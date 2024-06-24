@@ -1,0 +1,29 @@
+.faq_heading{
+    font-size: 60px !important;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 50px !important;
+    /* width: 90% !important; */
+    margin: auto !important;
+}
+.faq_heading::before{
+    content: ' ';
+    width: 220px;
+    height: 10px;
+    background-color: #008F71;
+    position: absolute;
+    top: 80px;
+    border-radius: 5px;
+
+}
+.faq_container{
+    justify-content: center;
+    border: 1px solid black;
+    margin-bottom: 100px;
+    /* width: 80%; */
+    border-radius: 149px;
+    padding: 16px;
+}
