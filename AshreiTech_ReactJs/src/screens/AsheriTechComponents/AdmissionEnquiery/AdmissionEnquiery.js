@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./AdmissionEnquiery.css";
 import { Checkbox, FormControl, FormControlLabel, InputLabel, Select, TextField } from '@mui/material/node';
-import { PostMethod, codeError, getMethod } from '../../../utils/services';
+import { PostMethod, codeError, formatDate, getMethod } from '../../../utils/services';
 // import { ToastContainer } from 'react-toastify';
 // import { Toaster, Toastersuccess } from '../../Toaster';
 
@@ -10,7 +10,7 @@ const INITIAL_STATE = {
     lname: "",
     father: "",
     email: "",
-    cnic: "",
+    cnicno: "",
     city: "",
     courseCategory: "",
     courses: "",
@@ -19,7 +19,8 @@ const INITIAL_STATE = {
     gender: "",
     cellno: "",
     lasteducation: "",
-    dob: "",
+    // dob: "",
+    dob: formatDate(new Date()),
     ownlaptop: false,
     zakat: false,
 }
@@ -127,6 +128,7 @@ export const AdmissionEnquiry = (props) => {
             return
         }
         const { name, value, type } = event?.target;
+        setErrors({})
         if (type === "checkbox") {
             setFormData((prevField) => ({
                 ...prevField,
@@ -245,6 +247,7 @@ export const AdmissionEnquiry = (props) => {
             .then((data) => {
                 if (data) {
                     // Toastersuccess("File Saved Successfully");
+                    alert("File Saved Successfully")
                     setFormData({ ...INITIAL_STATE });
                 }
             })
@@ -278,8 +281,8 @@ export const AdmissionEnquiry = (props) => {
             if (!formData.email) {
                 validationErrors.email = 'Email is required';
             }
-            if (!formData.cnic) {
-                validationErrors.cnic = 'CNIC is required';
+            if (!formData.cnicno) {
+                validationErrors.cnicno = 'CNIC is required';
             }
             if (!formData.city) {
                 validationErrors.city = 'City is required';
@@ -402,10 +405,10 @@ export const AdmissionEnquiry = (props) => {
                                     id="outlined-controlled"
                                     label="CNIC"
                                     size="small"
-                                    name="cnic"
-                                    value={formData?.cnic || ""}
+                                    name="cnicno"
+                                    value={formData?.cnicno || ""}
                                     onChange={handleFormData}
-                                    error={!!errors.cnic}
+                                    error={!!errors.cnicno}
                                 />
                             </div>
                             <div className='col-lg-6'>
@@ -591,6 +594,7 @@ export const AdmissionEnquiry = (props) => {
                                     label="Date Of Birth"
                                     size="small"
                                     error={!!errors.dob}
+                                    type="date"
                                     // helperText={errors.dob || ''}
                                 />
                             </div>
