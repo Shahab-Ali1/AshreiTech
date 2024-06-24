@@ -236,7 +236,6 @@ export const AdmissionEnquiry = (props) => {
 
         PostMethod("FOAdmEnquiry/v2/", bb)
             .then((data) => {
-                debugger
                 if (data) {
                     // Toastersuccess("File Saved Successfully");
                     setFormData({ ...INITIAL_STATE });
