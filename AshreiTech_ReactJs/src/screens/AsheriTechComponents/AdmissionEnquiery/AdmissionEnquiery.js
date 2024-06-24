@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./AdmissionEnquiery.css";
 import { Checkbox, FormControl, FormControlLabel, InputLabel, Select, TextField } from '@mui/material/node';
-import { PostMethod, codeError, getMethod } from '../../../utils/services'; 
+import { PostMethod, codeError, getMethod } from '../../../utils/services';
 // import { ToastContainer } from 'react-toastify';
 // import { Toaster, Toastersuccess } from '../../Toaster';
 
@@ -19,11 +19,13 @@ const INITIAL_STATE = {
     gender: "",
     cellno: "",
     lasteducation: "",
-    ownlaptop: false, 
+    dob: "",
+    ownlaptop: false,
     zakat: false,
 }
 export const AdmissionEnquiry = (props) => {
     const [formData, setFormData] = useState({ ...INITIAL_STATE })
+    const [errors, setErrors] = useState({});
     const [Cities, setCities] = useState([]);
     const [courseCategory, setCourseCategory] = useState([]);
     const [courses, setCourses] = useState([]);
@@ -186,6 +188,11 @@ export const AdmissionEnquiry = (props) => {
 
     const clickSubmit = () => {
 
+        let isValid = RequiredFields();
+        if(!isValid) {
+            return false;
+        }
+        
         let bb = {
             "Data": {
                 "FOAdmEnquirydtls": [
@@ -256,6 +263,65 @@ export const AdmissionEnquiry = (props) => {
         return emailRegex.test(email);
     }
 
+    const RequiredFields = () => {
+        try {
+            let validationErrors = {}
+            if (!formData.fname) {
+                validationErrors.fname = 'First Name is required';
+            }
+            if (!formData.lname) {
+                validationErrors.lname = 'Last Name is required';
+            }
+            if (!formData.father) {
+                validationErrors.father = 'Guardian is required';
+            }
+            if (!formData.email) {
+                validationErrors.email = 'Email is required';
+            }
+            if (!formData.cnic) {
+                validationErrors.cnic = 'CNIC is required';
+            }
+            if (!formData.city) {
+                validationErrors.city = 'City is required';
+            }
+            if (!formData.courseCategory) {
+                validationErrors.courseCategory = 'Course Category is required';
+            }
+            if (!formData.courses) {
+                validationErrors.courses = 'Courses is required';
+            }
+            if (!formData.stdStatus) {
+                validationErrors.stdStatus = 'Student Status is required';
+            }
+            if (!formData.whatsappno) {
+                validationErrors.whatsappno = 'WhatsApp No is required';
+            }
+            if (!formData.gender) {
+                validationErrors.gender = 'Gender is required';
+            }
+            if (!formData.cellno) {
+                validationErrors.cellno = 'Cell No is required';
+            }
+            if (!formData.lasteducation) {
+                validationErrors.lasteducation = 'Last Education No is required';
+            }
+           
+            if (!formData.dob) {
+                validationErrors.dob = 'Date of birth is required';
+            }
+            setErrors(validationErrors);
+            if (Object.keys(validationErrors).length !== 0) {
+                return false;
+            }
+            else{
+                return true;
+            }
+        } catch (error) {
+            codeError(error);
+        }
+    }
+
+
     return (
         <>
             <div className="background">
@@ -278,6 +344,8 @@ export const AdmissionEnquiry = (props) => {
                                     name="fname"
                                     onChange={handleFormData}
                                     value={formData?.fname || ""}
+                                    error={!!errors.fname}
+                                    // helperText={errors.fname || ''}
                                     InputProps={{
                                         style: { Margin: "0px" }
                                     }}
@@ -291,6 +359,8 @@ export const AdmissionEnquiry = (props) => {
                                     size="small"
                                     name="lname"
                                     value={formData?.lname || ""}
+                                    error={!!errors.lname}
+                                    // helperText={errors.lname || ''}
                                     onChange={handleFormData}
                                 />
                             </div>
@@ -305,6 +375,7 @@ export const AdmissionEnquiry = (props) => {
                                     size="small"
                                     name="father"
                                     value={formData?.father || ""}
+                                    error={!!errors.father}
                                     onChange={handleFormData}
                                 />
                             </div>
@@ -318,6 +389,8 @@ export const AdmissionEnquiry = (props) => {
                                     value={formData?.email || ""}
                                     onChange={handleFormData}
                                     onBlur={emailValidation}
+                                    error={!!errors.email}
+                                    // helperText={errors.email || ''}
                                 />
                             </div>
                         </div>
@@ -332,14 +405,16 @@ export const AdmissionEnquiry = (props) => {
                                     name="cnic"
                                     value={formData?.cnic || ""}
                                     onChange={handleFormData}
-                                    />
+                                    error={!!errors.cnic}
+                                />
                             </div>
                             <div className='col-lg-6'>
                                 <FormControl variant="outlined" size="small" className='w-100'>
                                     <InputLabel htmlFor="outlined-age-native-simple">Preferred City</InputLabel>
                                     <Select
                                         name="city"
-                                        style={{width:"100%"}}
+                                        error={!!errors.city}
+                                        style={{ width: "100%" }}
                                         className="w-100"
                                         onChange={handleFormData}
                                         value={formData?.city || ""}
@@ -367,6 +442,7 @@ export const AdmissionEnquiry = (props) => {
                                     <InputLabel htmlFor="outlined-age-native-simple">Course Category</InputLabel>
                                     <Select
                                         name="courseCategory"
+                                        error={!!errors.courseCategory}
                                         onChange={handleFormData}
                                         value={formData?.courseCategory || ""}
                                         native
@@ -392,6 +468,7 @@ export const AdmissionEnquiry = (props) => {
                                     <Select
                                         disabled={formData?.city === "" || formData.courseCategory === ""}
                                         name="courses"
+                                        error={!!errors.courses}
                                         onChange={handleFormData}
                                         value={formData?.courses || ""}
                                         native
@@ -418,6 +495,7 @@ export const AdmissionEnquiry = (props) => {
                                     <InputLabel htmlFor="outlined-age-native-simple">Student Status</InputLabel>
                                     <Select
                                         name="stdStatus"
+                                        error={!!errors.stdStatus}
                                         onChange={handleFormData}
                                         value={formData?.stdStatus || ""}
                                         native
@@ -440,6 +518,7 @@ export const AdmissionEnquiry = (props) => {
                             <div className='col-lg-6'>
                                 <TextField
                                     name="whatsappno"
+                                    error={!!errors.whatsappno}
                                     onChange={handleFormData}
                                     value={formData?.whatsappno || ""}
                                     className="w-100"
@@ -455,6 +534,7 @@ export const AdmissionEnquiry = (props) => {
                                     <InputLabel htmlFor="outlined-age-native-simple">Gender</InputLabel>
                                     <Select
                                         name="gender"
+                                        error={!!errors.gender}
                                         onChange={handleFormData}
                                         value={formData?.gender || ""}
                                         native
@@ -477,6 +557,7 @@ export const AdmissionEnquiry = (props) => {
                             <div className='col-lg-6'>
                                 <TextField
                                     name="cellno"
+                                    error={!!errors.cellno}
                                     onChange={handleFormData}
                                     value={formData?.cellno || ""}
                                     className="w-100"
@@ -491,6 +572,7 @@ export const AdmissionEnquiry = (props) => {
                             <div className='col-lg-6'>
                                 <TextField
                                     name="lasteducation"
+                                    error={!!errors.lasteducation}
                                     onChange={handleFormData}
                                     value={formData?.lasteducation || ""}
                                     className="w-100"
@@ -500,16 +582,16 @@ export const AdmissionEnquiry = (props) => {
                                 />
                             </div>
                             <div className='col-lg-6'>
-                                <FormControlLabel
-                                    control={
-                                        <Checkbox
-                                            name="ownlaptop"
-                                            checked={formData?.ownlaptop}
-                                            onClick={handleFormData}
-                                        />
-                                    }
-                                    label="Do you have your own laptop?"
-                                    sx={{ '& .MuiFormControlLabel-label': { fontSize: 12 } }}
+                                <TextField
+                                    name="dob"
+                                    onChange={handleFormData}
+                                    value={formData?.dob || ""}
+                                    className="w-100"
+                                    id="outlined-controlled"
+                                    label="Date Of Birth"
+                                    size="small"
+                                    error={!!errors.dob}
+                                    // helperText={errors.dob || ''}
                                 />
                             </div>
                         </div>
@@ -524,6 +606,19 @@ export const AdmissionEnquiry = (props) => {
                                         />
                                     }
                                     label="Financial Aid/ Zakat"
+                                    sx={{ '& .MuiFormControlLabel-label': { fontSize: 12 } }}
+                                />
+                            </div>
+                            <div className='col-lg-6'>
+                                <FormControlLabel
+                                    control={
+                                        <Checkbox
+                                            name="ownlaptop"
+                                            checked={formData?.ownlaptop}
+                                            onClick={handleFormData}
+                                        />
+                                    }
+                                    label="Do you have your own laptop?"
                                     sx={{ '& .MuiFormControlLabel-label': { fontSize: 12 } }}
                                 />
                             </div>
