@@ -19,7 +19,7 @@ const INITIAL_STATE = {
     gender: "",
     cellno: "",
     lasteducation: "",
-    ownlaptop: false,
+    ownlaptop: false, 
     zakat: false,
 }
 export const AdmissionEnquiry = (props) => {
