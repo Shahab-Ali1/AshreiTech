@@ -153,11 +153,26 @@ export const AdmissionEnquiry = (props) => {
             }));
         }
         else if (name === "courseCategory"){
-            debugger
             getCourses(formData.city, value)
             setFormData((prevField) => ({
                 ...prevField,
                 [name]: value,
+            }));
+        }
+        else if(name === "cnicno") {
+            const value = event.target.value.replace(/\D/g, ''); // Remove all non-digit characters
+            let formattedValue = value;
+        
+            if (value.length > 5 && value.length <= 12) {
+              formattedValue = `${value.slice(0, 5)}-${value.slice(5, 12)}`;
+            } else if (value.length > 12) {
+              formattedValue = `${value.slice(0, 5)}-${value.slice(5, 12)}-${value.slice(12, 13)}`;
+            } else {
+              formattedValue = value.slice(0, 5);
+            }
+            setFormData((prevField) => ({
+                ...prevField,
+                [name]: formattedValue,
             }));
         }
         else {
