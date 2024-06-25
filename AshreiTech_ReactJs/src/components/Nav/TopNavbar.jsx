@@ -72,7 +72,7 @@ export default function TopNavbar() {
             </li>
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
-            <li  onClick={()=>navigate("/AdmissionEnquiry")} className="semiBold font15  radius8 lightBg get_in_touch_btn pointer flexCenter" style={{ padding: "10px 15px",background:"#008F71",color:"white"}}>
+            <li  onClick={()=>navigate("/GetInTouch")} className="semiBold font15  radius8 lightBg get_in_touch_btn pointer flexCenter" style={{ padding: "10px 15px",background:"#008F71",color:"white"}}>
                 Get In Touch
             </li>
           </UlWrapperRight>

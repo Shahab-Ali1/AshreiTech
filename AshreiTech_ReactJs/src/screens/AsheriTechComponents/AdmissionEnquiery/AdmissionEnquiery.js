@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./AdmissionEnquiery.css";
 import { Checkbox, FormControl, FormControlLabel, InputLabel, Select, TextField } from '@mui/material/node';
 import { PostMethod, codeError, formatDate, getMethod } from '../../../utils/services';
+import TabsComponent from '../../../components/Tabs/Tabs';
 // import { ToastContainer } from 'react-toastify';
 // import { Toaster, Toastersuccess } from '../../Toaster';
 
@@ -351,6 +352,9 @@ export const AdmissionEnquiry = (props) => {
 
     return (
         <>
+        {/* <div>
+        <TabsComponent />
+        </div> */}
             <div className="background">
                 <div className="form-container" style={{
                     borderStyle: 'solid',
