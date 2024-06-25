@@ -153,23 +153,23 @@ export const AdmissionEnquiry = (props) => {
                 [name]: formattedValue,
             }));
         }
-        else if (name === "courseCategory"){
+        else if (name === "courseCategory") {
             getCourses(formData.city, value)
             setFormData((prevField) => ({
                 ...prevField,
                 [name]: value,
             }));
         }
-        else if(name === "cnicno") {
+        else if (name === "cnicno") {
             const value = event.target.value.replace(/\D/g, ''); // Remove all non-digit characters
             let formattedValue = value;
-        
+
             if (value.length > 5 && value.length <= 12) {
-              formattedValue = `${value.slice(0, 5)}-${value.slice(5, 12)}`;
+                formattedValue = `${value.slice(0, 5)}-${value.slice(5, 12)}`;
             } else if (value.length > 12) {
-              formattedValue = `${value.slice(0, 5)}-${value.slice(5, 12)}-${value.slice(12, 13)}`;
+                formattedValue = `${value.slice(0, 5)}-${value.slice(5, 12)}-${value.slice(12, 13)}`;
             } else {
-              formattedValue = value.slice(0, 5);
+                formattedValue = value.slice(0, 5);
             }
             setFormData((prevField) => ({
                 ...prevField,
@@ -216,10 +216,10 @@ export const AdmissionEnquiry = (props) => {
     const clickSubmit = () => {
 
         let isValid = RequiredFields();
-        if(!isValid) {
+        if (!isValid) {
             return false;
         }
-        
+
         let bb = {
             "Data": {
                 "FOAdmEnquirydtls": [
@@ -273,7 +273,8 @@ export const AdmissionEnquiry = (props) => {
                 if (data) {
                     // Toastersuccess("File Saved Successfully");
                     alert("File Saved Successfully")
-                    setFormData({ ...INITIAL_STATE });
+                    // setFormData({ ...INITIAL_STATE });
+                    sentWelcomeEmail();
                 }
             })
             .catch(error => {
@@ -333,7 +334,7 @@ export const AdmissionEnquiry = (props) => {
             if (!formData.lasteducation) {
                 validationErrors.lasteducation = 'Last Education No is required';
             }
-           
+
             if (!formData.dob) {
                 validationErrors.dob = 'Date of birth is required';
             }
@@ -341,7 +342,7 @@ export const AdmissionEnquiry = (props) => {
             if (Object.keys(validationErrors).length !== 0) {
                 return false;
             }
-            else{
+            else {
                 return true;
             }
         } catch (error) {
@@ -349,12 +350,36 @@ export const AdmissionEnquiry = (props) => {
         }
     }
 
+    const sentWelcomeEmail = () => {
+        try {
+            debugger;
+            let body = {
+                "Data": {
+                    sendfrom: "zusama729@gmail.com",
+                    sendto: formData.email,
+                    subject: "Enquiry Form",
+                    body: "Welcome",
+                }
+            }
+            PostMethod("FOAdmEnquiry/V2/SendEmailAsync", body)
+                .then((data) => {
+                    debugger
+                    // if (data) {
+                        setFormData({ ...INITIAL_STATE });
+                    // }
+                })
+                .catch(error => {
+                    codeError(error);
+                });
+        } catch (error) {
+            codeError(error);
+        }
+    }
+
+
 
     return (
         <>
-        {/* <div>
-        <TabsComponent />
-        </div> */}
             <div className="background">
                 <div className="form-container" style={{
                     borderStyle: 'solid',
@@ -421,7 +446,7 @@ export const AdmissionEnquiry = (props) => {
                                     onChange={handleFormData}
                                     onBlur={emailValidation}
                                     error={!!errors.email}
-                                    // helperText={errors.email || ''}
+                                // helperText={errors.email || ''}
                                 />
                             </div>
                         </div>
@@ -625,7 +650,7 @@ export const AdmissionEnquiry = (props) => {
                                     size="small"
                                     error={!!errors.dob}
                                     type="date"
-                                    // helperText={errors.dob || ''}
+                                // helperText={errors.dob || ''}
                                 />
                             </div>
                         </div>
