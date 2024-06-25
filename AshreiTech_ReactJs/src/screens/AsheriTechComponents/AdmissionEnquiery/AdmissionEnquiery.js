@@ -39,7 +39,7 @@ export const AdmissionEnquiry = (props) => {
         getCourseCategory();
         getGender();
         getStudentStatus();
-        getCourses();
+        //getCourses();
     }, [])
     const getCity = () => {
         try {
@@ -73,9 +73,10 @@ export const AdmissionEnquiry = (props) => {
         }
     }
 
-    const getCourses = () => {
+    const getCourses = (city, coursecat) => {
         try {
-            getMethod("FOAdmEnquiry/V2/CourseExtend/164/79594/1112")
+            // getMethod("FOAdmEnquiry/V2/CourseExtend/164/79594/1112")
+            getMethod(`FOAdmEnquiry/V2/CourseExtend/164/${city}/${coursecat}`)
                 .then((data) => {
                     if (data) {
                         setCourses(data?.Data);
@@ -149,6 +150,14 @@ export const AdmissionEnquiry = (props) => {
             setFormData((prevData) => ({
                 ...prevData,
                 [name]: formattedValue,
+            }));
+        }
+        else if (name === "courseCategory"){
+            debugger
+            getCourses(formData.city, value)
+            setFormData((prevField) => ({
+                ...prevField,
+                [name]: value,
             }));
         }
         else {
@@ -409,6 +418,7 @@ export const AdmissionEnquiry = (props) => {
                                     value={formData?.cnicno || ""}
                                     onChange={handleFormData}
                                     error={!!errors.cnicno}
+                                    inputProps={{ maxLength: 15 }}
                                 />
                             </div>
                             <div className='col-lg-6'>
@@ -528,6 +538,7 @@ export const AdmissionEnquiry = (props) => {
                                     id="outlined-controlled"
                                     label="WhatsApp Number"
                                     size="small"
+                                    inputProps={{ maxLength: 12 }}
                                 />
                             </div>
                         </div>

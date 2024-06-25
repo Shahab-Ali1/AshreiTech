@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = 'https://sma.edu-man.com/sm/api/';
+const URL = 'http://172.30.36.11:4324/sm/api/';
 // const URL = 'https://business.gos.pk/Feedback/api';
 
 export const getMethod = async (method) => {
