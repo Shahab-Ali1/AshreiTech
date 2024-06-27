@@ -28,13 +28,18 @@ export default function TopNavbar() {
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
       {/* <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "80px" }}> */}
+      <div className="d-flex  justify-content-end align-items-center " style={{padding:"10px 60px",gap:"32px"}}>
+        <div className="font20">Find Tech Talent</div>
+        <div className="font20">Digital Academy</div>
+        <div className="">
+          <button  className="semiBold font15  radius8 lightBg get_in_touch_btn pointer flexCenter" style={{ padding: "10px 15px",background:"#003650",color:"white"}}>Sign Up</button>
+        </div>
+      </div>
         <div className="d-flex justify-content-between align-items-center py-3" style={{padding:"0 60px"}}>
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             {/* <LogoIcon /> */}
             <img src={Logo} alt="" srcset="" />
-            <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
-              fanatic
-            </h1>
+           
           </Link>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
             <BurgerIcon />

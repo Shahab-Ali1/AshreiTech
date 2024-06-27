@@ -74,6 +74,7 @@ export default function ClientSlider() {
           <ImgStyle src={ClientLogo02} alt="client logo" />
         </LogoWrapper>
       </Slider>
+      
     </div>
   );
 }

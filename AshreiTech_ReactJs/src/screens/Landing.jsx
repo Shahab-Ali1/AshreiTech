@@ -10,6 +10,9 @@ import Contact from "../components/Sections/Contact";
 import Faq from "./Faq/Faq";
 import Hero from "../components/Sections/Hero/Hero";
 import Footer from "../components/Sections/Footer/Footer";
+import Currentstudents from "./Currentstudents/Currentstudents";
+import Sponsers from "./Sponsers/Sponsers";
+import InfoCard from "./InfoCard/InfoCard";
 
 
 export default function Landing() {
@@ -17,12 +20,14 @@ export default function Landing() {
     <>
       <TopNavbar />
       <Header />
+      <InfoCard/>
       <Hero/>
       {/* <Services /> */}
       {/* <Projects /> */}
+
       <Blog />
-      <Pricing />
-      {/* <Contact /> */}
+      <Currentstudents/>
+      <Sponsers/>
       <Faq/>
       <Footer/>
     </>

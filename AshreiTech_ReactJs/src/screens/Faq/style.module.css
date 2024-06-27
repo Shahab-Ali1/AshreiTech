@@ -8,6 +8,8 @@
     margin-bottom: 50px !important;
     /* width: 90% !important; */
     margin: auto !important;
+    margin-bottom: 50px !important;
+
 }
 .faq_heading::before{
     content: ' ';
@@ -15,8 +17,9 @@
     height: 10px;
     background-color: #008F71;
     position: absolute;
-    top: 80px;
+    top: 85px;
     border-radius: 5px;
+    margin-bottom: 20px !important;
 
 }
 .faq_container{

@@ -11,7 +11,7 @@ import style from "./style.module.css"
 const Faq = () => {
 const {faq_container,faq_heading}=style
     return (
-        <div className={`row justify-content-center mb-5 ${faq_container}`} style={{width:"90%",margin:"auto"}} >
+        <div className={`row justify-content-center mb-5 mt-5 ${faq_container}`} style={{width:"90%",margin:"auto"}} >
             <div className='col-md-10 col-12 mb-5 '>
             <Typography className={faq_heading} >Frequently Asked Questions</Typography>
 

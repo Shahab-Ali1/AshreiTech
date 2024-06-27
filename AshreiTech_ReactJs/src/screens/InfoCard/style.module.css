@@ -1,0 +1,16 @@
+.Info_container{
+    background-color: 
+    #00000017;  
+    color: black;
+    padding:0 50px;
+    width: 90%;
+    margin: auto;
+    border-radius: 100px;
+    margin-top: 50px;
+    display: flex;
+    padding:30px 50px;
+}
+.vector{
+    height: 65px;
+    width: 65px;
+}

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import BlogBox from "../Elements/BlogBox";
 import FullButton from "../Buttons/FullButton";
 import TestimonialSlider from "../Elements/TestimonialSlider";
+import Currentstudents from "../../screens/Currentstudents/Currentstudents";
 
 export default function Blog() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -18,9 +19,9 @@ export default function Blog() {
     setActiveIndex(index);
   };
   return (
-    <div className="row" style={{padding:'0 100px'}}>
+    <div className="row mt-5" style={{padding:'0 100px'}}>
      <div className="w-100">
-            <h1 className="font40 text-center extraBold generic_heading mt-5"> Courses we <span style={{color:'#008F71'}}>Offer</span></h1>
+            <h1 className="font40 text-center extraBold generic_heading mt-5"> Courses we <span style={{color:'#008F71'}}> Offer</span></h1>
             <p className="font20 mt-4 mb-5 text-center">
             There are many variations of passages of Lorem Ipsum available,     
             </p>
@@ -122,15 +123,7 @@ export default function Blog() {
       </div>
       </div>
  
-    
-      <div className="lightBg" style={{ padding: '50px 0' }}>
-        <div className="" style={{ padding: '0 25px' }} >
-          <HeaderInfo>
-            <h1 className="font40 mb-5 extraBold text-center generic_heading">Turning Goals Into  <span style={{color:'#008F71'}}>Wins!</span></h1>
-          </HeaderInfo>
-          <TestimonialSlider />
-        </div>
-      </div>
+   
     </div>
   );
 }
