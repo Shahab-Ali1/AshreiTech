@@ -20,9 +20,9 @@ export default function TabsComponent() {
                 centered
                 onChange={handleChange}
             >
-                <Tab label="Admission Enquiry" sx={{ margin: '0 20px', textTransform: "capitalize" }} />
-                <Tab label="Tab 2" sx={{ margin: '0 20px', textTransform: "capitalize" }} />
-                <Tab label="Tab 3" sx={{ margin: '0 20px', textTransform: "capitalize" }} />
+                <Tab label="Student" sx={{ margin: '0 20px', textTransform: "capitalize" }} />
+                <Tab label="Trainer" sx={{ margin: '0 20px', textTransform: "capitalize" }} />
+                <Tab label="Sponsor" sx={{ margin: '0 20px', textTransform: "capitalize" }} />
             </Tabs>
             {value === 0 && <AdmissionEnquiry />}
             {value === 1 && <TabContent2 />}
