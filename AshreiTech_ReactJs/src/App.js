@@ -19,7 +19,7 @@ export default function App() {
       }
     };
 
-    axios.put("http://172.30.36.11:4323/ut/api/utuser/v2/loginV3", body,
+    axios.put("https://uta.edu-man.com/ut/api/utuser/v2/loginV3", body,
       {
         headers: {
           'Content-Type': 'application/json',
