@@ -390,3 +390,8 @@ margin-top: -130px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
+
+.tabsSpace{
+  margin-top: 20vh;
+  margin-left: 20px;
+}

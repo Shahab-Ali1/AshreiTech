@@ -29,3 +29,7 @@
     text-align: center;
     align-items: center;
 }
+
+.no-outline:focus {
+    outline: none;
+}

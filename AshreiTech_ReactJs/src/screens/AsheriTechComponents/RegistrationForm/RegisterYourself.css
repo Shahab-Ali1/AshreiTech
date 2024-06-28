@@ -1,0 +1,48 @@
+/* .background {
+    background-image: url('../../../assets/puzzlePicture.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+/* 
+.background {
+    background-image: url('../../../assets/puzzlePicture.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.content{
+    z-index: 2;
+} */
+
+.background {
+    background-image: url('../../../assets/puzzlePicture.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.content {
+    /* display: grid; */
+    place-items: center;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure the content is above the background */
+}
+
+

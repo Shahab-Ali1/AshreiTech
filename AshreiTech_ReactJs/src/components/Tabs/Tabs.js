@@ -3,7 +3,7 @@ import Paper from '@mui/material/Paper';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { AdmissionEnquiry } from '../../screens/AsheriTechComponents/AdmissionEnquiery/AdmissionEnquiery';
-
+import "../../screens/AsheriTechComponents/AdmissionEnquiery/AdmissionEnquiery.css";
 export default function TabsComponent() {
     const [value, setValue] = React.useState(0);
 
@@ -20,9 +20,9 @@ export default function TabsComponent() {
                 centered
                 onChange={handleChange}
             >
-                <Tab label="Student" sx={{ margin: '0 20px', textTransform: "capitalize" }} />
-                <Tab label="Trainer" sx={{ margin: '0 20px', textTransform: "capitalize" }} />
-                <Tab label="Sponsor" sx={{ margin: '0 20px', textTransform: "capitalize" }} />
+                <Tab label="Student" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
+                <Tab label="Trainer" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
+                <Tab label="Sponsor" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
             </Tabs>
             {value === 0 && <AdmissionEnquiry />}
             {value === 1 && <TabContent2 />}
