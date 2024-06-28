@@ -691,3 +691,14 @@ margin-top: -130px;
   margin-top: 20vh;
   margin-left: 20px;
 }
+
+.buttonClass{
+  border-radius: 3px;
+  width: 10%;
+  font-size: 14px;
+  color: white;
+  background-color: #7C2916;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+}

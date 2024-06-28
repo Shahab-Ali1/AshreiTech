@@ -9,6 +9,7 @@ export const RegistrationForm = (props) => {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
+        debugger;
         setValue(newValue);
     };
 
@@ -26,7 +27,7 @@ export const RegistrationForm = (props) => {
                     <Tab label="Make Payment" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
                     <Tab label="Proceed" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
                 </Tabs>
-                {value === 0 && <RegisterYourself />}
+                {value === 0 && <RegisterYourself handleChange={handleChange}/>}
                 {value === 1 && <TabContent2 />}
                 {value === 2 && <TabContent3 />}
             </Paper>
