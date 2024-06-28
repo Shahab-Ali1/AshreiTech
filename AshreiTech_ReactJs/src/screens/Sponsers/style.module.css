@@ -25,15 +25,15 @@
   .sponsers{
     display: flex;
     justify-content: center;
-    gap: 32px;
-    align-items: baseline;
-    width: 80%;
+    /* gap: 32px; */
+    align-items: center;
+    width: 65%;
     margin: auto;
   }
 
   .sponsers img {
     height: 100%;
-    width: 100%;
+    width: 80%;
     object-fit: cover;
   }
   .sponsers_logo_container{
