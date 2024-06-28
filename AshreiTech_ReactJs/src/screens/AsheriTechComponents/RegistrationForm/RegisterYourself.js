@@ -13,7 +13,7 @@ export const RegisterYourself = (props) => {
     return (
         <>
             {/* <div className='tabsSpace background'> */}
-            <div className='background'>
+            <div className='Form_container'>
                 <div className='content'>
                     <div className='row'>
                         <div className='col-lg-3'>

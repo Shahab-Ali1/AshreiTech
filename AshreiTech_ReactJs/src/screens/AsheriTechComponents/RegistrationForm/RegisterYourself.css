@@ -21,9 +21,9 @@
     z-index: 2;
 } */
 
-.background {
+.Form_container {
     background-image: url('../../../assets/puzzlePicture.png');
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: fixed;
