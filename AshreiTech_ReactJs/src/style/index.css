@@ -23,7 +23,7 @@
     display: block;
   }
   *{
-    font-family: "Nunito", sans-serif ;
+    font-family: "Roboto", sans-serif;
   }
   ol, ul {
     list-style: none;
@@ -307,9 +307,9 @@
   height: 14px;
 }
 
-.active{
+/* .active{
   background-color:  #008F71 !important;
-}
+} */
 .custom-img {
   width: 100%; /* Adjust the size as needed */
   height: 100%;
@@ -330,7 +330,60 @@
   font-size: 23px;
 }
 .get_in_touch_btn{
-  background-color:  #008F71 !important;
+  background-color:  #008F71 ;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 23px;
+}
+.link{
+  cursor: pointer;
+  transition: all;
+
+}
+.link:hover{
+  border-bottom: 4.5px solid #008F71;
+  border-radius: 3px;
+}
+.link::before,
+.link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.link {
+  position: relative;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+  padding: 5px 0;
+}
+
+/* Styling for the underline */
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease-in-out;
+}
+
+/* On hover, animate the underline */
+.link:hover::after {
+  width: 100%;
+}
+.signup_btn{
+  background-color: #003650 ;
   border: none;
   color: white;
   padding: 15px 20px;
@@ -389,4 +442,248 @@ margin-top: -130px;
   height: 100%;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+}
+.header_menu{
+  /* width:40%; */
+  /* justify-content: space-between; */
+  gap: 21px;
+}
+.header_menu li a{
+  font-size: 21.5px;
+}
+.active{
+  font-weight: bolder;
+  background-color: #003650;
+}
+.dropdown-content a,
+.dropdown-content1 a {
+  color: #000000;
+}
+
+
+.hover-rotate {
+  transition: transform 0.3s;
+  /* Apply the transition property. Enables the animation */
+  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(140deg);
+  -o-transform: rotate(160deg);
+  transform: rotate(90deg);
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.hover-rotate:hover {
+  transform: rotate(-90deg);
+  /* Rotate if mouse is hovered */
+}
+
+.hover-rotate.collapse {
+  transform: rotate(-90deg);
+  /* Rotate if collapse class is present */
+}
+
+.dropdown-content a:hover {
+  color: #ffffff;
+  padding: 5px 16px;
+  text-decoration: none;
+  /* font-family: "Toyota Display"; */
+  font-family: "toyota_script";
+  /* font-weight: 400; */
+  font-weight: 600;
+  display: block;
+  /* font-family: "Toyota Display"; */
+  font-family: "toyota_script";
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #ffffff;
+  /* min-width: 160px; */
+  font-size: 18px;
+  font-family: "Crimson Pro" !important;
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  padding: 16px 0px;
+}
+.dropdown-content-translate {
+
+  /* min-width: 160px !important; */
+}
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  font-size: 18px;
+  font-family: "Crimson Pro" !important;
+  border-radius: 4px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  padding: 16px 0px;
+}
+.dropdown-content-translate a{
+  text-align: end !important;
+}
+.dropdown-content a,
+.dropdown-content1 a {
+  color: black !important;
+  padding: 3px 16px !important;
+  text-decoration: none !important;
+  display: block !important;
+}
+
+.dropdown-content a:hover,
+.dropdown-content1 a:hover {
+  background-color: #ddd !important;
+  /* color: rgb(124, 9, 9) !important; */
+  /* font-size: 18px; */
+  /* font-family: "Crimson Pro" !important; */
+  font-weight: 400;
+  border-radius: 4px !important;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown1:hover .dropdown-content1 {
+  display: block;
+}
+
+.dropdown:hover .dropbtn,
+.dropdown1:hover .dropbtn {
+  color: rgb(124, 9, 9);
+}
+
+.dropdown:hover .iconDown,
+.dropdown1:hover .iconDown {
+  color: rgb(124, 9, 9) !important;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  top: 4px;
+  right: 10px;
+}
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.dropdown:hover .hover-rotate {
+  transform: rotate(-90deg);
+}
+.dropdown1:hover .hover-rotate {
+  transform: rotate(-90deg);
+}
+.dropdown-content .nested-dropdown .nested-content {
+  display: none;
+}
+
+.dropdown-content .nested-dropdown:hover .nested-content {
+  display: block;
+  left: 100%;
+  top: 0;
+}
+
+.dropdown-content .nested-content {
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
+
+.dropdown-content .sub-nested-dropdown .sub-nested-content {
+  display: none;
+}
+
+.dropdown-content .sub-nested-dropdown:hover .sub-nested-content {
+  display: block;
+  left: 100%;
+  top: 40px;
+}
+
+.dropdown-content .sub-nested-content {
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
+
+.dropdown-content .sindhInvestment {
+  position: absolute;
+  top: 0px !important;
+  right: 100%;
+}
+
+.unique-hover-rotate {
+  transition: transform 0.3s;
+  color: rgb(124, 9, 9) !important;
+  /* Apply the transition property. Enables the animation */
+  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(140deg);
+  -o-transform: rotate(160deg);
+  transform: rotate(90deg);
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.unique-hover-rotate:hover {
+  transform: rotate(-90deg);
+  /* Rotate if mouse is hovered */
+}
+
+.unique-hover-rotate.collapse {
+  transform: rotate(-90deg);
+  /* Rotate if collapse class is present */
+}
+
+.unique-iconDown {
+  font-size: 16px !important;
+  color: rgb(124, 9, 9) !important;
+}
+
+.sub-footertitle {
+  font-size: var(--text-responsive) !important;
+}
+
+.dropdown-content .nested-dropdown:hover .unique-hover-rotate {
+  transform: rotate(-90deg);
+  /* Rotate if mouse is hovered */
+}
+
+.sub-unique-hover-rotate {
+  transition: transform 0.3s;
+  color: rgb(124, 9, 9) !important;
+  /* Apply the transition property. Enables the animation */
+  filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(140deg);
+  -o-transform: rotate(160deg);
+  transform: rotate(90deg);
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.sub-unique-hover-rotate:hover {
+  transform: rotate(-90deg);
+  /* Rotate if mouse is hovered */
+}
+
+.sub-unique-hover-rotate.collapse {
+  transform: rotate(-90deg);
+  /* Rotate if collapse class is present */
+}
+
+.sub-unique-iconDown {
+  font-size: 16px !important;
+  color: rgb(124, 9, 9) !important;
+}
+
+.dropdown-content .sub-nested-dropdown:hover .sub-unique-hover-rotate {
+  transform: rotate(-90deg);
+  /* Rotate if mouse is hovered */
 }
