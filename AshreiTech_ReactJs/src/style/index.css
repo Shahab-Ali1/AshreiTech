@@ -687,3 +687,7 @@ margin-top: -130px;
   transform: rotate(-90deg);
   /* Rotate if mouse is hovered */
 }
+.tabsSpace{
+  margin-top: 20vh;
+  margin-left: 20px;
+}

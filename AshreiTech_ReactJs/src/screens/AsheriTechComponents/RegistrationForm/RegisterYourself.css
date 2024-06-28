@@ -35,7 +35,6 @@
 }
 
 .content {
-    /* display: grid; */
     place-items: center;
     position: absolute;
     top: 125px;
