@@ -30,3 +30,17 @@
     border-radius: 149px;
     padding: 16px;
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1152px)  {
+    .faq{
+        padding: 5px 5px !important;
+    }
+    .faq_heading{
+        font-size: 50px !important;
+    }
+    .faq_heading::before{
+
+        top: 70px;
+    
+    }
+    }

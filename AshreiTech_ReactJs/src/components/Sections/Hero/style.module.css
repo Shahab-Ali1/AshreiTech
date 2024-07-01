@@ -22,3 +22,12 @@
     color: #343a40; 
     background-color: #fff;
   }
+  @media only screen and (min-width: 1024px) and (max-width: 1152px)  {
+    .Hero_image{
+      height: 500px !important;
+    }
+    .box{
+    padding: 70px;
+ 
+  }
+    }

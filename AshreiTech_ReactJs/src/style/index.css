@@ -55,7 +55,7 @@
   body {
     background: #fff;
     color: #0B093B;
-    font-family: 'Khula', sans-serif;
+    /* font-family: 'Khula', sans-serif; */
     overflow-x: hidden;
     font-size: 16px;
     font-weight: 400;
@@ -70,7 +70,62 @@
     .container {
       padding: 0 15px;
     }
+    .main_logo{
+      height: 40px;
+      width: 100%;
+    }
+    .top_menu{
+      padding: 10px  10px !important;
+    }
+    .top_menu a{
+       font-size: 16px !important;
+    }
+    .banner_container{
+      padding: 10px  10px !important;
+
+    }
+    /* .slider_1{
+      background-color: rebeccapurple !important;
+      padding: 0px !important;
+      height: 400px !important;
+      object-fit: cover;
+    } */
+    .slider_heading{
+      font-size: 16px !important;
+    }
+    .slider_btn{
+      padding: 10px 10px !important;
+      margin-top: 50px;
+      font-size: 16px !important;
+    }
   }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1152px)  {
+    .main_logo{
+      height: 40px;
+      width: 100%;
+    }
+    .banner_container{
+      padding:0 30px !important;
+
+    }
+    .header_menu{
+      gap: 0px !important;
+    } 
+    .get_in_touch_btn{
+      padding: 15px 20px;
+      font-size: 16px !important;
+    }
+    a span{
+      font-size: 14px !important;
+    }
+    }
+  .slider_discription{
+    font-size: 22px !important;
+    color: black !important;
+    font-weight: normal !important;
+  }
+
   .regular {
     font-weight: 400!important;
   }
@@ -106,10 +161,10 @@
   .x100 {
     width: 100%;
   }
-  .active {
+  /* .active {
     border-bottom: 2px solid #008F71;
     color: #008F71;
-  }
+  } */
   .tag {
     padding: 5px 10px;
     margin: 10px 0;
@@ -363,7 +418,7 @@
   font-size: 18px;
   text-decoration: none;
   color: black;
-  padding: 5px 0;
+  padding: 0px 0;
 }
 
 /* Styling for the underline */
@@ -449,7 +504,7 @@ margin-top: -130px;
   gap: 21px;
 }
 .header_menu li a{
-  font-size: 21.5px;
+  /* font-size: 21.5px; */
 }
 .active{
   font-weight: bolder;
@@ -489,12 +544,13 @@ margin-top: -130px;
   padding: 5px 16px;
   text-decoration: none;
   /* font-family: "Toyota Display"; */
-  font-family: "toyota_script";
+  /* font-family: "toyota_script"; */
   /* font-weight: 400; */
   font-weight: 600;
   display: block;
   /* font-family: "Toyota Display"; */
-  font-family: "toyota_script";
+  /* font-family: "toyota_script"; */
+  color: red;
 }
 
 .dropdown-content {
@@ -503,7 +559,7 @@ margin-top: -130px;
   background-color: #ffffff;
   /* min-width: 160px; */
   font-size: 18px;
-  font-family: "Crimson Pro" !important;
+  /* font-family: "Crimson Pro" !important; */
   border-radius: 4px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 9999;
@@ -519,7 +575,7 @@ margin-top: -130px;
   background-color: #ffffff;
   min-width: 160px;
   font-size: 18px;
-  font-family: "Crimson Pro" !important;
+  /* font-family: "Crimson Pro" !important; */
   border-radius: 4px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 9999;
@@ -534,16 +590,18 @@ margin-top: -130px;
   padding: 3px 16px !important;
   text-decoration: none !important;
   display: block !important;
+  
 }
 
 .dropdown-content a:hover,
 .dropdown-content1 a:hover {
-  background-color: #ddd !important;
-  /* color: rgb(124, 9, 9) !important; */
+  /* background-color: #ddd !important; */
+  /* color:  #008F71 !important; */
   /* font-size: 18px; */
   /* font-family: "Crimson Pro" !important; */
-  font-weight: 400;
-  border-radius: 4px !important;
+  /* font-weight: 400; */
+  /* border-radius: 4px !important; */
+  color:  #008F71 !important;
 }
 
 .dropdown:hover .dropdown-content,
@@ -553,12 +611,12 @@ margin-top: -130px;
 
 .dropdown:hover .dropbtn,
 .dropdown1:hover .dropbtn {
-  color: rgb(124, 9, 9);
+  color:  #008F71;
 }
 
 .dropdown:hover .iconDown,
 .dropdown1:hover .iconDown {
-  color: rgb(124, 9, 9) !important;
+  color:  #008F71 !important;
 }
 .dropdown {
   position: relative;
@@ -618,7 +676,7 @@ margin-top: -130px;
 
 .unique-hover-rotate {
   transition: transform 0.3s;
-  color: rgb(124, 9, 9) !important;
+  color:  #008F71 !important;
   /* Apply the transition property. Enables the animation */
   filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
   -webkit-transform: rotate(90deg);
@@ -642,7 +700,7 @@ margin-top: -130px;
 
 .unique-iconDown {
   font-size: 16px !important;
-  color: rgb(124, 9, 9) !important;
+  color:  #008F71 !important;
 }
 
 .sub-footertitle {
@@ -656,7 +714,7 @@ margin-top: -130px;
 
 .sub-unique-hover-rotate {
   transition: transform 0.3s;
-  color: rgb(124, 9, 9) !important;
+  color:  #008F71 !important;
   /* Apply the transition property. Enables the animation */
   filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5);
   -webkit-transform: rotate(90deg);
@@ -680,7 +738,7 @@ margin-top: -130px;
 
 .sub-unique-iconDown {
   font-size: 16px !important;
-  color: rgb(124, 9, 9) !important;
+  color:  #008F71 !important;
 }
 
 .dropdown-content .sub-nested-dropdown:hover .sub-unique-hover-rotate {
@@ -701,4 +759,7 @@ margin-top: -130px;
   text-align: center;
   align-items: center;
   cursor: pointer;
+}
+@media screen {
+  
 }

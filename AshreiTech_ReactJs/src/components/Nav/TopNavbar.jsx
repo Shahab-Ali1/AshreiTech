@@ -28,16 +28,19 @@ export default function TopNavbar() {
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
       {/* <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "80px" }}> */}
-      <div className="d-flex  justify-content-end align-items-center " style={{padding:"10px 60px",gap:"32px",height:50}}>
-        <div className="font20 link" style={{color:'#008F71'}}>Find Tech Talent</div>
-        <div className="font20 link" style={{color:'#008F71'}}>Digital Academy</div>
-        <div className="font20 link" style={{color:'#003650'}}>Sign In</div>
+      <div className="d-flex  justify-content-end align-items-center top_menu" style={{padding:"10px 60px",gap:"32px",height:50}}>
+        {/* <div className="font20 link" style={{color:'#008F71'}}></div>
+        <div className="font20 link" style={{color:'#008F71'}}></div>
+        <div className="font20 link" style={{color:'#003650'}}>Sign In</div> */}
+        <Link to="/" className="font20 link" style={{color:'#008F71'}}> Find Tech Talent</Link>
+        <Link to="/" className="font20 link" style={{color:'#008F71'}}>Digital Academy</Link>
+        <Link to="/" className="font20 link" style={{color:'#008F71'}}>Sign In</Link>
         
       </div>
         <div className="d-flex justify-content-between align-items-center py-3" style={{padding:"0 60px"}}>
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             {/* <LogoIcon /> */}
-            <img src={Logo} alt="" srcset="" />
+            <img src={Logo} className="main_logo" alt="" srcset="" />
            
           </Link>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>

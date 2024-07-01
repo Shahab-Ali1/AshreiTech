@@ -9,7 +9,7 @@ import departmentsFaq from "../../constant"
 import style from "./style.module.css"
 
 const Faq = () => {
-const {faq_container,faq_heading}=style
+const {faq_container,faq_heading,faq}=style
     return (
         <div className={`row justify-content-center mb-5 mt-5 ${faq_container}`} style={{width:"90%",margin:"auto"}} >
             <div className='col-md-10 col-12 mb-5 '>
@@ -18,6 +18,7 @@ const {faq_container,faq_heading}=style
                         {
                             departmentsFaq.map((faqItem) => (
                                 <Accordion key={faqItem?.id} 
+                                className={`${faq}`}
                                   style={{background:"#D9D9D9",marginBottom:20,padding:"20px 10px 20px 10px",borderRadius:40,display:'flex',justifyContent:"center",flexDirection:"column"}}
                                 >
                                     <AccordionSummary

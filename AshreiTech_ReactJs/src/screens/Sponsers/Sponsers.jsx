@@ -7,7 +7,7 @@ import sponser3 from "../../assets/sponser3.png"
 import sponser4 from "../../assets/sponser4.png"
 
 const Sponsers = () => {
-    const { box, custom_btn_outline_dark, sponsers, sponsers_logo_container } = style;
+    const { box, custom_btn_outline_dark, sponsers, sponsers_logo_container ,Laptop_Image} = style;
     return (
         <>
             <div className="w-100 mt-5 justify-content-center">
@@ -56,7 +56,7 @@ const Sponsers = () => {
                     <div className="col-6">
                         <div className="">
                             <img
-                                className="ml-n3"
+                                className={`${Laptop_Image} ml-n3`}
                                 style={{ width: "125%", height: "125%" }}
                                 src={LaptopImage}
                                 alt=""

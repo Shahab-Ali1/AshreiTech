@@ -14,19 +14,19 @@ export default function Header() {
 
   return (
     <>
-     <div id="carouselExampleIndicators" className="carousel slide" data-wrap="true" data-ride="carousel" data-interval="2000">
+     <div id="carouselExampleIndicators" className="carousel slide" data-wrap="true" data-ride="carousel" data-interval="200000">
       <ol className="carousel-indicators mt-n5">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active slider_control"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active slider_control" ></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1" className="slider_control"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2" className="slider_control"></li>
       </ol>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <div className="d-block w-100" style={{ backgroundImage: `url(${slider1})`,height: '700px',  backgroundColor: 'white',  padding: '100px 30px 0px 30px', boxSizing: 'border-box' }}>
-            <div className="row justify-content-center align-items-center">
-            <div className="col-sm-6 col-xs-12 p-5">
-                <h1 className="slider_heading">Complexity <span style={{color:'#008F71'}}>Simplified,</span> Globally</h1>
-                <button className="slider_btn mt-n5">Register Now</button>
+          <div className="d-block w-100 slider_1" style={{ backgroundImage: `url(${slider1})`, height:"82.5vh", backgroundColor: 'white',  padding: '100px 30px 0px 30px', boxSizing: 'border-box' }}>
+            <div className="row justify-content-center h-100 align-items-center ml-5 mt-5">
+            <div className="col-sm-6 col-xs-6 p-5 ">
+                <h1 className="slider_heading ">Complexity <span style={{color:'#008F71'}}>Simplified,</span><br /> Globally</h1>
+                <button className="slider_btn mt-n3">Register Now</button>
                 <button className="slider_btn ml-3">Explore More</button>
               </div>
                 {/* <img src={slider1} alt="" className="img-fluid" /> */}
@@ -34,11 +34,11 @@ export default function Header() {
           </div>
         </div>
         <div className="carousel-item">
-          <div className="d-block w-100" style={{ height: '700px', backgroundColor: 'white', padding: '90px 30px 0px 30px', boxSizing: 'border-box' }}>
+          <div className="d-block w-100" style={{  backgroundColor: 'white', padding: '90px 30px 0px 30px', boxSizing: 'border-box' }}>
             <div className="row">
               <div className="col-sm-6 col-xs-12 p-5">
                 <h1 className="slider_heading">Ready To Become <span style={{color:'#008F71'}}>Data Detective</span></h1>
-                <p className="font25">
+                <p className=" slider_discription">
                    dolorum soluta maiores repudiandae. Soluta architecto quasi quis recusandae eum laboriosam, optio alias ut harum, eaque consequuntur tempora, nam rem in inventore laborum. Ad voluptates magni ab maxime obcaecati amet ullam!
                 </p>
                 <button className="slider_btn">Getting Started</button>
@@ -50,11 +50,11 @@ export default function Header() {
           </div>
         </div>
         <div className="carousel-item">
-          <div className="d-block w-100"  style={{ height: '700px', backgroundColor: 'white', padding: '90px 50px 0px 50px', boxSizing: 'border-box' }}>
+          <div className="d-block w-100"  style={{  backgroundColor: 'white', padding: '90px 50px 0px 50px', boxSizing: 'border-box' }}>
             <div className="row">
               <div className="col-6 p-5">
                 <h1 className="slider_heading">Complexity <span style={{color:'#008F71'}}>Simplified,</span> Globally</h1>
-                <p className="font25">
+                <p className="slider_discription">
                    dolorum soluta maiores repudiandae. Soluta architecto quasi quis recusandae eum laboriosam, optio alias ut harum, eaque consequuntur tempora, nam rem in inventore laborum. Ad voluptates magni ab maxime obcaecati amet ullam!
                 </p>
                 <button className="slider_btn">Getting Started</button>
