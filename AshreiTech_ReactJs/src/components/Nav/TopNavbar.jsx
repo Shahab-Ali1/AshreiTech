@@ -28,13 +28,24 @@ export default function TopNavbar() {
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
       {/* <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "80px" }}> */}
-      <div className="d-flex  justify-content-end align-items-center top_menu" style={{padding:"10px 60px",gap:"32px",height:50}}>
+      <div className="d-flex  justify-content-end align-items-center top_menu" style={{padding:"10px 60px",gap:"30px",height:50}}>
         {/* <div className="font20 link" style={{color:'#008F71'}}></div>
         <div className="font20 link" style={{color:'#008F71'}}></div>
         <div className="font20 link" style={{color:'#003650'}}>Sign In</div> */}
-        <Link to="/" className="font20 link" style={{color:'#008F71'}}> Find Tech Talent</Link>
-        <Link to="/" className="font20 link" style={{color:'#008F71'}}>Digital Academy</Link>
-        <Link to="/" className="font20 link" style={{color:'#008F71'}}>Sign In</Link>
+        <Link style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}> <span
+         className="link"  style={{color:'#008F71'}}>
+        Find Tech Talent
+              </span></Link>
+        <Link style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}> <span
+         className="link"  style={{color:'#008F71'}}>
+        Digital Academy
+              </span></Link>
+        <Link style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}> <span
+         className="link"  style={{color:'#008F71'}}>
+        Sign In
+              </span></Link>
+        {/* <Link to="/" className="font20 link" style={{color:'#008F71'}}>Digital Academy</Link>
+        <Link to="/" className="font20 link" style={{color:'#008F71'}}>Sign In</Link> */}
         
       </div>
         <div className="d-flex justify-content-between align-items-center py-3" style={{padding:"0 60px"}}>
