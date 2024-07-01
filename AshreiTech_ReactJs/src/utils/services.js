@@ -38,15 +38,22 @@ export const codeError = (error) => {
 }
 
 export function formatDate(date) {
-  const month = date.getMonth() + 1; // Months are zero-indexed, so add 1
-  const day = date.getDate();
-  const year = date.getFullYear();
+  // const month = date.getMonth() + 1;
+  // const day = date.getDate();
+  // const year = date.getFullYear();
+  // const formattedMonth = month.toString().padStart(2, '0');
+  // const formattedDay = day.toString().padStart(2, '0');
+  // return `${formattedMonth}/${formattedDay}/${year}`;
 
-  // Ensure month and day are two digits
-  const formattedMonth = month.toString().padStart(2, '0');
-  const formattedDay = day.toString().padStart(2, '0');
+  // const today = new Date();
+  // const formattedDate = `${String(today.getFullYear())}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  // return formattedDate;
 
-  return `${formattedMonth}/${formattedDay}/${year}`;
+  const today = date;
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const day = String(today.getDate()).padStart(2, '0');
+  const year = today.getFullYear();
+  return `${day}/${month}/${year}`;
 }
 
 
