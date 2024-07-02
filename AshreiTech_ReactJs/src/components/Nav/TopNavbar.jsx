@@ -59,21 +59,21 @@ export default function TopNavbar() {
           </BurderWrapper>
           <UlWrapper className="flexNullCenter header_menu">
             <li className=" font15 pointer">
-              {/* <Link style={{ padding: "10px 15px" }} to="home" spy={true} smooth={true} offset={-80}>
+              <Link style={{ padding: "10px 15px" }} to="home" spy={true} smooth={true} offset={-80}>
                 Home
-              </Link> */}
+              </Link>
             </li>
             <li className="HeaderPaddingRight">
                   <div class="dropdown">
                     <span
-                      style={{ marginRight: "5px",fontSize:18 }}
+                      // style={{ marginRight: "5px",fontSize:18 }}
                       title=""
                       className={"link2 font15 pointer "}
                     >
                        Who Are We
                     </span>
                     <i
-                      style={{ marginTop: "0px", marginLeft: "3px" }}
+                      style={{ marginTop: "0px", marginLeft: "10px" }}
                       class=" dropbtn hover-rotate fa fa-chevron-right"
                     ></i>
                     <div class="dropdown-content">

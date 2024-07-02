@@ -11,7 +11,8 @@ const Hero = () => {
           <div className="row align-items-center" >
           <div className="">
             <h1 className="font40  mb-5">AshreiTech Academy - Empowering Your Tech Dreams</h1>
-            <p className='font20' style={{ lineHeight: 2 }}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.  It has survived not only five centuries.</p>
+            <p className='font20' style={{ lineHeight: 2 }}>The Academy is meticulously designed to provide organizations and individuals with comprehensive training and instructions on the latest technology and industry best practices.  
+            </p>
             <button type="button" class={`${custom_btn_outline_dark} mt-5`}>Learn More</button>
           </div>
           </div>

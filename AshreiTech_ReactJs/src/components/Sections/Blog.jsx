@@ -10,10 +10,10 @@ export default function Blog() {
   const [activeIndex, setActiveIndex] = useState(0);
   const categories = [
     "SAP",
+    "Oracle",
     "Salesforce",
-    "Cybersecurity",
-    "Data & Programming",
-    "Microsoft Azure (Cloud)"
+    "EC Council",
+    "Cyber Security"
   ];
   const handleClick = (index) => {
     setActiveIndex(index);
@@ -23,7 +23,7 @@ export default function Blog() {
      <div className="w-100">
             <h1 className="font40 text-center  generic_heading mt-5"> <span style={{color:'#000000'}}>Courses we</span> <span style={{color:'#008F71'}}> &nbsp; Offer</span></h1>
             <p className="font20 mt-5 mb-5 text-center">
-            There are many variations of passages of Lorem Ipsum available,     
+            Join the Academy and become a driving force in Pakistan's digital revolution!
             </p>
      </div>
       <div className="row">
