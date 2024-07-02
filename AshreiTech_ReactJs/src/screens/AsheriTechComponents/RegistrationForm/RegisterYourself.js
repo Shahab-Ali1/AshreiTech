@@ -17,12 +17,18 @@ const INITIAL_STATE = {
     name: "",
     dob: "",
     gender: "",
+    fname: "",
+    cellno:"",
+    whatsappno:"",
+    email:"",
+    lasteducation:"",
 }
 
 export const RegisterYourself = (props) => {
     const [formData, setFormData] = useState({ ...INITIAL_STATE });
     const [genderData, setGenderData] = useState([]);
     useEffect(() => {
+        loadData();
         getGender();
     }, [])
     const handleFormData = (event) => {
@@ -40,11 +46,25 @@ export const RegisterYourself = (props) => {
     const loadData = () => {
         try {
             debugger;
-            // api/FOAdmEnquiryV2/EnquiryChildren/{entityid}/{enquiryid}
-            getMethod("FOAdmEnquiryV2/EnquiryChildren/{9119}/{enquiryid}")
+            // FOAdmEnquiry/V2/EnquiryChildren/{entityid}/{enquiryid}
+            let Id = getIdFromUrl()
+            getMethod(`FOAdmEnquiry/V2/EnquiryChildren/9119/${Id}`)
                 .then((data) => {
                     debugger;
-                    if (data) {
+                    if (data?.IsSuccess) {
+                        let obj = data.Data[0];
+                        setFormData((prevField) => ({
+                            ...prevField,
+                            "name": obj.childname,
+                            "course": obj.coursestxt,
+                            "gender": obj.genderid,
+                            "fname": obj.fname,
+                            "cellno": obj.cellno,
+                            "whatsappno": obj.whatsappno,
+                            "email": obj.email,
+                            "lasteducation": obj.lastedu,
+                            "dob": formatDate(obj.dob),
+                        }));
                     }
                 })
                 .catch(error => {
@@ -70,27 +90,28 @@ export const RegisterYourself = (props) => {
             console.log(error);
         }
     }
+    const getIdFromUrl = () => {
+        // Get the hash part of the URL
+        const hash = window.location.hash;
+
+        // Remove the leading # and the / at the start
+        const hashPath = hash.substring(2); // This removes "#/"
+
+        // Split the remaining part by '?' to get the path and ID
+        const parts = hashPath.split('?');
+
+        // Extract the ID which is the second part
+        const id = parts[1] ? parts[1].split('/')[0] : null;
+
+        return id;
+    };
     return (
         <>
             {/* <div className='tabsSpace background'> */}
             <div className='Form_container'>
                 <div className='content'>
-                    <div className='col-lg-9'>
+                    <div className='col-lg-12'>
                         <div className='row'>
-                            <div className='col-lg-4'>
-                                <TextField
-                                    name="regNo"
-                                    value={formData?.regNo || ""}
-                                    onChange={handleFormData}
-                                    className="w-100"
-                                    id="outlined-controlled"
-                                    label="Registration No"
-                                    size="small"
-                                    InputProps={{
-                                        style: { Margin: "0px" }
-                                    }}
-                                />
-                            </div>
                             <div className='col-lg-4'>
                                 <TextField
                                     name="regDate"
@@ -106,68 +127,11 @@ export const RegisterYourself = (props) => {
                                         style: { Margin: "0px" }
                                     }}
                                 />
-                            </div>
-                        </div>
 
-                        <div className='row mt-3'>
-                            <div className='col-lg-4'>
-                                <FormControl variant="outlined" size="small" className='w-100'>
-                                    <InputLabel htmlFor="outlined-age-native-simple">Admission Register*</InputLabel>
-                                    <Select
-                                        name="admReg"
-                                        value={formData?.admReg || ""}
-                                        onChange={handleFormData}
-                                        native
-                                        label="Admission Register*"
-                                        inputProps={{
-                                            name: 'admReg',
-                                            id: 'outlined-age-native-simple',
-                                        }}
-                                    >
-                                        <option value={0}></option>
-                                        {
-                                            dowpdownData && dowpdownData.map((Val, index) => {
-                                                return (<option key={index} value={Val.Id}>{Val.stxt}</option>)
-                                            })
-                                        }
-
-                                    </Select>
-                                </FormControl>
                             </div>
                             <div className='col-lg-4'>
-                                <FormControl variant="outlined" size="small" className='w-100'>
-                                    <InputLabel htmlFor="outlined-age-native-simple">Course*</InputLabel>
-                                    <Select
-                                        name="course"
-                                        value={formData?.course || ""}
-                                        onChange={handleFormData}
-                                        native
-                                        label="Course*"
-                                        inputProps={{
-                                            name: 'course',
-                                            id: 'outlined-age-native-simple',
-                                        }}
-                                    >
-                                        <option value={0}></option>
-                                        {
-                                            dowpdownData && dowpdownData.map((Val, index) => {
-                                                return (<option key={index} value={Val.Id}>{Val.stxt}</option>)
-                                            })
-                                        }
-
-                                    </Select>
-                                </FormControl>
-                            </div>
-                            {/* <div className='col-lg-3'>
-                                <div className='d-flex justify-content-center'>
-                                    <button type="button" className="imgUploadBtn">Upload Image</button>
-                                </div>
-                            </div> */}
-                        </div>
-
-                        <div className='row mt-3'>
-                            <div className='col-lg-8'>
                                 <TextField
+                                    disabled
                                     name="name"
                                     value={formData?.name || ""}
                                     onChange={handleFormData}
@@ -185,21 +149,39 @@ export const RegisterYourself = (props) => {
                         <div className='row mt-3'>
                             <div className='col-lg-4'>
                                 <TextField
-                                    name="dob"
-                                    value={formData?.dob || ""}
+                                    disabled
+                                    name="fname"
+                                    value={formData?.fname || ""}
                                     onChange={handleFormData}
                                     className="w-100"
                                     id="outlined-controlled"
-                                    label="Date Of Birth*"
+                                    label="Father’s/Guardian Name"
                                     size="small"
-                                    type="date"
-                                    format="DD/MM/YYYY"
                                 />
                             </div>
+                            <div className='col-lg-4'>
+                                <TextField
+                                    disabled
+                                    name="course"
+                                    value={formData?.course || ""}
+                                    onChange={handleFormData}
+                                    className="w-100"
+                                    id="outlined-controlled"
+                                    label="Course"
+                                    size="small"
+                                    InputProps={{
+                                        style: { Margin: "0px" }
+                                    }}
+                                />
+                            </div>
+                        </div>
+
+                        <div className='row mt-3'>
                             <div className='col-lg-4'>
                                 <FormControl variant="outlined" size="small" className='w-100'>
                                     <InputLabel htmlFor="outlined-age-native-simple">Gender*</InputLabel>
                                     <Select
+                                        disabled
                                         name="gender"
                                         value={formData?.gender || ""}
                                         onChange={handleFormData}
@@ -212,127 +194,98 @@ export const RegisterYourself = (props) => {
                                     >
                                         <option value={0}></option>
                                         {
-                                           genderData && genderData?.map((Val, index) => {
-                                            return (<option key={index} value={Val.Id}>{Val.stxt}</option>)
-                                        })
-                                        }
-
-                                    </Select>
-                                </FormControl>
-                            </div>
-                            {/* <div className='col-lg-3'>
-                                <FormControl variant="outlined" size="small" className='w-100'>
-                                    <InputLabel htmlFor="outlined-age-native-simple">Blood Group</InputLabel>
-                                    <Select
-                                        name="stdStatus"
-                                        // error={!!errors.stdStatus}
-                                        // onChange={handleFormData}
-                                        // value={formData?.stdStatus || ""}
-                                        native
-                                        label="Blood Group"
-                                        inputProps={{
-                                            name: 'stdStatus',
-                                            id: 'outlined-age-native-simple',
-                                        }}
-                                    >
-                                        <option value={0}></option>
-                                        {
-                                            dowpdownData && dowpdownData.map((Val, index) => {
+                                            genderData && genderData?.map((Val, index) => {
                                                 return (<option key={index} value={Val.Id}>{Val.stxt}</option>)
                                             })
                                         }
 
                                     </Select>
                                 </FormControl>
-                            </div> */}
+                            </div>
+                            <div className='col-lg-4'>
+                                <TextField
+                                    disabled
+                                    name="dob"
+                                    value={formData?.dob || ""}
+                                    onChange={handleFormData}
+                                    className="w-100"
+                                    id="outlined-controlled"
+                                    label="Date Of Birth*"
+                                    size="small"
+                                    // type="date"
+                                    format="DD/MM/YYYY"
+                                />
+                            </div>
                         </div>
 
                         <div className='row mt-3'>
-                            <div className='col-lg-3'>
-                                <FormControl variant="outlined" size="small" className='w-100'>
-                                    <InputLabel htmlFor="outlined-age-native-simple">Nationality</InputLabel>
-                                    <Select
-                                        name="stdStatus"
-                                        // error={!!errors.stdStatus}
-                                        // onChange={handleFormData}
-                                        // value={formData?.stdStatus || ""}
-                                        native
-                                        label="Nationality"
-                                        inputProps={{
-                                            name: 'stdStatus',
-                                            id: 'outlined-age-native-simple',
-                                        }}
-                                    >
-                                        <option value={0}></option>
-                                        {
-                                            dowpdownData && dowpdownData.map((Val, index) => {
-                                                return (<option key={index} value={Val.Id}>{Val.stxt}</option>)
-                                            })
-                                        }
-
-                                    </Select>
-                                </FormControl>
+                            <div className='col-lg-4'>
+                                <TextField
+                                    disabled
+                                    name="cellno"
+                                    value={formData?.cellno || ""}
+                                    onChange={handleFormData}
+                                    className="w-100"
+                                    id="outlined-controlled"
+                                    label="Cell No"
+                                    size="small"
+                                />
                             </div>
-                            <div className='col-lg-3'>
-                                <FormControl variant="outlined" size="small" className='w-100'>
-                                    <InputLabel htmlFor="outlined-age-native-simple">Religion</InputLabel>
-                                    <Select
-                                        name="stdStatus"
-                                        // error={!!errors.stdStatus}
-                                        // onChange={handleFormData}
-                                        // value={formData?.stdStatus || ""}
-                                        native
-                                        label="Religion"
-                                        inputProps={{
-                                            name: 'stdStatus',
-                                            id: 'outlined-age-native-simple',
-                                        }}
-                                    >
-                                        <option value={0}></option>
-                                        {
-                                            dowpdownData && dowpdownData.map((Val, index) => {
-                                                return (<option key={index} value={Val.Id}>{Val.stxt}</option>)
-                                            })
-                                        }
-
-                                    </Select>
-                                </FormControl>
-                            </div>
-                            <div className='col-lg-3'>
-                                <FormControl variant="outlined" size="small" className='w-100'>
-                                    <InputLabel htmlFor="outlined-age-native-simple">Status</InputLabel>
-                                    <Select
-                                        name="stdStatus"
-                                        // error={!!errors.stdStatus}
-                                        // onChange={handleFormData}
-                                        // value={formData?.stdStatus || ""}
-                                        native
-                                        label="Status"
-                                        inputProps={{
-                                            name: 'stdStatus',
-                                            id: 'outlined-age-native-simple',
-                                        }}
-                                    >
-                                        <option value={0}></option>
-                                        {
-                                            dowpdownData && dowpdownData.map((Val, index) => {
-                                                return (<option key={index} value={Val.Id}>{Val.stxt}</option>)
-                                            })
-                                        }
-
-                                    </Select>
-                                </FormControl>
+                            <div className='col-lg-4'>
+                            <TextField
+                                    disabled
+                                    name="whatsappno"
+                                    value={formData?.whatsappno || ""}
+                                    onChange={handleFormData}
+                                    className="w-100"
+                                    id="outlined-controlled"
+                                    label="WhatsApp Number"
+                                    size="small"
+                                />
                             </div>
                         </div>
-                    </div>
 
-                    <div className='col-lg-3'></div>
+                        <div className='row mt-3'>
+                            <div className='col-lg-4'>
+                                <TextField
+                                    disabled
+                                    name="email"
+                                    value={formData?.email || ""}
+                                    onChange={handleFormData}
+                                    className="w-100"
+                                    id="outlined-controlled"
+                                    label="Email"
+                                    size="small"
+                                />
+                            </div>
+                            <div className='col-lg-4'>
+                            <TextField
+                                    disabled
+                                    name="lasteducation"
+                                    value={formData?.lasteducation || ""}
+                                    onChange={handleFormData}
+                                    className="w-100"
+                                    id="outlined-controlled"
+                                    label="Last Education"
+                                    size="small"
+                                />
+                            </div>
+                        </div>
 
-                    <div className='row mt-5'>
-                        <div className='col-lg-7 ml-n4 d-flex justify-content-end'>
+                        <div className='row mt-5'>
+                        <div className='col-lg-8 d-flex justify-content-end'>
                             <button type='submit' className='buttonClass' onClick={() => props?.handleChange(null, 1)}> Next</button>
                         </div>
                     </div>
+
+                    </div>
+
+
+                    {/* <div className='row mt-5'>
+                        <div className='col-lg-7 ml-n4 d-flex justify-content-end'>
+                            <button type='submit' className='buttonClass' onClick={() => props?.handleChange(null, 1)}> Next</button>
+                        </div>
+                    </div> */}
 
                 </div>
             </div>
