@@ -49,7 +49,7 @@ export function formatDate(date) {
   // const formattedDate = `${String(today.getFullYear())}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
   // return formattedDate;
 
-  const today = date;
+  const today = new Date(date);
   const month = String(today.getMonth() + 1).padStart(2, '0');
   const day = String(today.getDate()).padStart(2, '0');
   const year = today.getFullYear();

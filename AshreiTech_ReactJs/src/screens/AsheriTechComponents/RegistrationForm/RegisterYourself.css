@@ -37,7 +37,7 @@
     top: 125px;
     /* left: 0; */
     left: 27%;
-    width: 80%;
+    width: 68%;
     /* height: 100%; */
     z-index: 10; /* Ensure the content is above the background */
 }
@@ -52,5 +52,6 @@
     align-items: center;
     cursor: pointer;
 }
+
 
 
