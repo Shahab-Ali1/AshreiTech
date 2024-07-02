@@ -16,7 +16,9 @@ export default function Blog() {
     "Cyber Security"
   ];
   const handleClick = (index) => {
+
     setActiveIndex(index);
+    
   };
   return (
     <div className="row mt-5" style={{padding:'0 100px'}}>
