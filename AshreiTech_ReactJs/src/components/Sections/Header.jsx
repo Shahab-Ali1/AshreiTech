@@ -23,14 +23,12 @@ export default function Header() {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <div className="d-block w-100 slider_1" style={{ backgroundImage: `url(${slider1})`, height:"82.5vh", backgroundColor: 'white',  padding: '100px 30px 0px 30px', boxSizing: 'border-box' }}>
-            <div className="row justify-content-center h-100 align-items-center ml-5 mt-5">
-            <div className="col-sm-6 col-xs-6 p-5 ">
-                <h1 className="slider_heading ">Complexity <span style={{color:'#008F71'}}>Simplified,</span><br /> Globally</h1>
-                <button className="slider_btn mt-n3">Register Now</button>
-                <button className="slider_btn ml-3">Explore More</button>
+          <div className="col-sm-12 col-xs-12 d-flex  flex-column justify-content-center align-items-center mt-5 pt-5">
+                <h1 className="slider_heading ">Complexity <span style={{color:'#008F71'}}>Simplified,</span><br /> Globally
+                <div><button className="slider_btn ">Register Now</button>
+                <button className="slider_btn mx-3">Explore More</button></div>
+                </h1>
               </div>
-                {/* <img src={slider1} alt="" className="img-fluid" /> */}
-            </div>
           </div>
         </div>
         <div className="carousel-item">

@@ -13,10 +13,11 @@ const Sponsers = () => {
             <div className="w-100 mt-5 justify-content-center">
                 <h1 className=" text-center  generic_heading mt-5">
                     {" "}
-                    <span style={{color:'#000000'}}> Our Partners</span>
+                    <span style={{color:'#000000'}}> MEET THE EXPERTS</span>
                 </h1>
                 <p className="font20 mt-4 mb-5 text-center mt-2">
-                There are many variations of passages of Lorem Ipsum available,     
+                Our experts are here to empower the future of tech by enabling students and professionals.
+,     
                 </p>
 
                 <div className={`${sponsers}`}>
