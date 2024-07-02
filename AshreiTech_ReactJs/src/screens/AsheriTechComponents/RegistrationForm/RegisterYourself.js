@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Checkbox, FormControl, FormControlLabel, InputLabel, Select, TextField } from '@mui/material/node'
-import "./RegisterYourself.css"
+// import "./RegisterYourself.css"
 import { codeError, formatDate, getMethod } from '../../../utils/services'
+import "../AdmissionEnquiery/AdmissionEnquiery.css";
 
 const dowpdownData = [
     { Id: 1, stxt: "value1" },
@@ -109,12 +110,17 @@ export const RegisterYourself = (props) => {
     };
     return (
         <>
-            {/* <div className='tabsSpace background'> */}
-            <div className='Form_container'>
-                <div className='content'>
-                    <div className='col-lg-12'>
-                        <div className='row'>
-                            <div className='col-lg-4'>
+        <div className="background">
+                <div className="form-container" style={{
+                    borderStyle: 'solid',
+                    borderWidth: '6px',
+                    borderImage: 'linear-gradient(to bottom, #D0B62B, #E3AE2E, #008F71, #7C2916, #D0B62C, #053750)',
+                    borderImageSlice: 1,
+                    borderRadius: '10px',
+                }}>
+                    <form>
+                    <div className='row'>
+                            <div className='col-lg-6'>
                                 <TextField
                                     name="regDate"
                                     value={formData?.regDate || ""}
@@ -131,7 +137,7 @@ export const RegisterYourself = (props) => {
                                 />
 
                             </div>
-                            <div className='col-lg-4'>
+                            <div className='col-lg-6'>
                                 <TextField
                                     disabled
                                     name="name"
@@ -149,7 +155,7 @@ export const RegisterYourself = (props) => {
                         </div>
 
                         <div className='row mt-3'>
-                            <div className='col-lg-4'>
+                            <div className='col-lg-6'>
                                 <TextField
                                     disabled
                                     name="fname"
@@ -161,7 +167,7 @@ export const RegisterYourself = (props) => {
                                     size="small"
                                 />
                             </div>
-                            <div className='col-lg-4'>
+                            <div className='col-lg-6'>
                                 <TextField
                                     disabled
                                     name="course"
@@ -179,7 +185,7 @@ export const RegisterYourself = (props) => {
                         </div>
 
                         <div className='row mt-3'>
-                            <div className='col-lg-4'>
+                            <div className='col-lg-6'>
                                 <FormControl variant="outlined" size="small" className='w-100'>
                                     <InputLabel htmlFor="outlined-age-native-simple">Gender*</InputLabel>
                                     <Select
@@ -204,7 +210,7 @@ export const RegisterYourself = (props) => {
                                     </Select>
                                 </FormControl>
                             </div>
-                            <div className='col-lg-4'>
+                            <div className='col-lg-6'>
                                 <TextField
                                     disabled
                                     name="dob"
@@ -221,7 +227,7 @@ export const RegisterYourself = (props) => {
                         </div>
 
                         <div className='row mt-3'>
-                            <div className='col-lg-4'>
+                            <div className='col-lg-6'>
                                 <TextField
                                     disabled
                                     name="cellno"
@@ -233,7 +239,7 @@ export const RegisterYourself = (props) => {
                                     size="small"
                                 />
                             </div>
-                            <div className='col-lg-4'>
+                            <div className='col-lg-6'>
                                 <TextField
                                     disabled
                                     name="whatsappno"
@@ -248,7 +254,7 @@ export const RegisterYourself = (props) => {
                         </div>
 
                         <div className='row mt-3'>
-                            <div className='col-lg-4'>
+                            <div className='col-lg-6'>
                                 <TextField
                                     disabled
                                     name="email"
@@ -260,7 +266,7 @@ export const RegisterYourself = (props) => {
                                     size="small"
                                 />
                             </div>
-                            <div className='col-lg-4'>
+                            <div className='col-lg-6'>
                                 <TextField
                                     disabled
                                     name="lasteducation"
@@ -275,7 +281,7 @@ export const RegisterYourself = (props) => {
                         </div>
 
                         <div className='row mt-3'>
-                            <div className='col-lg-4'>
+                            <div className='col-lg-6'>
                                 <FormControlLabel
                                     control={
                                         <Checkbox
@@ -306,20 +312,12 @@ export const RegisterYourself = (props) => {
                         </div>
 
                         <div className='row mt-5'>
-                            <div className='col-lg-8 d-flex justify-content-end'>
+                            <div className='col-lg-12 d-flex justify-content-end'>
                                 <button type='submit' className='buttonClass' onClick={() => props?.handleChange(null, 1)}> Next</button>
                             </div>
                         </div>
 
-                    </div>
-
-
-                    {/* <div className='row mt-5'>
-                        <div className='col-lg-7 ml-n4 d-flex justify-content-end'>
-                            <button type='submit' className='buttonClass' onClick={() => props?.handleChange(null, 1)}> Next</button>
-                        </div>
-                    </div> */}
-
+                    </form>
                 </div>
             </div>
         </>

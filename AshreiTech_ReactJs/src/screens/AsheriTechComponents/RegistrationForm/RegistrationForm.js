@@ -4,6 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { RegisterYourself } from './RegisterYourself';
 import "./RegisterYourself.css"
+import { MakePayment } from './MakePayment';
 
 export const RegistrationForm = (props) => {
     const [value, setValue] = React.useState(0);
@@ -28,7 +29,7 @@ export const RegistrationForm = (props) => {
                     <Tab label="Proceed" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
                 </Tabs>
                 {value === 0 && <RegisterYourself handleChange={handleChange}/>}
-                {value === 1 && <TabContent2 />}
+                {value === 1 && <MakePayment />}
                 {value === 2 && <TabContent3 />}
             </Paper>
         </>
