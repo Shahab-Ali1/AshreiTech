@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FormControl, InputLabel, Select, TextField } from '@mui/material/node'
 import "./RegisterYourself.css"
+import { codeError, formatDate, getMethod } from '../../../utils/services'
 
 const dowpdownData = [
     { Id: 1, stxt: "value1" },
@@ -8,8 +9,67 @@ const dowpdownData = [
     { Id: 3, stxt: "value3" }
 ]
 
-export const RegisterYourself = (props) => {
+const INITIAL_STATE = {
+    regNo: "",
+    regDate: formatDate(new Date()),
+    admReg: "",
+    course: "",
+    name: "",
+    dob: "",
+    gender: "",
+}
 
+export const RegisterYourself = (props) => {
+    const [formData, setFormData] = useState({ ...INITIAL_STATE });
+    const [genderData, setGenderData] = useState([]);
+    useEffect(() => {
+        getGender();
+    }, [])
+    const handleFormData = (event) => {
+        if (!event) {
+            return
+        }
+        debugger;
+        const { name, value, } = event?.target;
+        setFormData((prevField) => ({
+            ...prevField,
+            [name]: value,
+        }));
+    }
+    /* load Initial Data from Api */
+    const loadData = () => {
+        try {
+            debugger;
+            // api/FOAdmEnquiryV2/EnquiryChildren/{entityid}/{enquiryid}
+            getMethod("FOAdmEnquiryV2/EnquiryChildren/{9119}/{enquiryid}")
+                .then((data) => {
+                    debugger;
+                    if (data) {
+                    }
+                })
+                .catch(error => {
+                    debugger;
+                    codeError(error);
+                });
+        } catch (error) {
+            console.log(error);
+        }
+    };
+    const getGender = () => {
+        try {
+            getMethod("lov/v2/list/GTYPE")
+                .then((data) => {
+                    if (data) {
+                        setGenderData(data?.Data);
+                    }
+                })
+                .catch(error => {
+                    codeError(error);
+                });
+        } catch (error) {
+            console.log(error);
+        }
+    }
     return (
         <>
             {/* <div className='tabsSpace background'> */}
@@ -17,37 +77,31 @@ export const RegisterYourself = (props) => {
                 <div className='content'>
                     <div className='col-lg-9'>
                         <div className='row'>
-                            <div className='col-lg-3'>
+                            <div className='col-lg-4'>
                                 <TextField
+                                    name="regNo"
+                                    value={formData?.regNo || ""}
+                                    onChange={handleFormData}
                                     className="w-100"
                                     id="outlined-controlled"
                                     label="Registration No"
                                     size="small"
-                                    name="fname"
                                     InputProps={{
                                         style: { Margin: "0px" }
                                     }}
                                 />
                             </div>
-                            <div className='col-lg-3'>
+                            <div className='col-lg-4'>
                                 <TextField
+                                    name="regDate"
+                                    value={formData?.regDate || ""}
+                                    onChange={handleFormData}
                                     className="w-100"
                                     id="outlined-controlled"
                                     label="Registration Date"
                                     size="small"
-                                    name="fname"
-                                    InputProps={{
-                                        style: { Margin: "0px" }
-                                    }}
-                                />
-                            </div>
-                            <div className='col-lg-3'>
-                                <TextField
-                                    className="w-100"
-                                    id="outlined-controlled"
-                                    label="Prospectus No"
-                                    size="small"
-                                    name="fname"
+                                    format="DD/MM/YYYY"
+                                    disabled
                                     InputProps={{
                                         style: { Margin: "0px" }
                                     }}
@@ -56,18 +110,17 @@ export const RegisterYourself = (props) => {
                         </div>
 
                         <div className='row mt-3'>
-                            <div className='col-lg-3'>
+                            <div className='col-lg-4'>
                                 <FormControl variant="outlined" size="small" className='w-100'>
                                     <InputLabel htmlFor="outlined-age-native-simple">Admission Register*</InputLabel>
                                     <Select
-                                        name="stdStatus"
-                                        // error={!!errors.stdStatus}
-                                        // onChange={handleFormData}
-                                        // value={formData?.stdStatus || ""}
+                                        name="admReg"
+                                        value={formData?.admReg || ""}
+                                        onChange={handleFormData}
                                         native
                                         label="Admission Register*"
                                         inputProps={{
-                                            name: 'stdStatus',
+                                            name: 'admReg',
                                             id: 'outlined-age-native-simple',
                                         }}
                                     >
@@ -81,18 +134,17 @@ export const RegisterYourself = (props) => {
                                     </Select>
                                 </FormControl>
                             </div>
-                            <div className='col-lg-3'>
+                            <div className='col-lg-4'>
                                 <FormControl variant="outlined" size="small" className='w-100'>
                                     <InputLabel htmlFor="outlined-age-native-simple">Course*</InputLabel>
                                     <Select
-                                        name="stdStatus"
-                                        // error={!!errors.stdStatus}
-                                        // onChange={handleFormData}
-                                        // value={formData?.stdStatus || ""}
+                                        name="course"
+                                        value={formData?.course || ""}
+                                        onChange={handleFormData}
                                         native
                                         label="Course*"
                                         inputProps={{
-                                            name: 'stdStatus',
+                                            name: 'course',
                                             id: 'outlined-age-native-simple',
                                         }}
                                     >
@@ -114,13 +166,15 @@ export const RegisterYourself = (props) => {
                         </div>
 
                         <div className='row mt-3'>
-                            <div className='col-lg-6'>
+                            <div className='col-lg-8'>
                                 <TextField
+                                    name="name"
+                                    value={formData?.name || ""}
+                                    onChange={handleFormData}
                                     className="w-100"
                                     id="outlined-controlled"
                                     label="Name*"
                                     size="small"
-                                    name="fname"
                                     InputProps={{
                                         style: { Margin: "0px" }
                                     }}
@@ -129,42 +183,44 @@ export const RegisterYourself = (props) => {
                         </div>
 
                         <div className='row mt-3'>
-                            <div className='col-lg-3'>
+                            <div className='col-lg-4'>
                                 <TextField
+                                    name="dob"
+                                    value={formData?.dob || ""}
+                                    onChange={handleFormData}
                                     className="w-100"
                                     id="outlined-controlled"
                                     label="Date Of Birth*"
                                     size="small"
                                     type="date"
-                                    value={new Date()}
+                                    format="DD/MM/YYYY"
                                 />
                             </div>
-                            <div className='col-lg-3'>
+                            <div className='col-lg-4'>
                                 <FormControl variant="outlined" size="small" className='w-100'>
                                     <InputLabel htmlFor="outlined-age-native-simple">Gender*</InputLabel>
                                     <Select
-                                        name="stdStatus"
-                                        // error={!!errors.stdStatus}
-                                        // onChange={handleFormData}
-                                        // value={formData?.stdStatus || ""}
+                                        name="gender"
+                                        value={formData?.gender || ""}
+                                        onChange={handleFormData}
                                         native
                                         label="Gender*"
                                         inputProps={{
-                                            name: 'stdStatus',
+                                            name: 'gender',
                                             id: 'outlined-age-native-simple',
                                         }}
                                     >
                                         <option value={0}></option>
                                         {
-                                            dowpdownData && dowpdownData.map((Val, index) => {
-                                                return (<option key={index} value={Val.Id}>{Val.stxt}</option>)
-                                            })
+                                           genderData && genderData?.map((Val, index) => {
+                                            return (<option key={index} value={Val.Id}>{Val.stxt}</option>)
+                                        })
                                         }
 
                                     </Select>
                                 </FormControl>
                             </div>
-                            <div className='col-lg-3'>
+                            {/* <div className='col-lg-3'>
                                 <FormControl variant="outlined" size="small" className='w-100'>
                                     <InputLabel htmlFor="outlined-age-native-simple">Blood Group</InputLabel>
                                     <Select
@@ -188,7 +244,7 @@ export const RegisterYourself = (props) => {
 
                                     </Select>
                                 </FormControl>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className='row mt-3'>
@@ -274,7 +330,7 @@ export const RegisterYourself = (props) => {
 
                     <div className='row mt-5'>
                         <div className='col-lg-7 ml-n4 d-flex justify-content-end'>
-                            <button type='submit' className='buttonClass' onClick={()=> props?.handleChange(null,1)}> Next</button>
+                            <button type='submit' className='buttonClass' onClick={() => props?.handleChange(null, 1)}> Next</button>
                         </div>
                     </div>
 
