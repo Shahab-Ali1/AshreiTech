@@ -34,7 +34,7 @@ export default function Header() {
           </div>
         </div>
         <div className="carousel-item">
-          <div className="d-block w-100" style={{  backgroundColor: 'white', padding: '90px 30px 0px 30px', boxSizing: 'border-box' }}>
+          <div className="d-block w-100 slider_container" style={{  backgroundColor: 'white', padding: '90px 30px 0px 30px', boxSizing: 'border-box' }}>
             <div className="row">
               <div className="col-sm-6 col-xs-12 p-5">
                 <h1 className="slider_heading">Ready To Become <span style={{color:'#008F71'}}>Data Detective</span></h1>
@@ -50,7 +50,7 @@ export default function Header() {
           </div>
         </div>
         <div className="carousel-item">
-          <div className="d-block w-100"  style={{  backgroundColor: 'white', padding: '90px 50px 0px 50px', boxSizing: 'border-box' }}>
+          <div className="d-block w-100 slider_container"  style={{  backgroundColor: 'white', padding: '90px 50px 0px 50px', boxSizing: 'border-box' }}>
             <div className="row">
               <div className="col-6 p-5">
                 <h1 className="slider_heading">Complexity <span style={{color:'#008F71'}}>Simplified,</span> Globally</h1>

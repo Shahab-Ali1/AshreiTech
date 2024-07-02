@@ -33,22 +33,22 @@ export default function TopNavbar() {
         <div className="font20 link" style={{color:'#008F71'}}></div>
         <div className="font20 link" style={{color:'#003650'}}>Sign In</div> */}
         <Link style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}> <span
-         className="link"  style={{color:'#008F71'}}>
+         className=" animated_link"  style={{color:'#008F71'}}>
         Find Tech Talent
               </span></Link>
         <Link style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}> <span
-         className="link"  style={{color:'#008F71'}}>
+         className=" animated_link"  style={{color:'#008F71'}}>
         Digital Academy
               </span></Link>
         <Link style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}> <span
-         className="link"  style={{color:'#008F71'}}>
+         className=" animated_link"  style={{color:'#008F71'}}>
         Sign In
               </span></Link>
         {/* <Link to="/" className="font20 link" style={{color:'#008F71'}}>Digital Academy</Link>
         <Link to="/" className="font20 link" style={{color:'#008F71'}}>Sign In</Link> */}
         
       </div>
-        <div className="d-flex justify-content-between align-items-center py-3" style={{padding:"0 60px"}}>
+        <div className="d-flex justify-content-between align-items-center py-3 " style={{padding:"0 60px"}}>
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             {/* <LogoIcon /> */}
             <img src={Logo} className="main_logo" alt="" srcset="" />
@@ -85,19 +85,9 @@ export default function TopNavbar() {
                       <Link className={""} to={"/"}>
                         <a href="#"> About The Team </a>
                       </Link>
-                      {/* <Link className={""} to={"/"}>
-                        <a href="#"> Achievements  </a>
-                      </Link> */}
                     </div>
                   </div>
                 </li>
-            <li className=" font15 pointer">
-              <Link style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}>
-              <span className="link">
-                 Who Are We
-              </span>
-              </Link>
-            </li>
             <li className=" font15 pointer">
               <Link  style={{ padding: "10px 15px" }} to="projects" spy={true} smooth={true} offset={-80}>
               <span className="link">

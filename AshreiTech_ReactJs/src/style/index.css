@@ -119,9 +119,23 @@
     a span{
       font-size: 14px !important;
     }
+    .slider_heading{
+  font-size: 48px !important;
+    }
+    .slider_discription{
+      font-size: 16px !important;
+    }
+    .slider_btn{
+      padding: 8px 14px !important;
+      font-size: 16px !important;
+    }
+    .slider_container{
+      padding: 0 40px !important;
+      justify-content: center;
+    }
     }
   .slider_discription{
-    font-size: 22px !important;
+    font-size: 22px ;
     color: black !important;
     font-weight: normal !important;
   }
@@ -431,11 +445,45 @@
   height: 2px;
   background-color: black;
   transition: width 0.3s ease-in-out;
+  
 }
 
 /* On hover, animate the underline */
 .link:hover::after {
   width: 100%;
+}
+
+
+.animated_link{
+  position: relative;
+  /* padding: 10px 15px; */
+  cursor: pointer;
+}
+.animated_link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black; /* Border color */
+  border-bottom: 4.5px solid #008F71;
+  border-radius: 3px;
+}
+
+/* Keyframes for the border animation */
+@keyframes slide-in {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+/* On hover, trigger the animation */
+.animated_link:hover::after {
+  animation: slide-in 0.3s forwards;
 }
 .signup_btn{
   background-color: #003650 ;
