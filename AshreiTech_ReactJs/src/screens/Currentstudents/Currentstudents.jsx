@@ -7,10 +7,15 @@ const Currentstudents = () => {
   const {heading,current_student_image}=style
   return (
     <div>
-      <div className=" row justify-content-center m-auto" style={{width:"50%",}}>
+      <div className="w-100">
+            <h1 className="text-center   mt-5"> <span style={{color:'#000000', fontSize:'60px'}}>Transforming Students Into</span> </h1>
+            <h1 className=" text-center  generic_heading mt-5"> <span style={{color:'#008F71'}}>Professionals</span> </h1>
+            
+     </div>
+      {/* <div className=" row justify-content-center m-auto" style={{width:"50%",}}>
 
-        <h1 className={`font45 text-center  w-75  mt-5`}> Transforming Students into<span className='' style={{color:'#008F71'}}> professionals</span></h1>
-      </div>
+        <h1 className={`font45 text-center  w-75  mt-5 `}> Transforming Students into<span className='' style={{color:'#008F71'}}> professionals</span></h1>
+      </div> */}
         <div className="mt-5 w-100">
           <img src={CurrentstudentsImage}  className={`${current_student_image}`}alt="" />
         </div>
@@ -18,7 +23,7 @@ const Currentstudents = () => {
     
     <div className="lightBg" style={{ padding: '50px 0' }}>
       <div className="" style={{ padding: '0 25px' }} >
-          <h1 className="font40 mb-5 extraBold text-center generic_heading">Turning Goals Into  <span style={{color:'#008F71'}}>Wins!</span></h1>
+          <h1 className="font40 mb-5  text-center generic_heading"> <span style={{color:'#000000'}}>Turning Goals Into </span> <span style={{color:'#008F71'}}> &nbsp; Wins!</span></h1>
         <TestimonialSlider />
       </div>
     </div>

@@ -7,7 +7,7 @@ import vector4 from '../../assets/Vector4.png';
 import vector5 from '../../assets/Vector5.png';
 
 const InfoCard = () => {
-    const { Info_container, vector, gradientCircle } = style; // Assuming gradientCircle is the class for the circle
+    const { Info_container, vector, gradientCircle } = style; 
 
     return (
         <div className={`${Info_container}`} >

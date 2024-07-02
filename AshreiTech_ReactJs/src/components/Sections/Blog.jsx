@@ -21,8 +21,8 @@ export default function Blog() {
   return (
     <div className="row mt-5" style={{padding:'0 100px'}}>
      <div className="w-100">
-            <h1 className="font40 text-center extraBold generic_heading mt-5"> Courses we <span style={{color:'#008F71'}}> Offer</span></h1>
-            <p className="font20 mt-4 mb-5 text-center">
+            <h1 className="font40 text-center  generic_heading mt-5"> <span style={{color:'#000000'}}>Courses we</span> <span style={{color:'#008F71'}}> &nbsp; Offer</span></h1>
+            <p className="font20 mt-5 mb-5 text-center">
             There are many variations of passages of Lorem Ipsum available,     
             </p>
      </div>

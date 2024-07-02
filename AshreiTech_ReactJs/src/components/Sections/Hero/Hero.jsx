@@ -4,6 +4,7 @@ import Hero_banner from "../../../assets/Hero_banner.png"
 const Hero = () => {
   const { box, custom_btn_outline_dark,Hero_image } = style
   return (
+    <>
     <div className={`${box}`}>
       <div className="row">
         <div className="col d-flex pr-5" >
@@ -19,7 +20,7 @@ const Hero = () => {
         <div className="col">
           <div className="" >
             <img
-              style={{ borderRadius: 50, width: "100%", height:"700px"}}
+              style={{ borderRadius: 50, width: "100%", height:"540px"}}
               src={Hero_banner}
               className={`${Hero_image}`}
               alt="" srcset="" />
@@ -28,6 +29,8 @@ const Hero = () => {
       </div>
 
     </div>
+    
+    </>
   )
 }
 

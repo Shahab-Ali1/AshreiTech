@@ -13,6 +13,7 @@ import Footer from "../components/Sections/Footer/Footer";
 import Currentstudents from "./Currentstudents/Currentstudents";
 import Sponsers from "./Sponsers/Sponsers";
 import InfoCard from "./InfoCard/InfoCard";
+import OurTrainer from "./OurTrainers/OurTrainer";
 
 
 export default function Landing() {
@@ -24,8 +25,8 @@ export default function Landing() {
       <Hero/>
       {/* <Services /> */}
       {/* <Projects /> */}
-
       <Blog />
+      <OurTrainer/>
       <Currentstudents/>
       <Sponsers/>
       <Faq/>

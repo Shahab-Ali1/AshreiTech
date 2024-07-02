@@ -11,9 +11,9 @@ const Sponsers = () => {
     return (
         <>
             <div className="w-100 mt-5 justify-content-center">
-                <h1 className="font40 text-center extraBold generic_heading mt-5">
+                <h1 className=" text-center  generic_heading mt-5">
                     {" "}
-                    Our Partners
+                    <span style={{color:'#000000'}}> Our Partners</span>
                 </h1>
                 <p className="font20 mt-4 mb-5 text-center mt-2">
                 There are many variations of passages of Lorem Ipsum available,     
@@ -57,7 +57,7 @@ const Sponsers = () => {
                         <div className="">
                             <img
                                 className={`${Laptop_Image} ml-n3`}
-                                style={{ width: "125%", height: "125%" }}
+                                style={{ width: "110%", height: "110%" }}
                                 src={LaptopImage}
                                 alt=""
                                 srcset=""
