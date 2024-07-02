@@ -1,0 +1,52 @@
+.team_comtainer {
+    /* padding: ; */
+    width: 95%;
+    /* background-color: red; */
+    align-self: center;
+    margin: auto;
+}
+
+.banner_container {
+    width: 100%;
+}
+
+.banner_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.teams_image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.members_container {
+    position: relative;
+    z-index: 2;
+}
+
+.gradientCircle {
+    position: absolute;
+    top: -34px;
+    right: 5px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle at center, rgb(158, 212, 180) 10%, rgba(167, 215, 206, 0) 70%);
+    border-radius: 50%;
+    filter: blur(2rem);
+    z-index: -1;
+}
+
+.gradientCircle {
+    position: absolute;
+    top: -34px;
+    right: 5px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle at center, rgb(158, 212, 180) 10%, rgba(167, 215, 206, 0) 70%);
+    border-radius: 50%;
+    filter: blur(2rem);
+    z-index: -1;
+}

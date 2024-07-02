@@ -90,21 +90,21 @@ export default function TopNavbar() {
                 </li>
             <li className=" font15 pointer">
               <Link  style={{ padding: "10px 15px" }} to="projects" spy={true} smooth={true} offset={-80}>
-              <span className="link">
+              <span className="animated_link">
                Book A Room
               </span>
               </Link>
             </li>
             <li className=" font15 pointer">
               <Link  style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
-              <span className="link">
+              <span className="animated_link">
                  Partner With Us
               </span>
               </Link>
             </li>
             <li className=" font15 pointer">
               <Link  style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
-               <span className="link">
+               <span className="animated_link">
                  Insights
                </span>
               </Link>
