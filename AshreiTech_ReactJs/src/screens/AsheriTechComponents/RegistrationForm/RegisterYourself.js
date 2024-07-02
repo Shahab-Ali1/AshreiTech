@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { FormControl, InputLabel, Select, TextField } from '@mui/material/node'
+import { Checkbox, FormControl, FormControlLabel, InputLabel, Select, TextField } from '@mui/material/node'
 import "./RegisterYourself.css"
 import { codeError, formatDate, getMethod } from '../../../utils/services'
 
@@ -18,10 +18,12 @@ const INITIAL_STATE = {
     dob: "",
     gender: "",
     fname: "",
-    cellno:"",
-    whatsappno:"",
-    email:"",
-    lasteducation:"",
+    cellno: "",
+    whatsappno: "",
+    email: "",
+    lasteducation: "",
+    zakat: "",
+    ownlaptop: "",
 }
 
 export const RegisterYourself = (props) => {
@@ -232,7 +234,7 @@ export const RegisterYourself = (props) => {
                                 />
                             </div>
                             <div className='col-lg-4'>
-                            <TextField
+                                <TextField
                                     disabled
                                     name="whatsappno"
                                     value={formData?.whatsappno || ""}
@@ -259,7 +261,7 @@ export const RegisterYourself = (props) => {
                                 />
                             </div>
                             <div className='col-lg-4'>
-                            <TextField
+                                <TextField
                                     disabled
                                     name="lasteducation"
                                     value={formData?.lasteducation || ""}
@@ -272,11 +274,42 @@ export const RegisterYourself = (props) => {
                             </div>
                         </div>
 
-                        <div className='row mt-5'>
-                        <div className='col-lg-8 d-flex justify-content-end'>
-                            <button type='submit' className='buttonClass' onClick={() => props?.handleChange(null, 1)}> Next</button>
+                        <div className='row mt-3'>
+                            <div className='col-lg-4'>
+                                <FormControlLabel
+                                    control={
+                                        <Checkbox
+                                            disabled
+                                            name="zakat"
+                                            checked={formData?.zakat}
+                                            onClick={handleFormData}
+                                        />
+                                    }
+                                    label="Financial Aid/ Zakat"
+                                    sx={{ '& .MuiFormControlLabel-label': { fontSize: 12 } }}
+                                />
+                            </div>
+                            <div className='col-lg-6'>
+                                <FormControlLabel
+                                    control={
+                                        <Checkbox
+                                            disabled
+                                            name="ownlaptop"
+                                            checked={formData?.ownlaptop}
+                                            onClick={handleFormData}
+                                        />
+                                    }
+                                    label="Do you have your own laptop?"
+                                    sx={{ '& .MuiFormControlLabel-label': { fontSize: 12 } }}
+                                />
+                            </div>
                         </div>
-                    </div>
+
+                        <div className='row mt-5'>
+                            <div className='col-lg-8 d-flex justify-content-end'>
+                                <button type='submit' className='buttonClass' onClick={() => props?.handleChange(null, 1)}> Next</button>
+                            </div>
+                        </div>
 
                     </div>
 
