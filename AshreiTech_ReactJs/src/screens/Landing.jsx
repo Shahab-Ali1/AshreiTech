@@ -14,6 +14,7 @@ import Currentstudents from "./Currentstudents/Currentstudents";
 import Sponsers from "./Sponsers/Sponsers";
 import InfoCard from "./InfoCard/InfoCard";
 import OurTrainer from "./OurTrainers/OurTrainer";
+import TestimonialSlider from "../components/Elements/TestimonialSlider";
 
 
 export default function Landing() {
@@ -25,6 +26,7 @@ export default function Landing() {
       <Hero/>
       {/* <Services /> */}
       {/* <Projects /> */}
+      <TestimonialSlider/>
       <Blog />
       <OurTrainer/>
       <Currentstudents/>
