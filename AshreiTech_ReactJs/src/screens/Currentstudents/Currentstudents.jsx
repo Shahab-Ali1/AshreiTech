@@ -7,7 +7,7 @@ const Currentstudents = () => {
   const {heading,current_student_image}=style
   return (
     <div>
-      <div className="w-100">
+      <div className="w-100 pb-4">
             <h1 className="text-center   mt-5"> <span style={{color:'#000000', fontSize:'60px'}}>Transforming Students Into</span> </h1>
             <h1 className=" text-center  generic_heading mt-5"> <span style={{color:'#008F71'}}>Professionals</span> </h1>
             
@@ -23,7 +23,7 @@ const Currentstudents = () => {
     
     <div className="lightBg" style={{ padding: '50px 0' }}>
       <div className="" style={{ padding: '0 25px' }} >
-          <h1 className="font40 mb-5  text-center generic_heading"> <span style={{color:'#000000'}}>Turning Goals Into </span> <span style={{color:'#008F71'}}> &nbsp; Wins!</span></h1>
+          <h1 className="font40 mb-5  text-center generic_heading pb-4"> <span style={{color:'#000000'}}>Turning Goals Into </span> <span style={{color:'#008F71'}}> &nbsp; Wins!</span></h1>
         <TestimonialSlider />
       </div>
     </div>

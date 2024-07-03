@@ -4,42 +4,44 @@ import AshrieTechWhiteLogo from "../../../assets/AshrieTechWhiteLogo.png"
 import sponser2 from "../../../assets/sponser2.png"
 import sponser3 from "../../../assets/sponser3.png"
 import sponser4 from "../../../assets/sponser4.png"
+import styled from "styled-components";
+
 
 const Footer = () => {
-    const { footer_container,containerOne, containerOnePiece ,containerTwo,containerTwoPiece} = style
+    const { footer_container, containerOne, containerOnePiece, containerTwo, containerTwoPiece } = style
     return (
-        <div className={`${footer_container}`}>
+        <div className={`${footer_container} footer_container`}>
             <div className="row">
                 <div className="col-6">
                     <div className='pb-5 mb-5'> <img src={AshrieTechWhiteLogo} alt="" /></div>
                     <div className="row">
                         <div className="col-4">
-                        <ul>
-                        <li style={{color:'#DBDBDB'}}>Home</li>
-                        <li style={{color:'#DBDBDB'}}> About</li>
-                        <li style={{color:'#DBDBDB'}}>Service</li>
-                        <li style={{color:'#DBDBDB'}}>Teacher</li>
-                        <li style={{color:'#DBDBDB'}}>Review</li>
-                        <li style={{color:'#DBDBDB'}}>Contact</li>
-                    </ul>
+                            <ul>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'>Home</li>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'> About</li>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'>Service</li>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'>Teacher</li>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'>Review</li>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'>Contact</li>
+                            </ul>
                         </div>
                         <div className="col-4">
-                        <ul>
-                        <li style={{color:'#DBDBDB'}}><i class="fab fa-facebook mr-2" style={{color:'white'}}></i>Facebook</li>
-                        <li style={{color:'#DBDBDB'}}><i class="fab fa-x-twitter mr-2" style={{color:'white'}}></i>Twitter</li>
-                        <li style={{color:'#DBDBDB'}}><i class="fab fa-instagram mr-2" style={{color:'white'}}></i>Instagram</li>
-                        <li style={{color:'#DBDBDB'}}><i class="fab fa-linkedin mr-2" style={{color:'white'}}></i>Linkedin</li >
+                            <ul>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'>Terms of Services</li>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'>Privacy Policy</li>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'>Licenses</li>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'>Security</li>
 
-                    </ul>
+                            </ul>
                         </div>
                         <div className="col-4">
-                        <ul>
-                        <li style={{color:'#DBDBDB'}}>Terms of Services</li>
-                        <li style={{color:'#DBDBDB'}}>Privacy Policy</li>
-                        <li style={{color:'#DBDBDB'}}>Licenses</li>
-                        <li style={{color:'#DBDBDB'}}>Security</li>
+                            <ul>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'><i class="fab fa-facebook mr-2 " style={{ color: 'white' }}></i>Facebook</li>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'><i class="fab fa-x-twitter mr-2 " style={{ color: 'white' }}></i>Twitter</li>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'><i class="fab fa-instagram mr-2 " style={{ color: 'white' }}></i>Instagram</li>
+                                <li style={{ color: '#DBDBDB' }} className='pb-3'><i class="fab fa-linkedin mr-2 " style={{ color: 'white' }}></i>Linkedin</li >
 
-                    </ul>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -60,12 +62,12 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className={`${containerTwo} `}>
-                    <h5>PROUD MEMBERS OF</h5>
-                   <div className="row  pt-4 d-flex justify-content-between align-items-center ">
-                   <div className={`${containerTwoPiece} col-4`}><img src={sponser2} className='img-fluid' alt="" /></div>
-                    <div className={`${containerTwoPiece} col-4`}><img src={sponser3} className='img-fluid' alt="" /></div>
-                    <div className={`${containerTwoPiece} col-4`}><img src={sponser4} className='img-fluid' alt="" /></div>
-                   </div>
+                        <h5>PROUD MEMBERS OF</h5>
+                        <div className="row  pt-4 d-flex justify-content-between align-items-center ">
+                            <div className={`${containerTwoPiece} col-4`}><img src={sponser2} className='img-fluid' alt="" /></div>
+                            <div className={`${containerTwoPiece} col-4`}><img src={sponser3} className='img-fluid' alt="" /></div>
+                            <div className={`${containerTwoPiece} col-4 mt-2 pt-4`}><img src={sponser4} className='img-fluid' alt="" /></div>
+                        </div>
                     </div>
                 </div>
 
@@ -131,7 +133,7 @@ const Footer = () => {
                             COMPLIANCE PRIVACY TERMS TRADEMARK
                         </div>
                         <div className="col-4">
-                        <li style={{listStyle:'none'}}><i class="fa-solid fa-circle mr-2"  style={{color: '#00FFCA'}}></i> All System Operational  &nbsp; &nbsp; 2024 ASHRIETECH</li>                        
+                            <li style={{ listStyle: 'none' }}><i class="fa-solid fa-circle mr-2" style={{ color: '#00FFCA' }}></i> All System Operational  &nbsp; &nbsp; 2024 ASHRIETECH</li>
                         </div>
                     </div>
                 </div>
@@ -145,3 +147,9 @@ const Footer = () => {
 }
 
 export default Footer
+
+const footer_container = styled.div`
+  .liClass{
+  margin-bottom: 20px;
+  }
+`;

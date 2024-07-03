@@ -7,30 +7,32 @@ import sponser3 from "../../assets/sponser3.png"
 import sponser4 from "../../assets/sponser4.png"
 
 const Sponsers = () => {
-    const { box, custom_btn_outline_dark, sponsers, sponsers_logo_container ,Laptop_Image} = style;
+    const { box, custom_btn_outline_dark, sponsers, sponsers_logo_container, Laptop_Image } = style;
     return (
         <>
             <div className="w-100 mt-5 justify-content-center">
-                <h1 className=" text-center  generic_heading mt-5">
-                    {" "}
-                    <span style={{color:'#000000'}}> MEET THE EXPERTS</span>
-                </h1>
-                <p className="font20 mt-4 mb-5 text-center mt-2">
-                Our experts are here to empower the future of tech by enabling students and professionals.
-,     
-                </p>
+                <div className=" mt-5 mb-5">
+                    <h1 className=" text-center  generic_heading">
+                        {" "}
+                        <span style={{ color: '#000000' }}> MEET THE EXPERTS</span>
+                    </h1>
+                    <p className="font20 mt-4 mb-5 text-center pt-4">
+                        Our experts are here to empower the future of tech by enabling students and professionals.
+                        ,
+                    </p>
+                </div>
 
                 <div className={`${sponsers}`}>
                     <div className={`${sponsers_logo_container}`}>
                         <img src={sponser1} alt="" />
-                    </div> 
-                     <div className={`${sponsers_logo_container}`}>
+                    </div>
+                    <div className={`${sponsers_logo_container}`}>
                         <img src={sponser2} alt="" />
-                    </div> 
-                     <div className={`${sponsers_logo_container}`}>
+                    </div>
+                    <div className={`${sponsers_logo_container}`}>
                         <img src={sponser3} alt="" />
-                    </div> 
-                     <div className={`${sponsers_logo_container}`}>
+                    </div>
+                    <div className={`${sponsers_logo_container}`}>
                         <img src={sponser4} alt="" />
                     </div>
                 </div>
