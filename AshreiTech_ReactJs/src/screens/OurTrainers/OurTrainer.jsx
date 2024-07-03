@@ -40,7 +40,7 @@ export default function OurTrainer() {
       <div className="row" >
         <div className="col-6 d-flex flex-column justify-content-center align-items-start">
           <h1>Nurturing Potential: Our Trainers Cultivate Students Excellence</h1>
-          <p>
+          <p className='pt-3'>
             500+ Counselors with 20+ years of experience in <br /> our team who have helped 1 Million+ students to <br /> kick start their Career Journey.
           </p>
         </div>

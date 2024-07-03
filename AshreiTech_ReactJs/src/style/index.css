@@ -24,7 +24,7 @@
     display: block;
   }
   *{
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto slab", sans-serif;
   }
   ol, ul {
     list-style: none;
@@ -459,6 +459,7 @@
   position: relative;
   /* padding: 10px 15px; */
   cursor: pointer;
+  color: #000000;
 }
 .animated_link::after {
   content: '';

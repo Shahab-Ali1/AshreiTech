@@ -5,6 +5,8 @@ import Landing from "./screens/Landing.jsx";
 import { AdmissionEnquiry } from "./screens/AsheriTechComponents/AdmissionEnquiery/AdmissionEnquiery.js";
 import axios from "axios";
 import Teams from "./screens/Teams/Teams.jsx";
+import SingleCourse from "./screens/SingleCourseScreen/SingleCourse.jsx";
+
 
 export default function App() {
   const loginApi = () => {
@@ -51,6 +53,7 @@ export default function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/AdmissionEnquiry" element={<AdmissionEnquiry />} />
           <Route path="/teams" element={<Teams />} />
+          <Route path="/singlecourse" element={<SingleCourse />} />
           {/* Add more routes as needed */}
         </Routes>
       </BrowserRouter>

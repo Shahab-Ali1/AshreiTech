@@ -51,9 +51,9 @@ export default function TopNavbar() {
         </BurderWrapper>
         <UlWrapper className="flexNullCenter header_menu">
           <li className="font15 pointer">
-            <Link style={{ padding: "10px 15px" }} to="/" spy={true} smooth={true} offset={-80}>
+            {/* <Link style={{ padding: "10px 15px" }} to="/" spy={true} smooth={true} offset={-80}>
               Home
-            </Link>
+            </Link> */}
           </li>
           <li className="HeaderPaddingRight">
             <div className="dropdown">

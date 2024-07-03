@@ -7,65 +7,61 @@ import vector4 from '../../assets/Vector4.png';
 import vector5 from '../../assets/Vector5.png';
 
 const InfoCard = () => {
-    const { Info_container, vector, gradientCircle } = style; 
+    const { Info_container, vector, gradientCircle } = style;
 
     return (
-        <div className={`${Info_container}`} >
-            <div className="col">
-                <div className="d-flex">
-                    <div className="">
-                        <img src={vector4} className={`${vector} mr-2`} alt="" srcSet="" />
+        <div className={`${Info_container} container p-4 mt-5`} >
+            <div className="row">
+                <div className="col-1"></div>
+                <div className="col-2 d-flex align-items-center">
+                    <div >
+                        <img src={vector4} className={`${''} mr-2`} alt="" srcSet="" />
                     </div>
-                    <div className="">
-                        <h4>Students</h4>
-                        <h3>10K+</h3>
-                    </div>
-                </div>
-            </div>
-            <div className="col">
-                <div className="d-flex">
-                    <div className="">
-                        <img src={vector1} className={`${vector} mr-2`} alt="" srcSet="" />
-                    </div>
-                    <div className="">
-                        <h4>Trainer</h4>
-                        <h3>100+</h3>
+                    <div >
+                        <h6>Students</h6>
+                        <h5>10K+</h5>
                     </div>
                 </div>
-            </div>
-            <div className="col">
-                <div className="d-flex">
+                <div className="col-2 d-flex align-items-center">
                     <div className="">
-                        <img src={vector5} className={`${vector} mr-2`} alt="" srcSet="" />
+                        <img src={vector1} className={`${''} mr-2`} alt="" srcSet="" />
                     </div>
                     <div className="">
-                        <h4>Employees</h4>
-                        <h3>500+</h3>
+                        <h6>Trainer</h6>
+                        <h5>100+</h5>
                     </div>
                 </div>
-            </div>
-            <div className="col">
-                <div className="d-flex">
+                <div className="col-2 d-flex align-items-center">
                     <div className="">
-                        <img src={vector3} className={`${vector} mr-2`} style={{ height: '54px', width: "71px" }} alt="" srcSet="" />
+                        <img src={vector5} className={`${''} mr-2`} alt="" srcSet="" />
                     </div>
                     <div className="">
-                        <h4>Alumni</h4>
-                        <h3>100+</h3>
+                        <h6>Employees</h6>
+                        <h5>500+</h5>
                     </div>
                 </div>
-            </div>
-            <div className="col">
-                <div className="d-flex">
+                <div className="col-2 d-flex align-items-center">
                     <div className="">
-                        <img src={vector2} className={`${vector} mr-2`} alt="" srcSet="" />
+                        <img src={vector3} className={`${''} mr-2`}  alt="" srcSet="" />
                     </div>
                     <div className="">
-                        <h4>Cities</h4>
-                        <h3>5+</h3>
+                        <h6>Alumni</h6>
+                        <h5>100+</h5>
                     </div>
                 </div>
+                <div className=" col-2 d-flex align-items-center">
+                    <div className="">
+                        <img src={vector2} className={`${vector5} mr-2`} alt="" srcSet="" />
+                    </div>
+                    <div className="">
+                        <h6>Cities</h6>
+                        <h5>5+</h5>
+                    </div>
+                </div>
+                <div className="col-1 |"></div>
             </div>
+
+
 
             {/* Circle with Gradient */}
             <div className={`${gradientCircle}`}></div>

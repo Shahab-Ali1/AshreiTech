@@ -1,12 +1,6 @@
 .Info_container {
     background-color: #00000017;
-    color: black;
-    padding: 30px 50px; 
-    width: 90%;
-    margin: auto;
     border-radius: 100px; 
-    margin-top: 50px;
-    display: flex;
     position: relative;  
 }
 
@@ -27,7 +21,7 @@
     top: 65px; /* Adjust top position */
     right: 5px; /* Adjust right position */
     width: 650px; /* Adjust width */
-    height: 240px; /* Adjust height */
+    height: 220px; /* Adjust height */
     background: radial-gradient(circle at center, rgb(158, 212, 180), rgba(167, 215, 206, 0));
     background-size: 100% 200%; /* Ensure gradient covers entire element */
     border-radius: 50%; /* Circle shape */
@@ -37,9 +31,25 @@
 }
 
 
-.vector{
-    height: 65px;
-    width: 65px;
+.vectora{
+    width: 69px;
+    height: 66.39px;
+}
+.vectorb{
+    width: 69px;
+    height: 67.03px;
+}
+.vectorc{
+    width: 69px;
+    height: 70.24px;
+}
+.vectord{
+    width: 69px;
+    height: 51.76px;
+}
+.vectore{
+    width: 47.44px;
+    height: 60.38px;
 }
 /* .Info_containe::after */
 @media only screen and (min-width: 1024px) and (max-width: 1152px)  {
