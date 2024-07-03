@@ -32,9 +32,9 @@ export default function Header() {
           </div>
         </div>
         <div className="carousel-item">
-          <div className="d-block w-100 slider_container" style={{  backgroundColor: 'white', padding: '90px 30px 0px 30px', boxSizing: 'border-box' }}>
+          <div className="d-block w-100 slider_container" style={{  backgroundColor: 'white', padding: '90px 30px 0px 30px', boxSizing: 'border-box', }}>
             <div className="row">
-              <div className="col-sm-6 col-xs-12 p-5">
+              <div className="col-sm-6 col-xs-12">
                 <h1 className="slider_heading">Ready To Become <span style={{color:'#008F71'}}>Data Detective</span></h1>
                 <p className=" slider_discription">
                    dolorum soluta maiores repudiandae. Soluta architecto quasi quis recusandae eum laboriosam, optio alias ut harum, eaque consequuntur tempora, nam rem in inventore laborum. Ad voluptates magni ab maxime obcaecati amet ullam!

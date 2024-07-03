@@ -16,6 +16,7 @@
     border: 0;
     vertical-align: baseline;
     box-sizing: border-box;
+    background-image: url(../assets/Element1.png);
   }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
