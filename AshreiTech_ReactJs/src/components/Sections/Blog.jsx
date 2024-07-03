@@ -28,9 +28,9 @@ export default function Blog() {
             Join the Academy and become a driving force in Pakistan's digital revolution!
             </p>
      </div>
-      <div className="row">
-      <div className="col-4">
-        <div className="catergory_container">
+      <div className="row ">
+      <div className="col-4" >
+        <div className="catergory_container " style={{backgroundColor:'white'}}>
           <h3 className="mb-4 ">Categories</h3>
           <ul className="catergory_menu ">
           {categories.map((category, index) => (
@@ -50,7 +50,7 @@ export default function Blog() {
       <div className="whiteBg">
         <div className="">
          
-          <div className="row">
+          <div className="row" style={{backgroundColor:'transparent'}}>
             {/* <div className="col-4"></div> */}
             <div className="col">
             <div className="row ">
