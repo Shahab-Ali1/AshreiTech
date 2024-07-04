@@ -4,6 +4,7 @@ import Landing from "./screens/Landing";
 import { GetInTouch } from "./screens/AsheriTechComponents/GetInTouch/GetInTouch";
 import { RegistrationForm } from "./screens/AsheriTechComponents/RegistrationForm/RegistrationForm";
 import Teams from "./screens/Teams/Teams";
+import SingleCourse from "./screens/SingleCourseScreen/SingleCourse";
 
 export const router = createHashRouter([
     {
@@ -21,6 +22,10 @@ export const router = createHashRouter([
     {
       path: "/teams",
       element: <Teams/>,
+    },
+    {
+      path: "/singlecourse",
+      element: <SingleCourse/>,
     },
   
   ]);

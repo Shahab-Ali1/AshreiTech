@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Landing from "./screens/Landing.jsx";
 import { AdmissionEnquiry } from "./screens/AsheriTechComponents/AdmissionEnquiery/AdmissionEnquiery.js";
 import axios from "axios";
 import Teams from "./screens/Teams/Teams.jsx";
 import SingleCourse from "./screens/SingleCourseScreen/SingleCourse.jsx";
+import { router } from "./Route.js";
 
 
 export default function App() {
@@ -43,20 +44,7 @@ export default function App() {
 
   return (
     <>
-      <Helmet>
-        <title>Ashrei Tech</title>
-        <meta name="description" content="Your page description" />
-        {/* Other meta tags */}
-      </Helmet>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/AdmissionEnquiry" element={<AdmissionEnquiry />} />
-          <Route path="/teams" element={<Teams />} />
-          <Route path="/singlecourse" element={<SingleCourse />} />
-          {/* Add more routes as needed */}
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </>
   );
 }
