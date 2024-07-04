@@ -110,10 +110,10 @@ const Teams = () => {
                                 <img src={img} alt="Team Member 1" className={`img-flui ${teams_image}`} />
                                  <h3 className="text-center">{name}</h3>
                                  <p className="text-center font20">designation</p>
-                                 {hoveredIndex === index && (
+                                 {true && (
                                         <div className={hover_content}>
-                                            <div className={`${shadow}`}></div>
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, expedita dignissimos? Ab fugiat esse hic.</p>
+                                            <div className={`${shadow}`}></div>
                                             <i class="fa-brands fa-linkedin"></i>
                                         </div>
                                     )}
