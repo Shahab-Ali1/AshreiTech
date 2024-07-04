@@ -6,13 +6,13 @@ const Hero = () => {
   return (
     <>
       <div className='container mt-5 p-5' style={{ backgroundColor: '#5A8C75', padding: '60px', borderRadius: '50px' }}>
-        <div className="row p-5">
-          <div className="col-12 col-md-6 d-flex pr-5" >
-            <div className="row align-items-center" >
+        <div className="row p-lg-5 p-3 d-flex justify-content-center align-items-center">
+          <div className="col-12 col-md-6 mt-md-5 d-flex align-items-center text-center text-md-left" >
+            <div className="row " >
               <div className="">
                 <h1 className="font40 text-white">AshreiTech Academy - Empowering Your Tech Dreams</h1>
                 <p className=' text-white my-2' style={{ lineHeight: 2 }}>The Academy is meticulously designed to provide organizations and individuals with comprehensive training and instructions on the latest technology and industry best practices.</p>
-                <button type="button" class={`${custom_btn_outline_dark} mt-5 px-4`}>Learn More</button>
+                <button type="button" class={`${custom_btn_outline_dark} mt-lg-5 mt-3 mb-5 px-4`}>Learn More</button>
               </div>
             </div>
           </div>

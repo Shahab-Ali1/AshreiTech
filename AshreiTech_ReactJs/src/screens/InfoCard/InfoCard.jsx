@@ -10,59 +10,54 @@ const InfoCard = () => {
     const { Info_container, vector, gradientCircle } = style;
 
     return (
-        <div className={`${Info_container} container p-4 mt-5`} >
-            <div className="row">
-                <div className="col-1"></div>
-                <div className="col-2 d-flex align-items-center">
-                    <div >
-                        <img src={vector4} className={`${''} mr-2`} alt="" srcSet="" />
+        <div className={`${Info_container} container p-1 mt-5`}>
+            <div className="row d-flex justify-content-center align-items-center pl-5 ml-3 pt-4">
+                <div className="col-6 col-md-3 col-lg-2 d-flex align-items-center mb-3">
+                    <div>
+                        <img src={vector4} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Students" />
                     </div>
-                    <div >
+                    <div>
                         <h6>Students</h6>
                         <h5>10K+</h5>
                     </div>
                 </div>
-                <div className="col-2 d-flex align-items-center">
-                    <div className="">
-                        <img src={vector1} className={`${''} mr-2`} alt="" srcSet="" />
+                <div className="col-6 col-md-3 col-lg-2 d-flex align-items-center mb-3">
+                    <div>
+                        <img src={vector1} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Trainer" />
                     </div>
-                    <div className="">
+                    <div>
                         <h6>Trainer</h6>
                         <h5>100+</h5>
                     </div>
                 </div>
-                <div className="col-2 d-flex align-items-center">
-                    <div className="">
-                        <img src={vector5} className={`${''} mr-2`} alt="" srcSet="" />
+                <div className="col-6 col-md-3 col-lg-2 d-flex align-items-center mb-3">
+                    <div>
+                        <img src={vector5} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Employees" />
                     </div>
-                    <div className="">
+                    <div>
                         <h6>Employees</h6>
                         <h5>500+</h5>
                     </div>
                 </div>
-                <div className="col-2 d-flex align-items-center">
-                    <div className="">
-                        <img src={vector3} className={`${''} mr-2`}  alt="" srcSet="" />
+                <div className="col-6 col-md-3 col-lg-2 d-flex align-items-center mb-3">
+                    <div>
+                        <img src={vector3} className={`${vector} mr-2`} style={{width:'52px', height:'44px'}} alt="Alumni" />
                     </div>
-                    <div className="">
+                    <div>
                         <h6>Alumni</h6>
                         <h5>100+</h5>
                     </div>
                 </div>
-                <div className=" col-2 d-flex align-items-center">
-                    <div className="">
-                        <img src={vector2} className={`${vector5} mr-2`} alt="" srcSet="" />
+                <div className="col-6 col-md-3 col-lg-2 d-flex align-items-center mb-3">
+                    <div>
+                        <img src={vector2} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Cities" />
                     </div>
-                    <div className="">
+                    <div>
                         <h6>Cities</h6>
                         <h5>5+</h5>
                     </div>
                 </div>
-                <div className="col-1 |"></div>
             </div>
-
-
-
             {/* Circle with Gradient */}
             <div className={`${gradientCircle}`}></div>
         </div>

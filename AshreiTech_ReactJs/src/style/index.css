@@ -24,7 +24,7 @@
     display: block;
   }
   *{
-    font-family: "Roboto slab", sans-serif;
+    font-family: "Roboto slab";
   }
   ol, ul {
     list-style: none;
@@ -509,7 +509,7 @@ margin-top: -130px;
 }
 
 .generic_heading{
-  font-size: 60px !important;
+  font-size: 40px !important;
   text-align: center;
   position: relative;
   display: flex;
@@ -522,13 +522,90 @@ margin-top: -130px;
 .generic_heading::before{
   content: ' ';
   width: 220px;
-  height: 10px;
-  background-color: #008F71;
+  height: 8px;
+  background-color: #5A8C75;
   position: absolute;
-  top: 80px;
+  top: 60px;
   border-radius: 5px;
-
 }
+
+.generic_heading {
+  font-size: 40px !important;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-bottom: 50px !important;
+  margin: auto !important;
+}
+
+.generic_heading::before {
+  content: ' ';
+  width: 220px;
+  height: 8px;
+  background-color: #5A8C75;
+  position: absolute;
+  top: 60px;
+  border-radius: 5px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .generic_heading {
+    font-size: 50px !important;
+  }
+
+  .generic_heading::before {
+    width: 180px;
+    top: 70px;
+  }
+}
+
+@media (max-width: 992px) {
+  .generic_heading {
+    font-size: 40px !important;
+  }
+
+  .generic_heading::before {
+    width: 150px;
+    top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .generic_heading {
+    font-size: 35px !important;
+  }
+
+  .generic_heading::before {
+    width: 130px;
+    top: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .generic_heading {
+    font-size: 30px !important;
+  }
+
+  .generic_heading::before {
+    width: 100px;
+    top: 45px;
+  }
+}
+
+@media (max-width: 400px) {
+  .generic_heading {
+    font-size: 30px !important;
+  }
+
+  .generic_heading::before {
+    width: 100px;
+    top: 40px;
+  }
+}
+
 .catergory_menu li{
   cursor: pointer;
   line-height: 43px;
@@ -544,7 +621,7 @@ margin-top: -130px;
 }
 .catergory_container{
   padding: 50px 21px;
-  height: 100%;
+  height: 925px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }

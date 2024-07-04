@@ -9,6 +9,7 @@ import Dots from "../../assets/svg/Dots";
 import slider1 from "../../assets/slider1.png"
 import slider2 from "../../assets/slider2.png"
 import slider3 from "../../assets/slider3.png"
+import newSlider1 from '../../assets/HeroHome1.png'
 
 export default function Header() {
 
@@ -22,7 +23,7 @@ export default function Header() {
       </ol>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <div className="d-block w-100 slider_1" style={{ backgroundImage: `url(${slider1})`, height:"82.5vh", backgroundColor: 'white',  padding: '100px 30px 0px 30px', boxSizing: 'border-box' }}>
+          <div className="d-block w-100 slider_1" style={{ backgroundImage: `url(${newSlider1})`, height:"82.5vh", backgroundColor: 'white',  padding: '100px 30px 0px 30px', boxSizing: 'border-box' }}>
           <div className="col-sm-12 col-xs-12 d-flex  flex-column justify-content-center align-items-center mt-5 pt-5">
                 <h1 className="slider_heading ">Complexity <span style={{color:'#008F71'}}>Simplified,</span><br /> Globally
                 <div><button className="slider_btn ">Register Now</button>

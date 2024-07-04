@@ -44,7 +44,7 @@ export default function TopNavbar() {
       </div>
       <div className="d-flex justify-content-between align-items-center py-3 " style={{ padding: "0 60px" }}>
         <Link className="pointer flexNullCenter" to="/" smooth={true}>
-          <img src={Logo} className="main_logo" alt="" srcSet="" />
+          <img src={Logo} className="main_logo" alt="" srcSet=""  style={{width:'200px' , height:'auto'}}/>
         </Link>
         <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
           <BurgerIcon />
@@ -97,7 +97,7 @@ export default function TopNavbar() {
           </li>
         </UlWrapper>
         <UlWrapperRight className="flexNullCenter">
-          <li onClick={() => navigate("/GetInTouch")} className="font15 radius8 lightBg get_in_touch_btn pointer flexCenter" style={{ padding: "10px 15px", background: "#008F71", color: "white" }}>
+          <li onClick={() => navigate("/GetInTouch")} className="font15 radius8 lightBg get_in_touch_btn pointer flexCenter" style={{ padding: "6px 10px", background: "#008F71", color: "white" }}>
             Get In Touch
           </li>
         </UlWrapperRight>
