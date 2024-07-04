@@ -24,7 +24,7 @@
     display: block;
   }
   *{
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto slab", sans-serif;
   }
   ol, ul {
     list-style: none;
@@ -459,6 +459,7 @@
   position: relative;
   /* padding: 10px 15px; */
   cursor: pointer;
+  color: #000000;
 }
 .animated_link::after {
   content: '';
@@ -468,7 +469,6 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: black; /* Border color */
   border-bottom: 4.5px solid #008F71;
   border-radius: 3px;
 }
