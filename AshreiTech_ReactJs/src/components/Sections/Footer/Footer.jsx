@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <div className={`${footer_container} footer_container`}>
             <div className="row">
-                <div className="col-6">
+                <div className="col-12 col-sm-6">
                     <div className='pb-5 mb-5'> <img src={AshrieTechWhiteLogo} alt="" /></div>
                     <div className="row">
                         <div className="col-4">
@@ -45,7 +45,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-6 d-flex flex-column justify-content-center align-items-center">
+                <div className="col-12 col-sm-6 d-flex flex-column justify-content-center align-items-center">
                     <div className={`${containerOne} `}>
                         <h5>GET INSHIGHTS FROM OUR BLOG</h5>
                         <div className="row pt-2 d-flex justify-content-between align-items-center ">
@@ -129,10 +129,10 @@ const Footer = () => {
                 <hr style={{ color: "white", background: "white" }} />
                 <div className="container my-3">
                     <div className="row d-flex justify-content-between">
-                        <div className="col-8">
+                        <div className="col-12 col-sm-8 ">
                             COMPLIANCE PRIVACY TERMS TRADEMARK
                         </div>
-                        <div className="col-4">
+                        <div className="col-12 col-sm-4">
                             <li style={{ listStyle: 'none' }}><i class="fa-solid fa-circle mr-2" style={{ color: '#00FFCA' }}></i> All System Operational  &nbsp; &nbsp; 2024 ASHRIETECH</li>
                         </div>
                     </div>
