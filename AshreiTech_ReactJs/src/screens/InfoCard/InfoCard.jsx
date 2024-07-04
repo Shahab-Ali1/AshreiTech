@@ -11,8 +11,8 @@ const InfoCard = () => {
 
     return (
         <div className={`${Info_container} container p-1 mt-5`}>
-            <div className="row d-flex justify-content-center align-items-center pl-5 ml-3 pt-4">
-                <div className="col-6 col-md-3 col-lg-2 d-flex align-items-center mb-3">
+            <div className="row d-flex justify-content-center align-items-center  pt-4">
+                <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
                     <div>
                         <img src={vector4} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Students" />
                     </div>
@@ -21,7 +21,7 @@ const InfoCard = () => {
                         <h5>10K+</h5>
                     </div>
                 </div>
-                <div className="col-6 col-md-3 col-lg-2 d-flex align-items-center mb-3">
+                <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
                     <div>
                         <img src={vector1} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Trainer" />
                     </div>
@@ -30,7 +30,7 @@ const InfoCard = () => {
                         <h5>100+</h5>
                     </div>
                 </div>
-                <div className="col-6 col-md-3 col-lg-2 d-flex align-items-center mb-3">
+                <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
                     <div>
                         <img src={vector5} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Employees" />
                     </div>
@@ -39,7 +39,7 @@ const InfoCard = () => {
                         <h5>500+</h5>
                     </div>
                 </div>
-                <div className="col-6 col-md-3 col-lg-2 d-flex align-items-center mb-3">
+                <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
                     <div>
                         <img src={vector3} className={`${vector} mr-2`} style={{width:'52px', height:'44px'}} alt="Alumni" />
                     </div>
@@ -48,7 +48,7 @@ const InfoCard = () => {
                         <h5>100+</h5>
                     </div>
                 </div>
-                <div className="col-6 col-md-3 col-lg-2 d-flex align-items-center mb-3">
+                <div className="col-12 col-md-3 col-lg-2  align-items-center justify-content-center mb-3 d-none d-lg-flex">
                     <div>
                         <img src={vector2} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Cities" />
                     </div>
@@ -59,7 +59,7 @@ const InfoCard = () => {
                 </div>
             </div>
             {/* Circle with Gradient */}
-            <div className={`${gradientCircle}`}></div>
+            <div className={`${gradientCircle} d-none d-lg-block`}></div>
         </div>
     );
 }

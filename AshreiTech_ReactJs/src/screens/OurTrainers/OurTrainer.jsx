@@ -39,7 +39,7 @@ export default function OurTrainer() {
     <div className={`${TrainerContainer}`}>
       <div className="row" >
         <div className="col-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center align-items-center align-items-lg-start">
-          <h1 className='text-center text-lg-left text-md-left'>Nurturing Potential: Our Trainers Cultivate Students Excellence</h1>
+          <h3 className='text-center text-lg-left text-md-left '>Nurturing Potential: Our Trainers Cultivate Students Excellence</h3>
           <p className='pt-3 text-center text-lg-left text-md-left'>
             500+ Counselors with 20+ years of experience in <br className='d-none d-lg-block d-md-block' /> our team who have helped 1 Million+ students to <br className='d-none d-lg-block d-md-block' /> kick start their Career Journey.
           </p>
