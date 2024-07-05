@@ -7,6 +7,7 @@ import Logo from "../../assets/logo.png";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 import { useNavigate } from "react-router-dom";
 import Team from '../../screens/Teams/Teams'
+import BookaRoom from '../../screens/BookaRoom/BookaRoom'
 
 export default function TopNavbar() {
   const navigate = useNavigate();
@@ -77,7 +78,7 @@ export default function TopNavbar() {
             </div>
           </li>
           <li className="font15 pointer">
-            <Link style={{ padding: "10px 15px" }} to="projects" spy={true} smooth={true} offset={-80}>
+            <Link style={{ padding: "10px 15px" }} to={"/BookaRoom"} spy={true} smooth={true} offset={-80}>
               <span className="animated_link">
                 Book A Room
               </span>

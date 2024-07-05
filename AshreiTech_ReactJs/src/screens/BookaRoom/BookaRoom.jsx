@@ -43,7 +43,7 @@ export default function BookaRoom() {
         ],
       };
     return (
-        <>
+        <> 
             <TopNavbar />
             <div
                 className="container-fluid py-4"
