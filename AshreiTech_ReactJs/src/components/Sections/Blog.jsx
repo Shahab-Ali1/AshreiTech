@@ -53,7 +53,7 @@ export default function Blog() {
         <div className="col-12 col-md-8 col-lg-8 pt-5 " >
           <div className="row " style={{display:'relative'}}>
 
-            <div className="col-sm-12 col-md-6  col-lg-4 " >
+            <div className="col-sm-12 col-md-6  col-lg-4  d-none d-lg-block" >
               <div class="card" style={{  borderBottom:'3px solid rgba(0, 0, 0, 0.25)', borderRadius:'0 0 100px 100px;' }}>
                 <img class="card-img-top" src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
                 <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
@@ -64,7 +64,7 @@ export default function Blog() {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-6  col-lg-4 " >
+            <div className="col-sm-12 col-md-6  col-lg-4 d-lg-block " >
               <div class="card" style={{  borderBottom:'3px solid rgba(0, 0, 0, 0.25)', borderRadius:'0 0 100px 100px;' }}>
                 <img class="card-img-top" src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
                 <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
@@ -75,7 +75,7 @@ export default function Blog() {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-6  col-lg-4 " >
+            <div className="col-sm-12 col-md-6  col-lg-4  d-none d-lg-block " >
               <div class="card" style={{  borderBottom:'3px solid rgba(0, 0, 0, 0.25)', borderRadius:'0 0 100px 100px;' }}>
                 <img class="card-img-top" src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
                 <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
@@ -87,7 +87,7 @@ export default function Blog() {
               </div>
             </div>
             
-            <div className="col-sm-12 col-md-6  col-lg-4 " >
+            <div className="col-sm-12 col-md-6  col-lg-4  d-none d-lg-block" >
               <div class="card" style={{  borderBottom:'3px solid rgba(0, 0, 0, 0.25)', borderRadius:'0 0 100px 100px;' }}>
                 <img class="card-img-top" src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
                 <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
@@ -98,7 +98,7 @@ export default function Blog() {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-6  col-lg-4 " >
+            <div className="col-sm-12 col-md-6  col-lg-4 d-lg-block " >
               <div class="card" style={{  borderBottom:'3px solid rgba(0, 0, 0, 0.25)', borderRadius:'0 0 100px 100px;' }}>
                 <img class="card-img-top" src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
                 <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
@@ -109,7 +109,7 @@ export default function Blog() {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-6  col-lg-4 " >
+            <div className="col-sm-12 col-md-6  col-lg-4 d-lg-block" >
               <div class="card" style={{  borderBottom:'3px solid rgba(0, 0, 0, 0.25)', borderRadius:'0 0 100px 100px;' }}>
                 <img class="card-img-top" src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
                 <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
