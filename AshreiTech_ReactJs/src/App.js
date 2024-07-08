@@ -7,6 +7,8 @@ import axios from "axios";
 import Teams from "./screens/Teams/Teams.jsx";
 import SingleCourse from "./screens/SingleCourseScreen/SingleCourse.jsx";
 import { router } from "./Route.js";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 
 export default function App() {
@@ -45,6 +47,7 @@ export default function App() {
   return (
     <>
       <RouterProvider router={router} />
+      <ToastContainer/>
     </>
   );
 }

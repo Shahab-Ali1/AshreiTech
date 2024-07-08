@@ -3,6 +3,7 @@ import "../AdmissionEnquiery/AdmissionEnquiery.css";
 import "./RegisterYourself.css"
 import { FormControl, InputLabel, Select, TextField } from '@mui/material/node';
 import { codeError, getMethod } from '../../../utils/services';
+import { errorMessage, succesMessage, toastError, toastSuccess } from '../../../utils/Toaster/toaster';
 const INITIAL_STATE = {
     paymentNo: "",
     paymentType: "",
@@ -43,7 +44,9 @@ export const MakePayment = (props) => {
     const clickGenerateBtn = () => {
       try {
         debugger;
-        
+        toastSuccess(succesMessage);
+        toastError(errorMessage);
+
       } catch (error) {
         codeError(error);
       }
