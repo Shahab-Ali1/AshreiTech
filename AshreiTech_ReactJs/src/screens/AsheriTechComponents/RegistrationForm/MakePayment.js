@@ -16,11 +16,11 @@ export const MakePayment = (props) => {
     const [formData, setFormData] = useState({ ...INITIAL_STATE });
     const [paymentData, setPaymentData] = useState([]);
     useEffect(() => {
-        // payemtMode();
+        payemtMode();
     }, [])
     const payemtMode = () => {
         try {
-            getMethod("lov/v2/list/GTYPE")
+            getMethod("lov/v2/list/FOCCU")
                 .then((data) => {
                     if (data) {
                         setPaymentData(data?.Data);
@@ -38,7 +38,6 @@ export const MakePayment = (props) => {
         if (!event) {
             return
         }
-        debugger;
         const { name, value, } = event?.target;
         setFormData((prevField) => ({
             ...prevField,
@@ -76,7 +75,7 @@ export const MakePayment = (props) => {
                                     <InputLabel htmlFor="outlined-age-native-simple">Payment Type</InputLabel>
                                     <Select
                                         name="paymentType"
-                                        value={formData?.paymentNo || ""}
+                                        value={formData?.paymentType || ""}
                                         onChange={handleFormData}
                                         native
                                         label="Payment Type"
@@ -87,7 +86,7 @@ export const MakePayment = (props) => {
                                     >
                                         <option value={0}></option>
                                         {
-                                            dowpdownData && dowpdownData?.map((Val, index) => {
+                                            paymentData && paymentData?.map((Val, index) => {
                                                 return (<option key={index} value={Val.Id}>{Val.stxt}</option>)
                                             })
                                         }
