@@ -3,6 +3,7 @@ import "./AdmissionEnquiery.css";
 import { Checkbox, FormControl, FormControlLabel, InputLabel, Select, TextField } from '@mui/material/node';
 import { PostMethod, codeError, formatDate, getMethod } from '../../../utils/services';
 import TabsComponent from '../../../components/Tabs/Tabs';
+import { errorMessage, succesMessage, toastError, toastSuccess } from '../../../utils/Toaster/toaster';
 // import { ToastContainer } from 'react-toastify';
 // import { Toaster, Toastersuccess } from '../../Toaster';
 
@@ -271,14 +272,12 @@ export const AdmissionEnquiry = (props) => {
         PostMethod("FOAdmEnquiry/v2/", bb)
             .then((data) => {
                 if (data) {
-                    // Toastersuccess("File Saved Successfully");
-                    alert("File Saved Successfully")
-                    // setFormData({ ...INITIAL_STATE });
+                    toastSuccess(succesMessage);
                     sentWelcomeEmail();
                 }
             })
             .catch(error => {
-                // Toaster(error.message, "error");
+                toastError(errorMessage);
                 codeError(error);
             });
 

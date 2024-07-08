@@ -2,18 +2,15 @@ import React, { useEffect, useState } from 'react';
 import "../AdmissionEnquiery/AdmissionEnquiery.css";
 import "./RegisterYourself.css"
 import { FormControl, InputLabel, Select, TextField } from '@mui/material/node';
-import { codeError, getMethod } from '../../../utils/services';
+import { PostMethod, codeError, getMethod } from '../../../utils/services';
+import { errorMessage, succesMessage, toastError, toastSuccess } from '../../../utils/Toaster/toaster';
 const INITIAL_STATE = {
     paymentNo: "",
     paymentType: "",
 }
-const dowpdownData = [
-    { Id: 1, stxt: "value1" },
-    { Id: 2, stxt: "value2" },
-    { Id: 3, stxt: "value3" }
-]
 export const MakePayment = (props) => {
     const [formData, setFormData] = useState({ ...INITIAL_STATE });
+    const [globalObj, setGlobalObj] = useState(null);
     const [paymentData, setPaymentData] = useState([]);
     useEffect(() => {
         payemtMode();
@@ -33,18 +30,138 @@ export const MakePayment = (props) => {
             console.log(error);
         }
     }
+    const FeeGroupChallanApi = (Id) => {
+        try {
+            debugger
+            getMethod(`SMFeegrphdr/V2/FeeGroupsforChallanAT/9119/60/${Id}`)
+                .then((data) => {
+                    if (data) {
+                        debugger
+                        FeeAmountApi(data.Data[0].Id);
+                    }
+                })
+                .catch(error => {
+                    debugger;
+                    codeError(error);
+                });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    // api/SMFeeprofhdr/V2/feeamountAT/{entityid}/{feegrpid}
+
+    const FeeAmountApi = (feegrpid) => {
+        try {
+            debugger
+            getMethod(`SMFeeprofhdr/V2/feeamountAT/9119/${feegrpid}`)
+                .then((data) => {
+                    debugger
+                    if (data) {
+                        setGlobalObj(data.Data[0])
+                    }
+                })
+                .catch(error => {
+                    debugger;
+                    codeError(error);
+                });
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     const handleFormData = (event) => {
         if (!event) {
             return
         }
+        debugger;
         const { name, value, } = event?.target;
-        setFormData((prevField) => ({
-            ...prevField,
-            [name]: value,
-        }));
+        if(name === "paymentType") {
+            // api/SMFeegrphdr/V2/FeeGroupsforChallanAT/{entityid}/{feenatureid}/{lov}
+            FeeGroupChallanApi(value);
+            setFormData((prevField) => ({
+                ...prevField,
+                [name]: value,
+            }));
+        }
+        else{
+            setFormData((prevField) => ({
+                ...prevField,
+                [name]: value,
+            }));
+        }
+        
     }
 
+    const clickGenerateBtn = () => {
+      try {
+        debugger;
+        let bb = {
+            "Data": {
+              "SMFeechallandtls": [
+                {
+                  "feeid": globalObj?.feetype,
+                  "amount": globalObj?.amount,
+                  "netamount": globalObj?.amount,
+                  "acadyrdtlid": 18946,
+                  "month": "July",
+                  "SMFeechallansubdtls": [],
+                  "lineindex": 1
+                },               
+              ],
+              "SMFeechallandiscounts": [],
+              "challanno": null,
+              "batchno": "0",
+              "challandate": new Date(),
+              "challanvalidity": new Date(),
+              "duedate": new Date(),
+              "entityid": "3256",
+              "studentid": 220633,
+              "ltxt": null,
+              "amount": null,
+              "feestatusid": null,
+              "appid": null,
+              "feeforid": 93,
+              "acdyearid": 13601,
+              "perioddtlid": 28038,
+              "feegrpid": 14016,
+              "feenatureid": 60,
+              "discountid": null,
+              "studentno": "ALBS000131",
+              "grno": "ALBS000131",
+              "revchln": null,
+              "revdate": null,
+              "revremarks": null,
+              "transno": null,
+              "beneficiaryno": null,
+              "noofinst": null,
+              "instamount": null,
+              "ficoaid": null,
+              "jvpost": null,
+              "courseid": null,
+              "sectionid": null
+            },
+            "DataAddon": {},
+            "ReturnObject": true
+          }
+        debugger;
+        PostMethod("Feechallanhdr/v2/", bb)
+        .then((data) => {
+            debugger;
+            if (data) {
+                toastSuccess(succesMessage);;
+            }
+        })
+        .catch(error => {
+            debugger;
+            toastError(errorMessage);
+            codeError(error);
+        });
+
+      } catch (error) {
+        codeError(error);
+      }
+    }
+    
 
 
     return (
@@ -61,6 +178,7 @@ export const MakePayment = (props) => {
                         <div className='row'>
                             <div className='col-lg-6'>
                                 <TextField
+                                    disabled
                                     name="paymentNo"
                                     value={formData?.paymentNo || ""}
                                     onChange={handleFormData}
@@ -97,7 +215,7 @@ export const MakePayment = (props) => {
                         </div>
                         <div className='row mt-3'>
                             <div className='col-lg-12 d-flex justify-content-end'>
-                                <button type="button" className="generateBtn">Generate</button>
+                                <button type="button" className="generateBtn" onClick={clickGenerateBtn}>Generate</button>
                             </div>
                         </div>
 
