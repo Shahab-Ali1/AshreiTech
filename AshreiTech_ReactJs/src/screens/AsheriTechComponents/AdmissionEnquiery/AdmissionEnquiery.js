@@ -328,7 +328,7 @@ export const AdmissionEnquiry = (props) => {
             if (!formData.gender) {
                 validationErrors.gender = 'Gender is required';
             }
-            if (!formData.cellno) {
+            if (!formData.cellno) { 
                 validationErrors.cellno = 'Cell No is required';
             }
             if (!formData.lasteducation) {

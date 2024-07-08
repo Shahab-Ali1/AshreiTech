@@ -1,13 +1,8 @@
 .box{
-    height: 600px !important;
   background-color: 
   #5A8C75;  
   color: #ffffff;
-  padding:0 50px;
-  width: 90%;
-  margin: auto;
   border-radius: 50px;
-  margin-top: 50px;
 }
 .custom_btn_outline_dark {
     color: #fff;
@@ -27,7 +22,8 @@
     justify-content: center;
     /* gap: 32px; */
     align-items: center;
-    width: 65%;
+    width: 90%;
+    height: auto;
     margin: auto;
   }
 

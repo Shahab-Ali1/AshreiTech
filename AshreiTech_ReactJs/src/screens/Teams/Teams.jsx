@@ -14,16 +14,23 @@ import teams_member_9 from "../../assets/teams_member_9.png";
 import teams_member_10 from "../../assets/teams_member_10.png";
 import teams_member_11 from "../../assets/teams_member_11.png";
 import teams_member_12 from "../../assets/teams_member_12.png";
+import teams_member_13 from "../../assets/teams_member_13.png";
+import teams_member_14 from "../../assets/teams_member_14.png";
+import teams_member_15 from "../../assets/teams_member_15.png";
+import teams_member_16 from "../../assets/teams_member_16.png";
 import Footer from "../../components/Sections/Footer/Footer";
 
 const teamMember=[
     {
         name:"Sohail Zindani",
+        img:teams_member_14
     },
     {
         name:"Syed Sajjad Hussain",
     }, {
         name:"Adnan Ahmed",
+        img:teams_member_13
+
     },
     {
         name:"Azmeena Furniturewala",
@@ -82,10 +89,17 @@ const teamMember=[
     },
     {
         name:"Syed Talha Asad",
+        img:teams_member_15
+
     },
     {
         name:"Unsar Hameed",
         img:teams_member_11
+    },
+    {
+        name:"Unsar hameed",
+        img:teams_member_16
+
     },
 ]
 const { team_comtainer, banner_container, teams_image, gradientCircle, members_container,img_container,hover_content,shadow } = style;
@@ -110,10 +124,10 @@ const Teams = () => {
                                 <img src={img} alt="Team Member 1" className={`img-flui ${teams_image}`} />
                                  <h3 className="text-center">{name}</h3>
                                  <p className="text-center font20">designation</p>
-                                 {hoveredIndex === index && (
+                                 {true  && (
                                         <div className={hover_content}>
-                                            <div className={`${shadow}`}></div>
                                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, expedita dignissimos? Ab fugiat esse hic.</p>
+                                            <div className={`${shadow}`}></div>
                                             <i class="fa-brands fa-linkedin"></i>
                                         </div>
                                     )}

@@ -7,7 +7,7 @@ import LogoIcon from "../../assets/svg/Logo";
 
 export default function Sidebar({ sidebarOpen, toggleSidebar }) {
   return (
-    <Wrapper className="animate darkBg" sidebarOpen={sidebarOpen}>
+    <Wrapper className="animate darkBg text-white" sidebarOpen={sidebarOpen}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
           <LogoIcon />
@@ -21,6 +21,39 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
       </SidebarHeader>
 
       <UlStyle className="flexNullCenter flexColumn">
+       <div className="d-flex justify-content-center align-items-center text-center">
+       <li className="semiBold font15 pointer col-4">
+          <Link
+            onClick={() => toggleSidebar(!sidebarOpen)}
+            activeClass="active"
+            className="whiteColor"
+            
+          >
+            Find Tech Talent
+          </Link>
+        </li>
+        <li className="semiBold font15 pointer col-4">
+          <Link
+            onClick={() => toggleSidebar(!sidebarOpen)}
+            activeClass="active"
+            className="whiteColor"
+            
+            
+          >
+            Digital Academy
+          </Link>
+        </li>
+        <li className="semiBold font15 pointer col-4">
+          <Link
+            onClick={() => toggleSidebar(!sidebarOpen)}
+            activeClass="active"
+            className="whiteColor"
+            
+          >
+            Sign In
+          </Link>
+        </li>
+       </div>
         <li className="semiBold font15 pointer">
           <Link
             onClick={() => toggleSidebar(!sidebarOpen)}

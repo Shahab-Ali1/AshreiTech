@@ -10,13 +10,13 @@ const Sponsers = () => {
     const { box, custom_btn_outline_dark, sponsers, sponsers_logo_container, Laptop_Image } = style;
     return (
         <>
-            <div className="w-100 mt-5 justify-content-center">
-                <div className=" mt-5 mb-5">
+            <div className="w-100  justify-content-center">
+                <div className=" mt-5 ">
                     <h1 className=" text-center  generic_heading">
                         {" "}
                         <span style={{ color: '#000000' }}> MEET THE EXPERTS</span>
                     </h1>
-                    <p className="font20 mt-4 mb-5 text-center pt-4">
+                    <p className="font20 mt-4 mb-3 text-center pt-4">
                         Our experts are here to empower the future of tech by enabling students and professionals.
                         ,
                     </p>
@@ -37,35 +37,30 @@ const Sponsers = () => {
                     </div>
                 </div>
             </div>
-            <div className={`${box} d-flex`}>
-                <div className="row align-items-center">
-                    <div className="col-5 d-flex">
-                        <div className="row align-items-center">
-                            <div className="">
-                                <h1 className="font40 extraBold mb-4">
-                                    Learn Anytime,
-                                    <br /> Anywhere!
-                                </h1>
-                                <p className="font20" style={{ lineHeight: 2 }}>
-                                    Get it on your device now!
-                                </p>
-                                <button type="button" class={`${custom_btn_outline_dark} mt-5`}>
+
+            <div className={`${box} container d-flex mt-5`}>
+                <div className="row px-4 d-flex justify-content-center align-items-center">
+                    <div className="col-lg-5 col-md-6 col-sm-12 d-flex flex-column justify-content-center text-center text-md-left text-lg-left">
+                        <div className=" ">
+                            <h1 className="mt-4">
+                                Learn Anytime,
+                                <br /> Anywhere!
+                            </h1>
+                            <div className="mt-4">
+                                <p>Get it on your device now!</p>
+                                <button type="button" className={`${custom_btn_outline_dark} px-4 mt-4`}>
                                     Learn More
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div className="col-1"></div>
-                    <div className="col-6">
-                        <div className="">
-                            <img
-                                className={`${Laptop_Image} ml-n3`}
-                                style={{ width: "110%", height: "110%" }}
-                                src={LaptopImage}
-                                alt=""
-                                srcset=""
-                            />
-                        </div>
+                    <div className="col-lg-7 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+                        <img
+                            className={`${Laptop_Image}`}
+                            style={{ width: "100%", height: "auto" }}
+                            src={LaptopImage}
+                            alt="Laptop Image"
+                        />
                     </div>
                 </div>
             </div>

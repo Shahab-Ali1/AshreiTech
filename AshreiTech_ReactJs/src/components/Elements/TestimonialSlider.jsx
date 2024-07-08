@@ -139,43 +139,6 @@ export default function TestimonialSlider() {
             </div>
           </div>
         </Card>
-        
-        <Card>
-          <div className="card-body pb-0">
-            <div className="row">
-              <div className="col-2 pr-0 pt-0" style={{height:70}}>
-                <img
-                  src="https://image.shutterstock.com/image-illustration/online-shopping-vr-glasses-furniture-260nw-2186046439.jpg"
-                  alt="Online Shopping VR Glasses"
-                  className="img-fluid rounded-circle custom-img"
-                />
-              </div>
-              <div className="col-1 mt-3">
-                <i className="fa-brands fa-linkedin"></i>
-              </div>
-              <div className="col">
-                <h4 className="font20 fw-bold"> Justin Bergson</h4>
-                <h5 className="font18 mt-1">Parents of students</h5>
-              </div>
-            </div>
-            <p className="card-text mb-3 mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptates, dolores cum laboriosam ratione voluptatibus dignissimos fuga. Facilis, praesentium dolore. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <div className="row justify-content-between mt-3">
-              <div className="col">
-                08:21 PM - Jan 4, 2023
-              </div>
-              <div className="col d-content" style={{display:'contents'}}>
-                <Rating>
-                  <i className="fa-solid fa-star rating"></i>
-                  <i className="fa-solid fa-star rating"></i>
-                  <i className="fa-solid fa-star rating"></i>
-                  <i className="fa-solid fa-star rating"></i>
-                  <i className="fa-solid fa-star disable_rating"></i>
-                </Rating>
-              </div>
-            </div>
-          </div>
-        </Card>
-
       </Slider>
     </SliderWrapper>
     </div>
