@@ -7,11 +7,6 @@ const INITIAL_STATE = {
     paymentNo: "",
     paymentType: "",
 }
-const dowpdownData = [
-    { Id: 1, stxt: "value1" },
-    { Id: 2, stxt: "value2" },
-    { Id: 3, stxt: "value3" }
-]
 export const MakePayment = (props) => {
     const [formData, setFormData] = useState({ ...INITIAL_STATE });
     const [paymentData, setPaymentData] = useState([]);
@@ -45,6 +40,15 @@ export const MakePayment = (props) => {
         }));
     }
 
+    const clickGenerateBtn = () => {
+      try {
+        debugger;
+        
+      } catch (error) {
+        codeError(error);
+      }
+    }
+    
 
 
     return (
@@ -61,6 +65,7 @@ export const MakePayment = (props) => {
                         <div className='row'>
                             <div className='col-lg-6'>
                                 <TextField
+                                    disabled
                                     name="paymentNo"
                                     value={formData?.paymentNo || ""}
                                     onChange={handleFormData}
@@ -97,7 +102,7 @@ export const MakePayment = (props) => {
                         </div>
                         <div className='row mt-3'>
                             <div className='col-lg-12 d-flex justify-content-end'>
-                                <button type="button" className="generateBtn">Generate</button>
+                                <button type="button" className="generateBtn" onClick={clickGenerateBtn}>Generate</button>
                             </div>
                         </div>
 
