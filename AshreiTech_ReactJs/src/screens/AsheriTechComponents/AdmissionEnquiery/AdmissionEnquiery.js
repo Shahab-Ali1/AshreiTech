@@ -391,9 +391,9 @@ export const AdmissionEnquiry = (props) => {
                     <form>
                         <h2 className="text-center">Enquiry Form</h2>
                         <div className='row'>
-                            <div className='col-lg-6'>
+                            <div className='col-12 col-lg-6'>
                                 <TextField
-                                    className="w-100"
+                                    className="w-100 form_textField"
                                     id="outlined-controlled"
                                     label="First Name"
                                     size="small"
@@ -407,9 +407,9 @@ export const AdmissionEnquiry = (props) => {
                                     }}
                                 />
                             </div>
-                            <div className='col-lg-6'>
+                            <div className='col-12 col-lg-6'>
                                 <TextField
-                                    className="w-100"
+                                    className="w-100 form_textField"
                                     id="outlined-controlled"
                                     label="Last Name"
                                     size="small"
@@ -422,10 +422,10 @@ export const AdmissionEnquiry = (props) => {
                             </div>
                         </div>
 
-                        <div className='row mt-3'>
+                        <div className='row mt-lg-3 mt-0'>
                             <div className='col-lg-6'>
                                 <TextField
-                                    className="w-100"
+                                    className="w-100 form_textField"
                                     id="outlined-controlled"
                                     label="Father’s/Guardian Name"
                                     size="small"
@@ -437,7 +437,7 @@ export const AdmissionEnquiry = (props) => {
                             </div>
                             <div className='col-lg-6'>
                                 <TextField
-                                    className="w-100"
+                                    className="w-100 form_textField"
                                     id="outlined-controlled"
                                     label="Email"
                                     size="small"
@@ -451,10 +451,10 @@ export const AdmissionEnquiry = (props) => {
                             </div>
                         </div>
 
-                        <div className='row mt-3'>
+                        <div className='row  mt-lg-3 mt-0'>
                             <div className='col-lg-6'>
                                 <TextField
-                                    className="w-100"
+                                    className="w-100 form_textField"
                                     id="outlined-controlled"
                                     label="CNIC"
                                     size="small"
@@ -472,7 +472,7 @@ export const AdmissionEnquiry = (props) => {
                                         name="city"
                                         error={!!errors.city}
                                         style={{ width: "100%" }}
-                                        className="w-100"
+                                        className="w-100 form_textField"
                                         onChange={handleFormData}
                                         value={formData?.city || ""}
                                         native
@@ -493,9 +493,9 @@ export const AdmissionEnquiry = (props) => {
                                 </FormControl>
                             </div>
                         </div>
-                        <div className='row mt-3'>
+                        <div className='row mt-lg-3 mt-0'>
                             <div className='col-lg-6'>
-                                <FormControl variant="outlined" size="small" className='w-100'>
+                                <FormControl variant="outlined" size="small" className='w-100 form_textField'>
                                     <InputLabel htmlFor="outlined-age-native-simple">Course Category</InputLabel>
                                     <Select
                                         name="courseCategory"
@@ -520,7 +520,7 @@ export const AdmissionEnquiry = (props) => {
                                 </FormControl>
                             </div>
                             <div className='col-lg-6'>
-                                <FormControl variant="outlined" size="small" className='w-100'>
+                                <FormControl variant="outlined" size="small" className='w-100 form_textField'>
                                     <InputLabel htmlFor="outlined-age-native-simple">Courses</InputLabel>
                                     <Select
                                         disabled={formData?.city === "" || formData.courseCategory === ""}
@@ -546,9 +546,9 @@ export const AdmissionEnquiry = (props) => {
                                 </FormControl>
                             </div>
                         </div>
-                        <div className='row mt-3'>
+                        <div className='row  mt-lg-3 mt-0'>
                             <div className='col-lg-6'>
-                                <FormControl variant="outlined" size="small" className='w-100'>
+                                <FormControl variant="outlined" size="small" className='w-100 form_textField'>
                                     <InputLabel htmlFor="outlined-age-native-simple">Student Status</InputLabel>
                                     <Select
                                         name="stdStatus"
@@ -578,7 +578,7 @@ export const AdmissionEnquiry = (props) => {
                                     error={!!errors.whatsappno}
                                     onChange={handleFormData}
                                     value={formData?.whatsappno || ""}
-                                    className="w-100"
+                                    className="w-100 form_textField"
                                     id="outlined-controlled"
                                     label="WhatsApp Number"
                                     size="small"
@@ -586,9 +586,9 @@ export const AdmissionEnquiry = (props) => {
                                 />
                             </div>
                         </div>
-                        <div className='row mt-3'>
+                        <div className='row   mt-lg-3 mt-0'>
                             <div className='col-lg-6'>
-                                <FormControl variant="outlined" size="small" className='w-100'>
+                                <FormControl variant="outlined" size="small" className='w-100 form_textField'>
                                     <InputLabel htmlFor="outlined-age-native-simple">Gender</InputLabel>
                                     <Select
                                         name="gender"
@@ -618,7 +618,7 @@ export const AdmissionEnquiry = (props) => {
                                     error={!!errors.cellno}
                                     onChange={handleFormData}
                                     value={formData?.cellno || ""}
-                                    className="w-100"
+                                    className="w-100 form_textField"
                                     id="outlined-controlled"
                                     label="Mobile Number"
                                     size="small"
@@ -626,14 +626,14 @@ export const AdmissionEnquiry = (props) => {
                                 />
                             </div>
                         </div>
-                        <div className='row mt-3'>
+                        <div className='row   mt-lg-3 mt-0'>
                             <div className='col-lg-6'>
                                 <TextField
                                     name="lasteducation"
                                     error={!!errors.lasteducation}
                                     onChange={handleFormData}
                                     value={formData?.lasteducation || ""}
-                                    className="w-100"
+                                    className="w-100 form_textField"
                                     id="outlined-controlled"
                                     label="Last Education"
                                     size="small"
@@ -644,7 +644,7 @@ export const AdmissionEnquiry = (props) => {
                                     name="dob"
                                     onChange={handleFormData}
                                     value={formData?.dob || ""}
-                                    className="w-100"
+                                    className="w-100 form_textField"
                                     id="outlined-controlled"
                                     label="Date Of Birth"
                                     size="small"
