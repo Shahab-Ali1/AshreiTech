@@ -5,16 +5,17 @@ import sponser1 from "../../assets/sponser1.png"
 import sponser2 from "../../assets/sponser2.png"
 import sponser3 from "../../assets/sponser3.png"
 import sponser4 from "../../assets/sponser4.png"
+import bg7 from "../../assets/bg7.png";
 
 const Sponsers = () => {
     const { box, custom_btn_outline_dark, sponsers, sponsers_logo_container, Laptop_Image } = style;
     return (
         <>
-            <div className="w-100  justify-content-center">
+            <div className="w-100  justify-content-center" >
                 <div className=" mt-5 ">
                     <h1 className=" text-center  generic_heading">
                         {" "}
-                        <span style={{ color: '#000000' }}> MEET THE EXPERTS</span>
+                        <span style={{ color: '#000000' }}> Meet Our Experts</span>
                     </h1>
                     <p className="font20 mt-4 mb-3 text-center pt-4">
                         Our experts are here to empower the future of tech by enabling students and professionals.

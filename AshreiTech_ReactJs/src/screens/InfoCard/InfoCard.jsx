@@ -7,18 +7,20 @@ import vector4 from '../../assets/Vector4.png';
 import vector5 from '../../assets/Vector5.png';
 
 const InfoCard = () => {
-    const { Info_container, vector, gradientCircle } = style;
+    const { Info_container, vector, gradientCircle ,gradientCircleLeft} = style;
 
     return (
-        <div className={`${Info_container} container p-1 mt-5`}>
+        <div className='py-4'>
+            <div className={`${Info_container} container p-1 mt-5 `}>
+            <div className={`${gradientCircleLeft} d-none d-lg-block`}></div>
             <div className="row d-flex justify-content-center align-items-center  pt-4">
                 <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
                     <div>
                         <img src={vector4} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Students" />
                     </div>
                     <div>
-                        <h6>Students</h6>
-                        <h5>10K+</h5>
+                        <h6 style={{fontWeight:'bold'}}>Students</h6>
+                        <h5 style={{fontWeight:'bold'}}>10K+</h5>
                     </div>
                 </div>
                 <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
@@ -26,8 +28,8 @@ const InfoCard = () => {
                         <img src={vector1} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Trainer" />
                     </div>
                     <div>
-                        <h6>Trainer</h6>
-                        <h5>100+</h5>
+                        <h6 style={{fontWeight:'bold'}}>Trainer</h6>
+                        <h5 style={{fontWeight:'bold'}}>100+</h5>
                     </div>
                 </div>
                 <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
@@ -35,8 +37,8 @@ const InfoCard = () => {
                         <img src={vector5} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Employees" />
                     </div>
                     <div>
-                        <h6>Employees</h6>
-                        <h5>500+</h5>
+                        <h6 style={{fontWeight:'bold'}}>Employees</h6>
+                        <h5 style={{fontWeight:'bold'}}>500+</h5>
                     </div>
                 </div>
                 <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
@@ -44,8 +46,8 @@ const InfoCard = () => {
                         <img src={vector3} className={`${vector} mr-2`} style={{width:'52px', height:'44px'}} alt="Alumni" />
                     </div>
                     <div>
-                        <h6>Alumni</h6>
-                        <h5>100+</h5>
+                        <h6 style={{fontWeight:'bold'}}>Alumni</h6>
+                        <h5 style={{fontWeight:'bold'}}>100+</h5>
                     </div>
                 </div>
                 <div className="col-12 col-md-3 col-lg-2  align-items-center justify-content-center mb-3 d-none d-lg-flex">
@@ -53,13 +55,14 @@ const InfoCard = () => {
                         <img src={vector2} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Cities" />
                     </div>
                     <div>
-                        <h6>Cities</h6>
-                        <h5>5+</h5>
+                        <h6 style={{fontWeight:'bold'}}>Cities</h6>
+                        <h5 style={{fontWeight:'bold'}}>5+</h5>
                     </div>
                 </div>
             </div>
             {/* Circle with Gradient */}
-            <div className={`${gradientCircle} d-none d-lg-block`}></div>
+            <div className={`${gradientCircle} d-none d-lg-block `}></div>
+        </div>
         </div>
     );
 }

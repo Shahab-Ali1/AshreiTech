@@ -27,7 +27,6 @@ const {faq_container,faq_heading,faq}=style
                                         expandIcon={<ExpandMoreIcon style={{ color: 'white',fontSize:40 }} />}
                                         aria-controls="panel1a-content"
                                         id="panel1a-header"
-                                        // style={{background:"#D9D9D9",marginBottom:20,borderRadius:5}}
                                     >
                                         <Typography sx={{ fontWeight: 'bold' }}>{faqItem?.question}</Typography>
                                     </AccordionSummary>

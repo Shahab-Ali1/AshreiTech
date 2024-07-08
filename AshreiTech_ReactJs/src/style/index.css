@@ -16,8 +16,10 @@
     border: 0;
     vertical-align: baseline;
     box-sizing: border-box;
-    background-image: url(../assets/Element1.png);
+    /* background-image: url(../assets/Element1.png); */
+    
   }
+
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
   footer, header, hgroup, menu, nav, section {
@@ -376,6 +378,16 @@
   border-radius: 15px !important;
   height: 14px;
 }
+.carousel-indicators  .active{
+  background-color: 
+  #008F71 !important;
+  width: 141px;
+  border-radius: 15px !important;
+  height: 14px;
+}
+
+
+
 
 /* .active{
   background-color:  #008F71 !important;
@@ -394,7 +406,7 @@
   background-color:  #008F71 !important;
   border: none;
   color: white;
-  padding: 14px 19px;
+  padding: 7px 10px;
   border-radius: 10px;
   margin-top: 30px;
   font-size: 23px;

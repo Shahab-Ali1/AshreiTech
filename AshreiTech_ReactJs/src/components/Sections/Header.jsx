@@ -24,11 +24,11 @@ export default function Header() {
               <h1 className="pt-3 text-center text-md-left">
                 Complexity <span style={{ color: "#008F71" }}>Simplified,</span>
                 <br /> Globally
-              </h1>
-              <div className="mb-5 pb-5">
+              <div className="mb-5 pb-5 pl-0">
                 <button className="slider_btn">Register Now</button>
                 <button className="slider_btn mx-3">Explore More</button>
               </div>
+              </h1>
             </div>
           </div>
           <div className="carousel-item bg-white p-5">

@@ -5,6 +5,7 @@ import BlogBox from "../Elements/BlogBox";
 import FullButton from "../Buttons/FullButton";
 import TestimonialSlider from "../Elements/TestimonialSlider";
 import Currentstudents from "../../screens/Currentstudents/Currentstudents";
+import bg1 from '../../assets/bg1.png'
 
 export default function Blog() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -21,11 +22,15 @@ export default function Blog() {
 
   };
   return (
-    <div className="container mt-5">
+    <div className="container-fluid px-5 mt-5" 
+    style={{
+      backgroundImage: `url(${bg1})`,
+    }}
+    >
 
       <div className="w-100">
-        <h1 className="font40 text-center  generic_heading"> <span style={{ color: '#000000' }}>Courses we</span> <span style={{ color: '#008F71' }}> &nbsp; Offer</span></h1>
-        <p className="font20 mt-5 mb-5 text-center">
+        <h1 className="text-center  generic_heading" > <span style={{ color: '#000000' }}>Courses we</span> <span style={{ color: '#008F71' }}> &nbsp; Offer</span></h1>
+        <p className="font20 mt-4 pt-3 mb-5 text-center">
           Join the Academy and become a driving force in Pakistan's digital revolution!
         </p>
       </div>

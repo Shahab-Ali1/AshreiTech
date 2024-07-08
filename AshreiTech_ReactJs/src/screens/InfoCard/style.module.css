@@ -19,15 +19,28 @@
 .gradientCircle {
     position: absolute;
     top:45px; /* Adjust top position */
-    right: 8px; /* Adjust right position */
-    width: 650px; /* Adjust width */
-    height: 210px; /* Adjust height */
+    right: -100px; /* Adjust right position */
+    width: 190px; /* Adjust width */
+    height: 190px; /* Adjust height */
     background: radial-gradient(circle at center, rgb(158, 212, 180), rgba(167, 215, 206, 0));
     background-size: 100% 200%; /* Ensure gradient covers entire element */
     border-radius: 50%; /* Circle shape */
     clip-path: ellipse(100% 50% at center); /* Clip to show only top half */
     transform: translateY(-50%); /* Center the clipped circle */
     filter: blur(2rem); /* Optional blur effect */
+}
+.gradientCircleLeft {
+    position: absolute;
+    top:45px; /* Adjust top position */
+    left: -100px;
+    width: 190px; /* Adjust width */
+    height: 190px; /* Adjust height */
+    background: radial-gradient(circle at center, rgb(158, 212, 180), rgba(167, 215, 206, 0));
+    background-size: 100% 200%; /* Ensure gradient covers entire element */
+    border-radius: 50%; /* Circle shape */
+    clip-path: ellipse(100% 50% at center); /* Clip to show only top half */
+    transform: translateY(-50%); /* Center the clipped circle */
+    filter: blur(2.5rem); /* Optional blur effect */
 }
 
 
