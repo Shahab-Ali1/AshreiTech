@@ -877,8 +877,9 @@ margin-top: -130px;
 
 .buttonClass{
   border-radius: 3px;
-  width: 10%;
+  /* width: 10%; */
   font-size: 14px;
+  font-family: Roboto;
   color: white;
   background-color: #7C2916;
   text-align: center;

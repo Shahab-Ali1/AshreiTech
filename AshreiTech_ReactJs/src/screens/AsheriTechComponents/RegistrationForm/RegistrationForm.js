@@ -11,6 +11,7 @@ export const RegistrationForm = (props) => {
 
     const handleChange = (event, newValue) => {
         debugger;
+        event.preventDefault()
         setValue(newValue);
     };
 
@@ -29,7 +30,7 @@ export const RegistrationForm = (props) => {
                     <Tab label="Proceed" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
                 </Tabs>
                 {value === 0 && <RegisterYourself handleChange={handleChange}/>}
-                {value === 1 && <MakePayment />}
+                {value === 1 && <MakePayment handleChange={handleChange}/>}
                 {value === 2 && <TabContent3 />}
             </Paper>
         </>
