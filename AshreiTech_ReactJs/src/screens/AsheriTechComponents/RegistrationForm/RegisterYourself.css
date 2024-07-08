@@ -30,12 +30,12 @@
     align-items: center;
     cursor: pointer;
 } */
-html, body {
+/* html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow: hidden;
-}
+} */
 .generateBtn{
     font-family: Roboto;
     border-radius: 4px;
