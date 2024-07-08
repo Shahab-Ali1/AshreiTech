@@ -313,7 +313,7 @@ export const RegisterYourself = (props) => {
 
                         <div className='row mt-5'>
                             <div className='col-lg-12 d-flex justify-content-end'>
-                                <button type='submit' className='buttonClass' onClick={(event) => props?.handleChange(event, 1)}> Next</button>
+                                <button type='submit' className='buttonClass' onClick={(event) => props?.handleChange(event, 1)}> Next &#8250;</button>
                             </div>
                         </div>
 

@@ -37,8 +37,7 @@ html, body {
     overflow: hidden;
 }
 .generateBtn{
-    /* width: 25%;
-    height: 40px; */
+    font-family: Roboto;
     border-radius: 4px;
     font-size: 15px;
     color: white;

@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import "../AdmissionEnquiery/AdmissionEnquiery.css";
 import "./RegisterYourself.css"
 import { FormControl, InputLabel, Select, TextField } from '@mui/material/node';
+import { codeError, getMethod } from '../../../utils/services';
 const INITIAL_STATE = {
-    fname: "",
-    lname: "",
+    paymentNo: "",
+    paymentType: "",
 }
 const dowpdownData = [
     { Id: 1, stxt: "value1" },
@@ -12,7 +13,38 @@ const dowpdownData = [
     { Id: 3, stxt: "value3" }
 ]
 export const MakePayment = (props) => {
-    const [formData, setFormData] = useState({ ...INITIAL_STATE })
+    const [formData, setFormData] = useState({ ...INITIAL_STATE });
+    const [paymentData, setPaymentData] = useState([]);
+    useEffect(() => {
+        // payemtMode();
+    }, [])
+    const payemtMode = () => {
+        try {
+            getMethod("lov/v2/list/GTYPE")
+                .then((data) => {
+                    if (data) {
+                        setPaymentData(data?.Data);
+                    }
+                })
+                .catch(error => {
+                    codeError(error);
+                });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const handleFormData = (event) => {
+        if (!event) {
+            return
+        }
+        debugger;
+        const { name, value, } = event?.target;
+        setFormData((prevField) => ({
+            ...prevField,
+            [name]: value,
+        }));
+    }
 
 
 
@@ -30,22 +62,26 @@ export const MakePayment = (props) => {
                         <div className='row'>
                             <div className='col-lg-6'>
                                 <TextField
+                                    name="paymentNo"
+                                    value={formData?.paymentNo || ""}
+                                    onChange={handleFormData}
                                     className="w-100"
                                     id="outlined-controlled"
                                     label="Payment No"
                                     size="small"
-                                    name="fname"
                                 />
                             </div>
                             <div className='col-lg-6'>
                                 <FormControl variant="outlined" size="small" className='w-100'>
                                     <InputLabel htmlFor="outlined-age-native-simple">Payment Type</InputLabel>
                                     <Select
-                                        name="gender"
+                                        name="paymentType"
+                                        value={formData?.paymentNo || ""}
+                                        onChange={handleFormData}
                                         native
                                         label="Payment Type"
                                         inputProps={{
-                                            name: 'gender',
+                                            name: 'paymentType',
                                             id: 'outlined-age-native-simple',
                                         }}
                                     >
@@ -68,8 +104,8 @@ export const MakePayment = (props) => {
 
                         <div className='row mt-5'>
                             <div className='col-lg-12 d-flex justify-content-end'>
-                                <button className='buttonClass mr-2' onClick={(event) => props?.handleChange(event, 0)}> Previous</button>
-                                <button type='submit' className='buttonClass' onClick={(event) => props?.handleChange(event, 2)}> Next</button>
+                                <button className='buttonClass mr-2' onClick={(event) => props?.handleChange(event, 0)}> &#8249; Previous</button>
+                                <button type='submit' className='buttonClass' onClick={(event) => props?.handleChange(event, 2)}> Next &#8250;</button>
                             </div>
                         </div>
 
