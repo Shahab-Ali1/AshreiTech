@@ -394,7 +394,7 @@
   background-color:  #008F71 !important;
   border: none;
   color: white;
-  padding: 15px 20px;
+  padding: 14px 19px;
   border-radius: 10px;
   margin-top: 30px;
   font-size: 23px;
@@ -576,10 +576,16 @@ margin-top: -130px;
   .generic_heading {
     font-size: 30px !important;
   }
-
+.tab{
+  margin-bottom: 50px !important;
+}
   .generic_heading::before {
     width: 100px;
     top: 45px;
+  }
+  .WhoAreYou{
+    font-size: 50px !important;
+    /* margin-bottom: 60px; */
   }
 }
 
@@ -871,8 +877,9 @@ margin-top: -130px;
 
 .buttonClass{
   border-radius: 3px;
-  width: 10%;
+  /* width: 10%; */
   font-size: 14px;
+  font-family: Roboto;
   color: white;
   background-color: #7C2916;
   text-align: center;

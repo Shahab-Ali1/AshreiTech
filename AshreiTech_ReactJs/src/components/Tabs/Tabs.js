@@ -19,6 +19,7 @@ export default function TabsComponent() {
                 textColor="primary"
                 centered
                 onChange={handleChange}
+                className='tab'
             >
                 <Tab label="Student" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
                 <Tab label="Trainer" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />

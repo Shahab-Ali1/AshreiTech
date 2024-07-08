@@ -28,8 +28,18 @@
     background-color: #7C2916;
     text-align: center;
     align-items: center;
+    font-family: Roboto;
 }
 
 .no-outline:focus {
     outline: none;
+}
+@media only screen and  (max-width: 600px)  {
+    .form-container {
+        width: 95%;
+        margin-top: 280px;
+}
+.form_textField{
+    margin-bottom: 10px !important;
+}
 }
