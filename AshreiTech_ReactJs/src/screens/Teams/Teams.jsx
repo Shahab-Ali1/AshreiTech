@@ -42,8 +42,7 @@ const teamMember=[
         name:"Azmeena Furniturewala",
         img:teams_member_2,
         designation:"Head of Marketing and Communications",
-        discription:`A MarCom professional with over 9 years of experience, in simple words, "Work inspires her." Embarking on a journey from science to advertising, her evolution into a strategic and adaptive marketer has been nothing short of thrilling. From navigating the agency experience of handling FMCG portfolios to transitioning to the brand side of the training and IT industry, her diverse experience fuels her passion for innovation, keeping the spark for advertising alive.
- She loves connecting with people and content that help her become a better individual in society, enjoys making floral arrangements, and loves to sing.`,
+        discription:`A MarCom professional with over 9 years of experience, in simple words, "Work inspires her." Embarking on a journey from science to advertising, her evolution into a strategic and adaptive marketer has been nothing short of thrilling.`,
  linkdIn:"https://www.linkedin.com/in/azmeena-k/"
 
     },
@@ -80,7 +79,7 @@ const teamMember=[
         img:teams_member_6,
         designation:"Head of Partnerships and Outreach",
         discription:`A dynamic and results-oriented professional with a proven track record in corporate liaison, events and 
-stakeholder management. Experienced in cultivating impactful partnerships, executing events, and facilitating personal and professional development workshops. Skilled in communication, process optimization, and team collaboration.`,
+stakeholder management. Experienced in cultivating impactful partnerships, executing events, and facilitating personal and professional development workshops. Skilled in communication and process optimization`,
 linkdIn:"https://www.linkedin.com/in/mufarrah/"
         
 
@@ -89,7 +88,7 @@ linkdIn:"https://www.linkedin.com/in/mufarrah/"
         name:"Samra Mazhar",
         img:teams_member_9,
         designation:"HR & Event Manager",
-        discription:"Samra, the Placements and Events Lead at AshreiTech Academy, is a dynamic and approachable professional known for her enthusiasm and dedication. A true people's person, she brings a warm and engaging presence to every interaction. Passionate about her role, Samra ensures all her responsibilities are met with utmost seriousness and a smile.",
+        discription:"Samra, the Placements and Events Lead at AshreiTech Academy, is a dynamic and approachable professional known for her enthusiasm. A true people's person, she brings a warm and engaging presence to every interaction. Passionate about her role, Samra ensures all her responsibilities are met with utmost seriousness and a smile.",
         linkdIn:"https://www.linkedin.com/in/samra-m-1782b5201/"
 
     },
@@ -97,7 +96,7 @@ linkdIn:"https://www.linkedin.com/in/mufarrah/"
         name:"Talha Shabbir",
         img:teams_member_7,
         designation:"Head, Corporate Trainings & Events",
-        discription:"Talha heads Corporate Trainings & Events at AshreiTech, where his 10+ years of expertise in event management, business development, and strategy shine. Thriving under pressure, he crafts standout marketing strategies and leverages digital platforms with finesse. A growth enthusiast, Talha loves traveling, playing cricket, and tackling new challenges, making him an invaluable asset to any team.",
+        discription:"Talha heads Corporate Trainings & Events at AshreiTech, where his 10+ years of expertise in event management, business development, and strategy shine. Thriving under pressure, he crafts standout marketing strategies and leverages digital platforms with finesse.",
         linkdIn:"https://www.linkedin.com/in/talhashabbir/"
 
     },
@@ -106,7 +105,7 @@ linkdIn:"https://www.linkedin.com/in/mufarrah/"
         name:'Arsalan Ahmed',
         img:teams_member_1,
         designation:"Accounts Officer",
-        discription:"As the finance officer, Arsalan supports the financial operations of this organization by processing transactions and maintaining financial records. He also excels in analyzing financial data, offering valuable insights and support to senior finance professionals. Moreover, Arsalan plays a crucial role in ensuring accuracy in financial reporting and compliance with internal policies and regulations.",
+        discription:"As the finance officer, Arsalan supports the financial operations of this organization by processing transactions and maintaining financial records. He also excels in analyzing financial data, offering valuable insights and support to senior finance professionals.",
         linkdIn:"https://www.linkedin.com/in/arsalan-ahmed-708974106/"
         
     },
