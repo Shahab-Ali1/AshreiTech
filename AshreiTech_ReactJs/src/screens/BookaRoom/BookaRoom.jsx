@@ -13,37 +13,37 @@ import vector4 from '../../assets/BookaScreen/Vector.png';
 import rectangle from '../../assets/BookaScreen/Rectangle 17041.png';
 import Slider from "react-slick";
 import styled from "styled-components";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function BookaRoom() {
     const settings = {
         infinite: true,
         speed: 500,
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
-        autoplay: true, 
+        autoplay: true,
         autoplaySpeed: 3000,
         responsive: [
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
             },
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
             },
-          },
         ],
-      };
+    };
     return (
-        <> 
+        <>
             <TopNavbar />
             <div
                 className="container-fluid py-4"
@@ -77,7 +77,7 @@ export default function BookaRoom() {
             </div>
             <div className="container py-4">
                 <div className="row p-5 d-flex justify-content-center align-items-center">
-                    <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-start">
+                    <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left">
                         <h1>Corporate Event Spaces That Inspire</h1>
                         <p className="mt-3">Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
                         <button className="slider_btn">Explore Our Rooms</button>
@@ -102,7 +102,7 @@ export default function BookaRoom() {
                         <div className="col-lg-6 col-md-6 col-sm-12">
                             <img src={Card1} alt="" style={{ width: '100%', height: 'auto' }} />
                         </div>
-                        <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-start text-white">
+                        <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left text-white">
                             <h1>Packages with everything you need</h1>
                             <p className="mt-3">We simplify everything with thoughtfully curated event packages and a dedicated support team to ensure a seamless planning process. From in-house AV technology, onsite kitchens, furniture, and hospitality staff - we have it all.</p>
                             <button className="slider_btn">Learn More</button>
@@ -112,7 +112,7 @@ export default function BookaRoom() {
             </div>
             <div className="container py-4">
                 <div className="row p-5 d-flex justify-content-center align-items-center">
-                    <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-start">
+                    <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left">
                         <p className="mt-3">Our tech tier bundles are curated with simple to complex meetings and events in mind, with multiple levels of in-room equipment and technical support. Work with our team to find the tech tier that’s right for you, or explore our custom offerings.</p>
                         <button className="slider_btn">View Packages</button>
                     </div>
@@ -128,6 +128,7 @@ export default function BookaRoom() {
                     backgroundImage: `url(${wave2})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
                     padding: 0,
                 }}
             >
@@ -194,26 +195,62 @@ export default function BookaRoom() {
                 </div>
             </div>
 
-            <div className="container py-4">
-                <div className="row d-flex justify-content-center align-items-center py-4">
-                    <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center align-items-center p-2">
-                        <div className="bg-white d-flex justify-content-center align-items-center" style={{ borderRadius: '24px', overflow: 'hidden', width: '100%', height: '100%' }}>
-                            <img src={rectangle} alt="Card 1" style={{ width: '100%', height: 'auto' }} />
+            <div className="col-12 col-md-6 col-lg-12 p-5">
+                <SliderWrapper>
+                    <Slider {...settings}>
+                        <div className="d-flex justify-content-center align-items-center">
+                            <div className=" m-2 p-4">
+                                <img src={rectangle} className="card-img-top" alt="..." />
+
+                            </div>
                         </div>
-                    </div>
-                    <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center align-items-center p-2">
-                        <div className="bg-white d-flex justify-content-center align-items-center" style={{ borderRadius: '24px', overflow: 'hidden', width: '100%', height: '100%' }}>
-                            <img src={rectangle} alt="Card 2" style={{ width: '100%', height: 'auto' }} />
+                        <div className="d-flex justify-content-center align-items-center">
+                            <div className=" m-2 p-4">
+                                <img src={rectangle} className="card-img-top" alt="..." />
+
+                            </div>
                         </div>
-                    </div>
-                    <div className="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center align-items-center p-2">
-                        <div className="bg-white d-flex justify-content-center align-items-center" style={{ borderRadius: '24px', overflow: 'hidden', width: '100%', height: '100%' }}>
-                            <img src={rectangle} alt="Card 3" style={{ width: '100%', height: 'auto' }} />
+                        <div className="d-flex justify-content-center align-items-center">
+                            <div className=" m-2 p-4">
+                                <img src={rectangle} className="card-img-top" alt="..." />
+
+                            </div>
                         </div>
-                    </div>
-                </div>
+                        <div className="d-flex justify-content-center align-items-center">
+                            <div className=" m-2 p-4">
+                                <img src={rectangle} className="card-img-top" alt="..." />
+
+                            </div>
+                        </div>
+                    </Slider>
+                </SliderWrapper>
             </div>
             <Footer />
         </>
     );
 }
+
+const SliderWrapper = styled.div`
+  .slick-slide {
+    padding: 0 10px; /* Space between slides */
+    background-color: white;
+    
+  }
+  .slick-prev, .slick-next {
+    background-color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slick-prev:before, .slick-next:before {
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    border-radius: 100%;
+    bordercolor: white;
+    outline: white solid;
+  }
+`;
