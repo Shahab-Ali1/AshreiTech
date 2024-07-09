@@ -11,17 +11,16 @@ import style from "./style.module.css"
 const Faq = () => {
 const {faq_container,faq_heading,faq}=style
     return (
-        <div className={`row justify-content-center mb-5 mt-5 ${faq_container}`} style={{width:"90%",margin:"auto",backgroundColor:'white' }} >
+        <div className={`row justify-content-center mb-5 mt-5 ${faq_container}`} style={{width:"80%",margin:"auto",backgroundColor:'white' }} >
             <div className='col-md-10 col-12 mb-5 ' >
-            {/* <Typography className={faq_heading} >Frequently Asked Questions</Typography> */}
             <Typography >
-                   <h1 className='pb-5 mb-4 mt-5'> <span className='generic_heading' id='generic_heading'  style={{color:'#000000', }}>Frequently Asked Questions</span></h1>
+                   <h1 className='pb-4 mb-4 mt-5'> <span className='generic_heading' id='generic_heading'  style={{color:'#000000', }}>Frequently Asked Questions</span></h1>
                 </Typography >
                         {
                             departmentsFaq.map((faqItem) => (
                                 <Accordion key={faqItem?.id} 
                                 className={`${faq}`}
-                                  style={{background:"#D9D9D9",marginBottom:20,padding:"20px 10px 20px 10px",borderRadius:40,display:'flex',justifyContent:"center",flexDirection:"column"}}
+                                  style={{background:"#D9D9D9",marginBottom:20,padding:"10px 10px 10px 10px",borderRadius:40,display:'flex',justifyContent:"center",flexDirection:"column"}}
                                 >
                                     <AccordionSummary
                                         expandIcon={<ExpandMoreIcon style={{ color: 'white',fontSize:40 }} />}

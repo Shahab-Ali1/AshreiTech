@@ -23,7 +23,7 @@ const Currentstudents = () => {
 
 
           <div className="lightBg col-12 mt-5 py-5 ">
-            <h1 className=" text-center generic_heading "> <span style={{ color: '#000000' }}>Turning Goals Into </span> <span style={{ color: '#008F71' }}> &nbsp; Wins!</span></h1>
+            <h1 className=" text-center generic_heading "> <span style={{ color: '#000000' }}>Turning Goals Into </span> <span style={{ color: '#008F71' }}>&nbsp;Wins!</span></h1>
             <TestimonialSlider />
           </div>
 

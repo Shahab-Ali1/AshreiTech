@@ -29,7 +29,7 @@ export default function Blog() {
     >
 
       <div className="w-100">
-        <h1 className="text-center  generic_heading" > <span style={{ color: '#000000' }}>Courses we</span> <span style={{ color: '#008F71' }}> &nbsp; Offer</span></h1>
+        <h1 className="text-center  generic_heading" > <span style={{ color: '#000000' }}>Courses we</span> <span style={{ color: '#008F71' }}>&nbsp;Offer</span></h1>
         <p className="font20 mt-4 pt-3 mb-5 text-center">
           Join the Academy and become a driving force in Pakistan's digital revolution!
         </p>
@@ -73,7 +73,7 @@ export default function Blog() {
               <div class="card" style={{  borderBottom:'3px solid rgba(0, 0, 0, 0.25)', borderRadius:'0 0 100px 100px;' }}>
                 <img class="card-img-top" src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
                 <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
-                  <p class="mb-3 p-1 text-center col-10" style={{ background: '#5A8C75', color: "white", borderRadius: 50, fontSize: '12px' }}>50,000+ Certified Students</p>
+                  <p class="mb-3 p-1 text-center col-10 " style={{ background: '#5A8C75', color: "white", borderRadius: 50, fontSize: '12px'  }}>50,000+ Certified Students</p>
                   <h5 class="card-title mt-4">Ariba Procurement</h5>
                   <p class="card-text mb-4 text-center text-lg-left text-md-left">Learn how to use SAP Ariba for managing procurement  and purchase orders.</p>
                   <p class="p-1 text-center col-6" style={{ background: '#5A8C75', color: "white", borderRadius: 50, fontSize: '14px' }}>View More</p>

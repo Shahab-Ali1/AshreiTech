@@ -14,7 +14,7 @@ const Sponsers = () => {
                 <div className=" mt-5 ">
                     <h1 className=" text-center  generic_heading">
                         {" "}
-                        <span style={{ color: '#000000' }}> Meet Our Experts</span>
+                        <span style={{ color: '#000000' }}>Our Partners</span>
                     </h1>
                     <p className="font20 mt-4 mb-3 text-center pt-4">
                         Our experts are here to empower the future of tech by enabling students and professionals.
@@ -22,9 +22,9 @@ const Sponsers = () => {
                     </p>
                 </div>
 
-                <div className={`${sponsers}`}>
+                <div className={`${sponsers} `}>
                     <div className={`${sponsers_logo_container}`}>
-                        <img src={sponser1} alt="" />
+                        <img src={sponser1} className="" alt="" />
                     </div>
                     <div className={`${sponsers_logo_container}`}>
                         <img src={sponser2} alt="" />

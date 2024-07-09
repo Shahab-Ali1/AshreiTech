@@ -6,6 +6,7 @@ import { RegistrationForm } from "./screens/AsheriTechComponents/RegistrationFor
 import Teams from "./screens/Teams/Teams";
 import BookaRoom from "./screens/BookaRoom/BookaRoom";
 import WhatWeDo from "./screens/WhatWeDo/WhatWeDo";
+import CommingSoon from "./components/Sections/CommingSoon";
 
 export const router = createHashRouter([
     {
@@ -31,6 +32,10 @@ export const router = createHashRouter([
     {
       path: "/WhatWeDo",
       element: <WhatWeDo/>,
+    },
+    {
+      path: "/CommingSoon",
+      element: <CommingSoon/>,
     },
   
   ]);

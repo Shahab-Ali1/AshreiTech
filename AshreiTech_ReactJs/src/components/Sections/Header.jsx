@@ -25,8 +25,8 @@ export default function Header() {
                 Complexity <span style={{ color: "#008F71" }}>Simplified,</span>
                 <br /> Globally
               <div className="mb-5 pb-5 pl-0">
-                <button className="slider_btn">Register Now</button>
-                <button className="slider_btn mx-3">Explore More</button>
+                <button className="slider_btn py-3 ">Register Now</button>
+                <button className="slider_btn mx-3 py-3">Explore More</button>
               </div>
               </h1>
             </div>

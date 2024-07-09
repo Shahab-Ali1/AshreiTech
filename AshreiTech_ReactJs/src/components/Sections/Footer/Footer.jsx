@@ -5,6 +5,7 @@ import sponser2 from "../../../assets/sponser2.png"
 import sponser3 from "../../../assets/sponser3.png"
 import sponser4 from "../../../assets/sponser4.png"
 import styled from "styled-components";
+import eduman from "../../../assets/eduMan.webp"
 
 
 const Footer = () => {
@@ -13,11 +14,11 @@ const Footer = () => {
         <div className={`${footer_container}`}>
             <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">
-                    <div className='pb-5 mb-5 d-flex justify-content-center justify-content-lg-start'>
+                    <div className='pb-4 mb-4 pt-1 d-flex justify-content-center justify-content-lg-start'>
                         <img src={AshrieTechWhiteLogo} alt="" className='pt-5 pt-lg-0' />
                     </div>
                     <div className="row">
-                        <div className="col-4">
+                        <div className="col-3">
                             <ul>
                                 <li style={{ color: '#DBDBDB' }} className='pb-3'>Home</li>
                                 <li style={{ color: '#DBDBDB' }} className='pb-3'>About</li>
@@ -69,17 +70,18 @@ const Footer = () => {
                             <div className={`${containerOnePiece} col-2`}>Academic</div>
                         </div>
                     </div>
-                    <div className={`${containerTwo}`}>
-                        <h5 className='text-center text-md-left'>PROUD MEMBERS OF</h5>
+                    <div className={`${containerTwo} mt-4`}>
+                        <h5 className='text-center text-md-left'>Developed By Edu-Man</h5>
                         <div className="row pt-4 d-flex justify-content-between align-items-center">
-                            <div className={`${containerTwoPiece} col-4`}><img src={sponser2} className='img-fluid' alt="" /></div>
-                            <div className={`${containerTwoPiece} col-4`}><img src={sponser3} className='img-fluid' alt="" /></div>
-                            <div className={`${containerTwoPiece} col-4 mt-2 pt-4`}><img src={sponser4} className='img-fluid' alt="" /></div>
+                            <div className={`${containerTwoPiece} col-4 mt-2 ml-1`}><img src={eduman} className='img-fluid' alt="" /></div>
+                            <div className={`${containerTwoPiece} col-4 d-none`}><img src={sponser2} className='img-fluid' alt="" /></div>
+                            <div className={`${containerTwoPiece} col-4 d-none`}><img src={sponser3} className='img-fluid' alt="" /></div>
+                            <div className={`${containerTwoPiece} col-4 mt-2 pt-4 d-none`}><img src={sponser4} className='img-fluid' alt="" /></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="">
+            <div className="d-none">
                 <hr style={{ color: "white", background: "white" }} />
                 <div className="container my-3">
                     <div className="row d-flex justify-content-between">
@@ -89,7 +91,7 @@ const Footer = () => {
                         <div className="col-12 col-sm-4">
                             <li style={{ listStyle: 'none' }}>
                                 <i className="fa-solid fa-circle mr-2" style={{ color: '#00FFCA' }}></i>
-                                All System Operational &nbsp; &nbsp; 2024 ASHRIETECH
+                                All System Operational &nbsp; 2024 ASHRIETECH
                             </li>
                         </div>
                     </div>

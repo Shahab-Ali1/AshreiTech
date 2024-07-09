@@ -20,14 +20,17 @@
   .sponsers{
     display: flex;
     justify-content: center;
-    /* gap: 32px; */
+    /* gap: 3px; */
     align-items: center;
-    width: 90%;
+    width: 100%;
     height: auto;
     margin: auto;
   }
 
   .sponsers img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 80%;
     object-fit: cover;
@@ -35,7 +38,7 @@
   .sponsers_logo_container{
    
     height: 100%;
-    width: 100%;
+    width: 20% ;
   }
   @media only screen and (min-width: 1024px) and (max-width: 1152px)  {
     .box{

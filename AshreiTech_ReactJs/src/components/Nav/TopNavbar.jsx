@@ -27,17 +27,17 @@ export default function TopNavbar() {
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
       <div className="justify-content-end align-items-center top_menu d-none d-lg-flex" style={{ padding: "10px 60px", gap: "30px", height: 50 }}>
-        <Link style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}>
+        <Link style={{ padding: "10px 15px" }} to={"/CommingSoon"} spy={true} smooth={true} offset={-80}>
           <span className="animated_link" style={{ color: '#008F71' }}>
             Find Tech Talent
           </span>
         </Link>
-        <Link style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}>
+        <Link style={{ padding: "10px 15px" }} to={"/CommingSoon"} spy={true} smooth={true} offset={-80}>
           <span className="animated_link" style={{ color: '#008F71' }}>
             Digital Academy
           </span>
         </Link>
-        <Link style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}>
+        <Link style={{ padding: "10px 15px" }} to={"/CommingSoon"} spy={true} smooth={true} offset={-80}>
           <span className="animated_link" style={{ color: '#008F71' }}>
             Sign In
           </span>
@@ -85,14 +85,14 @@ export default function TopNavbar() {
             </Link>
           </li>
           <li className="font15 pointer">
-            <Link style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
+            <Link style={{ padding: "10px 15px" }} to={"/CommingSoon"} spy={true} smooth={true} offset={-80}>
               <span className="animated_link">
                 Partner With Us
               </span>
             </Link>
           </li>
           <li className="font15 pointer">
-            <Link style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
+            <Link style={{ padding: "10px 15px" }} to={"/CommingSoon"} spy={true} smooth={true} offset={-80}>
               <span className="animated_link">
                 Insights
               </span>
@@ -100,7 +100,7 @@ export default function TopNavbar() {
           </li>
         </UlWrapper>
         <UlWrapperRight className="flexNullCenter">
-          <li onClick={() => navigate("/GetInTouch")} className="font15 radius8 lightBg get_in_touch_btn pointer flexCenter" style={{ padding: "3px 10px", background: "#008F71", color: "white" }}>
+          <li onClick={() => navigate("/GetInTouch")} className="font15 radius8 lightBg get_in_touch_btn  " >
             Get In Touch
           </li>
          
