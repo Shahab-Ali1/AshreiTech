@@ -126,7 +126,7 @@ export const RegisterYourself = (props) => {
               "stateid": 0,
               "cityid": 202354,
               "dateofbirth": formData?.dob,
-              "genderid": formData?.genderid,
+              "genderid": formData?.gender,
               "bldgroupid": null,
               "religionid": null,
               "nationality": 166,
