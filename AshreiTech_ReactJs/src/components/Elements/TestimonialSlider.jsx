@@ -12,6 +12,8 @@ export default function TestimonialSlider() {
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true, 
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 600,
@@ -77,6 +79,42 @@ export default function TestimonialSlider() {
                 <div className="col-3">
                   <img
                     src={profile2}
+                    alt="Online Shopping VR Glasses"
+                    className="rounded-circle custom-img"
+                  />
+                </div>
+                <div className="col-2">
+                  <i className="fa-brands fa-linkedin"></i>
+                </div>
+                <div className="" >
+                  <h5 className="font-weight-bolder"> Justin Bergson</h5>
+                  <h6 className="">Parents of students</h6>
+                </div>
+              </div>
+              <p className="card-text mb-3 mt-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie turpis tempus nunc pellentesque blandit. Sed pharetra efficitur ex sit amet ultricies. Nulla facilisi.</p>
+              <div className="row justify-content-between mt-3">
+                <div className="col" style={{ color: '#DBDBDB' }}>
+                  08:21 PM - Jan 4, 2023
+                </div>
+                <div className="col" style={{ display: 'contents' }}>
+                  <Rating>
+                    <i className="fa-solid fa-star rating"></i>
+                    <i className="fa-solid fa-star rating"></i>
+                    <i className="fa-solid fa-star rating"></i>
+                    <i className="fa-solid fa-star rating"></i>
+                    <i className="fa-solid fa-star disable_rating"></i>
+                  </Rating>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card >
+            <div className="card-body pb-0">
+              <div className="row d-flex justify-content-left align-items-center">
+                <div className="col-3">
+                  <img
+                    src={profile3}
                     alt="Online Shopping VR Glasses"
                     className="rounded-circle custom-img"
                   />
