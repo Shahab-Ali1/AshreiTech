@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Checkbox, FormControl, FormControlLabel, InputLabel, Select, TextField } from '@mui/material/node'
 // import "./RegisterYourself.css"
-import { codeError, formatDate, getMethod } from '../../../utils/services'
+import { PostMethod, codeError, formatDate, getMethod } from '../../../utils/services'
 import "../AdmissionEnquiery/AdmissionEnquiery.css";
+import { errorMessage, succesMessage, toastError, toastSuccess } from '../../../utils/Toaster/toaster';
 
 const dowpdownData = [
     { Id: 1, stxt: "value1" },
@@ -25,6 +26,8 @@ const INITIAL_STATE = {
     lasteducation: "",
     zakat: "",
     ownlaptop: "",
+    batchid: "",
+    courseid:""
 }
 
 export const RegisterYourself = (props) => {
@@ -38,7 +41,6 @@ export const RegisterYourself = (props) => {
         if (!event) {
             return
         }
-        debugger;
         const { name, value, } = event?.target;
         setFormData((prevField) => ({
             ...prevField,
@@ -48,14 +50,12 @@ export const RegisterYourself = (props) => {
     /* load Initial Data from Api */
     const loadData = () => {
         try {
-            debugger;
-            // FOAdmEnquiry/V2/EnquiryChildren/{entityid}/{enquiryid}
             let Id = getIdFromUrl()
             getMethod(`FOAdmEnquiry/V2/EnquiryChildren/9119/${Id}`)
                 .then((data) => {
-                    debugger;
                     if (data?.IsSuccess) {
                         let obj = data.Data[0];
+                        debugger;
                         setFormData((prevField) => ({
                             ...prevField,
                             "name": obj.childname,
@@ -66,12 +66,14 @@ export const RegisterYourself = (props) => {
                             "whatsappno": obj.whatsappno,
                             "email": obj.email,
                             "lasteducation": obj.lastedu,
+                            "ownlaptop": obj.ownlaptop,
+                            "courseid": obj.courseid,
+                            "batchid": obj.batchid,
                             "dob": formatDate(obj.dob),
                         }));
                     }
                 })
                 .catch(error => {
-                    debugger;
                     codeError(error);
                 });
         } catch (error) {
@@ -108,6 +110,81 @@ export const RegisterYourself = (props) => {
 
         return id;
     };
+    const clickNextBtn = (event) => {
+      try {
+        debugger;
+        let bb = {
+            "Data": {
+              "appno": null,
+              "appdate": "Tue Jul 09 2024",
+              "courseid": formData?.courseid,
+              "batchid": formData?.batchid,
+              "studentname": formData?.name,
+              "fathername": formData?.fname,
+              "mothername": null,
+              "countryid": 166,
+              "stateid": 0,
+              "cityid": 202354,
+              "dateofbirth": formData?.dob,
+              "genderid": formData?.genderid,
+              "bldgroupid": null,
+              "religionid": null,
+              "nationality": 166,
+              "occupation": null,
+              "address": "Bufferzone, Karachi.",
+              "phoneno": null,
+              "mobileno": "0323-5945321",
+              "fathermobile": "0323-5945321",
+              "fathercnic": null,
+              "mothermobile": null,
+              "email": null,
+              "prevschool": null,
+              "prevcourseid": null,
+              "year": null,
+              "marks": null,
+              "grade": null,
+              "leavingdate": null,
+              "leavingreason": null,
+              "fatherqualification": null,
+              "motherqualification": null,
+              "motheremail": null,
+              "fatherincome": null,
+              "mothercnic": null,
+              "imageid": "",
+              "entityid": 3256,
+              "statusid": 80,
+              "enquiryid": 63029,
+              "enquirydtlid": 59858,
+              "fathqualificationid": null,
+              "fathoccupationid": null,
+              "fathwhatsappno": null,
+              "mothqualificaionid": null,
+              "mothoccupationid": null,
+              "mothwhatsappno": null,
+              "prospectusno": null
+            },
+            "DataAddon": {},
+            "ReturnObject": true
+          }
+        // https://sm.edu-man.com/sm/api/AdmApplication/v2/
+        PostMethod("AdmApplication/v2/", bb)
+        .then((data) => {
+            debugger;
+            if (data?.IsSuccess) {
+                toastSuccess(succesMessage);
+                props?.handleChange(event, 1)
+            }
+        })
+        .catch(error => {
+            debugger;
+            toastError(errorMessage);
+            codeError(error);
+        });
+      } catch (error) {
+        codeError(error);
+      }
+    }
+    
     return (
         <>
         <div className="background">
@@ -313,7 +390,8 @@ export const RegisterYourself = (props) => {
 
                         <div className='row mt-5'>
                             <div className='col-lg-12 d-flex justify-content-end'>
-                                <button type='submit' className='buttonClass' onClick={(event) => props?.handleChange(event, 1)}> Next &#8250;</button>
+                                {/* <button type='submit' className='buttonClass' onClick={(event) => props?.handleChange(event, 1)}> Next &#8250;</button> */}
+                                <button type='submit' className='buttonClass' onClick={clickNextBtn}> Next &#8250;</button>
                             </div>
                         </div>
 

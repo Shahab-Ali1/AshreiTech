@@ -21,7 +21,6 @@ const INITIAL_STATE = {
     gender: "",
     cellno: "",
     lasteducation: "",
-    // dob: "",
     dob: formatDate(new Date()),
     ownlaptop: false,
     zakat: false,
@@ -236,7 +235,8 @@ export const AdmissionEnquiry = (props) => {
                         "email": formData.email,
                         "cellno": formData.cellno,
                         "lasteducation": formData.lasteducation,
-                        "dob": "2000-06-20"
+                        "dob": formData?.dob,
+                        "ezakat": formData?.zakat
                     }
                 ],
                 //   "noofchild": 1,
