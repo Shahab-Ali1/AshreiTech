@@ -5,8 +5,7 @@ import sponser1 from "../../assets/sponser1.png"
 import sponser2 from "../../assets/sponser2.png"
 import sponser3 from "../../assets/sponser3.png"
 import sponser4 from "../../assets/sponser4.png"
-import bg7 from "../../assets/bg7.png";
-
+ 
 const Sponsers = () => {
     const { box, custom_btn_outline_dark, sponsers, sponsers_logo_container, Laptop_Image } = style;
     return (
