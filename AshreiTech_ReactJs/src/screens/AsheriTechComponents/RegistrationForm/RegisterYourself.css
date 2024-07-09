@@ -45,3 +45,6 @@
     text-align: center;
     align-items: center;
 }
+.generateBtn:hover {
+    background-color: #5a1f10; 
+  }
