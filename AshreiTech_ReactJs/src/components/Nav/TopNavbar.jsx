@@ -44,12 +44,12 @@ export default function TopNavbar() {
         </Link>
       </div>
       <div className="d-flex justify-content-between align-items-center py-3 px-lg-5 px-0" >
-        <div className="d-flex justify-content-between  ">
+        <div className="d-flex justify-content-center">
         <Link className="pointer flexNullCenter" to="/" smooth={true}>
-          <img src={Logo} className="main_logo ml-4 ml-lg-0" alt="" srcSet=""  style={{width:'200px' , height:'auto'}}/>
+          <img src={Logo} className="main_logo mx-5 mx-lg-0" alt="" srcSet=""  style={{width:'200px' , height:'auto'}}/>
         </Link>
-        <BurderWrapper className="pointer mt-1 mt-lg-0 ml-5 ml-lg-0" onClick={() => toggleSidebar(!sidebarOpen)}>
-          <BurgerIcon className=" ml-5 ml-lg-0"/>
+        <BurderWrapper className="pointer mt-2" onClick={() => toggleSidebar(!sidebarOpen)}>
+          <BurgerIcon className=" "/>
         </BurderWrapper>
         </div>
         <UlWrapper className="flexNullCenter header_menu">

@@ -4,7 +4,7 @@ import Usman from '../../assets/Usman.png';
 import Abdullah from '../../assets/abdullah.png';
 import Slider from "react-slick";
 import styled from "styled-components";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import bg2 from '../../assets/Rectangle 17011.png'
 
@@ -15,7 +15,7 @@ export default function OurTrainer() {
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: true,
-    autoplay: true, 
+    autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
       {

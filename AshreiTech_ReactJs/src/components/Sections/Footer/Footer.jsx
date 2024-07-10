@@ -72,11 +72,8 @@ const Footer = () => {
                     </div>
                     <div className={`${containerTwo} mt-4`}>
                         <h5 className='text-center text-md-left'>Developed By Edu-Man</h5>
-                        <div className="row pt-4 d-flex justify-content-between align-items-center">
-                            <div className={`${containerTwoPiece} col-4 mt-2 ml-1`}><img src={eduman} className='img-fluid' alt="" /></div>
-                            <div className={`${containerTwoPiece} col-4 d-none`}><img src={sponser2} className='img-fluid' alt="" /></div>
-                            <div className={`${containerTwoPiece} col-4 d-none`}><img src={sponser3} className='img-fluid' alt="" /></div>
-                            <div className={`${containerTwoPiece} col-4 mt-2 pt-4 d-none`}><img src={sponser4} className='img-fluid' alt="" /></div>
+                        <div className="row pt-4 d-flex justify-content-lg-start justify-content-center">
+                            <div className={`${containerTwoPiece} col-6  mt-2 ml-1`}><img src={eduman} className='img-fluid' alt="" /></div>
                         </div>
                     </div>
                 </div>

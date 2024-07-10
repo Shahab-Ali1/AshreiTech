@@ -14,12 +14,12 @@ export default function Header() {
     <>
       <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
         <ol className="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" className=" active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1" cl></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div className="carousel-inner">
-          <div className="carousel-item active bg-white py-5 " style={{ backgroundImage: `url(${newSlider1})`, width: '100%', height: 'auto',backgroundRepeat:'no-repeat', backgroundSize:'cover', backgroundPosition:'center' }}>
+          <div className="carousel-item active bg-white py-5  " style={{ backgroundImage: `url(${newSlider1})`, width: '100%', height: 'auto',backgroundRepeat:'no-repeat', backgroundSize:'cover', backgroundPosition:'center' }}>
             <div className="d-flex flex-column justify-content-center align-items-center py-5 my-5 ">
               <h1 className="pt-3 text-center text-md-left">
                 Complexity <span style={{ color: "#008F71" }}>Simplified,</span>

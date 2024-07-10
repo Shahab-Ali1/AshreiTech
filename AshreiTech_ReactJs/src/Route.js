@@ -6,7 +6,7 @@ import { RegistrationForm } from "./screens/AsheriTechComponents/RegistrationFor
 import Teams from "./screens/Teams/Teams";
 import BookaRoom from "./screens/BookaRoom/BookaRoom";
 import WhatWeDo from "./screens/WhatWeDo/WhatWeDo";
-import CommingSoon from "./components/Sections/CommingSoon";
+import CommingSoon from  "./components/Sections/CommingSoonPage/CommingSoon"
 
 export const router = createHashRouter([
     {

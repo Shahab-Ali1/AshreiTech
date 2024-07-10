@@ -3,17 +3,14 @@ import styled from "styled-components";
 import { Link } from "react-scroll";
 // Assets
 import CloseIcon from "../../assets/svg/CloseIcon";
-import LogoIcon from "../../assets/svg/Logo";
+import LogoIcon from "../../assets/logo.png";
 
 export default function Sidebar({ sidebarOpen, toggleSidebar }) {
   return (
-    <Wrapper className="animate darkBg text-white" sidebarOpen={sidebarOpen}>
+    <Wrapper className="text-white" sidebarOpen={sidebarOpen}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
-          <LogoIcon />
-          <h1 className="whiteColor font20" style={{ marginLeft: "15px" }}>
-            fanatic
-          </h1>
+          <img src={LogoIcon} alt="" />
         </div>
         <CloseBtn onClick={() => toggleSidebar(!sidebarOpen)} className="animate pointer">
           <CloseIcon />
@@ -21,51 +18,35 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
       </SidebarHeader>
 
       <UlStyle className="flexNullCenter flexColumn">
-       <div className="d-flex justify-content-center align-items-center text-center">
-       <li className="semiBold font15 pointer col-4">
+        <li className="semiBold font15 pointer ">
           <Link
             onClick={() => toggleSidebar(!sidebarOpen)}
             activeClass="active"
             className="whiteColor"
-            
-          >
-            Find Tech Talent
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer col-4">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            
-            
-          >
-            Digital Academy
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer col-4">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            
+
           >
             Sign In
           </Link>
         </li>
-       </div>
-        <li className="semiBold font15 pointer">
+        <li className="semiBold font15 pointer ">
           <Link
             onClick={() => toggleSidebar(!sidebarOpen)}
             activeClass="active"
             className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={-60}
+
           >
-            Home
+            Find Tech Talent
+          </Link>
+        </li>
+        <li className="semiBold font15 pointer ">
+          <Link
+            onClick={() => toggleSidebar(!sidebarOpen)}
+            activeClass="active"
+            className="whiteColor"
+
+
+          >
+            Digital Academy
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -74,12 +55,12 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="services"
+            to={"/CommingSoon"}
             spy={true}
             smooth={true}
             offset={-60}
           >
-            Services
+            About the  company
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -88,12 +69,12 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="projects"
+            to={"/teams"}
             spy={true}
             smooth={true}
             offset={-60}
           >
-            Projects
+            About the team
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -102,12 +83,12 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="blog"
+            to={"/BookaRoom"}
             spy={true}
             smooth={true}
             offset={-60}
           >
-            Blog
+            Book a Room
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -116,12 +97,12 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="pricing"
+            to={"/CommingSoon"}
             spy={true}
             smooth={true}
             offset={-60}
           >
-            Pricing
+            Partner with Us
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -130,12 +111,12 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="contact"
+            to={"/CommingSoon"}
             spy={true}
             smooth={true}
             offset={-60}
           >
-            Contact
+            Insights
           </Link>
         </li>
       </UlStyle>
@@ -147,7 +128,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
         </li>
         <li className="semiBold font15 pointer flexCenter">
           <a href="/" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
-            Get Started
+            Get in Touch
           </a>
         </li>
       </UlStyle>
@@ -157,6 +138,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
 
 const Wrapper = styled.nav`
   width: 400px;
+  background-color: #008F71;
   height: 100vh;
   position: fixed;
   top: 0;
