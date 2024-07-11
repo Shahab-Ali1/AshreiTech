@@ -43,7 +43,7 @@ export default function TopNavbar() {
           </span>
         </Link>
       </div>
-      <div className="d-flex justify-content-between align-items-center py-3 px-lg-5 px-0" >
+      <div className="d-flex justify-content-between align-items-center py-3 px-lg-5 px-0 pb-5 mb-2" >
         <div className="d-flex justify-content-center">
         <Link className="pointer flexNullCenter" to="/" smooth={true}>
           <img src={Logo} className="main_logo mx-5 mx-lg-0" alt="" srcSet=""  style={{width:'200px' , height:'auto'}}/>
@@ -61,7 +61,7 @@ export default function TopNavbar() {
           <li className="HeaderPaddingRight">
             <div className="dropdown">
               <span className="link2 font15 pointer">
-                Who Are We
+                Who We Are
               </span>
               <i
                 style={{ marginTop: "0px", marginLeft: "10px" }}
@@ -76,6 +76,13 @@ export default function TopNavbar() {
                 </Link>
               </div>
             </div>
+          </li>
+          <li className="font15 pointer">
+            <Link style={{ padding: "10px 15px" }} to={"/WhatWeDo"} spy={true} smooth={true} offset={-80}>
+              <span className="animated_link">
+               What We Do
+              </span>
+            </Link>
           </li>
           <li className="font15 pointer">
             <Link style={{ padding: "10px 15px" }} to={"/BookaRoom"} spy={true} smooth={true} offset={-80}>

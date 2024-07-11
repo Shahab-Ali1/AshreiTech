@@ -10,21 +10,26 @@ import alrazi from '../../assets/BookaScreen/al-razi.jpg';
 import alFarabi from '../../assets/BookaScreen/al-farabi.jpg';
 import alkhawarzmi from '../../assets/BookaScreen/al-khawarizmi.jpg';
 import alkindi from '../../assets/BookaScreen/al-kindi.jpg';
-import heart from '../../assets/BookaScreen/vanue at the heart of the city.svg';
-import wifi from '../../assets/BookaScreen/wifi.svg'
-import tech from '../../assets/BookaScreen/high tech learning.svg'
-import pray from '../../assets/BookaScreen/prayer area.svg'
+import heart from '../../assets/BookaScreen/vanue at the heart of the city.png';
+import wifi from '../../assets/BookaScreen/wifi.png'
+import tech from '../../assets/BookaScreen/high tech learning.png'
+import pray from '../../assets/BookaScreen/prayer area.png'
+import glowwithdots from '../../assets/BookaScreen/glowwithdot.png'
+import glowimg from '../../assets/BookaScreen/glowimg.png'
+import glowimg1 from '../../assets/BookaScreen/Glowimg1.png'
 import Slider from "react-slick";
 import vactor1 from '../../assets/BookaScreen/Group 7901.png';
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './style.module.css'
-import { AdmissionEnquiry } from '../AsheriTechComponents/AdmissionEnquiery/AdmissionEnquiery';
+import formBackground from '../../assets/BookaScreen/FormBackground.png'
 import style from "./style.module.css";
 import videoOne from '../../assets/video/video1.mp4'
 import videoTwo from '../../assets/video/video2.mp4'
 import videoThree from '../../assets/video/video3.mp4'
+import { colors } from '@mui/material';
+import { BookaRoomForm } from './BookaRoomForm';
 
 
 export default function BookaRoom() {
@@ -38,7 +43,14 @@ export default function BookaRoom() {
         autoplaySpeed: 3000,
         responsive: [
             {
-                breakpoint: 600,
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -56,7 +68,6 @@ export default function BookaRoom() {
     const { modallg } = style;
     return (
         <>
-
             <TopNavbar />
             <div
                 className="container-fluid py-4"
@@ -96,29 +107,37 @@ export default function BookaRoom() {
                                 Events & Conferences</h1>
                             <h4 className="text-white mt-3">No matters if it’s a 10-person strategy meeting or a
                                 1000-person conference, we’ve got your back.</h4>
-                            <button className="slider_btn"  >Register Now</button>
+                            <button className="slider_btn" data-toggle="modal" data-target="#exampleModal"   >Register Now</button>
                         </div>
                         <div className="pb-5 mb-5"></div>
                     </div>
                 </div>
-
             </div>
-            <div className="container py-4">
+            
+            <div className="container-fluid py-4"
+                style={{
+                    backgroundImage: `url(${glowimg}),url(${glowimg}),url(${glowimg}),url(${glowimg}),url(${glowimg})`,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    padding: 0,
+                }}
+            >
                 <div className="row p-5 d-flex justify-content-center align-items-center">
-                    <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left">
-                        <h1>Professional Ambiance</h1>
-                        <p className="mt-3">Our rooms are meticulously designed to create a professional atmosphere
+                    <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left px-5">
+                        <h1 >Professional Ambiance</h1>
+                        <h4 className="mt-3" style={{ color: '#6D6D6D' }}>Our rooms are meticulously designed to create a professional atmosphere
                             conducive to productivity and focus. <br />
                             Each room is customized to suit various types and room layouts of
                             corporate events and trainings, whether it's a board meeting, seminar,
                             workshop, or training session.
-                        </p>
+                        </h4>
                         <button className="slider_btn d-none">Explore Our Rooms</button>
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-12">
                         <video controls style={{
                             width: '100%',
-                            height: 'auto'
+                            height: 'auto',
+                            borderRadius: '15px',
                         }}>
                             <source src={videoOne} type="video/mp4" />
                             Your browser does not support the video tag.
@@ -136,12 +155,13 @@ export default function BookaRoom() {
                     padding: 0,
                 }}
             >
-                <div className="container py-4">
+                <div className="py-4">
                     <div className="row p-5 d-flex justify-content-center align-items-center">
                         <div className="col-lg-6 col-md-6 col-sm-12">
                             <video controls style={{
                                 width: '100%',
-                                height: 'auto'
+                                height: 'auto',
+                                borderRadius: '15px',
                             }}>
                                 <source src={videoTwo} type="video/mp4" />
                                 Your browser does not support the video tag.
@@ -149,34 +169,51 @@ export default function BookaRoom() {
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left text-white">
                             <h1>High-Tech Equipment</h1>
-                            <p className="mt-3">State-of-the-art audiovisual equipment ensures seamless
+                            <h4 className="mt-3">State-of-the-art audiovisual equipment ensures seamless
                                 presentations and interactive sessions.
                                 <br />
                                 High-resolution latest commercial grade screen and traditional
                                 whiteboards covers all the training needs of communication and
                                 collaboration.
-                            </p>
+                            </h4>
                             <button className="slider_btn d-none">Learn More</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="container py-4">
-                <div className="row p-5 d-flex justify-content-center align-items-center">
-                    <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left">
+            <div className="container-fluid py-4"
+                style={{
+                    backgroundImage: `url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1})`,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    padding: 0,
+                }}>
+                <div className="row p-5 d-flex justify-content-center align-items-center ">
+                    <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left px-5">
                         <h1>Customizable Amenities</h1>
-                        <p className="mt-3">We offer customizable amenities such as catering services, coffee stations,
+                        <h4 className="mt-3" style={{ color: '#6D6D6D' }}>We offer customizable amenities such as catering services, coffee stations,
                             and breakout areas to meet specific event requirements.
                             <br />
                             Our dedicated staff is available to assist with setup, technical support, and
                             any other logistical needs, ensuring a seamless event experience.
-                        </p>
+                        </h4>
+                        <div className='d-none d-lg-block' style={{
+                            width: '10px',
+                            height: '10px',
+                            backgroundColor: '#525FE1',
+                            borderRadius: '50%',
+                            marginLeft: '100px',
+                            marginTop: '50px',
+                            border: '1px solid white',
+
+                        }}></div>
                         <button className="slider_btn d-none">View Packages</button>
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-12">
                         <video controls style={{
                             width: '100%',
-                            height: 'auto'
+                            height: 'auto',
+                            borderRadius: '15px',
                         }}>
                             <source src={videoThree} type="video/mp4" />
                             Your browser does not support the video tag.
@@ -198,138 +235,171 @@ export default function BookaRoom() {
                 <div className="row d-flex justify-content-center align-items-center py-4">
                     <div className="col-lg-12 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center text-white">
                         <h1 className="generic_heading pb-4 pb-lg-0" id="generic_heading_BookRoom">What's Included ?</h1>
-                        <p className="col-8 pt-2 mt-4">Our tech tier bundles are curated with simple to complex meetings and events in mind, with multiple levels of in-room equipment and technical support. Work with our team to find the tech tier that’s right for you, or explore our custom offerings.</p>
+                        <p className="col-8 pt-2 mt-4">Our state-of-the-art learning facility includes purpose-built training rooms, assessment centers, meeting rooms, labs, in-house amphitheater, podcast, and recording setup for e-Learning, high-end restaurant, networking event spaces and a full-service conference arena.</p>
                     </div>
                 </div>
                 <div className='d-sm-block d-md-none d-lg-none'>
                     <div className="col-12 d-flex justify-content-center align-items-center py-4">
                         <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
-                            <div className="col-3">
-                                <img src={wifi} alt="" />
+                            <div className="col-sm-5 col-lg-3">
+                                <img src={wifi} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
-                            <i class="fa-solid fa-wifi fa-4x" style={{ color: 'black' }}></i>
-                            <h4 className="my-2 font-weight-bolder " style={{ color: 'black !important' }} >24/7 wi-fi</h4>
-                            <p className="line-height-sm">Obviously, it’s Not A Luxury – It’s A Necessity!</p>
+                            <h4 className="my-2 " style={{ color: 'black !important' }} >24/7 wi-fi</h4>
+                            <p className="line-height-sm">Obviously, it’s Not A Luxury – It’s A Necessity, Because We Are Serving A Global World!</p>
                         </div>
 
                     </div>
                     <div className="col-12 d-flex justify-content-center align-items-center py-4">
                         <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
-                            <div className="col-3">
-                                <img src={tech} alt="" />
+                            <div className="col-sm-5 col-lg-3">
+                                <img src={tech} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
-                            <i class="fa-solid fa-book fa-4x" style={{ color: 'black !important' }}></i>
-                            <h4 className="my-2 font-weight-bolder">High-Tech Learning Venue</h4>
-                            <p className="line-height-sm"> Of course, We Are A Tech Company!</p>
+                            <h4 className="my-2 ">High-Tech Learning Venue</h4>
+                            <p className="line-height-sm">We Are A Tech Company, And We Know The Importance Of Tech Amenities!</p>
                         </div>
                     </div>
                     <div className="col-12 d-flex justify-content-center align-items-center py-4">
                         <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
-                            <div className="col-3">
-                                <img src={pray} alt="" />
+                            <div className="col-sm-5 col-lg-3">
+                                <img src={pray} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
-                            <i class="fa-solid fa-mosque fa-4x" style={{ color: 'black !important' }}></i>
-                            <h4 className="my-2 font-weight-bolder">Segregated Prayer Area</h4>
-                            <p className="line-height-sm">Neat And Tidy, For Ladies And Gentlemen!</p>
+                            <h4 className="my-2 ">Segregated Prayer Area</h4>
+                            <p className="line-height-sm">Neat And Tidy, For Ladies And Gentlemen, With Ample Rest Rooms On Every Floor!</p>
                         </div>
                     </div>
                     <div className="col-12 d-flex justify-content-center align-items-center py-4">
                         <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
-                            <div className="col-3">
-                                <img src={heart} alt="" />
+                            <div className="col-sm-5 col-lg-3">
+                                <img src={heart} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
-                            <i class="fa-solid fa-city fa-4x" style={{ color: 'black !important' }}></i>
-                            <h4 className="my-2 font-weight-bolder">Venue At The Heart Of The City</h4>
-                            <p className="line-height-sm">With Ample Shaded Parking Space!</p>
+                            <h4 className="my-2 ">Venue At The Heart Of The City</h4>
+                            <p className="line-height-sm">Located Inside NASTP, Karachi, with Shaded Parking Space for Up To 500 Cars!</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="col-12 justify-content-center align-items-center py-4 d-none d-md-flex d-lg-flex">
                     <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
-                        <div className="col-3">
-                            <img src={wifi} alt="" />
+                        <div className="col-md-6 col-lg-3">
+                            <img src={wifi} alt="" style={{ width: '55px', height: '55px' }} />
                         </div>
-                        <h4 className="my-2 font-weight-bolder " style={{ color: 'black !important' }} >24/7 wi-fi</h4>
-                        <p className="line-height-sm">Obviously, it’s Not A Luxury – It’s A Necessity!</p>
+                        <h4 className="my-2  " style={{ color: 'black !important' }} >24/7 wi-fi</h4>
+                        <p className="line-height-sm">Obviously, it’s Not A Luxury – It’s A Necessity, Because We Are Serving A Global World!</p>
                     </div>
                     <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ml-5" style={{ borderRadius: '24px' }}>
-                        <div className="col-3">
-                            <img src={tech} alt="" />
+                        <div className="col-md-6 col-lg-3">
+                            <img src={tech} alt="" style={{ width: '55px', height: '55px' }} />
                         </div>
-                        <h4 className="my-2 font-weight-bolder">High-Tech Learning Venue</h4>
-                        <p className="line-height-sm"> Of course, We Are A Tech Company!</p>
+                        <h4 className="my-2 ">High-Tech Learning Venue</h4>
+                        <p className="line-height-sm">We Are A Tech Company, And We Know The Importance Of Tech Amenities!</p>
+                    </div>
+                </div>
+                <div className='d-none d-lg-block' style={{
+                    width: '10px',
+                    height: '10px',
+                    backgroundColor: '#525FE1',
+                    borderRadius: '50%',
+                    marginLeft: '100px',
+                    position: 'relative',
+
+                }}>
+                    <div
+                        className='d-none d-lg-block' style={{
+                            width: '15px',
+                            height: '15px',
+                            backgroundColor: '#FFCF59',
+                            borderRadius: '50%',
+                            border: '1px solid white',
+                            top: '-40px',
+                            left: '-50px',
+                            position: 'absolute'
+
+                        }}>
+
                     </div>
                 </div>
                 <div className="col-12 justify-content-center align-items-center py-4 d-none d-md-flex d-lg-flex">
                     <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
-                        <div className="col-3">
-                            <img src={pray} alt="" />
+                        <div className="col-md-6 col-lg-3">
+                            <img src={pray} alt="" style={{ width: '55px', height: '55px' }} />
                         </div>
-                        <h4 className="my-2 font-weight-bolder">Segregated Prayer Area</h4>
-                        <p className="line-height-sm">Neat And Tidy, For Ladies And Gentlemen!</p>
+                        <h4 className="my-2 ">Segregated Prayer Area</h4>
+                        <p className="line-height-sm">Neat And Tidy, For Ladies And Gentlemen, With Ample Rest Rooms On Every Floor!</p>
                     </div>
                     <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ml-5" style={{ borderRadius: '24px' }}>
-                        <div className="col-3">
-                            <img src={heart} alt="" />
+                        <div className="col-md-6 col-lg-3">
+                            <img src={heart} alt="" style={{ width: '55px', height: '55px' }} />
                         </div>
-                        <h4 className="my-2 font-weight-bolder">Venue At The Heart Of The City</h4>
-                        <p className="line-height-sm">With Ample Shaded Parking Space!</p>
+                        <h4 className="my-2 ">Venue At The Heart Of The City</h4>
+                        <p className="line-height-sm">Located Inside NASTP, Karachi, with Shaded Parking Space for Up To 500 Cars!</p>
                     </div>
                 </div>
             </div>
 
-            <div className="row">
-                <div className="col-1"></div>
-                <div className="col-12 col-md-6 col-lg-10 p-5 justify-content-center">
-                    <SliderWrapper>
-                        <Slider {...settings}>
-                            <div className="d-flex justify-content-center align-items-center">
-                                <div className="m-2 p-4">
-                                    <img src={alrazi} alt="Al-Razi" className='slick-slide' />
-                                    <div className="info">
-                                        <h1>Al-Razi</h1>
-                                    </div>
-                                    <div className="overlay">
-                                        <h4>Capacity: 15 to 25 Person</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="d-flex justify-content-center align-items-center">
-                                <div className="m-2 p-4">
-                                    <img src={alFarabi} alt="Al-Farabi" className='slick-slide' />
-                                    <div className="info">
-                                        <h1>Al-Farabi</h1>
-                                    </div>
-                                    <div className="overlay">
-                                        <h4>Capacity: 15 to 25 Person</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="d-flex justify-content-center align-items-center">
-                                <div className="m-2 p-4">
-                                    <img src={alkhawarzmi} alt="Al-Khawarzmi" className='slick-slide' />
-                                    <div className="info">
-                                        <h1>Al-Khawarzmi</h1>
-                                    </div>
-                                    <div className="overlay">
-                                        <h4>Capacity: 15 to 25 Person</h4>
+            <div className="container-fluid py-5"
+                style={{
+                    backgroundImage: `  url(${glowwithdots}),url(${BookaScreenHeroContainer})`,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    padding: 0,
+                }}
+            >
+                <div className="row d-flex flex-column justify-content-center align-items-center pb-4 ">
+                    <div className="col-12">
+                        <h1 className='generic_heading'>Rooms</h1>
+                    </div>
+                </div>
+                <div className="row d-flex  justify-content-center p-5 ">
+                    <div className="col-sm-12 col-md-10 col-lg-12 px-5 justify-content-center ">
+                        <SliderWrapper>
+                            <Slider {...settings}>
+                                <div className="d-flex justify-content-center align-items-center">
+                                    <div className="">
+                                        <img src={alrazi} alt="Al-Razi" className='slick-slide' />
+                                        <div className="info">
+                                            <h1>Al-Razi</h1>
+                                        </div>
+                                        <div className="overlay">
+                                            <h4>Capacity: 15 to 25 Person</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="d-flex justify-content-center align-items-center">
-                                <div className="m-2 p-4">
-                                    <img src={alkindi} alt="Al-kindi" className='slick-slide' />
-                                    <div className="info">
-                                        <h1>Al-kindi</h1>
-                                    </div>
-                                    <div className="overlay">
-                                        <h4>Capacity: 15 to 25 Person</h4>
+                                <div className="d-flex justify-content-center align-items-center">
+                                    <div className="">
+                                        <img src={alFarabi} alt="Al-Farabi" className='slick-slide' />
+                                        <div className="info">
+                                            <h1>Al-Farabi</h1>
+                                        </div>
+                                        <div className="overlay">
+                                            <h4>Capacity: 15 to 25 Person</h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </Slider>
-                    </SliderWrapper>
+                                <div className="d-flex justify-content-center align-items-center">
+                                    <div className="">
+                                        <img src={alkhawarzmi} alt="Al-Khawarzmi" className='slick-slide' />
+                                        <div className="info">
+                                            <h1>Al-Khawarzmi</h1>
+                                        </div>
+                                        <div className="overlay">
+                                            <h4>Capacity: 15 to 25 Person</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="d-flex justify-content-center align-items-center">
+                                    <div className="">
+                                        <img src={alkindi} alt="Al-kindi" className='slick-slide' />
+                                        <div className="info">
+                                            <h1>Al-kindi</h1>
+                                        </div>
+                                        <div className="overlay">
+                                            <h4>Capacity: 15 to 25 Person</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Slider>
+                        </SliderWrapper>
+                    </div>
                 </div>
             </div>
 
@@ -337,9 +407,8 @@ export default function BookaRoom() {
                 <div class="modal fade  " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div className={`${modallg} modal-dialog `} id='modalForm' role="document">
                         <div class="modal-content">
-
                             <div class="modal-body">
-                                ...<AdmissionEnquiry />
+                                <BookaRoomForm/>
                             </div>
                         </div>
                     </div>
@@ -351,6 +420,56 @@ export default function BookaRoom() {
     );
 }
 
+// const SliderWrapper = styled.div`
+//   .slick-slide {
+//     position: relative;
+//     text-align: center;
+//     padding: 0 10px;
+//     border-radius: 25px !important;
+//   }
+
+//   img {
+//     width: 350px;
+//     height: 270px;
+
+//   }
+
+//   .info {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     color: white;
+//     /* background: rgba(0, 0, 0, 0.5); */
+//     padding: 10px;
+//     transition: opacity 0.3s ease;
+//   }
+
+//   .overlay {
+//     position: absolute;
+//     top: 1;
+//     left: 23px;
+//     width: 326px;
+//     height: 270px;
+//     background: rgba(0, 0, 0, 0.7);
+//     color: white;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     opacity: 0;
+//     transition: opacity 0.3s ease;
+//     border-radius: 20px !important;
+//   }
+
+//   .slick-slide:hover .info {
+//     opacity: 0;
+//   }
+
+//   .slick-slide:hover .overlay {
+//     opacity: 1;
+//   }
+// `;
+
 const SliderWrapper = styled.div`
   .slick-slide {
     position: relative;
@@ -360,9 +479,9 @@ const SliderWrapper = styled.div`
   }
 
   img {
-    width: 350px;
-    height: 270px;
-
+    width: 100%;
+    height: auto;
+    /* border-radius: 25px !important; */
   }
 
   .info {
@@ -371,25 +490,25 @@ const SliderWrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    /* background: rgba(0, 0, 0, 0.5); */
     padding: 10px;
     transition: opacity 0.3s ease;
   }
 
   .overlay {
     position: absolute;
-    top: 1;
-    left: 23px;
-    width: 326px;
-    height: 270px;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.7);
+    transform: translate(-50%, -50%);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    border-radius: 20px !important;
+    border-radius: 25px !important;
   }
 
   .slick-slide:hover .info {
@@ -399,6 +518,37 @@ const SliderWrapper = styled.div`
   .slick-slide:hover .overlay {
     opacity: 1;
   }
-`;
 
-// data-toggle="modal" data-target="#exampleModal" 
+  @media (max-width: 1200px) {
+    img {
+      width: 300px;
+      height: 230px;
+    }
+    .overlay {
+      width: 300px;
+      height: 230px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 250px;
+      height: 200px;
+    }
+    .overlay {
+      width: 250px;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    img {
+      width: 200px;
+      height: 150px;
+    }
+    .overlay {
+      width: 200px;
+      height: 150px;
+    }
+  }
+`;
