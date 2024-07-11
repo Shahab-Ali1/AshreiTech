@@ -1,4 +1,4 @@
-.card {
+/* .card {
     display: flex;
     position: relative;
     border-radius: 50px;
@@ -24,16 +24,11 @@
    border-radius: 50px;
 }
 
-.card-title {
-    font-family: 'Work Sans';
-    padding: 0 16px;
-    font-weight: 400;
-}
 
 .card-block {
     text-align: center;
     padding: 16px;
-    margin-top: 15%;
+    margin-top: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,4 +64,4 @@
 .card:hover::after {
     opacity: 0.5;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-}
+} */
