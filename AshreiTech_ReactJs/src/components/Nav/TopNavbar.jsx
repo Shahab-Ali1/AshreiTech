@@ -27,29 +27,29 @@ export default function TopNavbar() {
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
       <div className="justify-content-end align-items-center top_menu d-none d-lg-flex" style={{ padding: "10px 60px", gap: "30px", height: 50 }}>
-        <Link style={{ padding: "10px 15px" }} to={"/CommingSoon"} spy={true} smooth={true} offset={-80}>
+        <Link style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}>
           <span className="animated_link" style={{ color: '#008F71' }}>
             Find Tech Talent
           </span>
         </Link>
-        <Link style={{ padding: "10px 15px" }} to={"/CommingSoon"} spy={true} smooth={true} offset={-80}>
+        <Link style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}>
           <span className="animated_link" style={{ color: '#008F71' }}>
             Digital Academy
           </span>
         </Link>
-        <Link style={{ padding: "10px 15px" }} to={"/CommingSoon"} spy={true} smooth={true} offset={-80}>
+        <Link style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}>
           <span className="animated_link" style={{ color: '#008F71' }}>
             Sign In
           </span>
         </Link>
       </div>
       <div className="d-flex justify-content-between align-items-center py-3 px-lg-5 px-0" >
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-between  ">
         <Link className="pointer flexNullCenter" to="/" smooth={true}>
-          <img src={Logo} className="main_logo mx-5 mx-lg-0" alt="" srcSet=""  style={{width:'200px' , height:'auto'}}/>
+          <img src={Logo} className="main_logo ml-4 ml-lg-0" alt="" srcSet=""  style={{width:'200px' , height:'auto'}}/>
         </Link>
-        <BurderWrapper className="pointer mt-2" onClick={() => toggleSidebar(!sidebarOpen)}>
-          <BurgerIcon className=" "/>
+        <BurderWrapper className="pointer mt-1 mt-lg-0 ml-5 ml-lg-0" onClick={() => toggleSidebar(!sidebarOpen)}>
+          <BurgerIcon className=" ml-5 ml-lg-0"/>
         </BurderWrapper>
         </div>
         <UlWrapper className="flexNullCenter header_menu">
@@ -68,7 +68,7 @@ export default function TopNavbar() {
                 className="dropbtn hover-rotate fa fa-chevron-right"
               ></i>
               <div className="dropdown-content">
-                <Link className="" to={"/"}>
+                <Link className="" to={"/aboutthecompany"}>
                   About The Company
                 </Link>
                 <Link className="" to={"/teams"}>
@@ -85,14 +85,14 @@ export default function TopNavbar() {
             </Link>
           </li>
           <li className="font15 pointer">
-            <Link style={{ padding: "10px 15px" }} to={"/CommingSoon"} spy={true} smooth={true} offset={-80}>
+            <Link style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
               <span className="animated_link">
                 Partner With Us
               </span>
             </Link>
           </li>
           <li className="font15 pointer">
-            <Link style={{ padding: "10px 15px" }} to={"/CommingSoon"} spy={true} smooth={true} offset={-80}>
+            <Link style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
               <span className="animated_link">
                 Insights
               </span>
@@ -100,7 +100,7 @@ export default function TopNavbar() {
           </li>
         </UlWrapper>
         <UlWrapperRight className="flexNullCenter">
-          <li onClick={() => navigate("/GetInTouch")} className="font15 radius8 lightBg get_in_touch_btn  " >
+          <li onClick={() => navigate("/GetInTouch")} className="font15 radius8 lightBg get_in_touch_btn pointer flexCenter" style={{ padding: "3px 10px", background: "#008F71", color: "white" }}>
             Get In Touch
           </li>
          
