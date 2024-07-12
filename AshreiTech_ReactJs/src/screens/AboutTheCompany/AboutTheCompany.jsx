@@ -1,22 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from "./style.module.css"
 import TopNavbar from '../../components/Nav/TopNavbar'
 import section2banner from '../../assets/aboutSection2banner.png'
 import section1banner from '../../assets/aboutSection1banner.png'
 import Footer from '../../components/Sections/Footer/Footer'
 
-import vector1 from '../../assets/aboutcard1.png'
+import vector1 from '../../assets/aboutAnimation1.png'
 import vector2 from '../../assets/aboutcard2.png'
 import vector3 from '../../assets/aboutcard3.png'
 import vector4 from '../../assets/aboutcard4.png'
 import BookaScreenHeroContainer from '../../assets/BookaScreen/BookaScreenHeroContainer.png';
 import BookaScreenHero from '../../assets/BookaScreen/BookaScreenHero.png';
 import bg from '../../assets/missonbackground.png'
-
+import animation1 from '../../assets/aboutAnimation1.png'
+import animation2 from '../../assets/aboutAnimation2.png'
+import animation3 from '../../assets/aboutAnimation3.png'
+import animation4 from '../../assets/aboutAnimation4.png'
 
 
 const AboutTheCompany = () => {
-    const { box1, box2, parent_box, section_2, banner_container, view_all, section1_banner_container } = style
+    const { box1, box2, parent_box, section_2,card_discription,card_title, banner_container, view_all, section1_banner_container ,card_hover,card_container,active_card} = style
+    const [hoveredIndex, setHoveredIndex] = useState(0);
+ const card=[
+    {
+        logo:animation1,
+        title:"Learning is our choice.",
+        discription:"We embrace continuous learning and view every challenge as an opportunity for growth."
+    },
+    {
+        logo:animation2,
+        title:"Learning is our choice.",
+        discription:"We embrace continuous learning and view every challenge as an opportunity for growth."
+    },
+    {
+        logo:animation3,
+        title:"Learning is our choice.",
+        discription:"We embrace continuous learning and view every challenge as an opportunity for growth."
+    },
+    {
+        logo:animation3,
+        title:"Learning is our choice.",
+        discription:"We embrace continuous learning and view every challenge as an opportunity for growth."
+    },
+ ]
     return (
         <>
             <TopNavbar />
@@ -94,7 +120,8 @@ const AboutTheCompany = () => {
                         <p className="col-sm-8 pt-2 mt-4 font25">Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
                     </div>
                 </div>
-                <div className="row px-5">
+                
+                <div className="row px-5 justify-content-end">
                     <div className="col-sm-3 d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ">
                         <img src={vector1} alt="" />
                         <h3 className="my-2 font-weight-bolder">Learning is our choice.</h3>
@@ -116,6 +143,51 @@ const AboutTheCompany = () => {
                         <p className="line-height-sm">We embrace continuous learning and view every challenge as an opportunity for growth.</p>
                     </div>
 
+                </div>
+            </div>
+            <div
+                className="container-fluid py-4 "
+                style={{
+                    // backgroundImage: `url(${wave2})`,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                    padding: 0,
+                    background:"rgba(255, 222, 142, 1)"
+                }}
+            >
+                <div className="row d-flex justify-content-center align-items-center py-4">
+                    <div className="col-lg-12 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center ">
+                        <h1 className=" pb-sm-4 pb-lg-0" id="">What Makes Us Unqiue</h1>
+                        <p className="col-sm-8 pt-2 mt-4 font25">Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
+                    </div>
+                </div>
+                
+                <div className={`row px-5`}  >
+                    {
+                        card?.map(({logo,title,discription},index)=>{
+                            return    <div style={
+                                hoveredIndex === 0 || hoveredIndex === 3
+                                  ? { borderRadius: "" }
+                                  : hoveredIndex === index
+                                  ? { backgroundColor: "red !important" }
+                                  : hoveredIndex === index
+                                  ? { backgroundColor: "green !important" }
+                                  : hoveredIndex === index
+                                  ? { backgroundColor: "yellow" }
+                                  : hoveredIndex === index
+                                  ? { backgroundColor: "blue" }
+                                  : {}
+                              } onMouseEnter={() => setHoveredIndex(index)}
+                            onMouseLeave={() => setHoveredIndex(0)} className={`  ${hoveredIndex == index ? active_card: card_container} text-black p-4 ${hoveredIndex}  ${card_hover}`}>
+                    <img src={logo} style={{height:80}} alt=""  className='mb-5'/>
+                    <p className={`my-2 font-weight-bolder font20 mt-3 ${card_title}`}>{title}</p>
+                    <p className={`line-height-sm ${card_discription}`}>{discription}</p>
+                </div>
+                        })
+                    }
+
+{/* {`col-sm-3 d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ${card_hover}` */}
                 </div>
             </div>
             <Footer />

@@ -14,7 +14,7 @@ const {faq_container,faq_heading,faq}=style
         <div className={`row justify-content-center mb-5 mt-5 ${faq_container}`} style={{width:"80%",margin:"auto",backgroundColor:'white' }} >
             <div className='col-md-10 col-12 mb-5 ' >
             <Typography >
-                   <h1 className='pb-4 mb-4 mt-5'> <span className='generic_heading' id='generic_heading'  style={{color:'#000000', }}>Frequently Asked Questions</span></h1>
+                   <h1 className='pb-4 mb-4 mt-5 generic_heading' id='generic_heading' style={{color:'#000000', }}> Frequently Asked Questions</h1>
                 </Typography >
                         {
                             departmentsFaq.map((faqItem) => (

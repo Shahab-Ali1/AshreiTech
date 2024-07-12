@@ -19,7 +19,25 @@
     /* background-image: url(../assets/Element1.png); */
     
   }
+  @font-face {
+    font-family: lato_medium;
+    src: url("../assets/fonts/Lato-Medium/lato/Lato-Medium.ttf");
+  }
+  @font-face {
+    font-family: lato_regular;
+    src: url("../assets/fonts/Lato-Medium/lato/Lato-Regular.ttf");
+  }
+  
+  p{
+    font-family: lato_regular !important;
+  }
+  h1,h2,h3,h4,h5,h6{
+  font-family: lato_medium !important;
+}
+h1 span,h2 span ,h3 span{
+  font-family: lato_medium !important;
 
+}
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
   footer, header, hgroup, menu, nav, section {
