@@ -19,7 +19,7 @@ export default function Header() {
           {/* <li data-target="#arouselExampleIndicators" data-slide-to="1" cl></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> */}
         </ol>
-        <div className="carousel-inner">
+        <div className="carousel-inner"> 
           <div className="carousel-item active bg-white py-5  " style={{  width: '100%', height: 'auto',backgroundRepeat:'no-repeat', backgroundSize:'cover', backgroundPosition:'center' }}>
           <video autoPlay loop muted style={{width:"100%",height:"100%"}}>
           <source src={homebannervideo} type="video/mp4" style={{width:"100%",height:"100%"}} />
