@@ -7,6 +7,7 @@ import Teams from "./screens/Teams/Teams";
 import BookaRoom from "./screens/BookaRoom/BookaRoom";
 import WhatWeDo from "./screens/WhatWeDo/WhatWeDo";
 import AboutTheCompany from "./screens/AboutTheCompany/AboutTheCompany";
+import CommingSoon from "./components/Sections/CommingSoonPage/CommingSoon";
 
 export const router = createHashRouter([
     {
@@ -36,6 +37,10 @@ export const router = createHashRouter([
     {
       path: "/aboutthecompany",
       element: <AboutTheCompany/>,
+    },
+    {
+      path: "/services",
+      element: <CommingSoon/>,
     },
   
   
