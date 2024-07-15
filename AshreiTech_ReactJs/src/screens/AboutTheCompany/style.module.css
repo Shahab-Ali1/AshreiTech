@@ -157,3 +157,17 @@
  
   
     }
+    @media only screen and (min-width: 1360px) and (max-width: 1399px)  {
+      .card_container{
+        width: 23%;
+      }
+      .active_card{
+        width: 31%; /* Increase width */
+  
+      }
+      .active_card .card_title{
+        font-size: 30px;
+        transition: font-size  .9s ease;
+      }
+    
+      }

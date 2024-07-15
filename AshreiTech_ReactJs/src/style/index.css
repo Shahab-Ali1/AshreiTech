@@ -16,7 +16,8 @@
     border: 0;
     vertical-align: baseline;
     box-sizing: border-box;
-    /* background-image: url(../assets/Element1.png); */
+    
+
     
   }
   @font-face {
@@ -936,3 +937,28 @@ margin-top: -130px;
 @media screen {
   
 }
+.gradientCircleLeft:before {
+  content: "";
+  position: absolute;
+  left: -411px;
+  bottom: 0;
+  width: 639px;
+  height: 1030px;
+  background: radial-gradient(circle, rgb(0 54 80 / 17%) 30%, rgb(0 54 80 / 0%) 51%);
+  top: -388px;
+  background-position: center;
+   z-index: 0;
+}
+.gradientCircle:before {
+  content: "";
+  position: absolute;
+  right: -225px;
+  bottom: 0;
+  width: 639px;
+  height: 1030px;
+  background: radial-gradient(circle, rgb(158 212 180 / 39%) 30%, rgb(255 255 255 / 0%) 51%);
+  top: -388px;
+  background-position: center;
+   z-index: -1 !important;
+}
+

@@ -27,10 +27,40 @@
     border: 1px solid black;
     margin-bottom: 100px;
     /* width: 80%; */
-    border-radius: 149px;
+    border-radius: 68px;
     padding: 16px;
 }
+.expand {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: beat 1s infinite; /* Apply the beat animation */
 
+    transition: transform 0.3s ease-in-out; /* Ensure smooth transition */
+  }
+  
+  .expand:hover {
+    animation: none; /* Apply the beat animation */
+
+    cursor: pointer;
+  }
+
+
+
+
+
+  @keyframes beat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2); /* Adjust scale factor as needed */
+    }
+  }
+  
 @media only screen and (min-width: 1024px) and (max-width: 1152px)  {
     .faq{
         padding: 5px 5px !important;
