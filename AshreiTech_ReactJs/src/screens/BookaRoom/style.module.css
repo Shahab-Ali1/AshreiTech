@@ -3,17 +3,19 @@
     }
 
 
-    .gradientCircle {
+    .gradientCircle:before {
+        content: "";
         position: absolute;
-        top: 200px;
-        right: -250px;
-        width: 500px;
-        height: 500px;
-        background: radial-gradient(circle at center, rgb(158, 212, 180) 10%, rgba(167, 215, 206, 0) 70%);
-        border-radius: 50%;
-        filter: blur(2rem);
-        z-index: -1;
+        right: -100px;
+        bottom: 0px;
+        width: 639px;
+        height: 1030px;
+        background: radial-gradient(circle, rgb(158 212 180 / 39%) 30%, rgb(255 255 255 / 0%) 51%);
+        top: -258px;
+        background-position: center;
+        z-index: -1 !important;
     }
+    
     .gradientCircleLeft {
         content: "";
         position: absolute;
