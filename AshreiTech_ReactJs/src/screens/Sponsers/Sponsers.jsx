@@ -10,9 +10,11 @@ const Sponsers = () => {
     const { box, custom_btn_outline_dark, sponsers, sponsers_logo_container, Laptop_Image } = style;
     return (
         <>
-            <div className="container " style={{position:'relative'}}>
+         <div className="" style={{position:'relative'}}>
+         <div className="gradientCircle"></div>
+         </div>
+            <div className=" " style={{position:'relative'}}>
                 <div className=" mt-5 ">
-
                     <div>
                         <h1 className=" text-center  generic_heading" style={{ color: '#000000' }}>
                             {" "}
@@ -40,7 +42,7 @@ const Sponsers = () => {
                     </div>
                 </div>
 
-                <div className={`${box} container d-flex mt-5`}>
+                <div className={`${box} mx-lg-5 d-flex mt-5`}>
                     <div className="row px-4 d-flex justify-content-center align-items-center">
                         <div className="col-lg-5 col-md-6 col-sm-12 d-flex flex-column justify-content-center text-center text-md-left text-lg-left">
                             <div className=" ">

@@ -9,8 +9,8 @@ const Currentstudents = () => {
   const { current_student_image } = style
   return (
     <>
-      <div style={{backgroundImage: `url(${bg4})`}}>
-        <div className='container' >
+      <div style={{backgroundImage: `url(${bg4})`,position:"relative",zIndex:1}}>
+        <div className='containe mx-lg-5'  >
 
           <div className="w-100 pb-4">
             <h1 className="text-center  mt-5" style={{ fontSize: '40px' }}> <span style={{ color: '#000000' }}>Transforming Students Into</span> </h1>
@@ -22,7 +22,7 @@ const Currentstudents = () => {
           </div>
 
 
-          <div className="lightBg col-12 mt-5 py-5 ">
+          <div className=" col-12 mt-5 py-3 ">
             <h1 className=" text-center generic_heading "> <span style={{ color: '#000000' }}>Turning Goals Into </span> <span style={{ color: '#008F71' }}>&nbsp;Wins!</span></h1>
             <TestimonialSlider />
           </div>

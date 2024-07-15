@@ -2,6 +2,7 @@
     background-color:  rgb(167, 215, 206, 0.22);
     border-radius: 100px; 
     position: relative;  
+    border-width:1px ;
 }
 
 .Info_container::after {
@@ -12,35 +13,22 @@
     transform: translateX(-50%);
     width: 100%;
     height: 50%;
-    border-bottom: 3px solid rgba(0, 0, 0, 0.25); 
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25); 
     border-radius: 0 0 100px 100px;
 }
 
-.gradientCircle {
+
+.gradientCircle:before {
+    content: "";
     position: absolute;
-    top:45px; /* Adjust top position */
-    right: -100px; /* Adjust right position */
-    width: 190px; /* Adjust width */
-    height: 190px; /* Adjust height */
-    background: radial-gradient(circle at center, rgb(158, 212, 180), rgba(167, 215, 206, 0));
-    background-size: 100% 200%; /* Ensure gradient covers entire element */
-    border-radius: 50%; /* Circle shape */
-    clip-path: ellipse(100% 50% at center); /* Clip to show only top half */
-    transform: translateY(-50%); /* Center the clipped circle */
-    filter: blur(2rem); /* Optional blur effect */
-}
-.gradientCircleLeft {
-    position: absolute;
-    top:45px; /* Adjust top position */
-    left: -100px;
-    width: 190px; /* Adjust width */
-    height: 190px; /* Adjust height */
-    background: radial-gradient(circle at center, rgb(158, 212, 180), rgba(167, 215, 206, 0));
-    background-size: 100% 200%; /* Ensure gradient covers entire element */
-    border-radius: 50%; /* Circle shape */
-    clip-path: ellipse(100% 50% at center); /* Clip to show only top half */
-    transform: translateY(-50%); /* Center the clipped circle */
-    filter: blur(2.5rem); /* Optional blur effect */
+    right: -10px;
+    bottom: 0;
+    width: 639px;
+    height: 1030px;
+    background: radial-gradient(circle, rgb(158 212 180 / 39%) 30%, rgb(255 255 255 / 0%) 51%);
+    top: -388px;
+    background-position: center;
+    z-index: -1 !important;
 }
 
 

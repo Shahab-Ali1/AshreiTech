@@ -38,7 +38,8 @@ export default function OurTrainer() {
 
   return (
     <div className={`${TrainerContainer}`}>
-      <div className="row">
+      <div className="row" style={{position:'relative'}}>
+        <div className="gradientCircle"></div>
         <div className="col-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center align-items-center align-items-lg-start">
           <h3 className='text-center text-lg-left text-md-left '>Nurturing Potential: Our Experts Cultivate Students Excellence</h3>
           <p className='pt-3 text-center text-lg-left text-md-left'>
@@ -52,7 +53,7 @@ export default function OurTrainer() {
                 <div className="p-5 m-2 card-style1">
                   <img src={Usman} className="card-img-top" alt="..." />
                   <div className='text-center'>
-                    <h5 className='mt-3'>Muhammad Usman</h5>
+                    <h5 className='mt-3'> Usman</h5>
                     <p style={{ fontSize: '14px' }}>Associate SAP Consultant</p>
                     <i className="fab fa-linkedin mr-2 fa-2x"></i>
                   </div>
@@ -72,7 +73,7 @@ export default function OurTrainer() {
                 <div className="p-5 m-2 card-style1">
                   <img src={Usman} className="card-img-top" alt="..." />
                   <div className='text-center'>
-                    <h5 className='mt-3'>Muhammad Usman</h5>
+                    <h5 className='mt-3'> Usman</h5>
                     <p style={{ fontSize: '14px' }}>Associate SAP Consultant</p>
                     <i className="fab fa-linkedin mr-2 fa-2x"></i>
                   </div>
@@ -89,7 +90,7 @@ export default function OurTrainer() {
 const SliderWrapper = styled.div`
   .slick-slide {
     padding: 0 10px; /* Space between slides */
-    background-color: white;
+    background-color: transparent;
     
   }
   .card-style1 {

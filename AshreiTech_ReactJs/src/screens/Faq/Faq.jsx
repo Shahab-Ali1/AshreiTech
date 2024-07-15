@@ -1,45 +1,78 @@
 // src/components/Faq.js
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import departmentsFaq from "../../constant"
-import style from "./style.module.css"
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import departmentsFaq from "../../constant";
+import style from "./style.module.css";
 
 const Faq = () => {
-const {faq_container,faq_heading,faq}=style
-    return (
-        <div className={`row justify-content-center mb-5 mt-5 ${faq_container}`} style={{width:"80%",margin:"auto",backgroundColor:'white' }} >
-            <div className='col-md-10 col-12 mb-5 ' >
-            <Typography >
-                   <h1 className='pb-4 mb-4 mt-5 generic_heading' id='generic_heading' style={{color:'#000000', }}> Frequently Asked Questions</h1>
-                </Typography >
-                        {
-                            departmentsFaq.map((faqItem) => (
-                                <Accordion key={faqItem?.id} 
-                                className={`${faq}`}
-                                  style={{background:"#D9D9D9",marginBottom:20,padding:"10px 10px 10px 10px",borderRadius:40,display:'flex',justifyContent:"center",flexDirection:"column"}}
-                                >
-                                    <AccordionSummary
-                                        expandIcon={<ExpandMoreIcon style={{ color: 'white',fontSize:40 }} />}
-                                        aria-controls="panel1a-content"
-                                        id="panel1a-header"
-                                    >
-                                        <Typography sx={{ fontWeight: 'bold' }}>{faqItem?.question}</Typography>
-                                    </AccordionSummary>
-                                    <AccordionDetails>
-                                        <Typography>
-                                            <span style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: faqItem?.answer }} ></span>
-                                        </Typography>
-                                    </AccordionDetails>
-                                </Accordion>
-                            ))
-                        }
-            </div>
+  const { faq_container, faq_heading, faq, expand } = style;
+  const [showMore, setShowMore] = useState(false);
+
+  const handleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
+  return (
+    <div className={`row justify-content-center mb-5 mx-lg-5 mt-5 ${faq_container}`} style={{ margin: "auto", backgroundColor: 'white' }} >
+      <div className='col-12 '>
+        <Typography>
+          <div className="mb-4">
+            <h1 className='pb-4 mb-4 mt-5 generic_heading' id='generic_heading' style={{ color: '#000000' }}>
+              Frequently Asked Questions
+            </h1>
+          </div>
+        </Typography>
+        {departmentsFaq.slice(0, showMore ? departmentsFaq.length : 5).map((faqItem) => (
+          <Accordion
+            key={faqItem?.id}
+            className={`${faq}`}
+            style={{
+              background: "#D9D9D9",
+              marginBottom: 20,
+              padding: "10px 10px 10px 10px",
+              borderRadius: 15,
+              display: 'flex',
+              justifyContent: "center",
+              flexDirection: "column"
+            }}
+          >
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon style={{ color: '#5A8C75', fontSize: 40 }} />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography sx={{ fontWeight: 'bold' }}>{faqItem?.question}</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <span style={{ whiteSpace: "pre-line" }} dangerouslySetInnerHTML={{ __html: faqItem?.answer }}></span>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+        ))}
+        <div className={`row justify-content-center`}>
+          {showMore ? (
+            <ExpandLessIcon
+              className={`${expand}`}
+              onClick={handleShowMore}
+              style={{ color: '#5A8C75', fontSize: 40, cursor: 'pointer' }}
+            />
+          ) : (
+            <ExpandMoreIcon
+              className={`${expand}`}
+              onClick={handleShowMore}
+              style={{ color: '#5A8C75', fontSize: 40, cursor: 'pointer' }}
+            />
+          )}
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Faq;
