@@ -5,7 +5,6 @@ import BlogBox from "../Elements/BlogBox";
 import FullButton from "../Buttons/FullButton";
 import TestimonialSlider from "../Elements/TestimonialSlider";
 import Currentstudents from "../../screens/Currentstudents/Currentstudents";
-import glowThree from '../../assets/glowThree.png';
 import offerbg from '../../assets/offerbg.png';
 import { getMethod, codeError, ClientId } from "../../utils/services";
 export default function Blog() {
