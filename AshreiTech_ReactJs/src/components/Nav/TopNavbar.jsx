@@ -43,7 +43,7 @@ export default function TopNavbar() {
           </span>
         </Link>
       </div>
-      <div className="d-flex justify-content-between align-items-center py-3 px-lg-5 px-0 pb-5 mb-2" >
+      <div className="d-flex justify-content-between align-items-center py-3 px-lg-5 px-0 " >
         <div className="d-flex justify-content-between  ">
         <Link className="pointer flexNullCenter" to="/" smooth={true}>
           <img src={Logo} className="main_logo ml-4 ml-lg-0" alt="" srcSet=""  style={{width:'200px' , height:'auto'}}/>

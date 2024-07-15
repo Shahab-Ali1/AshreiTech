@@ -17,8 +17,6 @@
     vertical-align: baseline;
     box-sizing: border-box;
     
-
-    
   }
   @font-face {
     font-family: lato_medium;
@@ -962,3 +960,7 @@ margin-top: -130px;
    z-index: -1 !important;
 }
 
+
+.css-1086bdv-MuiPaper-root-MuiAccordion-root::before {
+  background-color: white !important;
+}

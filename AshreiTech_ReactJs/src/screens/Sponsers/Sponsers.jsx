@@ -5,12 +5,19 @@ import sponser1 from "../../assets/sponser1.png"
 import sponser2 from "../../assets/sponser2.png"
 import sponser3 from "../../assets/sponser3.png"
 import sponser4 from "../../assets/sponser4.png"
+import ourpartnerbg from '../../assets/Ourpartnerbg.png'
 
 const Sponsers = () => {
     const { box, custom_btn_outline_dark, sponsers, sponsers_logo_container, Laptop_Image } = style;
     return (
         <>
-         <div className="" style={{position:'relative'}}>
+         <div style={{
+            backgroundImage: `url(${ourpartnerbg})`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            padding: 0,
+         }}>
+         <div className="" style={{position:'relative',}}>
          <div className="gradientCircle"></div>
          </div>
             <div className=" " style={{position:'relative', zIndex:2}}>
@@ -42,10 +49,10 @@ const Sponsers = () => {
                     </div>
                 </div>
 
-                <div className={`${box} mx-lg-5 d-flex mt-5`}>
-                    <div className="row px-4 d-flex justify-content-center align-items-center">
-                        <div className="col-lg-5 col-md-6 col-sm-12 d-flex flex-column justify-content-center text-center text-md-left text-lg-left">
-                            <div className=" ">
+                <div className={`${box} container px-lg-5 d-flex d-flex justify-content-center align-items-center`}>
+                    <div className="row  ">
+                        <div className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center text-center text-md-left text-lg-left ">
+                            <div className="">
                                 <h1 className="mt-4">
                                     Learn Anytime,
                                     <br /> Anywhere!
@@ -58,7 +65,7 @@ const Sponsers = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-7 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+                        <div className="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
                             <img
                                 className={`${Laptop_Image}`}
                                 style={{ width: "100%", height: "auto" }}
@@ -69,6 +76,7 @@ const Sponsers = () => {
                     </div>
                 </div>
             </div>
+         </div>
 
         </>
     );

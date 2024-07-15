@@ -32,7 +32,7 @@ const Faq = () => {
             key={faqItem?.id}
             className={`${faq}`}
             style={{
-              background: "#D9D9D9",
+              background: "#fff",
               marginBottom: 20,
               padding: "10px 10px 10px 10px",
               borderRadius: 15,

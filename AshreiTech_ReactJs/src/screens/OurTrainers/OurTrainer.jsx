@@ -6,18 +6,38 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import bg2 from '../../assets/Rectangle 17011.png'
 
 export default function OurTrainer() {
   const settings = {
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
     autoplay: true,
     autoplaySpeed: 3000,
     responsive: [
+      { 
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
       {
         breakpoint: 600,
         settings: {
@@ -74,6 +94,16 @@ export default function OurTrainer() {
                   <img src={Usman} className="card-img-top" alt="..." />
                   <div className='text-center'>
                     <h5 className='mt-3'> Usman</h5>
+                    <p style={{ fontSize: '14px' }}>Associate SAP Consultant</p>
+                    <i className="fab fa-linkedin mr-2 fa-2x"></i>
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex justify-content-center align-items-center">
+                <div className="p-5 m-2 card-style2">
+                  <img src={Abdullah} className="card-img-top" alt="..." />
+                  <div className='text-center'>
+                    <h5 className='mt-3'>Abdullah</h5>
                     <p style={{ fontSize: '14px' }}>Associate SAP Consultant</p>
                     <i className="fab fa-linkedin mr-2 fa-2x"></i>
                   </div>
