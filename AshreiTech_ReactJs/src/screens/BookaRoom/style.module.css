@@ -2,4 +2,27 @@
         max-width: 1000px;
     }
 
-   
+
+    .gradientCircle {
+        position: absolute;
+        top: 200px;
+        right: -250px;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle at center, rgb(158, 212, 180) 10%, rgba(167, 215, 206, 0) 70%);
+        border-radius: 50%;
+        filter: blur(2rem);
+        z-index: -1;
+    }
+    .gradientCircleLeft {
+        content: "";
+        position: absolute;
+        left: -304px;
+        bottom: 0;
+        width: 639px;
+        height: 1030px;
+        background: radial-gradient(circle, rgb(0 54 80 / 20%) 30%, rgb(0 54 80 / 0%) 51%);
+        top: -388px;
+        background-position: center;
+         z-index: 0;
+      }

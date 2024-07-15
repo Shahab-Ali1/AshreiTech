@@ -38,7 +38,7 @@ export default function BookaRoom() {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         autoplay: true,
         autoplaySpeed: 3000,
         responsive: [
@@ -65,7 +65,7 @@ export default function BookaRoom() {
             },
         ],
     };
-    const { modallg } = style;
+    const { modallg,gradientCircle,gradientCircleLeft } = style;
     return (
         <>
             <TopNavbar />
@@ -338,22 +338,47 @@ export default function BookaRoom() {
 
             <div className="container-fluid py-5"
                 style={{
-                    backgroundImage: `  url(${glowwithdots}),url(${BookaScreenHeroContainer})`,
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    padding: 0,
+                   position:'relative',
+                   zIndex:2,
                 }}
             >
+                <div className={`${gradientCircle}`}></div>
+                <div className={`${gradientCircleLeft}`}></div>
+                <div className='d-none d-lg-block' style={{
+                    width: '10px',
+                    height: '10px',
+                    backgroundColor: '#525FE1',
+                    borderRadius: '50%',
+                    marginLeft: '1200px',
+                    top:'40px'  ,
+                    position: 'relative',
+
+                }}>
+                    <div
+                        className='d-none d-lg-block' style={{
+                            width: '15px',
+                            height: '15px',
+                            backgroundColor: '#FFCF59',
+                            borderRadius: '50%',
+                            border: '1px solid white',
+                            top: '-40px',
+                            left: '-50px',
+                            position: 'absolute'
+
+                        }}>
+
+                    </div>
+                </div>
                 <div className="row d-flex flex-column justify-content-center align-items-center pb-4 ">
                     <div className="col-12">
                         <h1 className='generic_heading'>Rooms</h1>
                     </div>
                 </div>
-                <div className="row d-flex  justify-content-center p-5 ">
+                <div className="row d-flex  justify-content-center p-0 p-lg-5">
                     <div className="col-sm-12 col-md-10 col-lg-12 px-5 justify-content-center ">
                         <SliderWrapper>
                             <Slider {...settings}>
-                                <div className="d-flex justify-content-center align-items-center">
+                                <div className="d-flex justify-content-center align-items-center col-12 ">
                                     <div className="">
                                         <img src={alrazi} alt="Al-Razi" className='slick-slide' />
                                         <div className="info">
@@ -364,7 +389,7 @@ export default function BookaRoom() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="d-flex justify-content-center align-items-center">
+                                <div className="d-flex justify-content-center align-items-center col-12 ">
                                     <div className="">
                                         <img src={alFarabi} alt="Al-Farabi" className='slick-slide' />
                                         <div className="info">
@@ -375,7 +400,7 @@ export default function BookaRoom() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="d-flex justify-content-center align-items-center">
+                                <div className="d-flex justify-content-center align-items-center col-12 ">
                                     <div className="">
                                         <img src={alkhawarzmi} alt="Al-Khawarzmi" className='slick-slide' />
                                         <div className="info">
@@ -386,7 +411,7 @@ export default function BookaRoom() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="d-flex justify-content-center align-items-center">
+                                <div className="d-flex justify-content-center align-items-center col-12 ">
                                     <div className="">
                                         <img src={alkindi} alt="Al-kindi" className='slick-slide' />
                                         <div className="info">
@@ -498,7 +523,7 @@ const SliderWrapper = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 90%;
+    width: 88%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     transform: translate(-50%, -50%);
@@ -519,36 +544,5 @@ const SliderWrapper = styled.div`
     opacity: 1;
   }
 
-  @media (max-width: 1200px) {
-    img {
-      width: 300px;
-      height: 230px;
-    }
-    .overlay {
-      width: 300px;
-      height: 230px;
-    }
-  }
-
-  @media (max-width: 768px) {
-    img {
-      width: 250px;
-      height: 200px;
-    }
-    .overlay {
-      width: 250px;
-      height: 200px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    img {
-      width: 200px;
-      height: 150px;
-    }
-    .overlay {
-      width: 200px;
-      height: 150px;
-    }
-  }
+  
 `;
