@@ -5,7 +5,7 @@ import BlogBox from "../Elements/BlogBox";
 import FullButton from "../Buttons/FullButton";
 import TestimonialSlider from "../Elements/TestimonialSlider";
 import Currentstudents from "../../screens/Currentstudents/Currentstudents";
-import glowThree from '../../assets/glowThree.png'
+import offerbg from "../../assets/offerbg.png"
 
 export default function Blog() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -22,12 +22,12 @@ export default function Blog() {
 
   };
   return (
-    <div className="container-fluid px-5 mt-5"
+    <div className="container-fluid px-5 pt-5"
       style={{
-        backgroundImage: `url(${glowThree})`,
+        backgroundImage: `url(${offerbg})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        padding: 0,
+        position:'relative'
       }}
     >
       <div className="w-100">

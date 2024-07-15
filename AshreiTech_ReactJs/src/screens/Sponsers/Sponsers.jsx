@@ -13,7 +13,7 @@ const Sponsers = () => {
          <div className="" style={{position:'relative'}}>
          <div className="gradientCircle"></div>
          </div>
-            <div className=" " style={{position:'relative'}}>
+            <div className=" " style={{position:'relative', zIndex:2}}>
                 <div className=" mt-5 ">
                     <div>
                         <h1 className=" text-center  generic_heading" style={{ color: '#000000' }}>

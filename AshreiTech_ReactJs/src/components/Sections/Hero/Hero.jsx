@@ -1,10 +1,17 @@
 import React from 'react'
 import style from "./style.module.css"
 import Hero_banner from "../../../assets/Hero_banner.png"
+import herobg from "../../../assets/herobg.png"
 const Hero = () => {
   const { box, custom_btn_outline_dark, Hero_image } = style
   return (
     <>
+      <div className="container-fluid" style={{
+        backgroundImage: `url(${herobg})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        padding: 0,
+      }}>
       <div className='mx-lg-5  p-4' style={{ backgroundColor: '#5A8C75', padding: '60px', borderRadius: '50px' ,position:"relative",zIndex:1,marginTop:35}}>
         <div className="row p-lg-5 p-3 d-flex justify-content-center align-items-center">
           <div className="col-12 col-md-6 mt-md-5 d-flex align-items-center text-center text-md-left"  style={{paddingRight:68}}>
@@ -25,6 +32,7 @@ const Hero = () => {
           </div>
         </div>
 
+      </div>
       </div>
 
     </>

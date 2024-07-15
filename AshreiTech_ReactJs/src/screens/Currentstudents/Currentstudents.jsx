@@ -3,13 +3,24 @@ import CurrentstudentsImage from "../../assets/CurrentstudentsImage.png"
 import style from "./style.module.css"
 import TestimonialSlider from '../../components/Elements/TestimonialSlider'
 import bg4 from '../../assets/bg4.png'
+import transformingbg from "../../assets/turningbg.png"
 
 
 const Currentstudents = () => {
   const { current_student_image } = style
   return (
     <>
-      <div style={{backgroundImage: `url(${bg4})`,position:"relative",zIndex:1}}>
+    <div className="container-fluid"
+    style={{
+      backgroundImage: `url(${transformingbg})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        padding: 0,
+        position:'relative'
+    }}
+    >
+
+      <div style={{backgroundImage: `url(${bg4})`,position:"relative"}}>
         <div className='containe mx-lg-5'  >
 
           <div className="w-100 pb-4">
@@ -29,6 +40,7 @@ const Currentstudents = () => {
 
         </div>
       </div>
+    </div>
     </>
   )
 }
