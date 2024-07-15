@@ -1,0 +1,68 @@
+.card-Team {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    height: 358px;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.card-Team::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    border-radius: 50px;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-Team:hover::after {
+    opacity: 0.5;
+}
+
+.card-Team-bg {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    border-radius: 50px;
+    /* Match the border-radius */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 358px !important;
+
+}
+
+.card-Team:hover .card-Team-bg {
+    opacity: 0.8;
+}
+
+.card-Team-block {
+    text-align: center;
+    padding: 16px;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}

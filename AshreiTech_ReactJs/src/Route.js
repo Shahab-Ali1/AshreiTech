@@ -11,8 +11,12 @@ import CommingSoon from "./components/Sections/CommingSoonPage/CommingSoon";
 
 export const router = createHashRouter([
     {
-      path: "/",
+      path: "/test",
       element:  <Landing />,
+    },  
+    {
+      path: "/",
+      element:  <CommingSoon />,
     },  
     {
       path: "/GetInTouch",

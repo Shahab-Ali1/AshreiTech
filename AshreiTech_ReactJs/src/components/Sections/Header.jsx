@@ -20,7 +20,7 @@ export default function Header() {
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> */}
         </ol>
         <div className="carousel-inner"> 
-          <div className="carousel-item active bg-white py-5  " style={{  width: '100%', height: 'auto',backgroundRepeat:'no-repeat', backgroundSize:'cover', backgroundPosition:'center' }}>
+          <div className="carousel-item active  mb-3  " style={{  width: '100%', background:"transparent",height: 'auto',backgroundRepeat:'no-repeat', backgroundSize:'cover', backgroundPosition:'center' }}>
           <video autoPlay loop muted style={{width:"100%",height:"100%"}}>
           <source src={homebannervideo} type="video/mp4" style={{width:"100%",height:"100%"}} />
           Your Browser Does Not Support The Video Tag.

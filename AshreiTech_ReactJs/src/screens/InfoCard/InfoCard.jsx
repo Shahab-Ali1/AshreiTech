@@ -10,8 +10,8 @@ const InfoCard = () => {
     const { Info_container, vector, gradientCircle ,gradientCircleLeft} = style;
 
     return (
-        <div className='py-4'>
-            <div className={`${Info_container} container p-1 mt-5 `}>
+        <div className=''>
+            <div className={`${Info_container}  p-1 mt-5 mx-lg-5`}>
             <div className={`${gradientCircleLeft} d-none d-lg-block`}></div>
             <div className="row d-flex justify-content-center align-items-center  pt-4">
                 <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
@@ -19,8 +19,8 @@ const InfoCard = () => {
                         <img src={vector4} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Students" />
                     </div>
                     <div>
-                        <h6 style={{fontWeight:'bold'}}>Students</h6>
-                        <h5 style={{fontWeight:'bold'}}>10K+</h5>
+                        <h6 style={{fontWeight:''}}>Students</h6>
+                        <h6 style={{fontWeight:'bold'}}>10K+</h6>
                     </div>
                 </div>
                 <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
@@ -28,8 +28,8 @@ const InfoCard = () => {
                         <img src={vector1} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Trainer" />
                     </div>
                     <div>
-                        <h6 style={{fontWeight:'bold'}}>Trainer</h6>
-                        <h5 style={{fontWeight:'bold'}}>100+</h5>
+                        <h6 style={{fontWeight:''}}>Trainer</h6>
+                        <h6 style={{fontWeight:'bold'}}>100+</h6>
                     </div>
                 </div>
                 <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
@@ -37,8 +37,8 @@ const InfoCard = () => {
                         <img src={vector5} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Employees" />
                     </div>
                     <div>
-                        <h6 style={{fontWeight:'bold'}}>Employees</h6>
-                        <h5 style={{fontWeight:'bold'}}>500+</h5>
+                        <h6 style={{fontWeight:''}}>Employees</h6>
+                        <h6 style={{fontWeight:'bold'}}>500+</h6>
                     </div>
                 </div>
                 <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
@@ -46,8 +46,8 @@ const InfoCard = () => {
                         <img src={vector3} className={`${vector} mr-2`} style={{width:'52px', height:'44px'}} alt="Alumni" />
                     </div>
                     <div>
-                        <h6 style={{fontWeight:'bold'}}>Alumni</h6>
-                        <h5 style={{fontWeight:'bold'}}>100+</h5>
+                        <h6 style={{fontWeight:'',position:"relative",zIndex:1}}>Alumni</h6>
+                        <h6 style={{fontWeight:'bold',position:"relative",zIndex:1}}>100+</h6>
                     </div>
                 </div>
                 <div className="col-12 col-md-3 col-lg-2  align-items-center justify-content-center mb-3 d-none d-lg-flex">
@@ -55,8 +55,8 @@ const InfoCard = () => {
                         <img src={vector2} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Cities" />
                     </div>
                     <div>
-                        <h6 style={{fontWeight:'bold'}}>Cities</h6>
-                        <h5 style={{fontWeight:'bold'}}>5+</h5>
+                        <h6 style={{fontWeight:'',position:"relative",zIndex:1}}>Cities</h6>
+                        <h6 style={{fontWeight:'bold',position:"relative",zIndex:1}}>5+</h6>
                     </div>
                 </div>
             </div>
