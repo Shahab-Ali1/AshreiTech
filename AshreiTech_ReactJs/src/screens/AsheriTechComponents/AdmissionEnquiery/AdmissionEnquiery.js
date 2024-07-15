@@ -236,7 +236,7 @@ export const AdmissionEnquiry = (props) => {
                         "cellno": formData.cellno,
                         "lasteducation": formData.lasteducation,
                         "dob": formData?.dob,
-                        "ezakat": formData?.zakat
+                        "ezakat": formData?.zakat ? 1 : 0
                     }
                 ],
                 //   "noofchild": 1,
@@ -351,7 +351,6 @@ export const AdmissionEnquiry = (props) => {
 
     const sentWelcomeEmail = () => {
         try {
-            debugger;
             let body = {
                 "Data": {
                     sendfrom: "zusama729@gmail.com",
@@ -362,7 +361,6 @@ export const AdmissionEnquiry = (props) => {
             }
             PostMethod("FOAdmEnquiry/V2/SendEmailAsync", body)
                 .then((data) => {
-                    debugger
                     // if (data) {
                         setFormData({ ...INITIAL_STATE });
                     // }

@@ -11,7 +11,7 @@ export default function CommingSoon() {
   
   return (
     <>
-      <TopNavbar />
+      {/* <TopNavbar /> */}
       <div className="container-fluid">
           <div className="row d-flex justify-content-center align-items-center">
             <div className="col-md-12 main-title">
@@ -229,7 +229,7 @@ export default function CommingSoon() {
             </div>
           </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

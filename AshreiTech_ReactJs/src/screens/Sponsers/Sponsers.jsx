@@ -14,9 +14,9 @@ const Sponsers = () => {
                 <div className=" mt-5 ">
 
                     <div>
-                        <h1 className=" text-center  generic_heading">
+                        <h1 className=" text-center  generic_heading" style={{ color: '#000000' }}>
                             {" "}
-                            <span style={{ color: '#000000' }}>Our Partners</span>
+                            Our Partners
                         </h1>
                         <p className="font20 mt-4 mb-3 text-center pt-4">
                             Our experts are here to empower the future of tech by enabling students and professionals.

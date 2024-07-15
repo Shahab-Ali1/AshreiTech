@@ -19,14 +19,32 @@
     /* background-image: url(../assets/Element1.png); */
     
   }
+  @font-face {
+    font-family: lato_medium;
+    src: url("../assets/fonts/Lato-Medium/lato/Lato-Medium.ttf");
+  }
+  @font-face {
+    font-family: lato_regular;
+    src: url("../assets/fonts/Lato-Medium/lato/Lato-Regular.ttf");
+  }
+  
+  p{
+    font-family: lato_regular !important;
+  }
+  h1,h2,h3,h4,h5,h6{
+  font-family: lato_medium !important;
+}
+h1 span,h2 span ,h3 span{
+  font-family: lato_medium !important;
 
+}
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
   *{
-    font-family: "Roboto slab";
+    font-family: 'Roboto', sans-serif;
   }
   ol, ul {
     list-style: none;
@@ -58,7 +76,7 @@
   body {
     background: #fff;
     color: black;
-    font-family: "Roboto slab";
+    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     font-size: 16px;
     font-weight: 400;
@@ -231,7 +249,8 @@
     font-size: 0.875rem;
   }
   .font15 {
-    font-size: 0.938rem;
+    /* font-size: 0.938rem; */
+    font-size: 15.008px !important;
   }
   .font18 {
     font-size: 1.125rem;
@@ -290,7 +309,8 @@
   }
   /* BORDER RADIUS */
   .radius8 {
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
+    border-radius: 7px !important;
   }
   .radius6 {
     border-radius: 0.6rem;
@@ -483,6 +503,7 @@
   /* padding: 10px 15px; */
   cursor: pointer;
   color: #000000;
+  font-size: 15.008px;
 }
 .animated_link::after {
   content: '';
@@ -902,7 +923,7 @@ margin-top: -130px;
   border-radius: 3px;
   /* width: 10%; */
   font-size: 14px;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   color: white;
   background-color: #7C2916;
   text-align: center;
