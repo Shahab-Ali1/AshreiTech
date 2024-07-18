@@ -52,12 +52,8 @@ export default function TopNavbar() {
           <BurgerIcon className=" ml-5 ml-lg-0"/>
         </BurderWrapper>
         </div>
+        <div className="d-flex">
         <UlWrapper className="flexNullCenter header_menu">
-          <li className="font15 pointer">
-            {/* <Link style={{ padding: "10px 15px" }} to="/" spy={true} smooth={true} offset={-80}>
-              Home
-            </Link> */}
-          </li>
           <li className="HeaderPaddingRight">
             <div className="dropdown">
               <span className="link2 font15 pointer">
@@ -68,10 +64,10 @@ export default function TopNavbar() {
                 className="dropbtn hover-rotate fa fa-chevron-right"
               ></i>
               <div className="dropdown-content">
-                <Link className="" to={"/aboutthecompany"}>
+                <Link className="" to={"/aboutthecompany"} style={{fontSize:'15.008px'}}>
                   About The Company
                 </Link>
-                <Link className="" to={"/teams"}>
+                <Link className="" to={"/teams"}  style={{fontSize:'15.008px'}}>
                   About The Team
                 </Link>
               </div>
@@ -107,11 +103,12 @@ export default function TopNavbar() {
           </li>
         </UlWrapper>
         <UlWrapperRight className="flexNullCenter">
-          <li onClick={() => navigate("/GetInTouch")} className="font15 radius8 lightBg get_in_touch_btn pointer flexCenter" style={{ padding: "3px 10px", background: "#008F71", color: "white" }}>
+          <li onClick={() => navigate("/GetInTouch")} className=" navbtn p-2 ml-5">
             Get In Touch
           </li>
          
         </UlWrapperRight>
+        </div>
       </div>
     </>
   );

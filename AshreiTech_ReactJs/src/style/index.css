@@ -964,3 +964,19 @@ margin-top: -130px;
 .css-1086bdv-MuiPaper-root-MuiAccordion-root::before {
   background-color: white !important;
 }
+
+.navbtn{
+  font-size: 15.008px;
+  border: 1px solid #008F71;
+  border-radius: 5px;
+  color: #008F71;
+  font-weight: 500 !important;
+  cursor: pointer;
+}
+
+.navbtn:hover{
+  background-color: #f3f8ff;
+  color: #00a884;
+
+  
+}
