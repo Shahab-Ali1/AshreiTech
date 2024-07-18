@@ -20,7 +20,7 @@ const InfoCard = () => {
                     </div>
                     <div>
                         <h6 style={{fontWeight:''}}>Students</h6>
-                        <h6 style={{fontWeight:'bold'}}>10K+</h6>
+                        <h6 style={{fontWeight:'bold'}}>500+</h6>
                     </div>
                 </div>
                 <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
@@ -28,8 +28,8 @@ const InfoCard = () => {
                         <img src={vector1} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Trainer" />
                     </div>
                     <div>
-                        <h6 style={{fontWeight:''}}>Trainer</h6>
-                        <h6 style={{fontWeight:'bold'}}>100+</h6>
+                        <h6 style={{fontWeight:''}}>Courses</h6>
+                        <h6 style={{fontWeight:'bold'}}>18</h6>
                     </div>
                 </div>
                 <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
@@ -37,8 +37,8 @@ const InfoCard = () => {
                         <img src={vector5} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Employees" />
                     </div>
                     <div>
-                        <h6 style={{fontWeight:''}}>Employees</h6>
-                        <h6 style={{fontWeight:'bold'}}>500+</h6>
+                        <h6 style={{fontWeight:''}}>International Certifications</h6>
+                        <h6 style={{fontWeight:'bold'}}>100</h6>
                     </div>
                 </div>
                 <div className="col-12 col-md-3 col-lg-2 d-flex align-items-center justify-content-center mb-3">
@@ -56,7 +56,7 @@ const InfoCard = () => {
                     </div>
                     <div>
                         <h6 style={{fontWeight:'',position:"relative",zIndex:1}}>Cities</h6>
-                        <h6 style={{fontWeight:'bold',position:"relative",zIndex:1}}>5+</h6>
+                        <h6 style={{fontWeight:'bold',position:"relative",zIndex:1}}>3</h6>
                     </div>
                 </div>
             </div>

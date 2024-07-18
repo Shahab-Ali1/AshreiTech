@@ -61,9 +61,11 @@ export default function OurTrainer() {
       <div className="row" style={{position:'relative'}}>
         <div className="gradientCircle"></div>
         <div className="col-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center align-items-center align-items-lg-start">
-          <h3 className='text-center text-lg-left text-md-left '>Nurturing Potential: Our Experts Cultivate Students Excellence</h3>
+          <h3 className='text-center text-lg-left text-md-left '>MEET THE EXPERTS</h3>
+          <p className='text-center text-lg-left text-md-left '>Our experts are here to empower the future of tech by enabling <br className='d-none d-lg-block d-md-block' />  students and professionals.</p>
           <p className='pt-3 text-center text-lg-left text-md-left'>
-            500+ Counselors with 20+ years of experience in <br className='d-none d-lg-block d-md-block' /> our team who have helped 1 Million+ students to <br className='d-none d-lg-block d-md-block' /> kick start their Career Journey.
+          In a short span of time, AshreiTech has established itself as a <br className='d-none d-lg-block d-md-block' />  Center of Excellence, recognized for providing state-of-the-art tech <br className='d-none d-lg-block d-md-block' />  training programs. Our commitment to excellence has made us a <br className='d-none d-lg-block d-md-block' />  trusted name in the tech industry, renowned for our innovative<br className='d-none d-lg-block d-md-block' />  and comprehensive training solutions.
+          <br className='d-none d-lg-block d-md-block' /> 
           </p>
         </div>
         <div className="col-12 col-md-6 col-lg-6">

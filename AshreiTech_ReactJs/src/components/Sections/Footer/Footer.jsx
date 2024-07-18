@@ -1,9 +1,6 @@
 import React from 'react'
 import style from "./style.module.css"
-import AshrieTechWhiteLogo from "../../../assets/AshrieTechWhiteLogo.png"
-import sponser2 from "../../../assets/sponser2.png"
-import sponser3 from "../../../assets/sponser3.png"
-import sponser4 from "../../../assets/sponser4.png"
+import AshrieTechWhiteLogo from "../../../assets/AshrieTechWhiteLogo.png"   
 import styled from "styled-components";
 import eduman from "../../../assets/eduMan.webp"
 

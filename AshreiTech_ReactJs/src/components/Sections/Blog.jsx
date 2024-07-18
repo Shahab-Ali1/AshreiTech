@@ -100,13 +100,13 @@ export default function Blog() {
           <div className="row " style={{ display: 'relative' }}>
             {
               ImagesData && ImagesData.map((item, index) => (
-                <div key={index} className="col-sm-12 col-md-6  col-lg-4 d-lg-block d-none" >
+                <div key={index} className="col-sm-12 col-md-6  col-lg-6 d-lg-block d-none" >
                   <div class="card" style={{ borderBottom: '3px solid rgba(0, 0, 0, 0.25)', borderRadius: '0 0 100px 100px;' }}>
                     <img class="card-img-top" 
                     src={`https://sma.edu-man.com/sm/Images/Actual/${item?.stdimagefilename}`} alt="Card image cap" />
                     <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
                       <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start" >
-                        <div className="pclass p-1 d-flex justify-content-center"><p>50,000+ Certified Students</p></div>
+                        <div className="pclass p-1 d-flex justify-content-center px-3"><p>50,000+ Certified Students</p></div>
                         <h5 class="card-title mt-4 text-center text-lg-left text-md-left">{item?.stxt}</h5>
                         <p class="card-text mb-4 text-center text-lg-left text-md-left">{item?.discription}</p>
                         <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }}>View More</p></div>

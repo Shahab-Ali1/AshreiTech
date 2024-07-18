@@ -6,6 +6,7 @@ import sponser2 from "../../assets/sponser2.png"
 import sponser3 from "../../assets/sponser3.png"
 import sponser4 from "../../assets/sponser4.png"
 import ourpartnerbg from '../../assets/Ourpartnerbg.png'
+import QRandndiPh from "../../assets/Frame 7873.png"
 
 const Sponsers = () => {
     const { box, custom_btn_outline_dark, sponsers, sponsers_logo_container, Laptop_Image } = style;
@@ -58,9 +59,13 @@ const Sponsers = () => {
                             </h1>
                             <div className="mt-4">
                                 <p>Get it on your device now!</p>
-                                <button type="button" className={`${custom_btn_outline_dark} px-4 mt-4`}>
+                                {/* <button type="button" className={`${custom_btn_outline_dark} px-4 mt-4`}>
                                     Learn More
-                                </button>
+                                </button> */}
+                                <div>
+                                <img src={QRandndiPh} alt="" className="pt-4" />
+
+                                </div>
                             </div>
                         </div>
                     </div>
