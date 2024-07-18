@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./AdmissionEnquiery.css";
 import { Checkbox, FormControl, FormControlLabel, InputLabel, Select, TextField } from '@mui/material/node';
-import { PostMethod, codeError, formatDate, getMethod } from '../../../utils/services';
+import { ClientId, PostMethod, codeError, formatDate, getMethod } from '../../../utils/services';
 import TabsComponent from '../../../components/Tabs/Tabs';
 import { errorMessage, succesMessage, toastError, toastSuccess } from '../../../utils/Toaster/toaster';
 // import { ToastContainer } from 'react-toastify';
@@ -76,8 +76,7 @@ export const AdmissionEnquiry = (props) => {
 
     const getCourses = (city, coursecat) => {
         try {
-            // getMethod("FOAdmEnquiry/V2/CourseExtend/164/79594/1112")
-            getMethod(`FOAdmEnquiry/V2/CourseExtend/164/${city}/${coursecat}`)
+            getMethod(`FOAdmEnquiry/V2/CourseExtend/${ClientId}/${city}/${coursecat}`)
                 .then((data) => {
                     if (data) {
                         setCourses(data?.Data);

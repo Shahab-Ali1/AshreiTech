@@ -9,6 +9,7 @@ import SingleCourse from "./screens/SingleCourseScreen/SingleCourse.jsx";
 import { router } from "./Route.js";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { ClientId } from "./utils/services.js";
 
 
 export default function App() {
@@ -18,7 +19,7 @@ export default function App() {
         user: {
           username: "atadmin",
           password: "atadmin123",
-          userclientid: 164,
+          userclientid: ClientId,
         },
       },
     };

@@ -1,5 +1,6 @@
 import axios from "axios";
 
+export const ClientId = 164;
 const URL = 'https://sma.edu-man.com/sm/api/';
 // const URL = 'https://business.gos.pk/Feedback/api';
 
@@ -45,7 +46,7 @@ export function formatDate(date) {
   return `${day}/${month}/${year}`;
 }
 
-export const ClientId = 164;
+
 
 
 
