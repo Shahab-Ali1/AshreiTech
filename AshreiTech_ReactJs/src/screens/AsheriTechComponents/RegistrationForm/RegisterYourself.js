@@ -55,7 +55,6 @@ export const RegisterYourself = (props) => {
                 .then((data) => {
                     if (data?.IsSuccess) {
                         let obj = data.Data[0];
-                        debugger;
                         setFormData((prevField) => ({
                             ...prevField,
                             "name": obj.childname,
@@ -112,7 +111,6 @@ export const RegisterYourself = (props) => {
     };
     const clickNextBtn = (event) => {
       try {
-        debugger;
         let bb = {
             "Data": {
               "appno": null,
@@ -169,14 +167,12 @@ export const RegisterYourself = (props) => {
         // https://sm.edu-man.com/sm/api/AdmApplication/v2/
         PostMethod("AdmApplication/v2/", bb)
         .then((data) => {
-            debugger;
             if (data?.IsSuccess) {
                 toastSuccess(succesMessage);
                 props?.handleChange(event, 1)
             }
         })
         .catch(error => {
-            debugger;
             toastError(errorMessage);
             codeError(error);
         });

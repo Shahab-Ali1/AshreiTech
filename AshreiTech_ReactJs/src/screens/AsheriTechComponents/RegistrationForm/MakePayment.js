@@ -32,36 +32,29 @@ export const MakePayment = (props) => {
     }
     const FeeGroupChallanApi = (Id) => {
         try {
-            debugger
             getMethod(`SMFeegrphdr/V2/FeeGroupsforChallanAT/9119/60/${Id}`)
                 .then((data) => {
                     if (data) {
-                        debugger
                         FeeAmountApi(data.Data[0].Id);
                     }
                 })
                 .catch(error => {
-                    debugger;
                     codeError(error);
                 });
         } catch (error) {
             console.log(error);
         }
     }
-    // api/SMFeeprofhdr/V2/feeamountAT/{entityid}/{feegrpid}
 
     const FeeAmountApi = (feegrpid) => {
         try {
-            debugger
             getMethod(`SMFeeprofhdr/V2/feeamountAT/9119/${feegrpid}`)
                 .then((data) => {
-                    debugger
                     if (data) {
                         setGlobalObj(data.Data[0])
                     }
                 })
                 .catch(error => {
-                    debugger;
                     codeError(error);
                 });
         } catch (error) {
@@ -73,10 +66,8 @@ export const MakePayment = (props) => {
         if (!event) {
             return
         }
-        debugger;
         const { name, value, } = event?.target;
         if(name === "paymentType") {
-            // api/SMFeegrphdr/V2/FeeGroupsforChallanAT/{entityid}/{feenatureid}/{lov}
             FeeGroupChallanApi(value);
             setFormData((prevField) => ({
                 ...prevField,
@@ -94,7 +85,6 @@ export const MakePayment = (props) => {
 
     const clickGenerateBtn = () => {
       try {
-        debugger;
         let bb = {
             "Data": {
               "SMFeechallandtls": [
@@ -143,16 +133,13 @@ export const MakePayment = (props) => {
             "DataAddon": {},
             "ReturnObject": true
           }
-        debugger;
         PostMethod("Feechallanhdr/v2/", bb)
         .then((data) => {
-            debugger;
             if (data) {
                 toastSuccess(succesMessage);;
             }
         })
         .catch(error => {
-            debugger;
             toastError(errorMessage);
             codeError(error);
         });

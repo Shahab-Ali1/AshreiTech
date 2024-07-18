@@ -1,5 +1,11 @@
 import axios from "axios";
 
+export const ClientId = 164;
+/* Login Credentials */
+export const UserName = "atadmin";
+export const Password = "atadmin123";
+
+export const LoginURL = 'https://uta.edu-man.com/ut/api/utuser/v2/loginV3';
 const URL = 'https://sma.edu-man.com/sm/api/';
 // const URL = 'https://business.gos.pk/Feedback/api';
 
@@ -45,7 +51,7 @@ export function formatDate(date) {
   return `${day}/${month}/${year}`;
 }
 
-export const ClientId = 164;
+
 
 
 

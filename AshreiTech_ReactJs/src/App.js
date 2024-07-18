@@ -9,6 +9,7 @@ import SingleCourse from "./screens/SingleCourseScreen/SingleCourse.jsx";
 import { router } from "./Route.js";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { ClientId, LoginURL, Password, UserName } from "./utils/services.js";
 
 
 export default function App() {
@@ -16,15 +17,15 @@ export default function App() {
     let body = {
       Data: {
         user: {
-          username: "atadmin",
-          password: "atadmin123",
-          userclientid: 164,
+          username: UserName,
+          password: Password,
+          userclientid: ClientId,
         },
       },
     };
 
     axios
-      .put("https://uta.edu-man.com/ut/api/utuser/v2/loginV3", body, {
+      .put(LoginURL, body, {
         headers: {
           "Content-Type": "application/json",
         },

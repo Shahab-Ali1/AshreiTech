@@ -27,7 +27,6 @@ export default function Blog() {
     try {
       getMethod(`SMCourse/V2/Coursecategory/`)
         .then((data) => {
-          debugger;
           if (data?.IsSuccess) {
             setCategories(data.Data)
             handleClick(data.Data[0]?.Id)
@@ -44,7 +43,6 @@ export default function Blog() {
     try {
       getMethod(`SMCourse/V2/ClientCourseWithoutToken/${ClientId}/${vtype}`)
         .then((data) => {
-          debugger;
           if (data?.IsSuccess) {
             setImagesData(data.Data)
           }
@@ -100,13 +98,11 @@ export default function Blog() {
 
         <div className="col-12 col-md-8 col-lg-8 pt-5 " >
           <div className="row " style={{ display: 'relative' }}>
-            {/* shahab */}
             {
               ImagesData && ImagesData.map((item, index) => (
                 <div key={index} className="col-sm-12 col-md-6  col-lg-4 d-lg-block d-none" >
                   <div class="card" style={{ borderBottom: '3px solid rgba(0, 0, 0, 0.25)', borderRadius: '0 0 100px 100px;' }}>
                     <img class="card-img-top" 
-                    // src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
                     src={`https://sma.edu-man.com/sm/Images/Actual/${item?.stdimagefilename}`} alt="Card image cap" />
                     <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
                       <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start" >
@@ -120,86 +116,7 @@ export default function Blog() {
                 </div>
               ))
             }
-            {/* <div className="col-sm-12 col-md-6  col-lg-4 d-lg-block d-none" >
-              <div class="card" style={{ borderBottom: '2.5px solid rgba(0, 0, 0, 0.25)', borderRadius: '0 0 100px 100px;' }}>
-                <img class="card-img-top" src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
-                <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
-                 <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start" >
-                 <div className="pclass p-1 col-10 d-flex justify-content-center"><p className="font12">50,000+ Certified Students</p></div>
-                  <h5 class="card-title mt-4 text-center text-lg-left text-md-left font18">Ariba Procurement</h5>
-                  <p class="card-text mb-4 text-center text-lg-left text-md-left font13">Learn how to use SAP Ariba for managing procurement  and purchase orders.</p>
-                  <div className="pclass p-1 text-center col-6"><p style={{fontSize:'14px'}}>View More</p></div>
-                 </WrapperForP>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-6  col-lg-4 d-lg-block" >
-              <div class="card" style={{ borderBottom: '2.5px solid rgba(0, 0, 0, 0.25)', borderRadius: '0 0 100px 100px;' }}>
-                <img class="card-img-top" src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
-                <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
-                 <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start" >
-                 <div className="pclass p-1 col-10 d-flex justify-content-center"><p className="font12">50,000+ Certified Students</p></div>
-                  <h5 class="card-title mt-4 text-center text-lg-left text-md-left font18">Ariba Procurement</h5>
-                  <p class="card-text mb-4 text-center text-lg-left text-md-left font13">Learn how to use SAP Ariba for managing procurement  and purchase orders.</p>
-                  <div className="pclass p-1 text-center col-6"><p style={{fontSize:'14px'}}>View More</p></div>
-                 </WrapperForP>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-6  col-lg-4 d-lg-block d-none" >
-              <div class="card" style={{ borderBottom: '2.5px solid rgba(0, 0, 0, 0.25)', borderRadius: '0 0 100px 100px;' }}>
-                <img class="card-img-top" src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
-                <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
-                 <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start" >
-                 <div className="pclass p-1 col-10 d-flex justify-content-center"><p className="font12">50,000+ Certified Students</p></div>
-                  <h5 class="card-title mt-4 text-center text-lg-left text-md-left font18">Ariba Procurement</h5>
-                  <p class="card-text mb-4 text-center text-lg-left text-md-left font13">Learn how to use SAP Ariba for managing procurement  and purchase orders.</p>
-                  <div className="pclass p-1 text-center col-6"><p style={{fontSize:'14px'}}>View More</p></div>
-                 </WrapperForP>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-sm-12 col-md-6  col-lg-4 d-lg-block d-none" >
-              <div class="card" style={{ borderBottom: '2.5px solid rgba(0, 0, 0, 0.25)', borderRadius: '0 0 100px 100px;' }}>
-                <img class="card-img-top" src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
-                <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
-                 <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start" >
-                 <div className="pclass p-1 col-10 d-flex justify-content-center"><p className="font12">50,000+ Certified Students</p></div>
-                  <h5 class="card-title mt-4 text-center text-lg-left text-md-left font18">Ariba Procurement</h5>
-                  <p class="card-text mb-4 text-center text-lg-left text-md-left font13">Learn how to use SAP Ariba for managing procurement  and purchase orders.</p>
-                  <div className="pclass p-1 text-center col-6"><p style={{fontSize:'14px'}}>View More</p></div>
-                 </WrapperForP>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-6  col-lg-4 d-lg-block" >
-              <div class="card" style={{ borderBottom: '2.5px solid rgba(0, 0, 0, 0.25)', borderRadius: '0 0 100px 100px;' }}>
-                <img class="card-img-top" src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
-                <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
-                 <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start" >
-                 <div className="pclass p-1 col-10 d-flex justify-content-center"><p className="font12">50,000+ Certified Students</p></div>
-                  <h5 class="card-title mt-4 text-center text-lg-left text-md-left font18 font13">Ariba Procurement</h5>
-                  <p class="card-text mb-4 text-center text-lg-left text-md-left font13">Learn how to use SAP Ariba for managing procurement  and purchase orders.</p>
-                  <div className="pclass p-1 text-center col-6"><p style={{fontSize:'14px'}}>View More</p></div>
-                 </WrapperForP>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-6  col-lg-4 d-lg-block" >
-              <div class="card" style={{ borderBottom: '2.5px solid rgba(0, 0, 0, 0.25)', borderRadius: '0 0 100px 100px;' }}>
-                <img class="card-img-top" src="https://images.ctfassets.net/hrltx12pl8hq/1SOYk8vr3SXlQjbdvjhrfF/01a56dbce5cccbfe8858f31ba6bf5283/thumb_sept22_04.jpg" alt="Card image cap" />
-                <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
-                 <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start" >
-                 <div className="pclass p-1 col-10 d-flex justify-content-center"><p className="font12">50,000+ Certified Students</p></div>
-                  <h5 class="card-title mt-4 text-center text-lg-left text-md-left font18">Ariba Procurement</h5>
-                  <p class="card-text mb-4 text-center text-lg-left text-md-left font13">Learn how to use SAP Ariba for managing procurement  and purchase orders.</p>
-                  <div className="pclass p-1 text-center col-6"><p style={{fontSize:'14px'}}>View More</p></div>
-                 </WrapperForP>
-                </div>
-              </div>
-            </div> */}
-
+          
           </div>
         </div>
       </div>
