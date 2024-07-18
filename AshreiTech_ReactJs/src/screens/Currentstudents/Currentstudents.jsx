@@ -38,7 +38,7 @@ const Currentstudents = () => {
       }}
     >
       <div>
-        <div className="container mx-lg-5">
+        <div className="container ">
           <div className="w-100 pb-4">
             <h1 className="text-center mt-5" style={{ fontSize: '40px' }}>
               <span style={{ color: '#000000' }}>Transforming Students Into</span>
