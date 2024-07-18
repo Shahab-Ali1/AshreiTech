@@ -10,7 +10,6 @@ export const RegistrationForm = (props) => {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
-        debugger;
         event.preventDefault()
         setValue(newValue);
     };
