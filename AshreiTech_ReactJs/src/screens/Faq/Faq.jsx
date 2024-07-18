@@ -9,7 +9,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import departmentsFaq from "../../constant";
 import style from "./style.module.css";
 
-const Faq = () => {
+const Faq = (props) => {
   const { faq_container, faq_heading, faq, expand } = style;
   const [showMore, setShowMore] = useState(false);
 
@@ -27,7 +27,7 @@ const Faq = () => {
             </h1>
           </div>
         </Typography>
-        {departmentsFaq.slice(0, showMore ? departmentsFaq.length : 5).map((faqItem) => (
+        {props?.data?.slice(0, showMore ? props.data.length : 5).map((faqItem) => (
           <Accordion
             key={faqItem?.id}
             className={`${faq}`}

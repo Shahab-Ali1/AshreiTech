@@ -27,7 +27,6 @@ export default function Landing() {
       <OurTrainer/>
       <Currentstudents/>
       <Sponsers/>
-      <Faq/>
       <Footer/>
     </>
   );

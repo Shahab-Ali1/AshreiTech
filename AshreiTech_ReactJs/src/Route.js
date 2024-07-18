@@ -8,6 +8,7 @@ import BookaRoom from "./screens/BookaRoom/BookaRoom";
 import WhatWeDo from "./screens/WhatWeDo/WhatWeDo";
 import AboutTheCompany from "./screens/AboutTheCompany/AboutTheCompany";
 import CommingSoon from "./components/Sections/CommingSoonPage/CommingSoon";
+import SingleCourse from "./screens/SingleCourseScreen/SingleCourse";
 
 export const router = createHashRouter([
     {
@@ -46,6 +47,9 @@ export const router = createHashRouter([
       path: "/services",
       element: <CommingSoon/>,
     },
-  
+    {
+      path: "/courses",
+      element: <SingleCourse/>,
+    },
   
   ]);

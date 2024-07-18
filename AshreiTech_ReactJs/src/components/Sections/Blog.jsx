@@ -112,7 +112,7 @@ export default function Blog() {
                       <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start" >
                         <div className="pclass p-1 d-flex justify-content-center"><p>50,000+ Certified Students</p></div>
                         <h5 class="card-title mt-4 text-center text-lg-left text-md-left">{item?.stxt}</h5>
-                        <p class="card-text mb-4 text-center text-lg-left text-md-left">{item?.discription}</p>
+                        <p class="card-text mb-4 text-center text-lg-left text-md-left" id="offer_card">{item?.discription}</p>
                         <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }}>View More</p></div>
                       </WrapperForP>
                     </div>
