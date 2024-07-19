@@ -19,7 +19,7 @@ const Faq = (props) => {
 
   return (
     <div className={`row justify-content-center mb-5 mx-lg-5 mt-5 ${faq_container}`} style={{ margin: "auto", backgroundColor: 'white' }} >
-      <div className='col-12 '>
+      <div className='col-6'>
         <Typography>
           <div className="mb-4">
             <h1 className='pb-4 mb-4 mt-5 generic_heading' id='generic_heading' style={{ color: '#000000' }}>
@@ -38,7 +38,7 @@ const Faq = (props) => {
               borderRadius: 15,
               display: 'flex',
               justifyContent: "center",
-              flexDirection: "column"
+              flexDirection: "column",
             }}
           >
             <AccordionSummary
