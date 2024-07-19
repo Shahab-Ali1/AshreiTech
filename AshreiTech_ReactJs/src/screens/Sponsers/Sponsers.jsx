@@ -7,6 +7,8 @@ import sponser3 from "../../assets/sponser3.png"
 import sponser4 from "../../assets/sponser4.png"
 import ourpartnerbg from '../../assets/Ourpartnerbg.png'
 import QRandndiPh from "../../assets/Frame 7873.png"
+import Faq from "../Faq/Faq";
+import departmentsFaq from "../../constant"
 
 const Sponsers = () => {
     const { box, custom_btn_outline_dark, sponsers, sponsers_logo_container, Laptop_Image } = style;
@@ -80,7 +82,7 @@ const Sponsers = () => {
                     </div>
                 </div>
             </div>
-
+         <Faq data={departmentsFaq}/>
         </>
     );
 };

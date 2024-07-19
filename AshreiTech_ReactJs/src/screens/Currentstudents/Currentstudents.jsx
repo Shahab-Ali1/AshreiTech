@@ -20,7 +20,7 @@ const Currentstudents = () => {
   useEffect(() => {
     AOS.init({
       once: false,
-      delay: 50,
+      delay: 1000,
       duration: 1000,
       easing: 'ease-in-out',
     });
@@ -48,7 +48,15 @@ const Currentstudents = () => {
             </div>
           </div>
 
-          <div className="mt-5 container-fluid">
+          <div className="mt-5 container-fluid d-block d-md-none">
+            <div className="row d-flex justify-content-between align-items-center">
+              <div className="col-12">
+              <img src={CurrentstudentsImage} alt="" className='img-fluid' />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-5 container-fluid d-none d-md-block">
             <div className="row d-flex justify-content-between align-items-center">
               <div className="col-2">
                 <div className="row">

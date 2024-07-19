@@ -77,7 +77,7 @@ export default function OurTrainer() {
                   <div className='text-center'>
                     <h5 className='mt-3'> Usman</h5>
                     <p style={{ fontSize: '14px' }}>Associate SAP Consultant</p>
-                    <i className="fab fa-linkedin mr-2 fa-2x"></i>
+                    <i className="fab fa-linkedin mr-2 fa-2x mt-1"></i>
                   </div>
                 </div>
               </div>
@@ -87,7 +87,7 @@ export default function OurTrainer() {
                   <div className='text-center'>
                     <h5 className='mt-3'>Abdullah</h5>
                     <p style={{ fontSize: '14px' }}>Associate SAP Consultant</p>
-                    <i className="fab fa-linkedin mr-2 fa-2x"></i>
+                    <i className="fab fa-linkedin mr-2 fa-2x mt-1"></i>
                   </div>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function OurTrainer() {
                   <div className='text-center'>
                     <h5 className='mt-3'> Usman</h5>
                     <p style={{ fontSize: '14px' }}>Associate SAP Consultant</p>
-                    <i className="fab fa-linkedin mr-2 fa-2x"></i>
+                    <i className="fab fa-linkedin mr-2 fa-2x mt-1"></i>
                   </div>
                 </div>
               </div>
@@ -107,7 +107,7 @@ export default function OurTrainer() {
                   <div className='text-center'>
                     <h5 className='mt-3'>Abdullah</h5>
                     <p style={{ fontSize: '14px' }}>Associate SAP Consultant</p>
-                    <i className="fab fa-linkedin mr-2 fa-2x"></i>
+                    <i className="fab fa-linkedin mr-2 fa-2x mt-1"></i>
                   </div>
                 </div>
               </div>
@@ -126,6 +126,7 @@ const SliderWrapper = styled.div`
     
   }
   .card-style1 {
+    height:400px;
     width: 18rem;
     border-radius: 16px;
     border: 1px solid #FDD8A3;
@@ -133,6 +134,7 @@ const SliderWrapper = styled.div`
   }
   .card-style2 {
     width: 18rem;
+    height:400px;
     border-radius: 16px;
     border: 1px solid #8FCEC1;
     background-color: white;
