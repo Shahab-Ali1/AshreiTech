@@ -149,7 +149,6 @@ export const BookaRoomForm = (props) => {
 
     function isValidEmail(field, value) {
         // Define the regular expression for a valid email address
-        debugger;
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const isValidEmail = emailRegex.test(value);  
 
@@ -191,7 +190,6 @@ export const BookaRoomForm = (props) => {
 
     const sentWelcomeEmail = () => {
         try {
-            debugger;
             let body = {
                 "Data": {
                     sendfrom: "zusama729@gmail.com",
@@ -202,7 +200,6 @@ export const BookaRoomForm = (props) => {
             }
             PostMethod("FOAdmEnquiry/V2/SendEmailAsync", body)
                 .then((data) => {
-                    debugger
                     // if (data) {
                         setFormData({ ...INITIAL_STATE });
                     // }
