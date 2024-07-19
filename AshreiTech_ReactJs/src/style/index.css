@@ -580,6 +580,23 @@ margin-top: -130px;
   top: 60px;
   border-radius: 5px;
 }
+.left_underline{
+  font-size: 40px !important;
+  position: relative;
+  display: flex;
+  align-items: end;
+  margin-bottom: 50px !important;
+  margin: auto !important;
+}
+.left_underline::before {
+  content: ' ';
+  width: 170px;
+  height: 8px;
+  background-color: #5A8C75;
+  position: absolute;
+  top: 50px;
+  border-radius: 5px;
+}
 
 /* Media queries for responsiveness */
 @media (max-width: 1200px) {
@@ -979,4 +996,12 @@ margin-top: -130px;
 }
 .bg_green{
   background-color: rgba(90, 140, 117, 1);
+}
+.custom-rounded{
+  border-radius: 20px;
+}
+
+.fixed-height {
+  height: 240px; 
+  overflow: hidden; 
 }

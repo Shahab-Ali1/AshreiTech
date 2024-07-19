@@ -10,9 +10,12 @@ import profile2 from '../../assets/profile2.png'
 import vector1 from '../../assets/aboutAnimation1.png'
 import ladder_background from '../../assets/ladder.png'
 import InfoCard from '../InfoCard/InfoCard';
+import style from './style.module.css'
+import  gradeint_background from '../../assets/gradeint_background.png'
+import shopify_coins from '../../assets/shopify_coins.png'
 
 const SingleCourse = () => {
-  
+  const {sap_btn}=-style
   return (
     <>
       <TopNavbar />
@@ -27,13 +30,13 @@ const SingleCourse = () => {
         position:'relative'
       }}
     >
-          <div className="container p-5 " style={{ backgroundImage: `url(${HerobackImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <div className="container p-5 " style={{ backgroundImage: ``, backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="row">
           <div className="col-12 ">
             <div className="row">
               <div className="col-6">
                 <div>
-                  <button>SAP</button>
+                  <button className={`${sap_btn}`}>SAP</button>
                 </div>
                 <div className='mt-5'>
                   <h1>Ariba Procurement</h1>
@@ -50,16 +53,16 @@ const SingleCourse = () => {
                     <div>2000 ratings</div>
                   </div>
                 </div>
-                <div className='d-flex mt-5 align-items-center'>
-                  <div>
+                <div className='d-flex row mt-5 align-items-center'>
+                  <div className='col-5'>
                     <button className='slider_btn px-2 font20'>Ready To Upskill</button>
                   </div>
-                  <div className="testimonials- d-flex">
+                  <div className="testimonials- d-flex col-3">
                       <img src={vector1} alt="User 1" className="user-icon  h-50" />
                       <img src={vector1}  alt="User 2" className="user-ico h-50" />
                       <img src={vector1}  alt="User 3" className="user-ico h-50" />
                   </div>
-                  <div>4,000 Learners Enrolled</div>
+                  <div className='col-4'>4,000 Learners Enrolled</div>
                 </div>
               </div>
               <div className="col-6" >
@@ -73,7 +76,48 @@ const SingleCourse = () => {
 
     <InfoCard/>
     </div>
+    <div className="container gutter-0 py-5">
+      <div className="row gutter-0 ">
+        <div className="col-sm-8 ">
+          <h1 className='left_underline'>About This Course</h1>
+          <p className='my-5'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities await.</p>
+        </div>
+        <div className="col-sm-4 pl-5">
+          <h1 className='left_underline'>Skills You’ll Gain</h1>
+          <ul className='my-5'>
+            <li>skills</li>
+            <li>skills</li>
+            <li>skills</li>
+          </ul>
+       
+        </div>
+      </div>
+      <div className="row gutter-0">
+       <div className=" col-sm-8 bg-white mb-4  d-flex flex-column text-black  shadow custom-rounded border border-dark ">
+  <div className="row ">
+    <div className="col px-sm-4 py-sm-4 text-bold border-bottom border-dark"><h1>Syllabus</h1></div>
+  </div>
+  <div className="d-flex flex-column py-sm-5 py-3 px-sm-4 justify-content-center h-100">
+    <h4 className=''>Intro to Generative AI</h4>
+    <h5 className='text-disable mb-sm-5 mb-2'>Learn About the Different Types Of Generative AI!</h5>
+  <p>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
+  <br />
+  <p>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
+  <br />
 
+  <p>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
+  </div>
+</div>
+        <div className="col-sm-4 d-flex justify-content-center align-items-center">
+          <div className="gradientCircle"></div>
+          <img src={shopify_coins} style={{height:"52%",marginLeft:'30px'}} alt="" srcset="" />
+        </div>
+      </div>
+
+<div className="row justify-content-center mt-sm-1">
+      <button className='slider_btn '>Enroll Now</button>
+</div>
+    </div>
 
 
 
@@ -102,27 +146,27 @@ const SingleCourse = () => {
         <h1 className="text-center  generic_heading" > <span style={{ color: '#000000' }}>How Do You decide This Course Suits You</span> </h1>
           <div className="container d-flex justify-content-center">
             <div className="row mt-sm-5 justify-content-center bg-primar">
-            <div  className="col-sm-3 mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow rounded">
+            <div  className="col-sm-3 custom-rounded mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow ">
            <img src={vector1} alt="" />
            <p className="line-height-sm">We embrace continuous learning and view every challenge as an opportunity for growth.</p>
          </div>
-         <div  className="col-sm-3 mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow rounded">
+         <div  className="col-sm-3 custom-rounded mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow ">
            <img src={vector1} alt="" />
            <p className="line-height-sm">We embrace continuous learning and view every challenge as an opportunity for growth.</p>
          </div>
-         <div  className="col-sm-3 mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow rounded">
+         <div  className="col-sm-3 custom-rounded mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow ">
            <img src={vector1} alt="" />
            <p className="line-height-sm">We embrace continuous learning and view every challenge as an opportunity for growth.</p>
          </div>
-         <div  className="col-sm-3 mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow rounded">
+         <div  className="col-sm-3 custom-rounded mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow ">
            <img src={vector1} alt="" />
            <p className="line-height-sm">We embrace continuous learning and view every challenge as an opportunity for growth.</p>
          </div>
-         <div  className="col-sm-3 mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow rounded">
+         <div  className="col-sm-3 custom-rounded mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow ">
            <img src={vector1} alt="" />
            <p className="line-height-sm">We embrace continuous learning and view every challenge as an opportunity for growth.</p>
          </div>
-         <div  className="col-sm-3 mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow rounded">
+         <div  className="col-sm-3 custom-rounded mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow ">
            <img src={vector1} alt="" />
            <p className="line-height-sm">We embrace continuous learning and view every challenge as an opportunity for growth.</p>
          </div>
@@ -135,7 +179,7 @@ const SingleCourse = () => {
 
     </div>
       <div className="container-fluid bg_green py-5">
-        <div className="container  bg-white">
+        <div className="container custom-rounded bg-white">
           <div className="row  rounded-5 px-sm-5 px-2 align-items-center">
             <div className="col-sm-4">
               <h1>Meet the trainer
@@ -167,6 +211,60 @@ const SingleCourse = () => {
         <TestimonialSlider />
       </div>
       <Faq data={departmentsFaq}/>
+      <div className="container-fluid  pt-5"
+      style={{
+        backgroundImage: `url(${gradeint_background})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        position:'relative'
+      }}
+    >
+      <div className="w-100 py-5">
+        <h1 className="text-center  generic_heading" > <span style={{ color: '#000000' }}>Looking For Something Else?</span> </h1>
+          <div className=" d-flex justify-content-center">
+            <div className="row mt-sm-5 justify-content-center bg-primar py-sm-5">
+
+         
+<div className="col-sm-3 bg-white mb-4 mx-lg-4 mx-sm-2 d-flex flex-column text-black  shadow custom-rounded border border-dark fixed-height">
+  <div className="row ">
+    <div className="col px-3 py-1 text-bold border-bottom border-dark">Article</div>
+  </div>
+  <div className="d-flex flex-column justify-content-center h-100">
+    <h4>Detective Hallucinations in Generative AI</h4>
+    <p className="line-height-sm">We embrace continuous for growth.</p>
+  </div>
+</div>
+<div className="col-sm-3 bg-white mb-4 mx-lg-4 mx-sm-2 d-flex flex-column text-black  shadow custom-rounded border border-dark fixed-height">
+  <div className="row ">
+    <div className="col px-3 py-1 text-bold border-bottom border-dark">Article</div>
+  </div>
+  <div className="d-flex flex-column justify-content-center h-100">
+    <h4>Detective Hallucinations in Generative AI</h4>
+    <p className="line-height-sm">We embrace continuous for growth.</p>
+  </div>
+</div>
+<div className="col-sm-3 bg-white mb-4 mx-lg-4 mx-sm-2 d-flex flex-column text-black  shadow custom-rounded border border-dark fixed-height">
+  <div className="row ">
+    <div className="col px-3 py-1 text-bold border-bottom border-dark">Article</div>
+  </div>
+  <div className="d-flex flex-column justify-content-center h-100">
+    <h4>Detective Hallucinations in Generative AI</h4>
+    <p className="line-height-sm">We embrace continuous for growth.</p>
+  </div>
+</div>
+
+        
+            </div>
+         
+
+                      </div>
+        </div>
+
+
+    </div>
+
+
+   
       <Footer />
     </>
   );
