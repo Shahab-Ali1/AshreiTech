@@ -48,6 +48,16 @@
     cursor: pointer;
   }
 
+  .yellow_puzzle{
+    width: 500px;
+    height: auto !important;
+    position: absolute;
+    top: 50px;
+    left: -40px;
+    rotate: 90;
+    transform: rotate(150deg);
+  }
+
 
 
 

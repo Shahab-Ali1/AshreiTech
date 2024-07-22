@@ -8,7 +8,7 @@ import slider1 from "../../assets/slider1.png";
 import slider2 from "../../assets/slider2.png";
 import slider3 from "../../assets/slider3.png";
 import newSlider1 from "../../assets/HeroHome1.png";
-import homebannervideo from '../../assets/homebannervideo.mp4'
+import homebannervideo from '../../assets/video/headervideo.mp4'
 import InfoCard from "../../screens/InfoCard/InfoCard";
 import { infoCardData } from "../../constant";
 
@@ -82,7 +82,7 @@ export default function Header() {
           <span className="sr-only">Next</span>
         </a>
       </div>
-      <InfoCard data={infoCardData} />
+      <InfoCard data={infoCardData} count={true}/>
     </>
   );
 }

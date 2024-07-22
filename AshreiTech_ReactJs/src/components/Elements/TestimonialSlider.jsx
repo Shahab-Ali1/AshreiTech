@@ -36,78 +36,7 @@ export default function TestimonialSlider() {
     <div className="mt-5 " style={{ marginTop: "100px !important" }}>
       <SliderWrapper>
         <Slider {...settings}>
-          {/* <Card className="mb-1">
-            <div className="card-body ">
-              <div className="row d-flex justify-content-left align-items-center">
-                <div className="col-3">
-                  <img
-                    src={profile1}
-                    alt="Online Shopping VR Glasses"
-                    className="rounded-circle custom-img"
-                  />
-                </div>
-                <div className="col-2">
-                  <i className="fa-brands fa-linkedin"></i>
-                </div>
-                <div className="" >
-                  <h5 className="font-weight-bolder"> Justin Bergson</h5>
-                  <h6 className="">Parents of students</h6>
-                </div>
-              </div>
-              <p className="card-text mt-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie turpis tempus nunc pellentesque blandit. Sed pharetra efficitur ex sit amet ultricies. Nulla facilisi.</p>
-              <div className="row justify-content-between mt-3">
-                <div className="col" style={{ color: '#DBDBDB' }}>
-                  08:21 PM - Jan 4, 2023
-                </div>
-                <div className="col" style={{ display: 'contents' }}>
-                  <Rating>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star disable_rating"></i>
-                  </Rating>
-                </div>
-              </div>
-            </div>
-          </Card> */}
 
-          {/* Repeat for other cards */}
-          <Card className="mb-1">
-            <div className="card-body pb-0">
-              <div className="row d-flex justify-content-left align-items-center">
-                <div className="col-3">
-                  <img
-                    src={profile2}
-                    alt="Online Shopping VR Glasses"
-                    className="rounded-circle custom-img"
-                  />
-                </div>
-                <div className="col-2">
-                  <i className="fa-brands fa-linkedin"></i>
-                </div>
-                <div className="" >
-                  <h5 className="font-weight-bolder"> Justin Bergson</h5>
-                  <h6 className="">Parents of students</h6>
-                </div>
-              </div>
-              <p className="card-text mb-3 mt-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie turpis tempus nunc pellentesque blandit. Sed pharetra efficitur ex sit amet ultricies. Nulla facilisi.</p>
-              <div className="row justify-content-between mt-3">
-                <div className="col" style={{ color: '#DBDBDB' }}>
-                  08:21 PM - Jan 4, 2023
-                </div>
-                <div className="col" style={{ display: 'contents' }}>
-                  <Rating>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star disable_rating"></i>
-                  </Rating>
-                </div>
-              </div>
-            </div>
-          </Card>
           <Card >
             <div className="card-body pb-0">
               <div className="row d-flex justify-content-left align-items-center">
@@ -122,46 +51,11 @@ export default function TestimonialSlider() {
                   <i className="fa-brands fa-linkedin"></i>
                 </div>
                 <div className="" >
-                  <h5 className="font-weight-bolder"> Justin Bergson</h5>
-                  <h6 className="">Parents of students</h6>
+                  <h5 className="font-weight-bolder"> Muhammad Talib</h5>
+                  <h6 className="">Oracle Graduate</h6>
                 </div>
               </div>
-              <p className="card-text mb-3 mt-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie turpis tempus nunc pellentesque blandit. Sed pharetra efficitur ex sit amet ultricies. Nulla facilisi.</p>
-              <div className="row justify-content-between mt-3">
-                <div className="col" style={{ color: '#DBDBDB' }}>
-                  08:21 PM - Jan 4, 2023
-                </div>
-                <div className="col" style={{ display: 'contents' }}>
-                  <Rating>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star disable_rating"></i>
-                  </Rating>
-                </div>
-              </div>
-            </div>
-          </Card>
-          <Card >
-            <div className="card-body pb-0">
-              <div className="row d-flex justify-content-left align-items-center">
-                <div className="col-3">
-                  <img
-                    src={profile3}
-                    alt="Online Shopping VR Glasses"
-                    className="rounded-circle custom-img"
-                  />
-                </div>
-                <div className="col-2">
-                  <i className="fa-brands fa-linkedin"></i>
-                </div>
-                <div className="" >
-                  <h5 className="font-weight-bolder"> Justin Bergson</h5>
-                  <h6 className="">Parents of students</h6>
-                </div>
-              </div>
-              <p className="card-text mb-3 mt-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie turpis tempus nunc pellentesque blandit. Sed pharetra efficitur ex sit amet ultricies. Nulla facilisi.</p>
+              <p className="card-text mb-3 mt-3 testi_Card_text">Thanks to AshreiTech. Everything I learned from soft skills to technical expertise, has directly helped me in my job at Secure Beans in the HR department. My journey has been amazing.</p>
               <div className="row justify-content-between mt-3">
                 <div className="col" style={{ color: '#DBDBDB' }}>
                   08:21 PM - Jan 4, 2023
@@ -193,11 +87,86 @@ export default function TestimonialSlider() {
                   <i className="fa-brands fa-linkedin"></i>
                 </div>
                 <div className="" >
-                  <h5 className="font-weight-bolder"> Justin Bergson</h5>
-                  <h6 className="">Parents of students</h6>
+                  <h5 className="font-weight-bolder">Maria Farooqui</h5>
+                  <h6 className="">Cybersecurity Student</h6>
                 </div>
               </div>
-              <p className="card-text mb-3 mt-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie turpis tempus nunc pellentesque blandit. Sed pharetra efficitur ex sit amet ultricies. Nulla facilisi.</p>
+              <p className="card-text mb-3 mt-3 testi_Card_text">The courses offered by AshreiTech were very interesting, so I decided to enroll in them. I am glad I made this decision because the trainers are extremely helpful</p>
+              <div className="row justify-content-between mt-3">
+                <div className="col" style={{ color: '#DBDBDB' }}>
+                  08:21 PM - Jan 4, 2023
+                </div>
+                <div className="col" style={{ display: 'contents' }}>
+                  <Rating>
+                    <i className="fa-solid fa-star rating"></i>
+                    <i className="fa-solid fa-star rating"></i>
+                    <i className="fa-solid fa-star rating"></i>
+                    <i className="fa-solid fa-star rating"></i>
+                    <i className="fa-solid fa-star disable_rating"></i>
+                  </Rating>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card >
+            <div className="card-body pb-0">
+              <div className="row d-flex justify-content-left align-items-center">
+                <div className="col-3">
+                  <img
+                    src={profile3}
+                    alt="Online Shopping VR Glasses"
+                    className="rounded-circle custom-img"
+                  />
+                </div>
+                <div className="col-2">
+                  <i className="fa-brands fa-linkedin"></i>
+                </div>
+                <div className="" >
+                  <h5 className="font-weight-bolder"> Reena & NoorJehan </h5>
+                  <h6 className="">Salesforce Associates
+                  </h6>
+                </div>
+              </div>
+              <p className="card-text mb-3 mt-3 testi_Card_text">“We had no prior knowledge of IT but after we took admission in AshreiTech we got to learn a lot and both of us secured jobs as soon as we acquired our certifications. 
+              </p>
+              <div className="row justify-content-between mt-3">
+                <div className="col" style={{ color: '#DBDBDB' }}>
+                  08:21 PM - Jan 4, 2023
+                </div>
+                <div className="col" style={{ display: 'contents' }}>
+                  <Rating>
+                    <i className="fa-solid fa-star rating"></i>
+                    <i className="fa-solid fa-star rating"></i>
+                    <i className="fa-solid fa-star rating"></i>
+                    <i className="fa-solid fa-star rating"></i>
+                    <i className="fa-solid fa-star disable_rating"></i>
+                  </Rating>
+                </div>
+              </div>
+            </div>
+          </Card>
+          <Card >
+            <div className="card-body pb-0">
+              <div className="row d-flex justify-content-left align-items-center">
+                <div className="col-3">
+                  <img
+                    src={profile3}
+                    alt="Online Shopping VR Glasses"
+                    className="rounded-circle custom-img"
+                  />
+                </div>
+                <div className="col-2">
+                  <i className="fa-brands fa-linkedin"></i>
+                </div>
+                <div className="" >
+                  <h5 className="font-weight-bolder">Arwa Motiwala
+                  </h5>
+                  <h6 className="">Oracle GL Graduate
+                  </h6>
+                </div>
+              </div>
+              <p className="card-text mb-3 mt-3 testi_Card_text">I got my first job after I did my course in Oracle Financials General Ledger from AshreiTech. The experience was amazing, the trainers were really helpful.</p>
               <div className="row justify-content-between mt-3">
                 <div className="col" style={{ color: '#DBDBDB' }}>
                   08:21 PM - Jan 4, 2023
@@ -223,7 +192,7 @@ export default function TestimonialSlider() {
 
 const SliderWrapper = styled.div`
   .slick-slide {
-    padding: 0 10px; /* Space between slides */
+    padding: 10px 10px; /* Space between slides */
   }
 `;
 

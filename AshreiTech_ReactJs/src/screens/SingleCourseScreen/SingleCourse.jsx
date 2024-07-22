@@ -85,7 +85,7 @@ const SingleCourse = () => {
   </div>
   <div className="container-fluid px-5" style={{width:""}}>
 
-  <InfoCard data={courseInfoCardData} gradient={false}/> 
+  <InfoCard data={courseInfoCardData} count={false} gradient={false}/> 
   </div>
 
 </div>

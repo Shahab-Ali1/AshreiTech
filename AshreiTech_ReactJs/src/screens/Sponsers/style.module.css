@@ -3,6 +3,7 @@
   #5A8C75;  
   color: #ffffff;
   border-radius: 50px;
+  z-index: 2;
 }
 .custom_btn_outline_dark {
     color: #fff;
@@ -48,3 +49,4 @@
       width:  113% !important;
     }
     }
+    
