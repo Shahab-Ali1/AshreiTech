@@ -6,8 +6,9 @@ import Backdrop from "../Elements/Backdrop";
 import Logo from "../../assets/logo.png";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 import { useNavigate } from "react-router-dom";
-import Team from '../../screens/Teams/Teams'
-import BookaRoom from '../../screens/BookaRoom/BookaRoom'
+import QRapple from '../../assets/QRapple.png'
+import QRandroid from '../../assets/QRandroid.png'
+
 
 export default function TopNavbar() {
   const navigate = useNavigate();
@@ -42,6 +43,11 @@ export default function TopNavbar() {
             Sign In
           </span>
         </Link>
+        <UlWrapperRight className="flexNullCenter">
+          <li onClick={() => navigate("/GetInTouch")} className=" navbtn p-2 ml-2">
+            Get In Touch
+          </li>
+        </UlWrapperRight>
       </div>
       <div className="d-flex justify-content-between align-items-center py-3 px-lg-5 px-0 " >
         <div className="d-flex justify-content-between  ">
@@ -101,13 +107,21 @@ export default function TopNavbar() {
               </span>
             </Link>
           </li>
-        </UlWrapper>
-        <UlWrapperRight className="flexNullCenter">
-          <li onClick={() => navigate("/GetInTouch")} className=" navbtn p-2 ml-5">
-            Get In Touch
+          <li className="font15 pointer">
+            <Link style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
+              <span className="animated_link">
+                <img src={QRapple} alt="" style={{width:'35px', height:'auto'}} />
+              </span>
+            </Link>
           </li>
-         
-        </UlWrapperRight>
+          <li className="font15 pointer">
+            <Link style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
+              <span className="animated_link">
+                <img src={QRandroid} alt="" style={{width:'35px', height:'auto'}} />
+              </span>
+            </Link>
+          </li>
+        </UlWrapper>
         </div>
       </div>
     </>

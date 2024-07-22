@@ -590,7 +590,6 @@
 
 
 
-
  /* .active{
   background-color:  #008F71 !important;
 } */
@@ -1250,20 +1249,6 @@
    background-color: rgba(90, 140, 117, 1);
  }
 
-#offer_card{
-    /* Ensure text wraps within the container */
-    overflow: hidden;
-    /* Show ellipsis for overflow text */
-    text-overflow: ellipsis;
-    /* Display multiline text */
-    display: -webkit-box;
-    -webkit-line-clamp: 5; /* Number of lines to show */
-    -webkit-box-orient: vertical;
-    white-space: normal;
-}
-.bg_green{
-  background-color: rgba(90, 140, 117, 1);
-}
 .custom-rounded{
   border-radius: 20px;
 }
@@ -1272,3 +1257,4 @@
   height: 240px; 
   overflow: hidden; 
 
+}

@@ -19,7 +19,6 @@
     margin: 5px;
     width: 100%;
     height: auto;
-
 }
 
 .containerOnePiece {
@@ -42,8 +41,6 @@
 @media only screen and (max-width: 600px) {
     .footer_container {
         height: auto;
-
         padding: 16px;
-
     }
 }
