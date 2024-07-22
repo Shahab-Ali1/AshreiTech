@@ -21,7 +21,6 @@ export default function Landing() {
     <>
       <TopNavbar />
       <Header />
-      <InfoCard/>
       <Hero/>
       <Blog />
       <OurTrainer/>
