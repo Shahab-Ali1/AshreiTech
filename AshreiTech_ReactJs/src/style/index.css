@@ -85,8 +85,77 @@
    vertical-align: baseline;
    box-sizing: border-box;
 
- }
-
+}
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  *{
+    font-family: 'Roboto', sans-serif;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  a {
+    text-decoration: none!important;
+    color: #0B093B;
+  }
+  a:hover {
+    color: #7620FF;
+  }
+  input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px #fff inset; /* Change the color to your own background color */
+    box-shadow: transparent;
+    -webkit-text-fill-color: #fff;
+  }
+  body {
+    background: #fff;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0px 30px;
+  }
+  .bg_khaigreen{
+    background-color: #5A8C75;
+  }
+  @media only screen and (max-width: 859px) {
+    .container {
+      padding: 0 15px;
+    }
+    .main_logo{
+      height: 40px;
+      width: 100%;
+    }
+    .top_menu{
+      padding: 10px  10px !important;
+    }
+    .top_menu a{
+       font-size: 16px !important;
+    }
+    .banner_container{
+      padding: 10px  10px !important;
+}
+}
  @font-face {
    font-family: lato_medium;
    src: url("../assets/fonts/Lato-Medium/lato/Lato-Medium.ttf");
@@ -921,12 +990,28 @@
    display: inline-block;
    margin-bottom: 14px;
  }
+.coursegradientCircle:before {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  width: 639px;
+  height: 1030px;
+  background: radial-gradient(circle, rgb(158 212 180 / 39%) 30%, rgb(255 255 255 / 0%) 51%);
+  top: -314px;
+  background-position: center;
+���z-index:�-1 !important;
+}
 
  .hover-rotate:hover {
    transform: rotate(-90deg);
    /* Rotate if mouse is hovered */
  }
 
+
+.css-1086bdv-MuiPaper-root-MuiAccordion-root::before {
+  background-color: white !important;
+}
  .hover-rotate.collapse {
    transform: rotate(-90deg);
    /* Rotate if collapse class is present */

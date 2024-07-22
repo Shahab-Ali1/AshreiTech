@@ -24,8 +24,13 @@
     font-style: italic;
     color: #555;
 }
-.sap_btn{
-    border: none !important;
-    border-radius: 20px !important;
-    background-color: rebeccapurple;
+
+.ready_to_upskill_btn{
+    background-color:  #008F71 !important;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 18px; 
 }
