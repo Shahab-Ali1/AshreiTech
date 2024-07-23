@@ -663,7 +663,6 @@
 
 
 
-
  /* .active{
   background-color:  #008F71 !important;
 } */
@@ -1382,12 +1381,12 @@
    background-color: rgba(90, 140, 117, 1);
  }
 
- .custom-rounded{
+.custom-rounded{
   border-radius: 20px;
 }
 
 .fixed-height {
   height: 240px; 
   overflow: hidden; 
-}
 
+}

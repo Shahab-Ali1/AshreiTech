@@ -1,86 +1,70 @@
-.faq_heading{
-    font-size: 60px !important;
-    text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    margin-bottom: 50px !important;
-    /* width: 90% !important; */
-    margin: auto !important;
-    margin-bottom: 50px !important;
 
-}
-.faq_heading::before{
-    content: ' ';
-    width: 220px;
-    height: 10px;
-    background-color: #008F71;
-    position: absolute;
-    top: 85px;
-    border-radius: 5px;
-    margin-bottom: 20px !important;
 
+.faq_container {
+  justify-content: center;
+  border: 3px solid #5A8C75;
+  margin-bottom: 100px;
+  border-radius: 68px;
+  padding: 16px;
 }
-.faq_container{
-    justify-content: center;
-    border: 3px solid #5A8C75;
-    margin-bottom: 100px;
-    /* width: 80%; */
-    border-radius: 68px;
-    padding: 16px;
-}
+
 .expand {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: beat 1s infinite;
+  transition: transform 0.3s ease-in-out;
+}
+
+.expand:hover {
+  animation: none;
+  cursor: pointer;
+}
+
+.puzzle {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+
+@media (max-width: 1200px) {
+  .puzzle {
+    width: 150px;
+    top: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .puzzle {
+    width: 120px;
+    top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .puzzle {
     width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    animation: beat 1s infinite; /* Apply the beat animation */
-
-    transition: transform 0.3s ease-in-out; /* Ensure smooth transition */
+    top: 20px;
   }
-  
-  .expand:hover {
-    animation: none; /* Apply the beat animation */
+}
 
-    cursor: pointer;
+@media (max-width: 576px) {
+  .puzzle {
+    width: 80px;
+    top: 10px;
   }
+}
 
-  .yellow_puzzle{
-    width: 500px;
-    height: auto !important;
-    position: absolute;
-    top: 50px;
-    left: -40px;
-    rotate: 90;
-    transform: rotate(150deg);
+@keyframes beat {
+  0%, 100% {
+    transform: scale(1);
   }
-
-
-
-
-
-  @keyframes beat {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2); /* Adjust scale factor as needed */
-    }
+  50% {
+    transform: scale(1.2);
   }
-  
-@media only screen and (min-width: 1024px) and (max-width: 1152px)  {
-    .faq{
-        padding: 5px 5px !important;
-    }
-    .faq_heading{
-        font-size: 50px !important;
-    }
-    .faq_heading::before{
-
-        top: 70px;
-    
-    }
-    }
+}
