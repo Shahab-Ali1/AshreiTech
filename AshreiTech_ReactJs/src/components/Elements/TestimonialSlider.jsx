@@ -4,6 +4,7 @@ import styled from "styled-components";
 import profile1 from '../../assets/Profile1.png'
 import profile2 from '../../assets/profile2.png'
 import profile3 from '../../assets/profile3.png'
+import JustinBergson from '../../assets/JustinBergson.png'
 
 export default function TestimonialSlider() {
   const settings = {
