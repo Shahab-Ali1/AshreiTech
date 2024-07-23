@@ -137,23 +137,23 @@ const Teams = () => {
                     <div className={gradientCircle}></div>
                     {teamMembers.map((member, index) => (
                         <div className="col-md-6 col-lg-3 col-sm-12 my-4" key={index}>
-                            <div className="card-Team" style={{
-                                backgroundImage: `url(${member.image})`,
-                                backgroundSize: 'cover',
-                                padding: '10px',
-                            }}>
-                                <div className="card-Team-bg">
-                                    <div className="card-Team-block d-flex flex-column">
-                                        <p className="text-white">{member.description}</p>
-                                        <i className="fab fa-linkedin pt-2" style={{ color: "white" }}></i>
-                                    </div>
+                        <div className="card-Team" style={{
+                            backgroundImage: `url(${member.image})`,
+                            backgroundSize: 'cover',
+                            padding: '10px',
+                        }}>
+                            <div className="card-Team-bg">
+                                <div className="card-Team-block d-flex flex-column">
+                                    <p className="text-white">{member.description}</p>
+                                    <i className="fab fa-linkedin pt-2" style={{ color: "white" }}></i>
                                 </div>
                             </div>
-                            <div className="d-flex justify-content-center flex-column align-items-center mt-4">
-                                <h4>{member.name}</h4>
-                                <h6 className="text-center">{member.title}</h6>
-                            </div>
                         </div>
+                        <div className="d-flex justify-content-center flex-column align-items-center mt-4">
+                            <h4>{member.name}</h4>
+                            <h6 className="text-center">{member.title}</h6>
+                        </div>
+                    </div>
                     ))}
                 </div>
             </div>

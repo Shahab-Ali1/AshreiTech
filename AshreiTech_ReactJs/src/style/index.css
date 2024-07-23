@@ -845,6 +845,16 @@
    margin: auto !important;
  }
 
+ #generic_heading_for_transforming::before{
+  content: ' ';
+   width: 220px;
+   height: 8px;
+   background-color: #5A8C75;
+   position: absolute;
+   top: 100px;
+   border-radius: 5px;
+ }
+
  #generic_heading_BookRoom::before {
    content: ' ';
    width: 220px;
@@ -875,6 +885,14 @@
      width: 180px;
      top: 70px;
    }
+   #generic_heading::before {
+     width: 180px;
+     top: 120px;
+   }
+   #generic_heading_for_transforming::before {
+    width: 100px;
+    top: 125px !important;
+  }
  }
 
  @media (max-width: 992px) {
@@ -886,6 +904,7 @@
      width: 150px;
      top: 60px;
    }
+  
  }
 
  @media (max-width: 768px) {
@@ -897,6 +916,8 @@
      width: 130px;
      top: 50px;
    }
+  
+   
  }
 
  @media (max-width: 576px) {
@@ -912,6 +933,8 @@
      width: 100px;
      top: 45px;
    }
+
+   
 
    .WhoAreYou {
      font-size: 50px !important;
@@ -932,6 +955,10 @@
    #generic_heading::before {
      width: 100px;
      top: 80px !important;
+   }
+   #generic_heading_for_transforming::before {
+     width: 100px;
+     top: 75px !important;
    }
  }
 
@@ -1000,7 +1027,7 @@
   background: radial-gradient(circle, rgb(158 212 180 / 39%) 30%, rgb(255 255 255 / 0%) 51%);
   top: -314px;
   background-position: center;
-���z-index:�-1 !important;
+  z-index:-1 !important;
 }
 
  .hover-rotate:hover {
@@ -1343,3 +1370,4 @@
   overflow: hidden; 
 
 }
+

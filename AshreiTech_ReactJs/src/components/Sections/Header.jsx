@@ -27,8 +27,6 @@ export default function Header() {
           <source src={homebannervideo} type="video/mp4" style={{width:"100%",height:"100%"}} />
           Your Browser Does Not Support The Video Tag.
         </video>
-
-
             {/* <div className="d-flex flex-column justify-content-center align-items-center py-5 my-5 ">
               <h1 className="pt-3 text-center text-md-left">
                 Complexity <span style={{ color: "#008F71" }}>Simplified,</span>

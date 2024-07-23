@@ -9,9 +9,7 @@ import { useNavigate } from "react-router-dom";
 import QRTopNav from '../../assets/QRTopNav.png'
 import Androi_QR from '../../assets/Android.png'
 import IOS_QR from '../../assets/IOS.png'
-import { colors } from "@material-ui/core";
-
-
+import { Tooltip, tooltipClasses, TooltipProps } from "@mui/material";
 
 export default function TopNavbar() {
   const navigate = useNavigate();
@@ -24,6 +22,21 @@ export default function TopNavbar() {
       window.removeEventListener("scroll", () => setY(window.scrollY));
     };
   }, [y]);
+
+  const LightTooltip = styled(({ className, ...props }) => (
+    <Tooltip {...props} classes={{ popper: className }} />
+  ))(() => ({
+    [`& .${tooltipClasses.tooltip}`]: {
+      backgroundColor: 'rgb(236, 246, 244)',
+      color: '#008f71',
+      border: '1px solid #008f71',
+    },
+    [`& .${tooltipClasses.arrow}`]: {
+      color: 'rgb(236, 246, 244)',
+      color: '#008f71',
+      top: '25px'
+    },
+  }));
 
 
   return (
@@ -110,8 +123,10 @@ export default function TopNavbar() {
                 </span>
               </Link>
             </li>
-            <li className="font15 pointer">
-              <img src={QRTopNav} alt="" data-toggle="modal" data-target="#exampleModal" style={{ width: '35px', height: 'auto' }} />
+            <li className="font15 pointer" >
+              <LightTooltip title="click to scan QR code" placement="top" arrow>
+                <img src={QRTopNav} alt="" data-toggle="modal" data-target="#exampleModal" style={{ width: '35px', height: 'auto' }} />
+              </LightTooltip>
             </li>
           </UlWrapper>
         </div>
@@ -129,16 +144,16 @@ export default function TopNavbar() {
                 <div className="row">
                   <div className="col-6 d-flex justify-content-center align-items-center flex-column ">
                     <img src={IOS_QR} alt="" className="pt-5 mt-5" />
-                    <div style={{color:"#008F71"}}>IOS </div>
+                    <div style={{ color: "#008F71" }}>IOS </div>
                   </div>
                   <div className="col-6 d-flex justify-content-center align-items-center flex-column ">
                     <img src={Androi_QR} alt="" className="pt-5 mt-5" />
-                    <div style={{color:"#008F71"}}>Android</div>
+                    <div style={{ color: "#008F71" }}>Android</div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="modal-footer " style={{ backgroundColor: 'rgb(236, 246, 244)', borderTop:'none' }}>
+            <div class="modal-footer " style={{ backgroundColor: 'rgb(236, 246, 244)', borderTop: 'none' }}>
               <button type="button" class="btn" style={{ backgroundColor: '#5A8C75', color: 'white' }} data-dismiss="modal">Close</button>
             </div>
           </div>
@@ -149,10 +164,7 @@ export default function TopNavbar() {
   );
 }
 
-const NavInner = styled.div`
-  width: 100%;
-  height: 100%;
-`;
+
 
 const BurderWrapper = styled.button`
   outline: none;

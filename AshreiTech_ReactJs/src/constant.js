@@ -36,6 +36,7 @@ export const infoCardData=[
       discription:'5+'
   },
 ]
+
 export const courseInfoCardData=[
   {
       image:cvector1,

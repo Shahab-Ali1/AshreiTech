@@ -11,18 +11,18 @@ import Faq from "../Faq/Faq";
 import departmentsFaq from "../../constant"
 
 const Sponsers = () => {
-    const { box, custom_btn_outline_dark, sponsers, sponsers_logo_container, Laptop_Image } = style;
+    const { box, sponsers, sponsers_logo_container, Laptop_Image } = style;
     return (
         <>
             <div style={{
                 backgroundImage: `url(${ourpartnerbg})`,
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
-                position:'relative',
-            }} className="container-fluid gradientCircle px-5 ">
-
-                <div className="row d-flex justify-content-center align-items-center " style={{ position: 'relative', zIndex: 2 }}>
-                    <div className=" mt-5 ">
+                position: 'relative',
+            }} className="container-fluid  px-0 px-lg-5">
+                <div className="gradientCircle d-none d-lg-block"></div>
+                <div className="container-fluid d-flex flex-column justify-content-center align-items-center " style={{ position: 'relative', zIndex: 2 }}>
+                    <div className=" mt-0 mt-lg-5">
                         <div>
                             <h1 className=" text-center  generic_heading" style={{ color: '#000000' }}>
                                 {" "}
@@ -34,55 +34,55 @@ const Sponsers = () => {
                             </p>
                         </div>
 
-                        <div className={`${sponsers} `}>
-                            <div className={`${sponsers_logo_container}`}>
-                                <img src={sponser1} className="" alt="" />
-                            </div>
-                            <div className={`${sponsers_logo_container}`}>
-                                <img src={sponser2} alt="" />
-                            </div>
-                            <div className={`${sponsers_logo_container}`}>
-                                <img src={sponser3} alt="" />
-                            </div>
-                            <div className={`${sponsers_logo_container}`}>
-                                <img src={sponser4} alt="" />
-                            </div>
+                    </div>
+                    <div className={`${sponsers} mb-5 mb-md-0`}>
+                        <div className={`${sponsers_logo_container}`}>
+                            <img src={sponser1} className="" alt="" />
+                        </div>
+                        <div className={`${sponsers_logo_container}`}>
+                            <img src={sponser2} alt="" />
+                        </div>
+                        <div className={`${sponsers_logo_container}`}>
+                            <img src={sponser3} alt="" />
+                        </div>
+                        <div className={`${sponsers_logo_container}`}>
+                            <img src={sponser4} alt="" />
                         </div>
                     </div>
 
                 </div>
                 <div className={`${box} container-fluid`}>
                     <div className="row">
-                    <div className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center text-center text-md-left text-lg-left ">
-                        <div className="">
-                            <h1 className="mt-4">
-                                Learn Anytime,
-                                <br /> Anywhere!
-                            </h1>
-                            <div className="mt-4">
-                                <p>Get it on your device now!</p>
-                                {/* <button type="button" className={`${custom_btn_outline_dark} px-4 mt-4`}>
+                        <div className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center text-center text-md-left text-lg-left ">
+                            <div className="">
+                                <h1 className="mt-4">
+                                    Learn Anytime,
+                                    <br /> Anywhere!
+                                </h1>
+                                <div className="mt-4">
+                                    <p>Get it on your device now!</p>
+                                    {/* <button type="button" className={`${custom_btn_outline_dark} px-4 mt-4`}>
                                     Learn More
                                 </button> */}
-                                <div>
-                                <img src={QRandndiPh} alt="" className="pt-4" />
+                                    <div>
+                                        <img src={QRandndiPh} alt="" className="pt-4" />
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
-                        <img
-                            className={`${Laptop_Image}`}
-                            style={{ width: "100%", height: "auto" }}
-                            src={LaptopImage}
-                            alt="Laptop Image"
-                        />
-                    </div>
+                        <div className="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+                            <img
+                                className={`${Laptop_Image}`}
+                                style={{ width: "100%", height: "auto" }}
+                                src={LaptopImage}
+                                alt="Laptop Image"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-         <Faq data={departmentsFaq}/>
+            <Faq data={departmentsFaq} />
         </>
     );
 };

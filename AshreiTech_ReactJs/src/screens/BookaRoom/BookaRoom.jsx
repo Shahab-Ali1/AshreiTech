@@ -233,8 +233,8 @@ export default function BookaRoom() {
                 }}
             >
                 <div className="row d-flex justify-content-center align-items-center py-4">
-                    <div className="col-lg-12 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center text-white">
-                        <h1 className="generic_heading pb-4 pb-lg-0" id="generic_heading_BookRoom">What's Included ?</h1>
+                    <div className="col-lg-12 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center text-white ">
+                        <h1 className="pb-4 pb-lg-0" id="generic_heading_BookRoom">What's Included ?</h1>
                         <p className="col-8 pt-2 mt-4">Our state-of-the-art learning facility includes purpose-built training rooms, assessment centers, meeting rooms, labs, in-house amphitheater, podcast, and recording setup for e-Learning, high-end restaurant, networking event spaces and a full-service conference arena.</p>
                     </div>
                 </div>
