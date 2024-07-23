@@ -1,4 +1,3 @@
-// src/components/Faq.js
 import React, { useState } from 'react';
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
@@ -7,10 +6,10 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import style from "./style.module.css";
-import puzzle from '../../assets/yellow puzzle.png'
+import puzzleImage from '../../assets/yellow puzzle.png';
 
 const Faq = (props) => {
-  const { faq_container, faq_heading, faq, expand } = style;
+  const { faq_container, faq, expand, puzzle } = style;
   const [showMore, setShowMore] = useState(false);
 
   const handleShowMore = () => {
@@ -18,16 +17,16 @@ const Faq = (props) => {
   };
 
   return (
-    <div className={`row justify-content-center mb-5 mx-lg-5 mt-5 ${faq_container}`} style={{ margin: "auto", backgroundColor: 'white' }} >
-      <Typography>
-        <div className="mb-4">
-          <h1 className='pb-4 mb-4 mt-5 generic_heading' id='generic_heading' style={{ color: '#000000' }}>
-            Frequently Asked Questions
-          </h1>
-        </div>
-        <div className='d-none d-lg-block'><img src={puzzle} alt="" style={{ width: '200px', height: 'auto', left: '1122px', top: '5045px', position: 'absolute' }} /></div>
-      </Typography>
+    <div className={`row justify-content-center mb-5 mx-lg-5 mt-5 ${faq_container}`} style={{ margin: "auto", backgroundColor: 'white', position: 'relative' }} >
+      <div className='d-none d-lg-block'><img src={puzzleImage} alt="Puzzle" className={puzzle} /></div>
       <div className='col-lg-7 col-sm-6 offset-1'>
+        <Typography>
+          <div className="mb-4">
+            <h1 className='pb-4 mb-4 mt-5 generic_heading' id='generic_heading' style={{ color: '#000000' }}>
+              Frequently Asked Questions
+            </h1>
+          </div>
+        </Typography>
         {props?.data?.slice(0, showMore ? props.data.length : 5).map((faqItem) => (
           <Accordion sx={{ '&::before': { backgroundColor: 'white' } }}
             key={faqItem?.id}
