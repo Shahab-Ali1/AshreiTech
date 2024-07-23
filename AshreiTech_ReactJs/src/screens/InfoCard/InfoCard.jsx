@@ -20,11 +20,11 @@ const InfoCard = (props) => {
                     const updatedDescription = discription.replace(/[K+]/g, '');
                     return <div className={` ${props?.data?.length ==4 ?'':"col-12 col-md-3 col-lg-2 "}  d-flex align-items-center justify-content-center mb-3`}>
                     <div>
-                        <img src={image} className={`${vector} mr-2`} style={{width:'44px', height:'44px'}} alt="Students" />
+                        <img src={image} className={`${vector} mr-2`} style={{width:'48px', height:'auto'}} alt="Students" />
                     </div>
                     <div>
-                        { !props.count && <h6 style={{fontWeight:'bold'}}>{discription}</h6>}
                         <h6 style={{fontWeight:''}}>{heading}</h6>
+                        { !props.count && <h6 style={{fontWeight:'bold'}}>{discription}</h6>}
                         {
                             props.count && counter &&
                                 <h6 style={{ fontWeight: 'bold' }}> <Countup
