@@ -43,7 +43,7 @@ export default function TopNavbar() {
     <>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
-      <div className="justify-content-end align-items-center top_menu d-none d-lg-flex" style={{ padding: "10px 60px", gap: "30px", height: 50, background: "#ecf6f4" }}>
+      <div className="justify-content-end align-items-center top_menu d-none d-lg-flex" style={{ padding: "10px 45px", gap: "30px", height: 50, background: "#ecf6f4" }}>
         <Link style={{ padding: "10px 15px" }} to="/services" spy={true} smooth={true} offset={-80}>
           <span className="animated_link" style={{ color: '#008F71' }}>
             Find Tech Talent
