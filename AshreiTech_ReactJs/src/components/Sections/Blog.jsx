@@ -121,7 +121,7 @@ export default function Blog() {
               <Slider {...settings}>
                 {ImagesData.map((item, index) => (
                   <div key={item?.Id} className="px-2">
-                    <div className="card" style={{ borderBottom: '3px solid rgba(0, 0, 0, 0.25)', borderRadius: '0 0 100px 100px;' }}>
+                    <div className="card" style={{ borderBottom: '3px solid rgba(0, 0, 0, 0.25)', borderRadius: '0 0 100px 100px;', marginBottom:"0px !important" }}>
                       <img className="card-img-top"
                         src={`https://sma.edu-man.com/sm/Images/Actual/${item?.stdimagefilename}`} alt="Card image cap" />
                       <div className="card-body d-flex flex-column align-items-center align-items-lg-start">
