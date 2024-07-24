@@ -76,6 +76,20 @@ export default function TestimonialSlider() {
     autoplaySpeed: 3000,
     responsive: [
       {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
@@ -100,19 +114,20 @@ export default function TestimonialSlider() {
             <Card key={index}>
               <div className="card-body pb-0">
                 <div className="row d-flex justify-content-left align-items-center">
-                  <div className="col-3" style={{width:'50px', height:'50px'}}>
+                  <div className="" style={{width:'50px', height:'50px'}}>
                     <img
                       src={card.imgSrc}
                       alt={card.name}
-                      className="rounded-circle custom-img"
+                      className="rounded-circle custom-img "
+                      style={{width: "100%", height:'auto'}}
                     />
                   </div>
-                  <div className="col-2">
+                  <div className="col-1">
                     <a href={card.linkedinUrl} target="_blank" rel="noopener noreferrer">
                       <i className="fa-brands fa-linkedin"></i>
                     </a>
                   </div>
-                  <div className="" >
+                  <div className="col-8" >
                     <h5 className="font-weight-bolder">{card.name}</h5>
                     <h6 className="">{card.title}</h6>
                   </div>

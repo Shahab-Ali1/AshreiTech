@@ -168,7 +168,7 @@ export default function Blog() {
 const WrapperForP = styled.div`
   .pclass{
     background-color: #5A8C75;
-    color: #fff;
+    color: #ffffff;
     border-radius:50px;
     font-size:12px;
   }
