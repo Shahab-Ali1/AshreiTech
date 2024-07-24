@@ -20,6 +20,8 @@ import compass1 from '../../assets/compass1.png'
 import compass2 from '../../assets/compass2.png'
 import compass3 from '../../assets/compass3.png'
 import usman from '../../assets/Usman.png'
+import prof1 from '../../assets/prof1.png'
+import prof2 from '../../assets/prof2.png'
 
 
 const SingleCourse = () => {
@@ -39,12 +41,12 @@ const SingleCourse = () => {
     position: 'relative',
   }}
 ><div className="mt-3"></div>
-  <div className=" p-4 shadow-lg custom-rounded m-auto position-relative course_container" style={{  width:'85%',backgroundSize: 'cover', backgroundPosition: 'center',borderRadius:50 }}>
+  <div className=" p-sm-4  p-2 shadow-lg custom-rounded m-auto position-relative course_container" style={{  width:'85%',backgroundSize: 'cover', backgroundPosition: 'center',borderRadius:50 }}>
     {/* <div className="gradient_box"></div> */}
     <div className="row p-2  ">
       <div className="col-12">
         <div className="row ">
-          <div className="col-7">
+          <div className="col-sm-7">
             <div>
               <button className={` font18 bg_khaigreen border-0 text-white custom-rounded px-4 py-1`} style={{width:'110px'}}>SAP</button>
             </div>
@@ -77,17 +79,17 @@ const SingleCourse = () => {
     <img src={profile2} alt="User 1" className="user-icon" style={{width:35}} />
   </div>
   <div className="testimonial position-relative" style={{  right: '12px' }}>
-    <img src={profile2} alt="User 2" className="user-icon" style={{width:35}} />
+    <img src={prof1} alt="User 2" className="user-icon" style={{width:35}} />
   </div>
   <div className="testimonial position-relative" style={{  right: '24px' }}>
-    <img src={profile2} alt="User 3" className="user-icon" style={{width:35}} />
+    <img src={prof2} alt="User 3" className="user-icon" style={{width:35}} />
   </div>
               </div>
               
               <div className=' position-relative font13'>4,000 Learners Enrolled</div>
             </div>
           </div>
-          <div className="col-5 d-flex justify-content-center align-items-center">
+          <div className="col-sm-5 d-flex justify-content-center align-items-center">
             <img src={heroImage} className='' style={{width:'110%',height:"auto"}} alt="Course" />
           </div>
         </div>
@@ -105,13 +107,13 @@ const SingleCourse = () => {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         padding: 0,}}>
-   <div className="container gutter-0 py-5 px-0 pl-5"  style={{width:"83%", }}>
+   <div className="container gutter-0 py-5 px-0 pl-sm-5"  style={{width:"83%", }}>
       <div className="row gutter-0 p-0" >
         <div className="col-sm-6 col-md-8  col-lg-7 p-0">
           <h1 className='left_underline'>About This Course</h1>
           <p className='my-5 font13'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities await.</p>
         </div>
-        <div className="col-sm-6 p-0 col-md-4 col-lg-5  d-flex justify-content-end align-items-center ">
+        <div className="col-sm-6 p-0 col-md-4 col-lg-5  d-flex justify-content-sm-center mb-5 mb-sm-0  justify-content-sm-end align-items-center ">
           <div className="">
           <h1 className='left_underline'>Skills You’ll Gain</h1>
           <ul className='my-5'>
@@ -127,11 +129,11 @@ const SingleCourse = () => {
       <div className="row gutter-0">
        <div className=" col-sm-6 col-md-8  col-lg-7 bg-white mb-4  d-flex flex-column text-black  shadow custom-rounded border border-dark " style={{position:'relative',zIndex:1}}>
   <div className="row ">
-    <div className="col px-sm-4 py-sm-4 text-bold border-bottom border-dark"><h4>Syllabus</h4></div>
+    <div className="col px-sm-4 py-sm-4 text-bold border-bottom border-dark "><h3>Syllabus</h3></div>
   </div>
-  <div className=" py-sm-5 py-3 px-sm-2 justify-content-center h-100">
-    <h4 className=''>Intro to Generative AI</h4>
-    <h6 className='text-disable font14 mb-sm-3 mb-2'>Learn About the Different Types Of Generative AI!</h6>
+  <div className=" py-sm-4 py-3 px-sm-2 justify-content-center h-100">
+    <h4 className='mt-3 mb-1'>Intro to Generative AI</h4>
+    <h6 className='text-disable font13 mb-sm-3 mb-2 text-grey'>Learn About the Different Types Of Generative AI!</h6>
   <p className='font13'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
   <br />
   <p className='font13'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
@@ -140,7 +142,7 @@ const SingleCourse = () => {
   <p className='font13'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
   </div>
 </div>
-        <div className="col-sm-6 p-0 col-md-4 col-lg-5 d-flex justify-content-end align-items-center">
+        <div className="col-sm-6 p-0 col-md-4 col-lg-5 d-flex justify-content-sm-end align-items-center">
           <div className="coursegradientCircle"></div>
           <img src={shopify_coins} className='' style={{height:"auto",width:"80%",marginLeft:'30px',position:"relative",zIndex:3}} alt="" srcset="" />
 
@@ -156,17 +158,20 @@ const SingleCourse = () => {
 </div>
 
  
-      <div className="container-fluid  pt-5 ladder_box"
+      <div className="container-flui  pt-5 ladder_box"
       style={{
-        backgroundImage: `url(${ladder_background})`,
+        // backgroundImage: `url(${ladder_background})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        position:'relative'
+        position:'relative',
+        paddingBottom:165
       }}
     >
       <div className="w-100">
-        <h1 className="text-center  generic_heading" > <span style={{ color: '#000000' }}>How Do You decide This Course Suits You</span> </h1>
-          <div className="container d-flex justify-content-center">
+
+      <div className="courseGradientCircleLeft"></div>
+        <h1 className="text-center  generic_heading" style={{ color: '#000000' ,fontSize:43}}> How Do You decide This Course Suits You</h1>
+          <div className="container d-flex justify-content-center mt-4">
             <div className="row mx-lg-5 mt-sm-5 justify-content-center bg-primar">
             <div  className="col-sm-3 custom-rounded mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow ">
            <img src={compass1} alt="" />
@@ -189,8 +194,8 @@ const SingleCourse = () => {
 
     </div>
       <div className="container-fluid bg_green py-4 ">
-        <div className="container custom-rounded bg-white mx-5">
-          <div className="row  rounded-5 px-sm-5 px-2 align-items-center" >
+        <div className="container custom-rounded bg-white mx-sm-5">
+          <div className="row py-3 rounded-5 px-sm-5 px-2 align-items-center" >
             <div className="col-sm-3 pr-5">
               <h3>Meet the trainer
               of the course</h3>
@@ -198,7 +203,7 @@ const SingleCourse = () => {
             </div>
             <div className="col-sm-1"></div>
             <div className="col-sm-8">
-            <div className="card-body pb-0">
+            <div className=" pb-0">
             <div className=" d-flex justify-content-left align-items-center">
   {/* <span className="p-0" style={{ width: 'fit-content' }}>
     <img
@@ -213,14 +218,14 @@ const SingleCourse = () => {
       alt="Online Shopping VR Glasses"
       className="rounded-circle usman "
     />
-    <div className="ml-2">
+    <div className="ml-sm-2">
     <h5 className="font-weight-bolder font15">Muhammad Usman</h5>
     <h6 className="text-secondary font13">Associate SAP Consultant</h6>
     </div>
   </div>
 </div>
 
-              <p className=" mb-3 mt-3 font13"> Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities await.</p>
+              <p className="  mt-3 font13"> Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities await.</p>
             </div>
             </div>
           </div>
@@ -230,7 +235,7 @@ const SingleCourse = () => {
         <TestimonialSlider />
       </div>
       {/* <Faq data={departmentsFaq}/> */}
-      <div className="container-fluid  pt-5"
+      <div className="container-fluid pt-4 pt-sm-5"
       style={{
         backgroundImage: `url(${gradeint_background})`,
         backgroundSize: 'cover',
@@ -238,8 +243,8 @@ const SingleCourse = () => {
         position:'relative'
       }}
     >
-      <div className="w-100 py-5">
-        <h1 className="text-center  generic_heading" > <span style={{ color: '#000000' }}>Looking For Something Else?</span> </h1>
+      <div className="w-100 py-sm-5">
+        <h1 className="text-center  generic_heading" style={{ color: '#000000' }} > Looking For Something Else?</h1>
           <div className=" d-flex justify-content-center">
             <div className="row mt-sm-5 justify-content-center bg-primar py-sm-5">
 
