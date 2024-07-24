@@ -1,15 +1,8 @@
 .footer_container {
     background-color: #5A8C75;
-    height: 550px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    padding: 100px 100px 0 100px;
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    z-index: 2;
 }
 
 .containerOne {
@@ -24,8 +17,6 @@
 .containerOnePiece {
     background-color: #74C2A0;
     border-radius: 50px;
-    padding: 5px;
-    margin: 10px;
     text-align: center;
 }
 

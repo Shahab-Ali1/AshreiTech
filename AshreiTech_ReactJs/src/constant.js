@@ -9,54 +9,54 @@ import cvector2 from './assets/cVector2.png';
 import cvector3 from './assets/cVector3.png';
 import cvector4 from './assets/cVector4.png';
 
-export const infoCardData=[
+export const infoCardData = [
   {
-      image:vector1,
-      heading:'Students',
-      discription:'10K+'
+    image: vector1,
+    heading: 'Students',
+    discription: '508+'
   },
   {
-      image:vector2,
-      heading:'Trainer',
-      discription:'100+'
+    image: vector2,
+    heading: 'Courses',
+    discription: '18'
   },
   {
-      image:vector3,
-      heading:'Employees',
-      discription:'500+'
+    image: vector4,
+    heading: 'Alumni',
+    discription: '100+'
   },
   {
-      image:vector4,
-      heading:'Alumni',
-      discription:'100+'
+    image: vector5,
+    heading: 'Cities',
+    discription: '5+'
   },
   {
-      image:vector5,
-      heading:'Cities',
-      discription:'5+'
+    image: vector3,
+    heading: 'Global Certifications',
+    discription: '100+'
   },
 ]
 
-export const courseInfoCardData=[
+export const courseInfoCardData = [
   {
-      image:cvector1,
-      heading:'Skill Level',
-      discription:'Intermediate'
+    image: cvector1,
+    heading: 'Skill Level',
+    discription: 'Intermediate'
   },
   {
-      image:cvector2,
-      heading:'Time to Complete',
-      discription:'< 1 Hour'
+    image: cvector2,
+    heading: 'Time to Complete',
+    discription: '< 1 Hour'
   },
   {
-      image:cvector3,
-      heading:'Certificate Of Completion',
-      discription:'Included With Paid Courses'
+    image: cvector3,
+    heading: 'Certificate Of Completion',
+    discription: 'Included With Paid Courses'
   },
   {
-      image:cvector4,
-      heading:'Prerequiesites',
-      discription:'None'
+    image: cvector4,
+    heading: 'Prerequiesites',
+    discription: 'None'
   },
 ]
 
