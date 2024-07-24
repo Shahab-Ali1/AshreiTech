@@ -1,12 +1,12 @@
 import React from "react";
 import style from "./style.module.css";
 import LaptopImage from "../../assets/LaptopImage.png";
-import sponser1 from "../../assets/sponser1.png"
-import sponser2 from "../../assets/sponser2.png"
-import sponser3 from "../../assets/sponser3.png"
-import sponser4 from "../../assets/sponser4.png"
 import ourpartnerbg from '../../assets/Ourpartnerbg.png'
+import integration_experts_logo from '../../assets/integration_experts_logo.png'
+import avanza_logo from '../../assets/avanza_logo.png'
 import QRandndiPh from "../../assets/Frame 7873.png"
+import rewterz_logo from '../../assets/rewterz_logo.png'
+import nastp_logo from '../../assets/nastp_logo.png'
 import Faq from "../Faq/Faq";
 import departmentsFaq from "../../constant"
 
@@ -28,25 +28,25 @@ const Sponsers = () => {
                                 {" "}
                                 Our Partners
                             </h1>
-                            <p className="font20 mt-4 mb-3 text-center pt-4">
+                            <p className="font20 text-center  mt-4 ">
                                 Our experts are here to empower the future of tech by enabling students and professionals.
                                 ,
                             </p>
                         </div>
 
                     </div>
-                    <div className={`${sponsers} mb-5 mb-md-0`}>
-                        <div className={`${sponsers_logo_container}`}>
-                            <img src={sponser1} className="" alt="" />
+                    <div className={`${sponsers} mb-5 mt-4`}>
+                        <div className={`${sponsers_logo_container} col-3`}>
+                            <img src={integration_experts_logo} className="" alt="" />
                         </div>
-                        <div className={`${sponsers_logo_container}`}>
-                            <img src={sponser2} alt="" />
+                        <div className={`${sponsers_logo_container} col-3`}>
+                            <img src={nastp_logo} alt="" />
                         </div>
-                        <div className={`${sponsers_logo_container}`}>
-                            <img src={sponser3} alt="" />
+                        <div className={`${sponsers_logo_container} col-3`}>
+                            <img src={rewterz_logo} alt="" />
                         </div>
-                        <div className={`${sponsers_logo_container}`}>
-                            <img src={sponser4} alt="" />
+                        <div className={`${sponsers_logo_container} col-3`}>
+                            <img src={avanza_logo} alt="" />
                         </div>
                     </div>
 

@@ -1,35 +1,27 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-// Components
-import BlogBox from "../Elements/BlogBox";
-import FullButton from "../Buttons/FullButton";
-import TestimonialSlider from "../Elements/TestimonialSlider";
-import Currentstudents from "../../screens/Currentstudents/Currentstudents";
+import Slider from "react-slick";
 import offerbg from '../../assets/offerbg.png';
 import { getMethod, codeError, ClientId } from "../../utils/services";
+
 export default function Blog() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [ImagesData, setImagesData] = useState([]);
   const [Categories, setCategories] = useState([]);
-  const categories = [
-    "SAP",
-    "Oracle",
-    "Salesforce",
-    "EC Council",
-    "Cyber Security"
-  ];
-  const handleClick = (index) => {
-    loadCourses(index)
-    setActiveIndex(index);
 
+  const handleClick = (index) => {
+    setImagesData([]); // Clear previous data
+    setActiveIndex(index);
+    loadCourses(index);
   };
+
   const loadCategory = () => {
     try {
       getMethod(`SMCourse/V2/Coursecategory/`)
         .then((data) => {
           if (data?.IsSuccess) {
-            setCategories(data.Data)
-            handleClick(data.Data[0]?.Id)
+            setCategories(data.Data);
+            handleClick(data.Data[0]?.Id);
           }
         })
         .catch(error => {
@@ -39,12 +31,13 @@ export default function Blog() {
       console.log(error);
     }
   };
+
   const loadCourses = (vtype) => {
     try {
       getMethod(`SMCourse/V2/ClientCourseWithoutToken/${ClientId}/${vtype}`)
         .then((data) => {
           if (data?.IsSuccess) {
-            setImagesData(data.Data)
+            setImagesData(data.Data);
           }
         })
         .catch(error => {
@@ -54,88 +47,123 @@ export default function Blog() {
       console.log(error);
     }
   };
+
   useEffect(() => {
     loadCategory();
-  }, [])
+  }, []);
+
+  const settings = {
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      }
+    ]
+  };
 
   return (
-    <div className="container-fluid px-5 pt-5"
+    <div className="container-fluid px-5 py-5"
       style={{
         backgroundImage: `url(${offerbg})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        position:'relative'
+        position: 'relative'
       }}
     >
       <div className="w-100">
         <h1 className="text-center  generic_heading" > <span style={{ color: '#000000' }}>Courses we</span> <span style={{ color: '#008F71' }}>&nbsp;Offer</span></h1>
-        <p className=" mt-4 pt-3 mb-5 text-center">
+        <p className="mt-4 pt-3 mb-5 text-center">
           Join the Academy and become a driving force in Pakistan's digital revolution!
         </p>
       </div>
 
-      <div className="row " style={{position:"relative"}}>
-      <div className="gradientCircleLeft"></div>
+      <div className="row" style={{ position: "relative" }}>
+        <div className="gradientCircleLeft"></div>
 
-        <div className="col-12 col-md-4 col-lg-4" >
-          <div className="catergory_container " style={{ backgroundColor: 'white' }}>
+        <div className="col-12 col-md-4 col-lg-4">
+          <div className="catergory_container" style={{ backgroundColor: 'white' }}>
             <h3 className="mb-4 text-center text-lg-left text-md-left">Categories</h3>
-            <ul className="catergory_menu  ">
+            <ul className="catergory_menu">
               {Categories && Categories.map((item, index) => (
                 <li
-                  key={index}
+                  key={item?.Id}
                   value={item?.Id}
-                  className={`${activeIndex === item?.Id ? "active_category" : ""}  justify-content-center justify-content-lg-start   `}
+                  className={`${activeIndex === item?.Id ? "active_category" : ""} justify-content-center justify-content-lg-start`}
                   onClick={() => handleClick(item?.Id)}
                 >
-
-                  <p className="d-flex font20 justify-content-between align-items-center ">{item?.category} {activeIndex === item?.Id && <i class="fa-solid fa-arrow-right ml-3"></i>}</p>
+                  <p className="d-flex font20 justify-content-between align-items-center">{item?.category} {activeIndex === item?.Id && <i className="fa-solid fa-arrow-right ml-3"></i>}</p>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <div className="col-12 col-md-8 col-lg-8  " >
-          <div className="row " style={{ display: 'relative' }}>
-            {
-              ImagesData && ImagesData.map((item, index) => (
-                <div key={index} className="col-sm-12 col-md-6  col-lg-4 d-lg-block d-none" style={ImagesData.length -1 === index ? {} : {marginBottom:'20px'}} >
-                  <div class="card" style={{ borderBottom: '3px solid rgba(0, 0, 0, 0.25)', borderRadius: '0 0 100px 100px;' }}>
-                    <img class="card-img-top" 
-                    src={`https://sma.edu-man.com/sm/Images/Actual/${item?.stdimagefilename}`} alt="Card image cap" />
-                    <div class="card-body d-flex flex-column  align-items-center align-items-lg-start ">
-                      <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start" >
-                        <div className="pclass p-1 d-flex justify-content-center px-3"><p>50,000+ Certified Students</p></div>
-                        <h5 class="card-title mt-4 text-center text-lg-left text-md-left" id='odder_card-h'>{item?.stxt}</h5>
-                        <p class="card-text mb-4 text-center text-lg-left text-md-left" id="offer_card">{item?.discription}</p>
-                        <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }}>View More</p></div>
-                      </WrapperForP>
+        <div className="col-12 col-md-8 col-lg-8 mt-5 mt-lg-0">
+          {ImagesData.length > 0 ? (
+            ImagesData.length > 3 ? (
+              <Slider {...settings}>
+                {ImagesData.map((item, index) => (
+                  <div key={item?.Id} className="px-2">
+                    <div className="card" style={{ borderBottom: '3px solid rgba(0, 0, 0, 0.25)', borderRadius: '0 0 100px 100px;' }}>
+                      <img className="card-img-top"
+                        src={`https://sma.edu-man.com/sm/Images/Actual/${item?.stdimagefilename}`} alt="Card image cap" />
+                      <div className="card-body d-flex flex-column align-items-center align-items-lg-start">
+                        <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start">
+                          <div className="pclass p-1 d-flex justify-content-center px-3"><p>50,000+ Certified Students</p></div>
+                          <h5 className="card-title mt-4 text-center text-lg-left text-md-left" id='odder_card-h'>{item?.stxt}</h5>
+                          <p className="card-text mb-4 text-center text-lg-left text-md-left" id="offer_card">{item?.discription}</p>
+                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }}>View More</p></div>
+                        </WrapperForP>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))
-            }
-          
-          </div>
+                ))}
+              </Slider>
+            ) : (
+              <div className="row">
+                {ImagesData.map((item, index) => (
+                  <div key={item?.Id} className="col-sm-12 col-md-6 col-lg-4 px-2">
+                    <div className="card" style={{ borderBottom: '3px solid rgba(0, 0, 0, 0.25)', borderRadius: '0 0 100px 100px;' }}>
+                      <img className="card-img-top"
+                        src={`https://sma.edu-man.com/sm/Images/Actual/${item?.stdimagefilename}`} alt="Card image cap" />
+                      <div className="card-body d-flex flex-column align-items-center align-items-lg-start">
+                        <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start">
+                          <div className="pclass p-1 d-flex justify-content-center px-3"><p>50,000+ Certified Students</p></div>
+                          <h5 className="card-title mt-4 text-center text-lg-left text-md-left" id='odder_card-h'>{item?.stxt}</h5>
+                          <p className="card-text mb-4 text-center text-lg-left text-md-left" id="offer_card">{item?.discription}</p>
+                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }}>View More</p></div>
+                        </WrapperForP>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )
+          ) : (
+            <p>No courses available for this category.</p>
+          )}
         </div>
       </div>
-
-
     </div>
   );
 }
-
-const Wrapper = styled.section`
-  width: 100%;
-  padding-top: 20px;
-`;
-const HeaderInfo = styled.div`
-  margin-bottom: 30px;
-  @media (max-width: 860px) {
-    text-align: center;
-  }
-`;
 
 const WrapperForP = styled.div`
   .pclass{
@@ -143,10 +171,9 @@ const WrapperForP = styled.div`
     color: #fff;
     border-radius:50px;
     font-size:12px;
-    }
+  }
   .pclass:hover {
     background-color: #00194e;
     color: #fff;
-    }
+  }
 `;
-

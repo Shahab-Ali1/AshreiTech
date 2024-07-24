@@ -1,10 +1,69 @@
 import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
-import profile1 from '../../assets/Profile1.png'
-import profile2 from '../../assets/profile2.png'
-import profile3 from '../../assets/profile3.png'
-import JustinBergson from '../../assets/JustinBergson.png'
+import Zikria from '../../assets/testimonials_img/image2.jpg';
+import Bilal from '../../assets/testimonials_img/image4.jpg'
+import Adeel from '../../assets/testimonials_img/image3.jpg'
+import Mahnoor from '../../assets/testimonials_img/image6.png'
+import Ibrahim  from '../../assets/testimonials_img/image5.jpg'
+import Tehreem  from '../../assets/testimonials_img/image1.jpg'
+
+const cardData = [
+  // {
+  //   imgSrc: Zikria,
+  //   name: "Muhammad Zikria",
+  //   title: "Student",
+  //   text: "Enrolling in AshreiTech Academy has been one of the most rewarding decisions I've ever made. Even though I'm not paying for my education here, I've been given the same level of attention and support as if I had invested a substantial amount for my training.",
+  //   date: "08:21 PM - Jan 4, 2023",
+  //   rating: 4,
+  //   linkedinUrl: "https://www.linkedin.com/in/syed-muhammad-zikria-zikria-781bb8132/"
+  // },
+  // {
+  //   imgSrc: Bilal,
+  //   name: "Bilal Asif Mangi",
+  //   title: "Student",
+  //   text: "The faculty at AshreiTech Academy is professional and encouraging. I highly recommend visiting the academy and enrolling in their courses.",
+  //   date: "08:21 PM - Jan 4, 2023",
+  //   rating: 4,
+  //   linkedinUrl: "https://www.linkedin.com/in/bilal-asif-mangi-40b183223/"
+  // },
+  {
+    imgSrc: Adeel,
+    name: "Adeel Ahmed",
+    title: "Student",
+    text: "The classes are really interactive, and every week, we experiment with something new in cyber security. There has been a profound addition to my knowledge and which has broadened my skillset – all thanks to my trainers!",
+    date: "08:21 PM - Jan 4, 2023",
+    rating: 4,
+    linkedinUrl: "https://www.linkedin.com/in/adeel-ahmed-1842b6315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  {
+    imgSrc: Mahnoor,
+    name: "Mahnoor Khan",
+    title: "Student",
+    text: "Being a student at AshreiTech has been a transformative experience for me. The quality of education and the dedication of the faculty are truly exceptional. The curriculum is well-structured, providing a perfect balance of theoretical knowledge and practical application.",
+    date: "08:21 PM - Jan 4, 2023",
+    rating: 4,
+    linkedinUrl: "https://www.linkedin.com/in/mahnoor-khan-8143722a2/"
+  },
+  {
+    imgSrc: Ibrahim,
+    name: "Muhammad Ibrahim",
+    title: "Student",
+    text: "The instructors were knowledgeable and supportive, the curriculum was comprehensive, and the hands-on projects were invaluable. I now feel well-prepared for my career in procurement, thanks to AshreiTech Academy.",
+    date: "08:21 PM - Jan 4, 2023",
+    rating: 4,
+    linkedinUrl: "https://www.linkedin.com/in/muhammad-ibrahim-505b13235/"
+  },
+  {
+    imgSrc: Tehreem,
+    name: "Tehreem Fatima",
+    title: "Student",
+    text: "AshreiTech was a constant source of support, offering personalized advice and career guidance at every stage. I am thriving in my dream tech job!",
+    date: "08:21 PM - Jan 4, 2023",
+    rating: 4,
+    linkedinUrl: "https://www.linkedin.com/in/tehreem-fatimaa/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  }
+];
 
 export default function TestimonialSlider() {
   const settings = {
@@ -37,154 +96,46 @@ export default function TestimonialSlider() {
     <div className="mt-5 " style={{ marginTop: "100px !important" }}>
       <SliderWrapper>
         <Slider {...settings}>
-
-          <Card >
-            <div className="card-body pb-0">
-              <div className="row d-flex justify-content-left align-items-center">
-                <div className="col-3">
-                  <img
-                    src={profile2}
-                    alt="Online Shopping VR Glasses"
-                    className="rounded-circle custom-img"
-                  />
+          {cardData.map((card, index) => (
+            <Card key={index}>
+              <div className="card-body pb-0">
+                <div className="row d-flex justify-content-left align-items-center">
+                  <div className="col-3" style={{width:'50px', height:'50px'}}>
+                    <img
+                      src={card.imgSrc}
+                      alt={card.name}
+                      className="rounded-circle custom-img"
+                    />
+                  </div>
+                  <div className="col-2">
+                    <a href={card.linkedinUrl} target="_blank" rel="noopener noreferrer">
+                      <i className="fa-brands fa-linkedin"></i>
+                    </a>
+                  </div>
+                  <div className="" >
+                    <h5 className="font-weight-bolder">{card.name}</h5>
+                    <h6 className="">{card.title}</h6>
+                  </div>
                 </div>
-                <div className="col-2">
-                  <i className="fa-brands fa-linkedin"></i>
-                </div>
-                <div className="" >
-                  <h5 className="font-weight-bolder"> Muhammad Talib</h5>
-                  <h6 className="">Oracle Graduate</h6>
-                </div>
-              </div>
-              <p className="card-text mb-3 mt-3 testi_Card_text">Thanks to AshreiTech. Everything I learned from soft skills to technical expertise, has directly helped me in my job at Secure Beans in the HR department. My journey has been amazing.</p>
-              <div className="row justify-content-between mt-3">
-                <div className="col" style={{ color: '#DBDBDB' }}>
-                  08:21 PM - Jan 4, 2023
-                </div>
-                <div className="col" style={{ display: 'contents' }}>
-                  <Rating>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star disable_rating"></i>
-                  </Rating>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          <Card >
-            <div className="card-body pb-0">
-              <div className="row d-flex justify-content-left align-items-center">
-                <div className="col-3">
-                  <img
-                    src={profile3}
-                    alt="Online Shopping VR Glasses"
-                    className="rounded-circle custom-img"
-                  />
-                </div>
-                <div className="col-2">
-                  <i className="fa-brands fa-linkedin"></i>
-                </div>
-                <div className="" >
-                  <h5 className="font-weight-bolder">Maria Farooqui</h5>
-                  <h6 className="">Cybersecurity Student</h6>
+                <p className="card-text mb-3 mt-3 testi_Card_text">{card.text}</p>
+                <div className="row justify-content-between mt-3">
+                  <div className="col" style={{ color: '#DBDBDB' }}>
+                    {card.date}
+                  </div>
+                  <div className="col" style={{ display: 'contents' }}>
+                    <Rating>
+                      {[...Array(card.rating)].map((_, i) => (
+                        <i key={i} className="fa-solid fa-star rating"></i>
+                      ))}
+                      {[...Array(5 - card.rating)].map((_, i) => (
+                        <i key={i} className="fa-solid fa-star disable_rating"></i>
+                      ))}
+                    </Rating>
+                  </div>
                 </div>
               </div>
-              <p className="card-text mb-3 mt-3 testi_Card_text">The courses offered by AshreiTech were very interesting, so I decided to enroll in them. I am glad I made this decision because the trainers are extremely helpful</p>
-              <div className="row justify-content-between mt-3">
-                <div className="col" style={{ color: '#DBDBDB' }}>
-                  08:21 PM - Jan 4, 2023
-                </div>
-                <div className="col" style={{ display: 'contents' }}>
-                  <Rating>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star disable_rating"></i>
-                  </Rating>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          <Card >
-            <div className="card-body pb-0">
-              <div className="row d-flex justify-content-left align-items-center">
-                <div className="col-3">
-                  <img
-                    src={profile3}
-                    alt="Online Shopping VR Glasses"
-                    className="rounded-circle custom-img"
-                  />
-                </div>
-                <div className="col-2">
-                  <i className="fa-brands fa-linkedin"></i>
-                </div>
-                <div className="" >
-                  <h5 className="font-weight-bolder"> Reena & NoorJehan </h5>
-                  <h6 className="">Salesforce Associates
-                  </h6>
-                </div>
-              </div>
-              <p className="card-text mb-3 mt-3 testi_Card_text">“We had no prior knowledge of IT but after we took admission in AshreiTech we got to learn a lot and both of us secured jobs as soon as we acquired our certifications. 
-              </p>
-              <div className="row justify-content-between mt-3">
-                <div className="col" style={{ color: '#DBDBDB' }}>
-                  08:21 PM - Jan 4, 2023
-                </div>
-                <div className="col" style={{ display: 'contents' }}>
-                  <Rating>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star disable_rating"></i>
-                  </Rating>
-                </div>
-              </div>
-            </div>
-          </Card>
-          <Card >
-            <div className="card-body pb-0">
-              <div className="row d-flex justify-content-left align-items-center">
-                <div className="col-3">
-                  <img
-                    src={profile3}
-                    alt="Online Shopping VR Glasses"
-                    className="rounded-circle custom-img"
-                  />
-                </div>
-                <div className="col-2">
-                  <i className="fa-brands fa-linkedin"></i>
-                </div>
-                <div className="" >
-                  <h5 className="font-weight-bolder">Arwa Motiwala
-                  </h5>
-                  <h6 className="">Oracle GL Graduate
-                  </h6>
-                </div>
-              </div>
-              <p className="card-text mb-3 mt-3 testi_Card_text">I got my first job after I did my course in Oracle Financials General Ledger from AshreiTech. The experience was amazing, the trainers were really helpful.</p>
-              <div className="row justify-content-between mt-3">
-                <div className="col" style={{ color: '#DBDBDB' }}>
-                  08:21 PM - Jan 4, 2023
-                </div>
-                <div className="col" style={{ display: 'contents' }}>
-                  <Rating>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star rating"></i>
-                    <i className="fa-solid fa-star disable_rating"></i>
-                  </Rating>
-                </div>
-              </div>
-            </div>
-          </Card>
-
+            </Card>
+          ))}
         </Slider>
       </SliderWrapper>
     </div>
@@ -198,7 +149,7 @@ const SliderWrapper = styled.div`
 `;
 
 const Card = styled.div`
-  width: 16 rem; /* Adjust the width as needed */
+  width: 16rem; /* Adjust the width as needed */
   margin: 0 auto; /* Center the card */
   background-color: white; /* White background for the card */
   border-radius: 10px; /* Optional: Rounded corners */

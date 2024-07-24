@@ -42,14 +42,14 @@ const Currentstudents = () => {
         }}
       >
         <div>
-          <div className="container ">
-            <div className="w-100 pb-5">
+          <div className="container">
+            <div className="w-100 my-5">
               <h1 className="text-center mt-5 generic_heading" id='generic_heading_for_transforming'>
                 <span style={{ color: '#000000' }}>Transforming Students Into <br /> <span style={{ color: '#008F71' }}>Professional</span></span>
               </h1>
             </div>
 
-            <div className="mt-5 container-fluid d-block d-md-none">
+            <div className="mt-5 pt-5 container-fluid d-block d-md-none">
               <div className="row d-flex justify-content-between align-items-center">
                 <div className="col-12">
                   <img src={CurrentstudentsImage} alt="" className='img-fluid' />
@@ -91,7 +91,7 @@ const Currentstudents = () => {
                   <img src={st8} alt="" className={`${image}`} />
                   <div className={`d-flex justify-content-center flex-column align-items-center ${overlay}`}>
                     {counter &&
-                      <h2>
+                      <h2 style={{fontWeight:'bolder'}}>
                         <CountUp end={15000} prefix="" separator="," />
                         <span>+</span>
                       </h2>}
@@ -99,8 +99,8 @@ const Currentstudents = () => {
                   </div>
                   <div className={`col-4 d-flex justify-content-center flex-column align-items-left ${overlayRrightUp}`}>
                     {counter &&
-                      <h4>
-                        <CountUp end={1000} prefix="" separator="," />
+                      <h4 style={{color:'#003650', fontWeight:'bold'}}>
+                        <CountUp end={1000} prefix="" separator=","  />
                         <span>+</span>
                       </h4>
                     }
@@ -108,7 +108,7 @@ const Currentstudents = () => {
                   </div>
                   <div className={`col-4 d-flex justify-content-center flex-column align-items-left ${overlayRrightDown}`}>
                     {counter &&
-                      <h4>
+                      <h4 style={{color:'#7D2919', fontWeight:'bold'}}>
                         <CountUp end={1000} prefix="" separator="," />
                         <span>+</span>
                       </h4>
@@ -117,7 +117,7 @@ const Currentstudents = () => {
                   </div>
                   <div className={`col-4 d-flex justify-content-center flex-column align-items-left ${overlayLeftUp}`}>
                     {counter &&
-                      <h4>
+                      <h4 style={{color:'#FAA72E', fontWeight:'bold'}}>
                         <CountUp end={4000} prefix="" separator="," />
                         <span>+</span>
                       </h4>
@@ -126,7 +126,7 @@ const Currentstudents = () => {
                   </div>
                   <div className={`col-4 d-flex justify-content-center flex-column align-items-left ${overlayLeftDown}`}>
                     {counter &&
-                      <h4>
+                      <h4 style={{color:'#008F71', fontWeight:'bold'}}>
                         <CountUp end={8000} prefix="" separator="," />
                         <span>+</span>
                       </h4>}

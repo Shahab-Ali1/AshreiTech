@@ -140,7 +140,7 @@ const SliderWrapper = styled.div`
     background-color: white;
   }
   .slick-prev, .slick-next {
-    background-color: white;
+    /* background-color: white; */
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -150,6 +150,6 @@ const SliderWrapper = styled.div`
   }
   .slick-prev:before, .slick-next:before {
     font-size: 20px;
-    color: black;
+    color: rgb(90, 140, 117);
   }
 `;
