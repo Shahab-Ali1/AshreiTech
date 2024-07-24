@@ -127,11 +127,11 @@ const SingleCourse = () => {
       <div className="row gutter-0">
        <div className=" col-sm-6 col-md-8  col-lg-7 bg-white mb-4  d-flex flex-column text-black  shadow custom-rounded border border-dark " style={{position:'relative',zIndex:1}}>
   <div className="row ">
-    <div className="col px-sm-4 py-sm-4 text-bold border-bottom border-dark"><h3>Syllabus</h3></div>
+    <div className="col px-sm-4 py-sm-4 text-bold border-bottom border-dark"><h4>Syllabus</h4></div>
   </div>
-  <div className="d-flex flex-column py-sm-5 py-3 px-sm-4 justify-content-center h-100">
+  <div className=" py-sm-5 py-3 px-sm-2 justify-content-center h-100">
     <h4 className=''>Intro to Generative AI</h4>
-    <h5 className='text-disable mb-sm-5 mb-2'>Learn About the Different Types Of Generative AI!</h5>
+    <h6 className='text-disable font14 mb-sm-3 mb-2'>Learn About the Different Types Of Generative AI!</h6>
   <p className='font13'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
   <br />
   <p className='font13'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
@@ -143,6 +143,8 @@ const SingleCourse = () => {
         <div className="col-sm-6 p-0 col-md-4 col-lg-5 d-flex justify-content-end align-items-center">
           <div className="coursegradientCircle"></div>
           <img src={shopify_coins} className='' style={{height:"auto",width:"80%",marginLeft:'30px',position:"relative",zIndex:3}} alt="" srcset="" />
+
+          <div className="coursegradientCircle2"></div>
         </div>
       </div>
 

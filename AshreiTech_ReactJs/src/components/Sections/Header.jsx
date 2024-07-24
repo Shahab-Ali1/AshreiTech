@@ -80,7 +80,7 @@ export default function Header() {
           <span className="sr-only">Next</span>
         </a>
       </div>
-      <InfoCard data={infoCardData} count={true}/>
+      <InfoCard data={infoCardData}   count={true}/>
     </>
   );
 }

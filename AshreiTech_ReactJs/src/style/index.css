@@ -170,21 +170,21 @@
    font-family: lato_regular !important;
  }
 
- h1,
+ /* h1,
  h2,
  h3,
  h4,
  h5,
  h6 {
    font-family: lato_medium !important;
- }
+ } */
 
- h1 span,
+ /* h1 span,
  h2 span,
  h3 span {
    font-family: lato_medium !important;
 
- }
+ } */
 
  /* HTML5 display-role reset for older browsers */
  article,
@@ -1040,14 +1040,26 @@
 .coursegradientCircle:before {
   content: "";
   position: absolute;
-  right: -30px;
-  bottom: 0;
+  right: -95px;
+  bottom: 0px;
   width: 639px;
   height: 1030px;
-  background: radial-gradient(circle, rgb(158 212 180 / 39%) 30%, rgb(255 255 255 / 0%) 51%);
-  top: -314px;
+  background: radial-gradient(circle,rgba(0, 143, 112, 0.295) 4%, rgb(255 255 255 / 0%) 51%);
+  top: -507px;
   background-position: center;
-  z-index:-1 !important;
+  z-index: -1 !important;
+}
+.coursegradientCircle2:before {
+  content: "";
+  position: absolute;
+  right: -21px;
+  bottom: -195px;
+  width: 639px;
+  height: 1030px;
+  background: radial-gradient(circle, rgba(0, 143, 112, 0.295) 14%, rgb(255 255 255 / 0%) 51%);
+  /* top: -469px; */
+  background-position: center;
+  z-index: -1 !important;
 }
 
 
