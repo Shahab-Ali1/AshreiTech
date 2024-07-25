@@ -1,11 +1,6 @@
 import React, { useEffect } from "react";
-import { BrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
-import { Helmet } from "react-helmet";
-import Landing from "./screens/Landing.jsx";
-import { AdmissionEnquiry } from "./screens/AsheriTechComponents/AdmissionEnquiery/AdmissionEnquiery.js";
+import { RouterProvider } from "react-router-dom";
 import axios from "axios";
-import Teams from "./screens/Teams/Teams.jsx";
-import SingleCourse from "./screens/SingleCourseScreen/SingleCourse.jsx";
 import { router } from "./Route.js";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";

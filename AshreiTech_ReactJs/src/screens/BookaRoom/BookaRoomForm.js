@@ -14,28 +14,15 @@ const INITIAL_STATE = {
     cnicno: "",
     cname: "",
     pbooking: "",
-    query:"",
-   
-   
+    query: "",
+
+
 }
 export const BookaRoomForm = (props) => {
     const [formData, setFormData] = useState({ ...INITIAL_STATE })
     const [errors, setErrors] = useState({});
     const [courses, setCourses] = useState([]);
     const [EntityId, setEntityId] = useState(0)
-
-    
-   
-
-
-
-   
-
-   
-
-   
-
-
 
     const handleFormData = (event) => {
         if (!event) {
@@ -65,10 +52,10 @@ export const BookaRoomForm = (props) => {
                 [name]: value,
             }));
         }
-       
+
     }
 
-    const emailValidation = (field ='', event) => {
+    const emailValidation = (field = '', event) => {
         if (!event) {
             return;
         }
@@ -123,11 +110,11 @@ export const BookaRoomForm = (props) => {
                 "fname": formData.fname,
                 "pemail": formData.pemail,
                 "oemail": formData.oemail,
-                "cnicno": formData.cnicno, 
-                "cname": formData.cname, 
-                "query": formData.query, 
-                "pbooking": formData.pbooking, 
-                
+                "cnicno": formData.cnicno,
+                "cname": formData.cname,
+                "query": formData.query,
+                "pbooking": formData.pbooking,
+
             },
             "DataAddon": {},
             "ReturnObject": true
@@ -150,13 +137,13 @@ export const BookaRoomForm = (props) => {
     function isValidEmail(field, value) {
         // Define the regular expression for a valid email address
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        const isValidEmail = emailRegex.test(value);  
+        const isValidEmail = emailRegex.test(value);
 
         return isValidEmail;
         // Test the email against the regex
-        
+
     }
-    
+
 
     const RequiredFields = () => {
         try {
@@ -179,7 +166,7 @@ export const BookaRoomForm = (props) => {
             if (!formData.cname) {
                 validationErrors.cname = 'Company is required';
             }
-            
+
             else {
                 return true;
             }
@@ -201,7 +188,7 @@ export const BookaRoomForm = (props) => {
             PostMethod("FOAdmEnquiry/V2/SendEmailAsync", body)
                 .then((data) => {
                     // if (data) {
-                        setFormData({ ...INITIAL_STATE });
+                    setFormData({ ...INITIAL_STATE });
                     // }
                 })
                 .catch(error => {
@@ -256,11 +243,11 @@ export const BookaRoomForm = (props) => {
                                     inputProps={{ maxLength: 15 }}
                                 />
                             </div>
-                            
+
                         </div>
 
                         <div className='row mt-lg-3 mt-0'>
-                           
+
                             <div className='col-lg-6'>
                                 <TextField
                                     className="w-100 form_textField"
@@ -270,7 +257,7 @@ export const BookaRoomForm = (props) => {
                                     name="pemail"
                                     value={formData?.pemail || ""}
                                     onChange={handleFormData}
-                                    onBlur={(event) =>emailValidation('pemail', event.target.value)}
+                                    onBlur={(event) => emailValidation('pemail', event.target.value)}
                                     error={!!errors.pemail}
                                 // helperText={errors.email || ''}
                                 />
@@ -284,7 +271,7 @@ export const BookaRoomForm = (props) => {
                                     name="oemail"
                                     value={formData?.oemail || ""}
                                     onChange={handleFormData}
-                                    onBlur={(event) => emailValidation('oemail',event.target.value)}
+                                    onBlur={(event) => emailValidation('oemail', event.target.value)}
                                     error={!!errors.oemail}
                                 // helperText={errors.email || ''}
                                 />
@@ -292,7 +279,7 @@ export const BookaRoomForm = (props) => {
                         </div>
 
                         <div className='row mt-lg-3 mt-0'>
-                           
+
                             <div className='col-lg-6'>
                                 <TextField
                                     className="w-100 form_textField"

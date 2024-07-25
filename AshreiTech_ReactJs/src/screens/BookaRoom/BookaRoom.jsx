@@ -3,7 +3,6 @@ import TopNavbar from '../../components/Nav/TopNavbar';
 import Footer from '../../components/Sections/Footer/Footer';
 import BookaScreenHero from '../../assets/BookaScreen/BookaScreenHero.png';
 import BookaScreenHeroContainer from '../../assets/BookaScreen/BookaScreenHeroContainer.png';
-import Card1 from '../../assets/BookaScreen/pexels-pixabay-159806 1.png';
 import wave from '../../assets/BookaScreen/Wave.1.png';
 import wave2 from '../../assets/BookaScreen/Wave2.png';
 import alrazi from '../../assets/BookaScreen/al-razi.jpg';
@@ -14,25 +13,47 @@ import heart from '../../assets/BookaScreen/vanue at the heart of the city.png';
 import wifi from '../../assets/BookaScreen/wifi.png'
 import tech from '../../assets/BookaScreen/high tech learning.png'
 import pray from '../../assets/BookaScreen/prayer area.png'
-import glowwithdots from '../../assets/BookaScreen/glowwithdot.png'
 import glowimg from '../../assets/BookaScreen/glowimg.png'
 import glowimg1 from '../../assets/BookaScreen/Glowimg1.png'
 import Slider from "react-slick";
-import vactor1 from '../../assets/BookaScreen/Group 7901.png';
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './style.module.css'
-import formBackground from '../../assets/BookaScreen/FormBackground.png'
 import style from "./style.module.css";
 import videoOne from '../../assets/video/video1.mp4'
 import videoTwo from '../../assets/video/video2.mp4'
 import videoThree from '../../assets/video/video3.mp4'
-import { colors } from '@mui/material';
 import { BookaRoomForm } from './BookaRoomForm';
 
 
 export default function BookaRoom() {
+    const cardData = [
+        {
+            src: alrazi,
+            alt: "Al-Razi",
+            title: "Al-Razi",
+            capacity: "Capacity: 15 to 25 Person"
+        },
+        {
+            src: alFarabi,
+            alt: "Al-Farabi",
+            title: "Al-Farabi",
+            capacity: "Capacity: 15 to 25 Person"
+        },
+        {
+            src: alkhawarzmi,
+            alt: "Al-Khawarzmi",
+            title: "Al-Khawarzmi",
+            capacity: "Capacity: 15 to 25 Person"
+        },
+        {
+            src: alkindi,
+            alt: "Al-Kindi",
+            title: "Al-Kindi",
+            capacity: "Capacity: 15 to 25 Person"
+        }
+    ];
     const settings = {
         infinite: true,
         speed: 500,
@@ -70,12 +91,13 @@ export default function BookaRoom() {
         <>
             <TopNavbar />
             <div
-                className="container-fluid py-4"
+                className="container-fluid py-4 "
                 style={{
                     backgroundImage: `url(${BookaScreenHeroContainer})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
-                    padding: 0,
+                    height: 'auto',
+                    width: '100%',
                 }}
             >
                 <div className="row">
@@ -119,18 +141,17 @@ export default function BookaRoom() {
                     backgroundImage: `url(${glowimg}),url(${glowimg}),url(${glowimg}),url(${glowimg}),url(${glowimg})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
-                    padding: 0,
                 }}
             >
-                <div className="row p-5 d-flex justify-content-center align-items-center">
-                    <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left px-5">
+                <div className="row p-0 p-lg-5 d-flex justify-content-center align-items-center">
+                    <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left px-0 px-lg-5">
                         <h1 >Professional Ambiance</h1>
-                        <h4 className="mt-3" style={{ color: '#6D6D6D' }}>Our rooms are meticulously designed to create a professional atmosphere
+                        <p className="mt-3" style={{ color: '#6D6D6D' }}>Our rooms are meticulously designed to create a professional atmosphere
                             conducive to productivity and focus. <br />
                             Each room is customized to suit various types and room layouts of
                             corporate events and trainings, whether it's a board meeting, seminar,
                             workshop, or training session.
-                        </h4>
+                        </p>
                         <button className="slider_btn d-none">Explore Our Rooms</button>
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-12">
@@ -152,11 +173,10 @@ export default function BookaRoom() {
                     backgroundImage: `url(${wave})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
-                    padding: 0,
                 }}
             >
                 <div className="py-4">
-                    <div className="row p-5 d-flex justify-content-center align-items-center">
+                    <div className="row p-0 p-lg-5 d-flex justify-content-center align-items-center">
                         <div className="col-lg-6 col-md-6 col-sm-12">
                             <video controls style={{
                                 width: '100%',
@@ -167,15 +187,15 @@ export default function BookaRoom() {
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left text-white">
+                        <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left text-white px-0 px-lg-5">
                             <h1>High-Tech Equipment</h1>
-                            <h4 className="mt-3">State-of-the-art audiovisual equipment ensures seamless
+                            <p className="mt-3">State-of-the-art audiovisual equipment ensures seamless
                                 presentations and interactive sessions.
                                 <br />
                                 High-resolution latest commercial grade screen and traditional
                                 whiteboards covers all the training needs of communication and
                                 collaboration.
-                            </h4>
+                            </p>
                             <button className="slider_btn d-none">Learn More</button>
                         </div>
                     </div>
@@ -186,17 +206,16 @@ export default function BookaRoom() {
                     backgroundImage: `url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
-                    padding: 0,
                 }}>
-                <div className="row p-5 d-flex justify-content-center align-items-center ">
-                    <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left px-5">
+                <div className="row p-0 p-lg-5 d-flex justify-content-center align-items-center ">
+                    <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left px-0 px-lg-5">
                         <h1>Customizable Amenities</h1>
-                        <h4 className="mt-3" style={{ color: '#6D6D6D' }}>We offer customizable amenities such as catering services, coffee stations,
+                        <p className="mt-3" style={{ color: '#6D6D6D' }}>We offer customizable amenities such as catering services, coffee stations,
                             and breakout areas to meet specific event requirements.
                             <br />
                             Our dedicated staff is available to assist with setup, technical support, and
                             any other logistical needs, ensuring a seamless event experience.
-                        </h4>
+                        </p>
                         <div className='d-none d-lg-block' style={{
                             width: '10px',
                             height: '10px',
@@ -229,18 +248,17 @@ export default function BookaRoom() {
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
-                    padding: 0,
                 }}
             >
                 <div className="row d-flex justify-content-center align-items-center py-4">
                     <div className="col-lg-12 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center text-white ">
                         <h1 className="pb-4 pb-lg-0" id="generic_heading_BookRoom">What's Included ?</h1>
-                        <p className="col-8 pt-2 mt-4">Our state-of-the-art learning facility includes purpose-built training rooms, assessment centers, meeting rooms, labs, in-house amphitheater, podcast, and recording setup for e-Learning, high-end restaurant, networking event spaces and a full-service conference arena.</p>
+                        <p className="col-lg-8 col-md-12 pt-2 mt-4 p-0">Our state-of-the-art learning facility includes purpose-built training rooms, assessment centers, meeting rooms, labs, in-house amphitheater, podcast, and recording setup for e-Learning, high-end restaurant, networking event spaces and a full-service conference arena.</p>
                     </div>
                 </div>
-                <div className='d-sm-block d-md-none d-lg-none'>
-                    <div className="col-12 d-flex justify-content-center align-items-center py-4">
-                        <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
+                <div className='d-sm-block d-md-none d-lg-none '>
+                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5">
+                        <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black py-4" style={{ borderRadius: '24px' }}>
                             <div className="col-sm-5 col-lg-3">
                                 <img src={wifi} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
@@ -249,17 +267,17 @@ export default function BookaRoom() {
                         </div>
 
                     </div>
-                    <div className="col-12 d-flex justify-content-center align-items-center py-4">
-                        <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
+                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5">
+                        <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black py-4" style={{ borderRadius: '24px' }}>
                             <div className="col-sm-5 col-lg-3">
                                 <img src={tech} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
                             <h4 className="my-2 ">High-Tech Learning Venue</h4>
-                            <p className="line-height-sm">We Are A Tech Company, And We Know The Importance Of Tech Amenities!</p>
+                            <p className="line-height-sm">We Are A Tech Company, And We Know The Importance Of Tech <br /> Amenities!</p>
                         </div>
                     </div>
-                    <div className="col-12 d-flex justify-content-center align-items-center py-4">
-                        <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
+                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5">
+                        <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black py-4" style={{ borderRadius: '24px' }}>
                             <div className="col-sm-5 col-lg-3">
                                 <img src={pray} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
@@ -267,7 +285,7 @@ export default function BookaRoom() {
                             <p className="line-height-sm">Neat And Tidy, For Ladies And Gentlemen, With Ample Rest Rooms On Every Floor!</p>
                         </div>
                     </div>
-                    <div className="col-12 d-flex justify-content-center align-items-center py-4">
+                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5">
                         <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
                             <div className="col-sm-5 col-lg-3">
                                 <img src={heart} alt="" style={{ width: '55px', height: '55px' }} />
@@ -336,97 +354,56 @@ export default function BookaRoom() {
                 </div>
             </div>
 
-            <div className="container-fluid py-5"
-                style={{
-                   position:'relative',
-                   zIndex:2,
-                }}
-            >
-                <div className={`${gradientCircle}`}></div>
-                <div className={`${gradientCircleLeft}`}></div>
+            <div className="container-fluid py-5" style={{ position: 'relative', zIndex: 2 }}>
+            <div className={`${gradientCircle} d-none d-md-block`}></div>
+            <div className={`${gradientCircleLeft} d-none d-md-block`}></div>
+            <div className='d-none d-lg-block' style={{
+                width: '10px',
+                height: '10px',
+                backgroundColor: '#525FE1',
+                borderRadius: '50%',
+                marginLeft: '1200px',
+                top: '40px',
+                position: 'relative',
+            }}>
                 <div className='d-none d-lg-block' style={{
-                    width: '10px',
-                    height: '10px',
-                    backgroundColor: '#525FE1',
+                    width: '15px',
+                    height: '15px',
+                    backgroundColor: '#FFCF59',
                     borderRadius: '50%',
-                    marginLeft: '1200px',
-                    top:'40px'  ,
-                    position: 'relative',
-
-                }}>
-                    <div
-                        className='d-none d-lg-block' style={{
-                            width: '15px',
-                            height: '15px',
-                            backgroundColor: '#FFCF59',
-                            borderRadius: '50%',
-                            border: '1px solid white',
-                            top: '-40px',
-                            left: '-50px',
-                            position: 'absolute'
-
-                        }}>
-
-                    </div>
-                </div>
-                <div className="row d-flex flex-column justify-content-center align-items-center pb-4 ">
-                    <div className="col-12">
-                        <h1 className='generic_heading'>Rooms</h1>
-                    </div>
-                </div>
-                <div className="row d-flex  justify-content-center p-0 p-lg-5">
-                    <div className="col-sm-12 col-md-10 col-lg-12 px-5 justify-content-center ">
-                        <SliderWrapper>
-                            <Slider {...settings}>
-                                <div className="d-flex justify-content-center align-items-center col-12 ">
-                                    <div className="">
-                                        <img src={alrazi} alt="Al-Razi" className='slick-slide' />
-                                        <div className="info">
-                                            <h1>Al-Razi</h1>
-                                        </div>
-                                        <div className="overlay">
-                                            <h4>Capacity: 15 to 25 Person</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="d-flex justify-content-center align-items-center col-12 ">
-                                    <div className="">
-                                        <img src={alFarabi} alt="Al-Farabi" className='slick-slide' />
-                                        <div className="info">
-                                            <h1>Al-Farabi</h1>
-                                        </div>
-                                        <div className="overlay">
-                                            <h4>Capacity: 15 to 25 Person</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="d-flex justify-content-center align-items-center col-12 ">
-                                    <div className="">
-                                        <img src={alkhawarzmi} alt="Al-Khawarzmi" className='slick-slide' />
-                                        <div className="info">
-                                            <h1>Al-Khawarzmi</h1>
-                                        </div>
-                                        <div className="overlay">
-                                            <h4>Capacity: 15 to 25 Person</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="d-flex justify-content-center align-items-center col-12 ">
-                                    <div className="">
-                                        <img src={alkindi} alt="Al-kindi" className='slick-slide' />
-                                        <div className="info">
-                                            <h1>Al-kindi</h1>
-                                        </div>
-                                        <div className="overlay">
-                                            <h4>Capacity: 15 to 25 Person</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Slider>
-                        </SliderWrapper>
-                    </div>
+                    border: '1px solid white',
+                    top: '-40px',
+                    left: '-50px',
+                    position: 'absolute'
+                }}></div>
+            </div>
+            <div className="row d-flex flex-column justify-content-center align-items-center ">
+                <div className="col-12 mb-4">
+                    <h1 className='generic_heading'>Rooms</h1>
                 </div>
             </div>
+            <div className="row d-flex justify-content-center p-0 p-lg-5">
+                <div className="col-sm-12 col-md-10 col-lg-12  justify-content-center ">
+                    <SliderWrapper>
+                        <Slider {...settings}>
+                            {cardData.map((card, index) => (
+                                <div key={index} className="d-flex justify-content-center align-items-center col-12 ">
+                                    <div className="">
+                                        <img src={card.src} alt={card.alt} className='slick-slide' />
+                                        <div className="info">
+                                            <h1>{card.title}</h1>
+                                        </div>
+                                        <div className="overlay">
+                                            <h4>{card.capacity}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </Slider>
+                    </SliderWrapper>
+                </div>
+            </div>
+        </div>
 
             <div className="container">
                 <div class="modal fade  " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -445,61 +422,11 @@ export default function BookaRoom() {
     );
 }
 
-// const SliderWrapper = styled.div`
-//   .slick-slide {
-//     position: relative;
-//     text-align: center;
-//     padding: 0 10px;
-//     border-radius: 25px !important;
-//   }
-
-//   img {
-//     width: 350px;
-//     height: 270px;
-
-//   }
-
-//   .info {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     color: white;
-//     /* background: rgba(0, 0, 0, 0.5); */
-//     padding: 10px;
-//     transition: opacity 0.3s ease;
-//   }
-
-//   .overlay {
-//     position: absolute;
-//     top: 1;
-//     left: 23px;
-//     width: 326px;
-//     height: 270px;
-//     background: rgba(0, 0, 0, 0.7);
-//     color: white;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     opacity: 0;
-//     transition: opacity 0.3s ease;
-//     border-radius: 20px !important;
-//   }
-
-//   .slick-slide:hover .info {
-//     opacity: 0;
-//   }
-
-//   .slick-slide:hover .overlay {
-//     opacity: 1;
-//   }
-// `;
 
 const SliderWrapper = styled.div`
   .slick-slide {
     position: relative;
     text-align: center;
-    padding: 0 10px;
     border-radius: 25px !important;
   }
 
@@ -515,7 +442,7 @@ const SliderWrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    padding: 10px;
+    /* padding: 10px; */
     transition: opacity 0.3s ease;
   }
 
@@ -523,7 +450,7 @@ const SliderWrapper = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 88%;
+    width: 92%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     transform: translate(-50%, -50%);

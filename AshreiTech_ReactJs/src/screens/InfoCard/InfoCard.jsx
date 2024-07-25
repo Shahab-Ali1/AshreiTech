@@ -14,7 +14,7 @@ const InfoCard = (props) => {
                     {props?.data?.map(({ image, heading, discription }, index) => {
                         const updatedDescription = parseInt(discription.replace(/[K+]/g, ''), 10);
                         return (
-                            <div key={index} className={`${item} ${props?.data?.length === 4 ? '' : 'col-6 col-md-3 col-lg-2'} d-flex flex-column flex-lg-row align-items-center justify-content-center mb-3 text-center text-lg-left`}>
+                            <div key={index} className={`${item} ${props?.data?.length === 4 ? '' : 'col-6 col-md-4 col-lg-2'} d-flex flex-column flex-lg-row align-items-center justify-content-center mb-3 text-center text-lg-left`}>
                                 <div>
                                     <img src={image} className={`${vector} mr-2`} style={{ width: '65%' }} alt="Students" />
                                 </div>
