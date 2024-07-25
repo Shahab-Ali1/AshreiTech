@@ -691,12 +691,12 @@
  .ladder_box::after{
   background-image: url('../assets/ladder_right.png');
   content: ' ';
-  height: 126%;
-  width: 292px;
+  height: 115%;
+  width: 257px;
   position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
-  top: -141px;
+  top: -84px;
   right: 0px;
   z-index: -1;
  
@@ -957,12 +957,16 @@
   
    
  }
+@media screen {
+  
+}
 
  @media (max-width: 576px) {
   .course_container{
     width: 100% !important;
     border-radius: 5px !important;
   }
+
   .course_container::after{
     display: none;
   }
@@ -1472,4 +1476,41 @@ color: #969696;
   top: -127px;
   background-position: center;
   z-index: -2;
+}
+
+
+
+@media only screen  and (min-width: 1152px) and (max-width: 1280px) {
+  .ladder_box::after{
+    height: 95%;
+    width: 212px;
+    top: 29px;
+  }
+  .ladder_box::before {
+    height: 72%;
+    width: 209px;
+}
+
+}
+@media only screen  and (min-width: 1024px) and (max-width: 1152px) {
+  .ladder_box::after{
+    height: 80%;
+    width: 181px;
+    top: 115px;
+  }
+  .ladder_box::before {
+    height: 58%;
+    width: 185px;
+  }
+}
+@media only screen  and (min-width: 992px) and (max-width: 1050px) {
+  .ladder_box::after{
+    height: 71%;
+    width: 169px;
+    top: 170px;
+  }
+  .ladder_box::before {
+    height: 46%;
+    width: 170px;
+}
 }
