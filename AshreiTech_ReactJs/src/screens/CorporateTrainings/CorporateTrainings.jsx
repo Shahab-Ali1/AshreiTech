@@ -8,7 +8,7 @@ import orange_card from '../../assets/CorporateTraining/orange_card.png'
 import green_card from '../../assets/CorporateTraining/green_card .png'
 
 export default function CorporateTrainings() {
-    const { generic_heading_left, generic_heading_center, training_container, training_container_img, future_training_btn, training_container_white, card_style } = style;
+    const { generic_heading_left, generic_heading_center, training_container, training_container_img, future_training_btn, training_container_white, card_style, p_color } = style;
     const training_Card_Data = [
         {
             title: 'Ariba Procurement',
@@ -60,7 +60,7 @@ export default function CorporateTrainings() {
                     <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-left text-center text-md-left">
                         <h4 className='mb-3'>For the last 3 Years</h4>
                         <h1 className='my-3'>AshreiTech has been at the center of your training needs</h1>
-                        <p >Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
+                        <p className={`${p_color}`}>Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
                         <div><button className='slider_btn'>AshreiTech Academy</button></div>
                     </div>
                     <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end  align-items-center">

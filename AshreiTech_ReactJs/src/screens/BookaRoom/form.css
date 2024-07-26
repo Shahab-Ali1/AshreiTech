@@ -28,7 +28,7 @@
     background-color: #7C2916;
     text-align: center;
     align-items: center;
-    font-family: Roboto;
+    /* font-family: Roboto ; */
 }
 
 .no-outline:focus {
