@@ -1,0 +1,65 @@
+.generic_heading_left{
+   position: relative;
+   align-items: end;
+   margin-bottom: 50px !important;
+   margin: auto !important;
+}
+.generic_heading_center{
+  position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 50px !important;
+   margin: auto !important;
+}
+
+
+.generic_heading_left::before {
+    content: ' ';
+    width: 90px;
+    height: 8px;
+    background-color: #5A8C75;
+    position: absolute;
+    top: 50px;
+    border-radius: 5px;
+  }
+  .generic_heading_center::before{
+    content: ' ';
+    width: 120px;
+    height: 8px;
+    background-color: #5A8C75;
+    position: absolute;
+    top: 50px;
+    border-radius: 5px;
+  }
+  .training_container{
+    background-color: #5A8C75;
+    color: white !important;
+    border-radius: 10px !important;
+  }
+  .training_container_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px !important;
+
+  }
+  .future_training_btn{
+    background-color: black !important;
+    color: white;
+    border: none !important;
+    border-radius: 10px !important;
+  }
+  .training_container_white{
+    background-color: white;
+    border-radius: 10px !important;
+    box-shadow:  10px 10px 15px #6D6D6D,  
+    -10px -10px 15px rgba(255, 255, 255, 0.5); 
+  }
+
+  .card_style{
+    background-color: #5A8C75;
+    color: white;
+    border: none !important;
+    border-radius: 10px !important;
+  }

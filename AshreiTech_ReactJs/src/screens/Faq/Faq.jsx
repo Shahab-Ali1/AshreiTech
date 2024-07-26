@@ -17,7 +17,7 @@ const Faq = (props) => {
   };
 
   return (
-    <div className={`row justify-content-center mb-5 mx-lg-5 mt-5 ${faq_container}`} style={{ margin: "auto", backgroundColor: 'white', position: 'relative' }} >
+    <div className={`row justify-content-center mb-5 mx-lg-5 mt-5 m-1  ${faq_container}`} style={{ margin: "auto", backgroundColor: 'white', position: 'relative' }} >
       {/* <div className='d-none d-lg-block'><img src={puzzleImage} alt="Puzzle" className={puzzle} /></div> */}
       <div className='col-lg-12 col-sm-6'>
         <Typography>
