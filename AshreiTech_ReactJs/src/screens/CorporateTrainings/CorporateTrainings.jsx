@@ -2,15 +2,15 @@ import React from 'react'
 import TopNavbar from '../../components/Nav/TopNavbar'
 import Footer from '../../components/Sections/Footer/Footer'
 import cp_header from '../../assets/CorporateTraining/CP_Header.png'
-import style from "./CorporateTrainings.module.css"
+// import style from "./CorporateTrainings.module.css"
 import future_training from "../../assets/CorporateTraining/future_training.png"
 
 export default function CorporateTrainings() {
-     const {generic_heading, training_container, training_container_img, future_training_btn,training_container_white} = style;
+    //  const {generic_heading, training_container, training_container_img, future_training_btn,training_container_white} = style;
     return (
         <>
             <TopNavbar />
-            <div className="container-fluid px-0 px-md-4 mb-5">
+            {/* <div className="container-fluid px-0 px-md-4 mb-5">
                 <div className="row px-4">
                     <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-left text-center text-md-left">
                         <h4 className='mb-3'>For the last 3 Years</h4>
@@ -57,7 +57,7 @@ export default function CorporateTrainings() {
                     </div>
                    </div>
                 </div>
-            </div>
+            </div> */}
             <Footer />
         </>
     )
