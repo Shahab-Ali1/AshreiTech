@@ -19,7 +19,7 @@ const Sponsers = () => {
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 position: 'relative',
-            }} className="container-fluid  px-0 px-lg-5">
+            }} className="container-fluid  px-1 px-lg-5">
                 <div className="gradientCircle d-none d-lg-block"></div>
                 <div className="container-fluid d-flex flex-column justify-content-center align-items-center " style={{ position: 'relative', zIndex: 2 }}>
                     <div className=" mt-0 mt-lg-5">

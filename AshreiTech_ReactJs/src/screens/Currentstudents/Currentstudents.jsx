@@ -43,13 +43,13 @@ const Currentstudents = () => {
       >
         <div>
           <div className="container">
-            <div className="w-100 my-5">
+            <div className="w-100 my-5 d-md-block d-none">
               <h1 className="text-center mt-5 generic_heading" id='generic_heading_for_transforming'>
-                <span style={{ color: '#000000' }}>Transforming Students Into <br /> <span style={{ color: '#008F71' }}>Professional</span></span>
+                <span style={{ color: '#000000' }}>Transforming Students Into <br /> <span style={{ color: '#008F71' }}>Professionals</span></span>
               </h1>
             </div>
 
-            <div className="mt-5 pt-5 container-fluid d-block d-md-none">
+            <div className="mt-5 pt-5 container-fluid d-none">
               <div className="row d-flex justify-content-between align-items-center">
                 <div className="col-12">
                   <img src={CurrentstudentsImage} alt="" className='img-fluid' />

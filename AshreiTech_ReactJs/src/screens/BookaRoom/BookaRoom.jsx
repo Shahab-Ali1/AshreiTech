@@ -1,7 +1,7 @@
 import React from 'react';
 import TopNavbar from '../../components/Nav/TopNavbar';
 import Footer from '../../components/Sections/Footer/Footer';
-import BookaScreenHero from '../../assets/BookaScreen/BookaScreenHero.png';
+import BookaScreenHero from '../../assets/BookaScreen/BookaScreenHero.jpg';
 import BookaScreenHeroContainer from '../../assets/BookaScreen/BookaScreenHeroContainer.png';
 import wave from '../../assets/BookaScreen/Wave.1.png';
 import wave2 from '../../assets/BookaScreen/Wave2.png';
@@ -450,7 +450,7 @@ const SliderWrapper = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 92%;
+    width: 93%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     transform: translate(-50%, -50%);
