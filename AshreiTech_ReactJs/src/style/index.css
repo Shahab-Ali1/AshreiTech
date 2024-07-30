@@ -92,7 +92,7 @@
     display: block;
   }
   *{
-    font-family: 'Roboto slab';
+    font-family: 'Roboto', sans-serif;
   }
   ol, ul {
     list-style: none;
@@ -124,7 +124,7 @@
   body {
     background: #fff;
     color: black;
-    font-family: 'Roboto slab';
+    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
     font-size: 16px;
     font-weight: 400;
@@ -202,8 +202,8 @@
  }
 
  * {
-   font-family: 'Roboto slab';
- }
+  font-family: 'Roboto', sans-serif;
+}
 
  ol,
  ul {
@@ -247,7 +247,7 @@
  body {
    background: #fff;
    color: black;
-   font-family: 'Roboto slab';
+   font-family: 'Roboto', sans-serif;
    overflow-x: hidden;
    font-size: 16px;
    font-weight: 400;
@@ -1361,7 +1361,7 @@ display: none;
    border-radius: 3px;
    /* width: 10%; */
    font-size: 14px;
-   font-family: 'Roboto slab'; 
+   font-family: 'Roboto', sans-serif;
    color: white;
    background-color: #7C2916;
    text-align: center;
