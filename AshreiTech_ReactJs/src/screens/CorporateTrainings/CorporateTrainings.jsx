@@ -2,9 +2,10 @@ import React from 'react'
 import TopNavbar from '../../components/Nav/TopNavbar'
 import Footer from '../../components/Sections/Footer/Footer'
 import cp_header from '../../assets/CorporateTraining/CP_Header.png'
-// import style from "./CorporateTrainings.module.css"
+import style from "./CorporateTrainings.module.css"
 import future_training from "../../assets/CorporateTraining/future_training.png"
-
+import orange_card from '../../assets/CorporateTraining/orange_card.png'
+import green_card from '../../assets/CorporateTraining/green_card .png'
 export default function CorporateTrainings() {
     const { generic_heading_left, generic_heading_center, training_container, training_container_img, future_training_btn, training_container_white, card_style, p_color } = style;
     const training_Card_Data = [
