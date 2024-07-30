@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import "./AdmissionEnquiery.css";
 import { Checkbox, FormControl, FormControlLabel, InputLabel, Select, TextField } from '@mui/material/node';
-import { ClientId, PostMethod, codeError, formatDate, getMethod } from '../../../utils/services';
-import TabsComponent from '../../../components/Tabs/Tabs';
+import { ClientId, PhoneMasking, PostMethod, cnicMasking, codeError, formatDate, getMethod } from '../../../utils/services';
 import { errorMessage, succesMessage, toastError, toastSuccess } from '../../../utils/Toaster/toaster';
-// import { ToastContainer } from 'react-toastify';
-// import { Toaster, Toastersuccess } from '../../Toaster';
 
 const INITIAL_STATE = {
     fname: "",
@@ -137,19 +134,9 @@ export const AdmissionEnquiry = (props) => {
             }));
         }
         else if (name === "cellno" || name === "whatsappno") {
-            const digits = value.replace(/\D/g, '');
-
-            let formattedValue = '';
-            if (digits.length > 0) {
-                formattedValue = digits.slice(0, 4);
-            }
-            if (digits.length > 4) {
-                formattedValue += '-' + digits.slice(4, 11);
-            }
-
             setFormData((prevData) => ({
                 ...prevData,
-                [name]: formattedValue,
+                [name]: PhoneMasking(value),
             }));
         }
         else if (name === "courseCategory") {
@@ -159,20 +146,10 @@ export const AdmissionEnquiry = (props) => {
                 [name]: value,
             }));
         }
-        else if (name === "cnicno") {
-            const value = event.target.value.replace(/\D/g, ''); // Remove all non-digit characters
-            let formattedValue = value;
-
-            if (value.length > 5 && value.length <= 12) {
-                formattedValue = `${value.slice(0, 5)}-${value.slice(5, 12)}`;
-            } else if (value.length > 12) {
-                formattedValue = `${value.slice(0, 5)}-${value.slice(5, 12)}-${value.slice(12, 13)}`;
-            } else {
-                formattedValue = value.slice(0, 5);
-            }
+        else if (name === "cnicno") {           
             setFormData((prevField) => ({
                 ...prevField,
-                [name]: formattedValue,
+                [name]: cnicMasking(value),
             }));
         }
         else {
