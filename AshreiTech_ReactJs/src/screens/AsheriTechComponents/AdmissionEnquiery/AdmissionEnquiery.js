@@ -144,7 +144,6 @@ export const AdmissionEnquiry = (props) => {
         }
         const { name, value, type } = event?.target;
         setErrors({})
-        debugger;
         if (type === "checkbox") {
             setFormData((prevField) => ({
                 ...prevField,
@@ -328,8 +327,8 @@ export const AdmissionEnquiry = (props) => {
             if (!formData.cellno) {
                 validationErrors.cellno = 'Cell No is required';
             }
-            if (!formData.lasteducation) {
-                validationErrors.lasteducation = 'Last Education No is required';
+            if (!formData.jobStatus) {
+                validationErrors.jobStatus = 'Job Status is required';
             }
 
             if (!formData.dob) {
@@ -573,7 +572,7 @@ export const AdmissionEnquiry = (props) => {
                                     <InputLabel htmlFor="outlined-age-native-simple">Job Status</InputLabel>
                                     <Select
                                         name="jobStatus"
-                                        error={!!errors.gender}
+                                        error={!!errors.jobStatus}
                                         onChange={handleFormData}
                                         value={formData?.jobStatus || ""}
                                         native
