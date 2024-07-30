@@ -6,7 +6,49 @@ import cp_header from '../../assets/CorporateTraining/CP_Header.png'
 import future_training from "../../assets/CorporateTraining/future_training.png"
 
 export default function CorporateTrainings() {
-    //  const {generic_heading, training_container, training_container_img, future_training_btn,training_container_white} = style;
+    const { generic_heading_left, generic_heading_center, training_container, training_container_img, future_training_btn, training_container_white, card_style, p_color } = style;
+    const training_Card_Data = [
+        {
+            title: 'Ariba Procurement',
+            description: 'Learn how to use SAP Ariba for managing procurement processes, including supplier management and purchase orders.',
+            image: orange_card
+        },
+        {
+            title: 'Another Training',
+            description: 'Learn how to use SAP Ariba for managing procurement processes, including supplier management and purchase orders.',
+            image: orange_card
+        },
+        {
+            title: 'Another Training',
+            description: 'Learn how to use SAP Ariba for managing procurement processes, including supplier management and purchase orders.',
+            image: orange_card
+        },
+        {
+            title: 'Another Training',
+            description: 'Learn how to use SAP Ariba for managing procurement processes, including supplier management and purchase orders.',
+            image: orange_card
+        },
+        {
+            title: 'Another Training',
+            description: 'Learn how to use SAP Ariba for managing procurement processes, including supplier management and purchase orders.',
+            image: green_card
+        },
+        {
+            title: 'Another Training',
+            description: 'Learn how to use SAP Ariba for managing procurement processes, including supplier management and purchase orders.',
+            image: green_card
+        },
+        {
+            title: 'Another Training',
+            description: 'Learn how to use SAP Ariba for managing procurement processes, including supplier management and purchase orders.',
+            image: green_card
+        },
+        {
+            title: 'Another Training',
+            description: 'Learn how to use SAP Ariba for managing procurement processes, including supplier management and purchase orders.',
+            image: green_card
+        },
+    ];
     return (
         <>
             <TopNavbar />
@@ -15,7 +57,7 @@ export default function CorporateTrainings() {
                     <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-left text-center text-md-left">
                         <h4 className='mb-3'>For the last 3 Years</h4>
                         <h1 className='my-3'>AshreiTech has been at the center of your training needs</h1>
-                        <p >Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
+                        <p className={`${p_color}`}>Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
                         <div><button className='slider_btn'>AshreiTech Academy</button></div>
                     </div>
                     <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end  align-items-center">

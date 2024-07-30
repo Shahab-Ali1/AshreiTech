@@ -10,6 +10,7 @@ import AboutTheCompany from "./screens/AboutTheCompany/AboutTheCompany";
 import CommingSoon from "./components/Sections/CommingSoonPage/CommingSoon";
 import SingleCourse from "./screens/SingleCourseScreen/SingleCourse";
 import CorporateTrainings from "./screens/CorporateTrainings/CorporateTrainings";
+import CorporateTrainingSingle from "./screens/CorporateTrainingSingle/CorporateTrainingSingle";
 
 export const router = createHashRouter([
     {
@@ -55,6 +56,10 @@ export const router = createHashRouter([
     {
       path: "/CorporateTrainings",
       element: <CorporateTrainings/>,
+    },
+    {
+      path: "/CorporateTrainingSingle",
+      element: <CorporateTrainingSingle/>,
     },
   
   ]);
