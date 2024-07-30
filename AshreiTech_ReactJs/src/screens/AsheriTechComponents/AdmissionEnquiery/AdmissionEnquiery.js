@@ -658,6 +658,7 @@ export const AdmissionEnquiry = (props) => {
                                             name="zakat"
                                             checked={formData?.zakat}
                                             onClick={handleFormData}
+                                            color="success"
                                         />
                                     }
                                     label="Financial Aid/ Zakat"
@@ -671,10 +672,11 @@ export const AdmissionEnquiry = (props) => {
                                             name="ownlaptop"
                                             checked={formData?.ownlaptop}
                                             onClick={handleFormData}
+                                            color="success"
                                         />
                                     }
                                     label="Do you have your own laptop?"
-                                    sx={{ '& .MuiFormControlLabel-label': { fontSize: 12 } }}
+                                    sx={{ '& .MuiFormControlLabel-label': { fontSize: 12, } }}
                                 />
                             </div>
                         </div>

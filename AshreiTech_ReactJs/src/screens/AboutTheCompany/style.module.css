@@ -128,10 +128,7 @@
   
 
   
-  .card_container:hover h3, .card_container:hover p {
-    font-size: 1.1em; /* Enlarge the text */
-    transition: font-size 0.3s ease;
-  }
+
   .active_card{
     width: 29%; /* Increase width */
     background-color: red;
@@ -173,3 +170,21 @@
       }
     
       }
+
+      @media only screen and (min-width: 1024px) and (max-width: 1200px)  {
+        .card_container{
+          width: 23%;
+        }
+        .active_card{
+          width: 31%; /* Increase width */
+    
+        }
+        .active_card .card_title{
+          font-size: 18px;
+          transition: font-size  .9s ease;
+        }
+        .card_container:hover h3, .card_container:hover p {
+          font-size: 56em; /* Enlarge the text */
+          transition: font-size 0.3s ease;
+        }
+        }
