@@ -21,6 +21,7 @@ const INITIAL_STATE = {
     dob: formatDate(new Date()),
     ownlaptop: false,
     zakat: false,
+    jobStatus: "",
 }
 export const AdmissionEnquiry = (props) => {
     const [formData, setFormData] = useState({ ...INITIAL_STATE })
@@ -30,14 +31,15 @@ export const AdmissionEnquiry = (props) => {
     const [courses, setCourses] = useState([]);
     const [stdStatus, setStdStatus] = useState([]);
     const [genderData, setGenderData] = useState([]);
+    const [jobStatusData, setJobStatusData] = useState([]);
     const [EntityId, setEntityId] = useState(0)
 
     useEffect(() => {
         getCity();
-        getCourseCategory();
+        // getCourseCategory();
         getGender();
         getStudentStatus();
-        //getCourses();
+        getjobStatus();
     }, [])
     const getCity = () => {
         try {
@@ -55,9 +57,10 @@ export const AdmissionEnquiry = (props) => {
         }
     };
 
-    const getCourseCategory = () => {
+    const getCourseCategory = (cityid) => {
         try {
-            getMethod("lov/v2/list/COTY")
+            // getMethod("lov/v2/list/COTY")
+            getMethod(`SMCourse/V2/CourseAgainstCityid/${cityid}`)
                 .then((data) => {
                     if (data) {
                         setCourseCategory(data?.Data);
@@ -119,7 +122,21 @@ export const AdmissionEnquiry = (props) => {
         }
     }
 
-
+    const getjobStatus = () => {
+        try {
+            getMethod("lov/v2/list/JOBS")
+                .then((data) => {
+                    if (data) {
+                        setJobStatusData(data?.Data);
+                    }
+                })
+                .catch(error => {
+                    codeError(error);
+                });
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     const handleFormData = (event) => {
         if (!event) {
@@ -127,6 +144,7 @@ export const AdmissionEnquiry = (props) => {
         }
         const { name, value, type } = event?.target;
         setErrors({})
+        debugger;
         if (type === "checkbox") {
             setFormData((prevField) => ({
                 ...prevField,
@@ -146,7 +164,7 @@ export const AdmissionEnquiry = (props) => {
                 [name]: value,
             }));
         }
-        else if (name === "cnicno") {           
+        else if (name === "cnicno") {
             setFormData((prevField) => ({
                 ...prevField,
                 [name]: cnicMasking(value),
@@ -161,6 +179,9 @@ export const AdmissionEnquiry = (props) => {
         if (name === "courses") {
             let row = courses.find(x => x.id === Number(value))
             setEntityId(row.entityid)
+        }
+        else if (name === "city") {
+            getCourseCategory(value)
         }
     }
 
@@ -239,7 +260,8 @@ export const AdmissionEnquiry = (props) => {
                 "testdate": null,
                 "picktime": null,
                 "droptime": null,
-                "imageid": null
+                "imageid": null,
+                "jobstatus": formData?.jobStatus,
             },
             "DataAddon": {},
             "ReturnObject": true
@@ -295,7 +317,7 @@ export const AdmissionEnquiry = (props) => {
                 validationErrors.courses = 'Courses is required';
             }
             if (!formData.stdStatus) {
-                validationErrors.stdStatus = 'Student Status is required';
+                validationErrors.stdStatus = 'Education Status is required';
             }
             if (!formData.whatsappno) {
                 validationErrors.whatsappno = 'WhatsApp No is required';
@@ -303,7 +325,7 @@ export const AdmissionEnquiry = (props) => {
             if (!formData.gender) {
                 validationErrors.gender = 'Gender is required';
             }
-            if (!formData.cellno) { 
+            if (!formData.cellno) {
                 validationErrors.cellno = 'Cell No is required';
             }
             if (!formData.lasteducation) {
@@ -338,7 +360,7 @@ export const AdmissionEnquiry = (props) => {
             PostMethod("FOAdmEnquiry/V2/SendEmailAsync", body)
                 .then((data) => {
                     // if (data) {
-                        setFormData({ ...INITIAL_STATE });
+                    setFormData({ ...INITIAL_STATE });
                     // }
                 })
                 .catch(error => {
@@ -471,6 +493,7 @@ export const AdmissionEnquiry = (props) => {
                                 <FormControl variant="outlined" size="small" className='w-100 form_textField'>
                                     <InputLabel htmlFor="outlined-age-native-simple">Course Category</InputLabel>
                                     <Select
+                                        disabled={formData?.city === ""}
                                         name="courseCategory"
                                         error={!!errors.courseCategory}
                                         onChange={handleFormData}
@@ -485,7 +508,7 @@ export const AdmissionEnquiry = (props) => {
                                         <option value={""}></option>
                                         {
                                             courseCategory && courseCategory?.map((Val, index) => {
-                                                return (<option key={index} value={Val.Id}>{Val.stxt}</option>)
+                                                return (<option key={index} value={Val.Id}>{Val.category}</option>)
                                             })
                                         }
 
@@ -522,7 +545,7 @@ export const AdmissionEnquiry = (props) => {
                         <div className='row  mt-lg-3 mt-0'>
                             <div className='col-lg-6'>
                                 <FormControl variant="outlined" size="small" className='w-100 form_textField'>
-                                    <InputLabel htmlFor="outlined-age-native-simple">Student Status</InputLabel>
+                                    <InputLabel htmlFor="outlined-age-native-simple">Education Status</InputLabel>
                                     <Select
                                         name="stdStatus"
                                         error={!!errors.stdStatus}
@@ -546,17 +569,29 @@ export const AdmissionEnquiry = (props) => {
                                 </FormControl>
                             </div>
                             <div className='col-lg-6'>
-                                <TextField
-                                    name="whatsappno"
-                                    error={!!errors.whatsappno}
-                                    onChange={handleFormData}
-                                    value={formData?.whatsappno || ""}
-                                    className="w-100 form_textField"
-                                    id="outlined-controlled"
-                                    label="WhatsApp Number"
-                                    size="small"
-                                    inputProps={{ maxLength: 12 }}
-                                />
+                            <FormControl variant="outlined" size="small" className='w-100 form_textField'>
+                                    <InputLabel htmlFor="outlined-age-native-simple">Job Status</InputLabel>
+                                    <Select
+                                        name="jobStatus"
+                                        error={!!errors.gender}
+                                        onChange={handleFormData}
+                                        value={formData?.jobStatus || ""}
+                                        native
+                                        label="Job Status"
+                                        inputProps={{
+                                            name: 'jobStatus',
+                                            id: 'outlined-age-native-simple',
+                                        }}
+                                    >
+                                        <option value={0}></option>
+                                        {
+                                            jobStatusData && jobStatusData?.map((Val, index) => {
+                                                return (<option key={index} value={Val.Id}>{Val.ltxt}</option>)
+                                            })
+                                        }
+
+                                    </Select>
+                                </FormControl>
                             </div>
                         </div>
                         <div className='row   mt-lg-3 mt-0'>
@@ -602,14 +637,15 @@ export const AdmissionEnquiry = (props) => {
                         <div className='row   mt-lg-3 mt-0'>
                             <div className='col-lg-6'>
                                 <TextField
-                                    name="lasteducation"
-                                    error={!!errors.lasteducation}
+                                    name="whatsappno"
+                                    error={!!errors.whatsappno}
                                     onChange={handleFormData}
-                                    value={formData?.lasteducation || ""}
+                                    value={formData?.whatsappno || ""}
                                     className="w-100 form_textField"
                                     id="outlined-controlled"
-                                    label="Last Education"
+                                    label="WhatsApp Number"
                                     size="small"
+                                    inputProps={{ maxLength: 12 }}
                                 />
                             </div>
                             <div className='col-lg-6'>
@@ -636,7 +672,7 @@ export const AdmissionEnquiry = (props) => {
                                             checked={formData?.zakat}
                                             onClick={handleFormData}
                                             // color="success"
-                                            style={{color:"#008F71"}}
+                                            style={{ color: "#008F71" }}
 
                                         />
                                     }
@@ -652,7 +688,7 @@ export const AdmissionEnquiry = (props) => {
                                             checked={formData?.ownlaptop}
                                             onClick={handleFormData}
                                             // color="success"
-                                            style={{color:"#008F71"}}
+                                            style={{ color: "#008F71" }}
                                         />
                                     }
                                     label="Do you have your own laptop?"
@@ -660,6 +696,7 @@ export const AdmissionEnquiry = (props) => {
                                 />
                             </div>
                         </div>
+
                         <div className='row'>
                             <div className='col-lg-12 d-flex justify-content-center'>
                                 <button type="button" className="actionBtn" onClick={clickSubmit}>Submit</button>

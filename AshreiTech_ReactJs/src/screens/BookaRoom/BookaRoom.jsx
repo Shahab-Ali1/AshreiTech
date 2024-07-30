@@ -43,8 +43,8 @@ export default function BookaRoom() {
         },
         {
             src: alkhawarzmi,
-            alt: "Al-Khawarzmi",
-            title: "Al-Khawarzmi",
+            alt: "Al-Khwarizmi",
+            title: "Al-Khwarizmi",
             capacity: "Capacity: 15 to 25 Person"
         },
         {
@@ -262,7 +262,7 @@ export default function BookaRoom() {
                             <div className="col-sm-5 col-lg-3">
                                 <img src={wifi} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
-                            <h4 className="my-2 " style={{ color: 'black !important' }} >24/7 wi-fi</h4>
+                            <h4 className="my-2 " style={{ color: 'black !important' }} >24/7 Wi-Fi</h4>
                             <p className="line-height-sm">Obviously, it’s Not A Luxury – It’s A Necessity, Because We Are Serving A Global World!</p>
                         </div>
 
@@ -301,7 +301,7 @@ export default function BookaRoom() {
                         <div className="col-md-6 col-lg-3">
                             <img src={wifi} alt="" style={{ width: '55px', height: '55px' }} />
                         </div>
-                        <h4 className="my-2  " style={{ color: 'black !important' }} >24/7 wi-fi</h4>
+                        <h4 className="my-2  " style={{ color: 'black !important' }} >24/7 Wi-Fi</h4>
                         <p className="line-height-sm">Obviously, it’s Not A Luxury – It’s A Necessity, Because We Are Serving A Global World!</p>
                     </div>
                     <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ml-5" style={{ borderRadius: '24px' }}>
@@ -391,7 +391,7 @@ export default function BookaRoom() {
                                     <div className="">
                                         <img src={card.src} alt={card.alt} className='slick-slide' />
                                         <div className="info">
-                                            <h1>{card.title}</h1>
+                                            <h2>{card.title}</h2>
                                         </div>
                                         <div className="overlay">
                                             <h4>{card.capacity}</h4>

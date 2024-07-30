@@ -6,8 +6,9 @@ export const UserName = "atadmin";
 export const Password = "atadmin123";
 
 export const LoginURL = 'https://uta.edu-man.com/ut/api/utuser/v2/loginV3';
-const URL = 'https://sma.edu-man.com/sm/api/';
-// const URL = 'https://business.gos.pk/Feedback/api';
+
+const URL = 'https://sma.edu-man.com/sm/api/';         // For Live Connection
+// const URL = 'http://172.23.0.246:4324/smdev/api/'; // For BE Local Connection
 
 export const getMethod = async (method) => {
   try {

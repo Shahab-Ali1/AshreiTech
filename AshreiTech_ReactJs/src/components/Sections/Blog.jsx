@@ -3,8 +3,10 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import offerbg from '../../assets/offerbg.png';
 import { getMethod, codeError, ClientId } from "../../utils/services";
+import { useNavigate } from "react-router-dom";
 
 export default function Blog() {
+  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(0);
   const [ImagesData, setImagesData] = useState([]);
   const [Categories, setCategories] = useState([]);
@@ -143,10 +145,10 @@ export default function Blog() {
                         src={`https://sma.edu-man.com/sm/Images/Actual/${item?.stdimagefilename}`} alt="Card image cap" />
                       <div className="card-body d-flex flex-column align-items-center align-items-lg-start">
                         <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start">
-                          <div className="pclass p-1 d-flex justify-content-center px-3"><p>50,000+ Certified Students</p></div>
+                          <div className="pclass p-1 d-flex justify-content-center px-3"><p>{item?.category}</p></div>
                           <h5 className="card-title mt-4 text-center text-lg-left text-md-left" id='odder_card-h'>{item?.stxt}</h5>
                           <p className="card-text mb-4 text-center text-lg-left text-md-left" id="offer_card">{item?.discription}</p>
-                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }}>View More</p></div>
+                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }} onClick={() => navigate("/GetInTouch")}>Register Here</p></div>
                         </WrapperForP>
                       </div>
                     </div>
@@ -162,10 +164,10 @@ export default function Blog() {
                         src={`https://sma.edu-man.com/sm/Images/Actual/${item?.stdimagefilename}`} alt="Card image cap" />
                       <div className="card-body d-flex flex-column align-items-center align-items-lg-start">
                         <WrapperForP className="d-flex flex-column align-items-center align-items-lg-start">
-                          <div className="pclass p-1 d-flex justify-content-center px-3"><p>50,000+ Certified Students</p></div>
+                          <div className="pclass p-1 d-flex justify-content-center px-3"><p>{item?.category}</p></div>
                           <h5 className="card-title mt-4 text-center text-lg-left text-md-left" id='odder_card-h'>{item?.stxt}</h5>
                           <p className="card-text mb-4 text-center text-lg-left text-md-left" id="offer_card">{item?.discription}</p>
-                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }}>View More</p></div>
+                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }} onClick={() => navigate("/GetInTouch")}>Register Here</p></div>
                         </WrapperForP>
                       </div>
                     </div>
