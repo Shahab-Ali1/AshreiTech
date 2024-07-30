@@ -51,6 +51,39 @@ export function formatDate(date) {
   return `${day}/${month}/${year}`;
 }
 
+export const PhoneMasking = (value) => {
+  if (!value) {
+    return
+  }
+  const digits = value.replace(/\D/g, '');
+  let formattedValue = '';
+  if (digits.length > 0) {
+    formattedValue = digits.slice(0, 4);
+  }
+  if (digits.length > 4) {
+    formattedValue += '-' + digits.slice(4, 11);
+  }
+  return formattedValue;
+}
+
+export const cnicMasking = (value) => {
+  if (!value) {
+    return;
+  }
+  const getvalue = value.replace(/\D/g, ''); // Remove all non-digit characters
+  let formattedValue = getvalue;
+  if (getvalue.length > 5 && getvalue.length <= 12) {
+    formattedValue = `${getvalue.slice(0, 5)}-${getvalue.slice(5, 12)}`;
+  } else if (getvalue.length > 12) {
+    formattedValue = `${getvalue.slice(0, 5)}-${getvalue.slice(5, 12)}-${getvalue.slice(12, 13)}`;
+  } else {
+    formattedValue = getvalue.slice(0, 5);
+  }
+  return formattedValue;
+}
+
+
+
 
 
 
