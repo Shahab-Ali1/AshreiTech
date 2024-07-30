@@ -86,7 +86,7 @@ export default function BookaRoom() {
             },
         ],
     };
-    const { modallg,gradientCircle,gradientCircleLeft } = style;
+    const { modallg, gradientCircle, gradientCircleLeft } = style;
     return (
         <>
             <TopNavbar />
@@ -129,13 +129,13 @@ export default function BookaRoom() {
                                 Events & Conferences</h1>
                             <h4 className="text-white mt-3">No matters if it’s a 10-person strategy meeting or a
                                 1000-person conference, we’ve got your back.</h4>
-                            <button className="slider_btn" data-toggle="modal" data-target="#exampleModal"   >Register Now</button>
+                            <button className="slider_btn" data-toggle="modal" data-target="#bookingModal">Register Now</button>
                         </div>
                         <div className="pb-5 mb-5"></div>
                     </div>
                 </div>
             </div>
-            
+
             <div className="container-fluid py-4"
                 style={{
                     backgroundImage: `url(${glowimg}),url(${glowimg}),url(${glowimg}),url(${glowimg}),url(${glowimg})`,
@@ -355,67 +355,66 @@ export default function BookaRoom() {
             </div>
 
             <div className="container-fluid py-5" style={{ position: 'relative', zIndex: 2 }}>
-            <div className={`${gradientCircle} d-none d-md-block`}></div>
-            <div className={`${gradientCircleLeft} d-none d-md-block`}></div>
-            <div className='d-none d-lg-block' style={{
-                width: '10px',
-                height: '10px',
-                backgroundColor: '#525FE1',
-                borderRadius: '50%',
-                marginLeft: '1200px',
-                top: '40px',
-                position: 'relative',
-            }}>
+                <div className={`${gradientCircle} d-none d-md-block`}></div>
+                <div className={`${gradientCircleLeft} d-none d-md-block`}></div>
                 <div className='d-none d-lg-block' style={{
-                    width: '15px',
-                    height: '15px',
-                    backgroundColor: '#FFCF59',
+                    width: '10px',
+                    height: '10px',
+                    backgroundColor: '#525FE1',
                     borderRadius: '50%',
-                    border: '1px solid white',
-                    top: '-40px',
-                    left: '-50px',
-                    position: 'absolute'
-                }}></div>
-            </div>
-            <div className="row d-flex flex-column justify-content-center align-items-center ">
-                <div className="col-12 mb-4">
-                    <h1 className='generic_heading'>Rooms</h1>
+                    marginLeft: '1200px',
+                    top: '40px',
+                    position: 'relative',
+                }}>
+                    <div className='d-none d-lg-block' style={{
+                        width: '15px',
+                        height: '15px',
+                        backgroundColor: '#FFCF59',
+                        borderRadius: '50%',
+                        border: '1px solid white',
+                        top: '-40px',
+                        left: '-50px',
+                        position: 'absolute'
+                    }}></div>
                 </div>
-            </div>
-            <div className="row d-flex justify-content-center p-0 p-lg-5">
-                <div className="col-sm-12 col-md-10 col-lg-12  justify-content-center ">
-                    <SliderWrapper>
-                        <Slider {...settings}>
-                            {cardData.map((card, index) => (
-                                <div key={index} className="d-flex justify-content-center align-items-center col-12 ">
-                                    <div className="">
-                                        <img src={card.src} alt={card.alt} className='slick-slide' />
-                                        <div className="info">
-                                            <h1>{card.title}</h1>
-                                        </div>
-                                        <div className="overlay">
-                                            <h4>{card.capacity}</h4>
+                <div className="row d-flex flex-column justify-content-center align-items-center ">
+                    <div className="col-12 mb-4">
+                        <h1 className='generic_heading'>Rooms</h1>
+                    </div>
+                </div>
+                <div className="row d-flex justify-content-center p-0 p-lg-5">
+                    <div className="col-sm-12 col-md-10 col-lg-12  justify-content-center ">
+                        <SliderWrapper>
+                            <Slider {...settings}>
+                                {cardData.map((card, index) => (
+                                    <div key={index} className="d-flex justify-content-center align-items-center col-12 ">
+                                        <div className="">
+                                            <img src={card.src} alt={card.alt} className='slick-slide' />
+                                            <div className="info">
+                                                <h1>{card.title}</h1>
+                                            </div>
+                                            <div className="overlay">
+                                                <h4>{card.capacity}</h4>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
-                        </Slider>
-                    </SliderWrapper>
+                                ))}
+                            </Slider>
+                        </SliderWrapper>
+                    </div>
                 </div>
             </div>
-        </div>
 
-            <div className="container">
-                <div class="modal fade  " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className={`${modallg} modal-dialog `} id='modalForm' role="document">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <BookaRoomForm/>
-                            </div>
+            <div className="modal fade" id="bookingModal" tabIndex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
+                <div className={`${modallg} modal-dialog`} id='modalForm' role="document">
+                    <div className="modal-content">
+                        <div className="modal-body">
+                            <BookaRoomForm />
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <Footer />
         </>

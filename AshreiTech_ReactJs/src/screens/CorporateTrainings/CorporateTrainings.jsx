@@ -56,7 +56,7 @@ export default function CorporateTrainings() {
             <TopNavbar />
 
             <div className="container-fluid px-0 px-md-4 mb-5">
-                <div className="row px-4">
+                <div className="row px-4 mb-5">
                     <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-left text-center text-md-left">
                         <h1 className='my-3'>AshreiTech Has Industry Renowned Names As Training Partners, Covering All Your Tech
                             Training Needs!</h1>
@@ -71,7 +71,7 @@ export default function CorporateTrainings() {
                         <img src={cp_header} alt="" style={{ width: '80%', height: 'auto' }} />
                     </div>
                 </div>
-                <div className="row mt-3 mb-5 px-4">
+                <div className="row mt-3 mb-4 px-4">
                     <div className="col-12">
                         <h1 className={`${generic_heading_left} text-center text-md-left`}>Future Trainings</h1>
                     </div>
