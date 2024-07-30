@@ -131,7 +131,7 @@
 
   .active_card{
     width: 29%; /* Increase width */
-    background-color: red;
+    /* background-color: red; */
     transition: width .9s;
     cursor: pointer;
   }

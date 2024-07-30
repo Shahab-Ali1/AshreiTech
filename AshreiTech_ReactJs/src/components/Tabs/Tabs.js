@@ -15,8 +15,8 @@ export default function TabsComponent() {
         <Paper square>
             <Tabs
                 value={value}
-                indicatorColor="secondry"
-                textColor="Primary"
+                // indicatorColor="secondry"
+                // textColor="Primary"
                 centered
                 onChange={handleChange}
                 className='tab'
