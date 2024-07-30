@@ -674,7 +674,7 @@ export const AdmissionEnquiry = (props) => {
                                         />
                                     }
                                     label="Do you have your own laptop?"
-                                    sx={{ '& .MuiFormControlLabel-label': { fontSize: 12 } }}
+                                    sx={{ '& .MuiFormControlLabel-label': { fontSize: 12,color:'red' } }}
                                 />
                             </div>
                         </div>

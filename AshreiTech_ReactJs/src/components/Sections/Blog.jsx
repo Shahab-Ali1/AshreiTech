@@ -105,7 +105,7 @@ export default function Blog() {
       }}
     >
       <div className="w-100">
-        <h1 className="text-center  generic_heading" > <span style={{ color: '#000000' }}>Courses we</span> <span style={{ color: '#008F71' }}>&nbsp;Offer</span></h1>
+        <h1 className="text-center  generic_heading" > <span style={{ color: '#000000' }}>Courses We</span> <span style={{ color: '#008F71' }}>&nbsp;Offer</span></h1>
         <p className="mt-4 pt-3 mb-5 text-center">
           Join the Academy and become a driving force in Pakistan's digital revolution!
         </p>

@@ -227,7 +227,10 @@
    border-collapse: collapse;
    border-spacing: 0;
  }
-
+ .ss-ttwr4n{
+ background-color: rgb(153, 51, 51) !important;
+}
+.tab{}
  a {
    text-decoration: none !important;
    color: #0B093B;
@@ -842,6 +845,9 @@
    to {
      width: 100%;
    }
+ }
+ .Mui-selected{
+  color: #008F71 !important;
  }
 
  /* On hover, trigger the animation */

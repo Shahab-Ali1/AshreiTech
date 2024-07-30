@@ -15,15 +15,21 @@ export default function TabsComponent() {
         <Paper square>
             <Tabs
                 value={value}
-                indicatorColor="primary"
-                textColor="primary"
+                indicatorColor="secondry"
+                textColor="Primary"
                 centered
                 onChange={handleChange}
                 className='tab'
+                TabIndicatorProps={{
+                    style: {
+                      backgroundColor: "#008F71"
+                    }
+                  }}
+                
             >
                 <Tab label="Student" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
-                <Tab label="Trainer" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
-                <Tab label="Sponsor" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
+                <Tab disabled label="Trainer" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
+                <Tab  label="Sponsor" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
             </Tabs>
             {value === 0 && <AdmissionEnquiry />}
             {value === 1 && <TabContent2 />}
