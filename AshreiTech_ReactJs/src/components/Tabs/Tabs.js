@@ -29,7 +29,7 @@ export default function TabsComponent() {
             >
                 <Tab label="Student" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
                 <Tab disabled label="Trainer" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
-                <Tab  label="Sponsor" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
+                <Tab  disabled label="Sponsor" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
             </Tabs>
             {value === 0 && <AdmissionEnquiry />}
             {value === 1 && <TabContent2 />}

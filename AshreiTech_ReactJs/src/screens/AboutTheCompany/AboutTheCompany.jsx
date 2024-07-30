@@ -5,7 +5,7 @@ import section2banner from '../../assets/aboutSection2banner.png'
 import section1banner from '../../assets/aboutSection1banner.png'
 import Footer from '../../components/Sections/Footer/Footer'
 
-import vector1 from '../../assets/aboutAnimation1.png'
+import vector1 from '../../assets/aboutcard1.png'
 import vector2 from '../../assets/aboutcard2.png'
 import vector3 from '../../assets/aboutcard3.png'
 import vector4 from '../../assets/aboutcard4.png'
@@ -180,7 +180,7 @@ const AboutTheCompany = () => {
                                   : {}
                               } onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(0)} className={`  ${hoveredIndex == index ? active_card: card_container} text-black p-4 ${hoveredIndex}  ${card_hover}`}>
-                    <img src={logo} style={{height:80}} alt=""  className='mb-5'/>
+                    <img src={logo} style={{height:80}} alt=""  className='mb-xl-5 mb-lg-3'/>
                     <p className={`my-2 font-weight-bolder font20 mt-3 ${card_title}`}>{title}</p>
                     <p className={`line-height-sm ${card_discription}`}>{discription}</p>
                 </div>
