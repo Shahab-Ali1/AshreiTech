@@ -1,12 +1,12 @@
 .background {
-    background-image: url('../../assets/puzzlePicture.png');
+    /* background-image: url('../../assets/puzzlePicture.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; */
+    /* align-items: center; */
 }
 
 .form-container {
@@ -37,7 +37,7 @@
 @media only screen and  (max-width: 600px)  {
     .form-container {
         width: 95%;
-        margin-top: 280px;
+        /* margin-top: 280px; */
 }
 .form_textField{
     margin-bottom: 10px !important;

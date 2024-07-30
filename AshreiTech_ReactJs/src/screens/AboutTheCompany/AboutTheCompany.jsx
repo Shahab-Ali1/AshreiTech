@@ -20,7 +20,8 @@ import animation4 from '../../assets/aboutAnimation4.png'
 
 const AboutTheCompany = () => {
     const { box1, box2, parent_box,zain, section_2,card_discription,card_title, banner_container, view_all, section1_banner_container ,card_hover,card_container,active_card} = style
-    const [hoveredIndex, setHoveredIndex] = useState(0);
+    const [hoveredIndex, setHoveredIndex] = useState(null);
+    const cardColors = ['red', 'green', 'yellow', 'blue', 'orange'];
  const card=[
     {
         logo:animation1,
@@ -166,19 +167,12 @@ const AboutTheCompany = () => {
                 <div className={`row px-5`}  >
                     {
                         card?.map(({logo,title,discription},index)=>{
+                            const backgroundColor = hoveredIndex === index ? cardColors[index % cardColors.length] : 'initial';
                             return    <div style={
-                                hoveredIndex === 0 || hoveredIndex === 3
-                                  ? { borderRadius: "" }
-                                  : hoveredIndex === index
-                                  ? { backgroundColor: "red !important" }
-                                  : hoveredIndex === index
-                                  ? { backgroundColor: "green !important" }
-                                  : hoveredIndex === index
-                                  ? { backgroundColor: "yellow" }
-                                  : hoveredIndex === index
-                                  ? { backgroundColor: "blue" }
-                                  : {}
-                              } onMouseEnter={() => setHoveredIndex(index)}
+                                {backgroundColor } } onMouseEnter={() => {
+                                debugger;
+                                setHoveredIndex(index)
+                              }}
                             onMouseLeave={() => setHoveredIndex(0)} className={`  ${hoveredIndex == index ? active_card: card_container} text-black p-4 ${hoveredIndex}  ${card_hover}`}>
                     <img src={logo} style={{height:80}} alt=""  className='mb-xl-5 mb-lg-3'/>
                     <p className={`my-2 font-weight-bolder font20 mt-3 ${card_title}`}>{title}</p>

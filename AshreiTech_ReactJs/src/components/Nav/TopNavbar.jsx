@@ -131,7 +131,7 @@ export default function TopNavbar() {
               </Link>
             </li>
             <li className="font15 pointer" >
-              <LightTooltip title="Click to scan QR code" placement="top" arrow>
+              <LightTooltip title="Click to get our app" placement="top" arrow>
                 <img src={QRTopNav} alt="" data-toggle="modal" data-target="#exampleModal" style={{ width: '35px', height: 'auto' }} />
               </LightTooltip>
             </li>

@@ -385,7 +385,7 @@ export const AdmissionEnquiry = (props) => {
                     borderRadius: '10px',
                 }}>
                     <form>
-                        <h2 className="text-center">Enquiry Form</h2>
+                        <h2 className="text-center mb-3">Enquiry Form</h2>
                         <div className='row'>
                             <div className='col-12 col-lg-6'>
                                 <TextField
@@ -658,7 +658,9 @@ export const AdmissionEnquiry = (props) => {
                                             name="zakat"
                                             checked={formData?.zakat}
                                             onClick={handleFormData}
-                                            color="success"
+                                            // color="success"
+                                            style={{color:"#008F71"}}
+
                                         />
                                     }
                                     label="Financial Aid/ Zakat"
@@ -672,7 +674,8 @@ export const AdmissionEnquiry = (props) => {
                                             name="ownlaptop"
                                             checked={formData?.ownlaptop}
                                             onClick={handleFormData}
-                                            color="success"
+                                            // color="success"
+                                            style={{color:"#008F71"}}
                                         />
                                     }
                                     label="Do you have your own laptop?"
