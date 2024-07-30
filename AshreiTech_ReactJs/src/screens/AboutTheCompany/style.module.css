@@ -32,12 +32,14 @@
     object-fit: cover;
     /* padding-bottom: 50px; */
   }
-  /* .section1_banner_container::after {
+  .zain::after {
     position: absolute;
-    content: "xasld";
-    height: 500px;
-    background-color: red;
-  } */
+    content: "";
+    height: 100%;
+    background-color: rgba(0 0 0 / 38%);
+    width: 100%;
+    border-radius: 47px;
+  }
   .parent_box {
     align-items: center;
     background-repeat: no-repeat;

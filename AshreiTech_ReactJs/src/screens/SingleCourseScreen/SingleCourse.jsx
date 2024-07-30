@@ -43,7 +43,7 @@ const SingleCourse = () => {
       <TopNavbar />
    
 
-      <div className="container-sm-fluid px-3 px-0 gradient_box  d-lex  flex-column align-items-center pb-5 pt-sm-5"
+      <div className="container-sm-fluid px-3 px-0 gradient_box  d-lex  flex-column align-items-center pb-sm-5 pt-sm-5"
   style={{
     backgroundImage: `url(${HerobackImg})`,
     backgroundSize: 'cover',
@@ -128,8 +128,9 @@ Ready To Upskill
           </div>
          { }
           {
-    windowWidth < 580 ?  '':<div className="col-sm-5 d-flex d-sm-block d-none justify-content-center align-items-center">
-            <img src={heroImage} className='' style={{width:'110%',height:"auto"}} alt="Course" />
+   
+    <div className="col-sm-5 d-flex d-sm-block d-none justify-content-center align-items-center">
+            <img src={heroImage} className='' style={{width:'105%',height:"auto"}} alt="Course" />
           </div>
   }
   
@@ -138,13 +139,13 @@ Ready To Upskill
     </div>
     <div className="row"></div>
   </div>
-  <div className="container-fluid px-sm-5" style={{width:""}}>
+  <div className="container-fluid px-sm-5 py-3 py-sm-0" style={{width:""}}>
 
   <InfoCard data={courseInfoCardData} count={false} gradient={false}/> 
   </div>
 
 </div>
-<div className="container-fluid" style={{ backgroundImage: `url(${course_bg})`,
+<div className="container-sm-fluid" style={{ backgroundImage: `url(${course_bg})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         padding: 0,}}>
@@ -152,7 +153,7 @@ Ready To Upskill
       <div className="row gutter-0 p-0" >
         <div className="col-sm-6 col-md-8  col-lg-7 p-0">
           <h1 className='left_underline'>About This Course</h1>
-          <p className='my-sm-5 my-2 font13'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities await.</p>
+          <p className='my-sm-5 my-2 font13 mb-3 mb-sm-0'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities await.</p>
         </div>
         <div className="col-sm-6 p-0 col-md-4 col-lg-5  d-flex justify-content-sm-center mb-sm-5 mb-2 mb-sm-0  justify-content-sm-end align-items-center ">
           <div className="">
@@ -168,22 +169,22 @@ Ready To Upskill
         </div>
       </div>
       <div className="row gutter-0">
-       <div className=" col-sm-6 col-md-8  col-lg-7 bg-white mb-4  d-flex flex-column text-black  shadow custom-rounded border border-dark " style={{position:'relative',zIndex:1}}>
+       <div className=" col-sm-6 col-md-8  mt-3 mt-sm-0 col-lg-7 bg-white mb-4  d-flex flex-column text-black  shadow custom-rounded border border-dark " style={{position:'relative',zIndex:1}}>
   <div className="row ">
-    <div className="col px-sm-4 py-sm-4 text-bold border-bottom border-dark "><h3>Syllabus</h3></div>
+    <div className="col px-sm-4 py-sm-4 py-1  text-bold border-bottom border-dark "><h3>Syllabus</h3></div>
   </div>
   <div className=" py-sm-4 py-3 px-sm-2 justify-content-center h-100">
-    <h4 className='mt-3 mb-1'>Intro to Generative AI</h4>
+    <h4 className='mt-sm-3 mb-1'>Intro to Generative AI</h4>
     <h6 className='text-disable font13 mb-sm-3 mb-2 text-grey'>Learn About the Different Types Of Generative AI!</h6>
-  <p className='font13'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
-  <br />
-  <p className='font13'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
-  <br />
+  <p className='font13 mb-2 mb-sm-0'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
+  <br className='d-none d-sm-block '/>
+  <p className='font13 mb-2 mb-sm-0'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
+  <br className='d-none d-sm-block'/>
 
   <p className='font13'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
   </div>
 </div>
-        <div className="col-sm-6 p-0 col-md-4 col-lg-5 d-flex justify-content-sm-end align-items-center">
+        <div className="col-sm-6 p-0 pt-2 pt-sm-0 col-md-4 col-lg-5 d-flex justify-content-sm-end align-items-center">
           <div className="coursegradientCircle"></div>
           <img src={shopify_coins} className='' style={{height:"auto",width:"80%",marginLeft:'30px',position:"relative",zIndex:3}} alt="" srcset="" />
 
@@ -191,9 +192,9 @@ Ready To Upskill
         </div>
       </div>
 
-<div className="row justify-content-center mt-sm-1">
+{/* <div className="row justify-content-center mt-sm-1">
       <button className={`${ready_to_upskill_btn}`}>Enroll Now</button>
-</div>
+</div> */}
     </div>
 
 </div>
@@ -205,15 +206,15 @@ Ready To Upskill
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         position:'relative',
-        paddingBottom:165
+        // paddingBottom:165
       }}
     >
       <div className="w-100">
 
-      <div className="d-sm-block d-none courseGradientCircleLeft"></div>
+      <div className="d-sm-block d-none courseGradientCircleLeft "></div>
         <h1 className="text-center  generic_heading" style={{ color: '#000000' ,fontSize:43}}> How Do You decide This Course Suits You</h1>
-          <div className="container d-flex justify-content-center mt-4">
-            <div className="row mx-lg-5 mt-sm-5 justify-content-center bg-primar">
+          <div className="container d-flex justify-content-center mt-4 " style={{background:"#ffe0c0"}}>
+            <div className="row mx-lg-5 mt-sm-5 mt-n2 justify-content-center bg-primar">
             <div  className="col-sm-3 custom-rounded mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow ">
            <img src={compass1} alt="" />
            <p className="line-height-sm font13">Learn how to use SAP Ariba for managing procurement processes, including supplier management and purchase orders.</p>
@@ -231,7 +232,7 @@ Ready To Upskill
 
                       </div>
         </div>
-
+<div className="d-none d-sm-block" style={{height:170,}}></div>
 
     </div>
       <div className="container-fluid bg_green py-4 ">
@@ -253,13 +254,13 @@ Ready To Upskill
       className="rounded-circle usman"
     />
   </span> */}
-  <div className='d-flex align-items-center'>
+  <div className='d-flex gap-5 align-items-center'>
   <img
       src={usmanProf}
       alt="Online Shopping VR Glasses"
       className="rounded-circle usman "
     />
-    <div className="ml-sm-2">
+    <div className="ml-sm-2 pl-2 pl-sm-0">
     <h5 className="font-weight-bolder font15">Muhammad Usman</h5>
     <h6 className="text-secondary font13">Associate SAP Consultant</h6>
     </div>
@@ -272,11 +273,11 @@ Ready To Upskill
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="mb-5 mb-sm-0">
         <TestimonialSlider />
       </div>
       {/* <Faq data={departmentsFaq}/> */}
-      <div className="container-fluid pt-4 pt-sm-5"
+      <div className="container-fluid pt-4 pt-sm-5 mb-5"
       style={{
         backgroundImage: `url(${gradeint_background})`,
         backgroundSize: 'cover',
@@ -287,7 +288,7 @@ Ready To Upskill
       <div className="w-100 py-sm-5">
         <h1 className="text-center  generic_heading" style={{ color: '#000000' }} > Looking For Something Else?</h1>
           <div className=" d-flex justify-content-center">
-            <div className="row mt-sm-5 justify-content-center bg-primar py-sm-5">
+            <div className="row mt-sm-5 justify-content-center bg-primar py-sm-5 py-3">
 
          
 <div className="col-sm-3 bg-white mb-4 mx-lg-4 mx-sm-2 d-flex flex-column text-black  shadow custom-rounded border border-dark fixed-height">

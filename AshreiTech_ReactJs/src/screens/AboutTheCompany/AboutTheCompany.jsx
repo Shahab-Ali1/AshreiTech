@@ -19,7 +19,7 @@ import animation4 from '../../assets/aboutAnimation4.png'
 
 
 const AboutTheCompany = () => {
-    const { box1, box2, parent_box, section_2,card_discription,card_title, banner_container, view_all, section1_banner_container ,card_hover,card_container,active_card} = style
+    const { box1, box2, parent_box,zain, section_2,card_discription,card_title, banner_container, view_all, section1_banner_container ,card_hover,card_container,active_card} = style
     const [hoveredIndex, setHoveredIndex] = useState(0);
  const card=[
     {
@@ -57,20 +57,20 @@ const AboutTheCompany = () => {
             >
                 <div className={`row m-auto  ${section1_banner_container}`} style={{ width: "90%" }}>
                     <div
-                        className={`col-12 py-5 containr x-sm-5`}
+                        className={`col-12 py- containr x-sm-5 ${zain}`}
                         style={{
                             backgroundImage: `url(${section1banner})`,
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
-                            height: 'auto',
+                            height: '632px',
                             width: '90%',
                             borderRadius: '50px',
                             display: "flex",
                             justifyContent: "center"
                         }}
                     >
-                        <div className="d-flex flex-column justify-content-center align-items-center py-5 my-5 text-center w-75">
-                            <h1 className="font-weight-bold text-white font40">Empowering Tech Enthusiasts to shape the future</h1>
+                        <div className="d-flex flex-column justify-content-center align-items-center py-5 my-5 text-center w-75" style={{position:"relative",zIndex:2}}>
+                            <h1 className="font-weight-bold text-white font40" style={{width:"80%"}}>Empowering Tech Enthusiasts to shape the future</h1>
                             <h5 className="text-white my-4 font30">At AshreiTech Academy, We are on a mission to equip individuals with the technical and soft skills they need to thrive in the ever-evolving tech industry. Our dynamic programs and collaborative learning environment provide endless opportunities for growth and innovation</h5>
                             <button className={`border-0 rounded-3 bg-white px-sm-5  px-2 font25 ${view_all}`} style={{ borderRadius: 5 }}>View All Courses</button>
                         </div>
