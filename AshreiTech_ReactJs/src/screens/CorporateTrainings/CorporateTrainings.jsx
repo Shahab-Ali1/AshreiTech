@@ -54,14 +54,17 @@ export default function CorporateTrainings() {
     return (
         <>
             <TopNavbar />
-            
+
             <div className="container-fluid px-0 px-md-4 mb-5">
                 <div className="row px-4">
                     <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-left text-center text-md-left">
-                        <h4 className='mb-3'>For the last 3 Years</h4>
-                        <h1 className='my-3'>AshreiTech has been at the center of your training needs</h1>
-                        <p >Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
-                        <p className={`${p_color}`}>Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
+                        <h1 className='my-3'>AshreiTech Has Industry Renowned Names As Training Partners, Covering All Your Tech
+                            Training Needs!</h1>
+                        <p className={`${p_color}`}>We understand the unique needs of every organization. That's why we offer customized
+                            corporate tech training programs designed to help companies upskill their employees,
+                            fostering growth and maintaining a competitive edge in the ever-evolving digital landscape.</p>
+                        <p className={`${p_color}`}>AshreiTech is always open to collaborations with training partners interested in jointly
+                            developing courses and providing skilled instructors.</p>
                         <div><button className='slider_btn'>AshreiTech Academy</button></div>
                     </div>
                     <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end  align-items-center">

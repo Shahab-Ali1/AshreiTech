@@ -110,6 +110,13 @@ export default function TopNavbar() {
               </Link>
             </li>
             <li className="font15 pointer">
+              <Link style={{ padding: "10px 15px" }} to={"/CorporateTrainings"} spy={true} smooth={true} offset={-80}>
+                <span className="animated_link">
+                Corporate Trainings
+                </span>
+              </Link>
+            </li>
+            <li className="font15 pointer">
               <Link style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
                 <span className="animated_link">
                   Partner With Us
