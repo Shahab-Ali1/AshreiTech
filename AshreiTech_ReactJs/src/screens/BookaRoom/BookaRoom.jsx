@@ -3,7 +3,7 @@ import TopNavbar from '../../components/Nav/TopNavbar';
 import Footer from '../../components/Sections/Footer/Footer';
 import BookaScreenHero from '../../assets/BookaScreen/BookaScreenHero.jpg';
 import BookaScreenHeroContainer from '../../assets/BookaScreen/BookaScreenHeroContainer.png';
-import wave from '../../assets/BookaScreen/Wave.1.png';
+import wave3 from '../../assets/BookaScreen/Wave3.png';
 import wave2 from '../../assets/BookaScreen/Wave2.png';
 import alrazi from '../../assets/BookaScreen/al-razi.jpg';
 import alFarabi from '../../assets/BookaScreen/al-farabi.jpg';
@@ -13,7 +13,6 @@ import heart from '../../assets/BookaScreen/vanue at the heart of the city.png';
 import wifi from '../../assets/BookaScreen/wifi.png'
 import tech from '../../assets/BookaScreen/high tech learning.png'
 import pray from '../../assets/BookaScreen/prayer area.png'
-import glowimg from '../../assets/BookaScreen/glowimg.png'
 import glowimg1 from '../../assets/BookaScreen/Glowimg1.png'
 import Slider from "react-slick";
 import styled from "styled-components";
@@ -86,7 +85,7 @@ export default function BookaRoom() {
             },
         ],
     };
-    const { modallg,gradientCircle,gradientCircleLeft } = style;
+    const { modallg, gradientCircle, gradientCircleLeft, gradientCircleLeftTop, gradientCircleLeftTwo } = style;
     return (
         <>
             <TopNavbar />
@@ -125,24 +124,21 @@ export default function BookaRoom() {
                             }}
                         ></div>
                         <div className="d-flex flex-column justify-content-center align-items-center py-5 my-5 text-center" style={{ position: 'relative' }}>
-                            <h1 className="font-weight-bold text-white pt-5 mt-5">The Trusted Venue Partner for all your Corporate
-                                Events & Conferences</h1>
-                            <h4 className="text-white mt-3">No matters if it’s a 10-person strategy meeting or a
-                                1000-person conference, we’ve got your back.</h4>
-                            <button className="slider_btn" data-toggle="modal" data-target="#exampleModal"   >Register Now</button>
+                            <h2 className="font-weight-bold text-white pt-5 mt-5">The Trusted Venue Partner for all your Corporate
+                                Events & Conferences</h2>
+                            <h6 className="text-white mt-3">No matters if it’s a 10-person strategy meeting or a
+                                1000-person conference, we’ve got your back.</h6>
+                            <button className="slider_btn" data-toggle="modal" data-target="#bookingModal">Register Now</button>
                         </div>
                         <div className="pb-5 mb-5"></div>
                     </div>
                 </div>
             </div>
-            
+
             <div className="container-fluid py-4"
-                style={{
-                    backgroundImage: `url(${glowimg}),url(${glowimg}),url(${glowimg}),url(${glowimg}),url(${glowimg})`,
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                }}
+                style={{ position: 'relative', zIndex: -2 }}
             >
+                <div className={`${gradientCircleLeftTop} d-none d-md-block`}></div>
                 <div className="row p-0 p-lg-5 d-flex justify-content-center align-items-center">
                     <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left px-0 px-lg-5">
                         <h1 >Professional Ambiance</h1>
@@ -170,7 +166,7 @@ export default function BookaRoom() {
                 className="container-fluid"
                 style={{
                     backgroundColor: '#5A8C75',
-                    backgroundImage: `url(${wave})`,
+                    backgroundImage: `url(${wave3})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                 }}
@@ -202,11 +198,8 @@ export default function BookaRoom() {
                 </div>
             </div>
             <div className="container-fluid py-4"
-                style={{
-                    backgroundImage: `url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1}),url(${glowimg1})`,
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                }}>
+                style={{ position: 'relative', zIndex: -2 }}>
+                <div className={`${gradientCircleLeftTwo} d-none d-md-block`}></div>
                 <div className="row p-0 p-lg-5 d-flex justify-content-center align-items-center ">
                     <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left px-0 px-lg-5">
                         <h1>Customizable Amenities</h1>
@@ -355,67 +348,66 @@ export default function BookaRoom() {
             </div>
 
             <div className="container-fluid py-5" style={{ position: 'relative', zIndex: 2 }}>
-            <div className={`${gradientCircle} d-none d-md-block`}></div>
-            <div className={`${gradientCircleLeft} d-none d-md-block`}></div>
-            <div className='d-none d-lg-block' style={{
-                width: '10px',
-                height: '10px',
-                backgroundColor: '#525FE1',
-                borderRadius: '50%',
-                marginLeft: '1200px',
-                top: '40px',
-                position: 'relative',
-            }}>
+                <div className={`${gradientCircle} d-none d-md-block`}></div>
+                <div className={`${gradientCircleLeft} d-none d-md-block`}></div>
                 <div className='d-none d-lg-block' style={{
-                    width: '15px',
-                    height: '15px',
-                    backgroundColor: '#FFCF59',
+                    width: '10px',
+                    height: '10px',
+                    backgroundColor: '#525FE1',
                     borderRadius: '50%',
-                    border: '1px solid white',
-                    top: '-40px',
-                    left: '-50px',
-                    position: 'absolute'
-                }}></div>
-            </div>
-            <div className="row d-flex flex-column justify-content-center align-items-center ">
-                <div className="col-12 mb-4">
-                    <h1 className='generic_heading'>Rooms</h1>
+                    marginLeft: '1200px',
+                    top: '40px',
+                    position: 'relative',
+                }}>
+                    <div className='d-none d-lg-block' style={{
+                        width: '15px',
+                        height: '15px',
+                        backgroundColor: '#FFCF59',
+                        borderRadius: '50%',
+                        border: '1px solid white',
+                        top: '-40px',
+                        left: '-50px',
+                        position: 'absolute'
+                    }}></div>
                 </div>
-            </div>
-            <div className="row d-flex justify-content-center p-0 p-lg-5">
-                <div className="col-sm-12 col-md-10 col-lg-12  justify-content-center ">
-                    <SliderWrapper>
-                        <Slider {...settings}>
-                            {cardData.map((card, index) => (
-                                <div key={index} className="d-flex justify-content-center align-items-center col-12 ">
-                                    <div className="">
-                                        <img src={card.src} alt={card.alt} className='slick-slide' />
-                                        <div className="info">
-                                            <h2>{card.title}</h2>
-                                        </div>
-                                        <div className="overlay">
-                                            <h4>{card.capacity}</h4>
+                <div className="row d-flex flex-column justify-content-center align-items-center ">
+                    <div className="col-12 mb-4">
+                        <h1 className='generic_heading'>Rooms</h1>
+                    </div>
+                </div>
+                <div className="row d-flex justify-content-center p-0 p-lg-5">
+                    <div className="col-sm-12 col-md-10 col-lg-12  justify-content-center ">
+                        <SliderWrapper>
+                            <Slider {...settings}>
+                                {cardData.map((card, index) => (
+                                    <div key={index} className="d-flex justify-content-center align-items-center col-12 ">
+                                        <div className="">
+                                            <img src={card.src} alt={card.alt} className='slick-slide' />
+                                            <div className="info">
+                                                <h2>{card.title}</h2>
+                                            </div>
+                                            <div className="overlay">
+                                                <h4>{card.capacity}</h4>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
-                        </Slider>
-                    </SliderWrapper>
+                                ))}
+                            </Slider>
+                        </SliderWrapper>
+                    </div>
                 </div>
             </div>
-        </div>
 
-            <div className="container">
-                <div class="modal fade  " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div className={`${modallg} modal-dialog `} id='modalForm' role="document">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <BookaRoomForm/>
-                            </div>
+            <div className="modal fade" id="bookingModal" tabIndex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
+                <div className={`${modallg} modal-dialog`} id='modalForm' role="document">
+                    <div className="modal-content">
+                        <div className="modal-body">
+                            <BookaRoomForm />
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <Footer />
         </>

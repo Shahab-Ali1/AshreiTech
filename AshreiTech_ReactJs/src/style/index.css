@@ -299,7 +299,6 @@
    .slider_btn {
      padding: 10px 10px !important;
      margin-top: 50px;
-     font-size: 16px !important;
    }
  }
 
@@ -337,7 +336,6 @@
 
    .slider_btn {
      padding: 8px 14px !important;
-     font-size: 16px !important;
    }
 
    .slider_container {
@@ -721,10 +719,9 @@
    background-color: #008F71 !important;
    border: none;
    color: white;
-   padding: 15px 20px;
-   border-radius: 10px;
+   border-radius: 5px;
    margin-top: 30px;
-   font-size: 23px;
+   padding: 10px;
  }
 
  .slider_btn:hover {
@@ -897,6 +894,17 @@
    position: absolute;
    top: 100px;
    border-radius: 5px;
+ }
+
+ #generic_heading_BookRoom{
+  font-size: 40px !important;
+   text-align: center;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: end;
+   margin-bottom: 50px !important;
+   margin: auto !important;
  }
 
  #generic_heading_BookRoom::before {

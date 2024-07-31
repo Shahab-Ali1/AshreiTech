@@ -132,7 +132,7 @@ export default function TopNavbar() {
             </li>
             <li className="font15 pointer" >
               <LightTooltip title="Click to get our app" placement="top" arrow>
-                <img src={QRTopNav} alt="" data-toggle="modal" data-target="#exampleModal" style={{ width: '35px', height: 'auto' }} />
+              <img src={QRTopNav} alt="QR Code Icon" data-toggle="modal" data-target="#qrCodeModal" style={{ width: '35px', height: 'auto' }} />
               </LightTooltip>
             </li>
           </UlWrapper>
@@ -140,32 +140,33 @@ export default function TopNavbar() {
       </div>
 
       {/* Modal */}
-      <div class="modal fade bd-example-modal-lg " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-        <div class="modal-dialog modal-lg " role="document">
-          <div class="modal-content">
-            <div class="modal-header" style={{ backgroundColor: '#5A8C75' }}>
-              <h5 class="modal-title " id="" style={{ color: 'white' }}>QR Codes For IOS & Android</h5>
+      <div className="modal fade bd-example-modal-lg" id="qrCodeModal" tabIndex="-1" role="dialog" aria-labelledby="qrCodeModalLabel" aria-hidden="true">
+    <div className="modal-dialog modal-lg" role="document">
+        <div className="modal-content">
+            <div className="modal-header" style={{ backgroundColor: '#5A8C75' }}>
+                <h5 className="modal-title" id="qrCodeModalLabel" style={{ color: 'white' }}>QR Codes For IOS & Android</h5>
             </div>
-            <div class="modal-body pt-4 bordr-0" style={{ backgroundColor: 'rgb(236, 246, 244)', width: '100%', height: '300px' }}>
-              <div className="container-fluid d-flex justify-content-center align-items-center ">
-                <div className="row">
-                  <div className="col-6 d-flex justify-content-center align-items-center flex-column ">
-                    <img src={IOS_QR} alt="" className="pt-5 mt-5" />
-                    <div style={{ color: "#008F71" }}>IOS </div>
-                  </div>
-                  <div className="col-6 d-flex justify-content-center align-items-center flex-column ">
-                    <img src={Androi_QR} alt="" className="pt-5 mt-5" />
-                    <div style={{ color: "#008F71" }}>Android</div>
-                  </div>
+            <div className="modal-body pt-4 bordr-0" style={{ backgroundColor: 'rgb(236, 246, 244)', width: '100%', height: '300px' }}>
+                <div className="container-fluid d-flex justify-content-center align-items-center">
+                    <div className="row">
+                        <div className="col-6 d-flex justify-content-center align-items-center flex-column">
+                            <img src={IOS_QR} alt="iOS QR Code" className="pt-5 mt-5" />
+                            <div style={{ color: "#008F71" }}>iOS</div>
+                        </div>
+                        <div className="col-6 d-flex justify-content-center align-items-center flex-column">
+                            <img src={Androi_QR} alt="Android QR Code" className="pt-5 mt-5" />
+                            <div style={{ color: "#008F71" }}>Android</div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="modal-footer " style={{ backgroundColor: 'rgb(236, 246, 244)', borderTop: 'none' }}>
-              <button type="button" class="btn" style={{ backgroundColor: '#5A8C75', color: 'white' }} data-dismiss="modal">Close</button>
+            <div className="modal-footer" style={{ backgroundColor: 'rgb(236, 246, 244)', borderTop: 'none' }}>
+                <button type="button" className="btn" style={{ backgroundColor: '#5A8C75', color: 'white' }} data-dismiss="modal">Close</button>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+</div>
+
 
     </>
   );
