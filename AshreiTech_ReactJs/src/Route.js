@@ -11,6 +11,7 @@ import CommingSoon from "./components/Sections/CommingSoonPage/CommingSoon";
 import SingleCourse from "./screens/SingleCourseScreen/SingleCourse";
 import CorporateTrainings from "./screens/CorporateTrainings/CorporateTrainings";
 import CorporateTrainingSingle from "./screens/CorporateTrainingSingle/CorporateTrainingSingle";
+import CorporateSocialResponsibility from "./screens/CorporateSocialResponsibility/CorporateSocialResponsibility";
 
 export const router = createHashRouter([
     {
@@ -60,6 +61,10 @@ export const router = createHashRouter([
     {
       path: "/CorporateTrainingSingle",
       element: <CorporateTrainingSingle/>,
+    },
+    {
+      path: "/CorporateSocialResponsibility",
+      element: <CorporateSocialResponsibility/>,
     },
   
   ]);

@@ -1,9 +1,13 @@
 import React from 'react'
 import TopNavbar from '../../components/Nav/TopNavbar'
 import Footer from '../../components/Sections/Footer/Footer'
-import wave from '../../assets/BookaScreen/Wave2.png'
-import Card1 from '../../assets/BookaScreen/pexels-pixabay-159806 1.png'
-import waveOne from '../../assets/greenpattern.png'
+import wave from '../../assets/WhatWeDo/Wave2.png'
+import greenpattern from '../../assets/WhatWeDo/greenpattern.png'
+import WeD1 from '../../assets/WhatWeDo/WeD1.png'
+import WeD2 from '../../assets/WhatWeDo/WeD2.png'
+import WeD3 from '../../assets/WhatWeDo/WeD3.png'
+import WeD4 from '../../assets/WhatWeDo/WeD4.png'
+import style from "./style.module.css";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -12,6 +16,7 @@ export default function WhatWeDo() {
     const handleButtonClick = () => {
         navigate('/CorporateTrainings');
     };
+    const { hover_text, image_container, } = style
     return (
         <>
             <TopNavbar />
@@ -25,33 +30,31 @@ export default function WhatWeDo() {
                     padding: 0,
                 }}
             >
-                <div className="container py-2">
+                <div className="container py-2 ">
                     <div className="row p-3 p-md-5 d-flex justify-content-center align-items-center">
                         <div className="col-lg-6 col-md-6 col-sm-12">
-                            <img src={Card1} alt="" style={{ width: '100%', height: 'auto' }} />
+                            <div className={`${image_container}`}>
+                                <img src={WeD1} alt="" />
+                                <h3 className={`${hover_text}`}>
+                                    “Things change and unless you’re open to other ideas, you’re going to be totally irrelevant.”
+                                    – Tom Whitby
+                                </h3>
+                            </div>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left text-white">
                             <h1>Enable Yourselves By Becoming A Tech Learner</h1>
-                            <p className="mt-3"> Build or enhance your tech
-                                career by enrolling in our tech courses and get globally certified. From in-demand areas like cloud computing and cyber security, to coveted platform
-                                partner certifications including Microsoft, SAP, Oracle, Salesforce amongst
-                                others, we offer a diverse range of courses and training programs tailored to
-                                industry demands.
-                            </p>
+                            <p className="mt-3">Build or enhance your tech career by enrolling in our tech courses and get globally certified. From in-demand areas like cloud computing and cyber security, to coveted platform partner certifications including Microsoft, SAP, Oracle, Salesforce amongst others, we offer a diverse range of courses and training programs tailored to industry demands.</p>
                             <div className='d-flex pt-4 flex-column flex-lg-row'>
                                 <div className="col-md-6 col-sm-12 pl-0 mb-4 mb-md-0">
                                     <h5>Technical Prowess</h5>
-                                    <p className='pt-2'>Master the in-demand technical skills required for your chosen career
-                                        path in emerging technologies.
-                                    </p>
+                                    <p className='pt-2'>Master the in-demand technical skills required for your chosen career path in emerging technologies.</p>
                                 </div>
                                 <div className="col-md-6 col-sm-12">
                                     <h5>Entrepreneurial Mindset</h5>
-                                    <p className='pt-2'>Nurture your entrepreneurial spirit with programs designed to
-                                        empower you to turn your ideas into reality.</p>
+                                    <p className='pt-2'>Nurture your entrepreneurial spirit with programs designed to empower you to turn your ideas into reality.</p>
                                 </div>
                             </div>
-                            <button className="slider_btn">View All Courses </button>
+                            <button className="slider_btn">View All Courses</button>
                         </div>
                     </div>
                 </div>
@@ -63,7 +66,7 @@ export default function WhatWeDo() {
                 }}
             >
                 <div className=" d-none d-md-block" style={{
-                    backgroundImage: `url(${waveOne})`,
+                    backgroundImage: `url(${greenpattern})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     padding: 0,
@@ -98,7 +101,12 @@ export default function WhatWeDo() {
                             <button className="slider_btn">Book Your Space</button>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12">
-                            <img src={Card1} alt="" style={{ width: '100%', height: 'auto' }} />
+                            <div className={`${image_container}`}>
+                                <img src={WeD2} alt="" />
+                                <h3 className={`${hover_text}`}>
+                                "The classroom should be an entrance into the world, not an escape from it." – John Ciardi
+                                </h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,8 +124,13 @@ export default function WhatWeDo() {
             >
                 <div className="container py-2">
                     <div className="row p-3 p-md-5 d-flex justify-content-center align-items-center">
-                        <div className="col-lg-6 col-md-6 col-sm-12">
-                            <img src={Card1} alt="" style={{ width: '100%', height: 'auto' }} />
+                    <div className="col-lg-6 col-md-6 col-sm-12">
+                            <div className={`${image_container}`}>
+                                <img src={WeD3} alt="" />
+                                <h3 className={`${hover_text}`}>
+                                "Anyone who stops learning is old, at twenty or eighty. Anyone who keeps learning stays young." –  Henry Ford
+                                </h3>
+                            </div>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left text-white">
                             <h1>Level Up Your Workforce With Our Comprehensive Training Programs</h1>
@@ -149,7 +162,7 @@ export default function WhatWeDo() {
                 }}
             >
                 <div className=" d-none d-md-block" style={{
-                    backgroundImage: `url(${waveOne})`,
+                    backgroundImage: `url(${greenpattern})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     padding: 0,
@@ -184,7 +197,12 @@ export default function WhatWeDo() {
                             </button>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12">
-                            <img src={Card1} alt="" style={{ width: '100%', height: 'auto' }} />
+                            <div className={`${image_container}`}>
+                                <img src={WeD4} alt="" />
+                                <h3 className={`${hover_text}`}>
+                                "The business of business should not be about money. It should be about responsibility. It should be about public good, not private greed." – Anita Roddick 
+                                </h3>
+                            </div>
                         </div>
                     </div>
                 </div>

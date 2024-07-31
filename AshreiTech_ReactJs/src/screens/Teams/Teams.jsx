@@ -21,9 +21,8 @@ import Maryam from '../../assets/team/maryam.png'
 import Jamshed_Zaman from '../../assets/team/Jamshed_Zaman.png'
 import Muhammad_Ibrahim from '../../assets/team/Muhammad_Ibrahim.png'
 import Footer from "../../components/Sections/Footer/Footer";
-import './team.css';
 
-const { team_container, banner_container, gradientCircle } = style;
+const { team_container, banner_container, gradientCircle,team_description,card_Team,card_Team_bg } = style;
 
 const Teams = () => {
 
@@ -156,6 +155,7 @@ const Teams = () => {
         },
     ];
 
+   
 
     return (
         <>
@@ -171,11 +171,11 @@ const Teams = () => {
                     <div className={gradientCircle}></div>
                     {teamMembers.map((member, index) => (
                         <div className="col-md-6 col-lg-3 col-sm-12 d-flex flex-column" key={index}>
-                            <div className="card-Team my-4" style={{
+                            <div className={`${card_Team} my-4`} style={{
                                 backgroundImage: `url(${member.image})`,
                             }}>
-                                <div className="card-Team-bg">
-                                    <p className="text-white team_description" style={{ fontSize: '14px' }}>{member.description}</p>
+                                <div className={`${card_Team_bg}`}>
+                                    <p className={`${team_description} text-white`} style={{ fontSize: '14px' }}>{member.description}</p>
                                     <a href={member.linkedInProfile} target="_blank" rel="noopener noreferrer">
                                         <i className="fab fa-linkedin pt-2" style={{ color: "white" }}></i>
                                     </a>
