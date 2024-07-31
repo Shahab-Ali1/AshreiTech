@@ -1,8 +1,8 @@
 .footer_container {
     background-color: #5A8C75;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
     color: white;
+    padding: 0px;
+    margin: 0px;
 }
 
 .containerOne {
