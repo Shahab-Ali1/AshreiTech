@@ -1,6 +1,11 @@
 import React from 'react';
 import style from "./style.module.css";
 import AshrieTechWhiteLogo from "../../../assets/AshrieTechWhiteLogo.png";
+import Minar from "../../../assets/minar.png";
+import Map from "../../../assets/map.png";
+import PhoneIcon from "../../../assets/PhoneIcon.png";
+import pakistanIcon from "../../../assets/pakistanIcon.png";
+import mosqueIcon from "../../../assets/mosqueIcon.png";
 import FedumanLogo from "../../../assets/FeduManLogo.png";
 
 const Footer = () => {
@@ -39,28 +44,98 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center">
-                    <div className={`${containerOne}`}>
-                        <h5 className="text-center text-md-left">GET INSIGHTS FROM OUR BLOG</h5>
-                        <div className="row pt-2 d-flex justify-content-between align-items-center">
-                            {["Academic", "Academic", "Academic", "Academic"].map((category, index) => (
-                                <div key={index} className={`${containerOnePiece} col-lg-2 col-md-3 col-sm-12 my-3 py-1 d-flex justify-content-center align-items-center`}>{category}</div>
-                            ))}
-                        </div>
-                        <div className="row pt-2 justify-content-between align-items-center d-none d-lg-flex ">
-                            {["Academic", "Academic", "Academic", "Academic"].map((category, index) => (
-                                <div key={index} className={`${containerOnePiece} col-lg-2 col-md-3 col-sm-12 py-1 d-flex justify-content-center align-items-center `}>{category}</div>
-                            ))}
-                        </div>
+                {/* <div className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center"> */}
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                    <div className='row'>
+                        <div className='col-lg-12'><h3>Our Branches</h3></div>
                     </div>
-                    <div className={`${containerTwo} mt-4`}>
-                        <h5 className="text-center text-md-left">Developed By Edu-Man</h5>
-                        <div className="row pt-4 d-flex justify-content-lg-start justify-content-center">
-                            <div className="col-6 mt-2 ml-1">
-                                <img src={FedumanLogo} className="img-fluid" alt="Edu-Man" />
+                    <div className="row mt-5">
+                        <div className='col-lg-4'>
+                            <div style={{ color: '#DBDBDB' }} className="d-flex pb-3">
+                                <img src={Minar} alt="minar" className="pt-5 pt-lg-0" style={{height: "35px"}} />
+                                <span className='mt-3'> Lahore Branch </span>
+                            </div>
+                        </div>
+                        <div className='col-lg-4'>
+                            <div style={{ color: '#DBDBDB' }} className="d-flex pb-3">
+                                <img src={pakistanIcon} alt="pakistanIcon" className="pt-5 pt-lg-0" style={{height: "27px"}}/>
+                                <span className='mt-1'>Karachi Branch</span>
+
+                            </div>
+                        </div>
+                        <div className='col-lg-4'>
+                            <div style={{ color: '#DBDBDB' }} className="d-flex pb-3">
+                                <img src={mosqueIcon} alt="mosqueIcon" className="pt-5 pt-lg-0" style={{height: "35"}}/>
+                                <span className='mt-3'>Islamabad Branch</span>
+
                             </div>
                         </div>
                     </div>
+                    <div className="row">
+                        <div className='col-lg-4'>
+                            <div style={{ color: '#DBDBDB' }} className=" d-flex pb-3">
+                                <img src={Map} alt="Map" className="pt-5 pt-lg-0" style={{ height: "27px" }} />
+                                <span className='ml-2'>
+                                    G99P+Q28, Cantt, Lahore,
+                                    Punjab
+                                </span>
+
+                            </div>
+                        </div>
+                        <div className='col-lg-4'>
+                            <div style={{ color: '#DBDBDB' }} className="d-flex pb-3">
+                                <img src={Map} alt="Map" className="pt-5 pt-lg-0" style={{ height: "27px" }} />
+                                <span className='ml-2'>
+                                    NASTP Building, Main
+                                    Shahrah-e-Faisal Rd,
+                                    Faisal Cantonment,
+                                    Karachi City, Sindh
+                                </span>
+
+                            </div>
+                        </div>
+                        <div className='col-lg-4'>
+                            <div style={{ color: '#DBDBDB' }} className="d-flex pb-3">
+                                <img src={Map} alt="Map" className="pt-5 pt-lg-0" style={{ height: "27px" }} />
+                                <span className='ml-2'>
+                                    J453+GPQ, Old Airport Rd,
+                                    Chaklala Cantt., Rawalpindi,
+                                    Punjab 46000
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className='col-lg-4'>
+                            <div style={{ color: '#DBDBDB' }} className="d-flex pb-3">
+                                <img src={PhoneIcon} alt="PhoneIcon" className="pt-5 pt-lg-0" style={{ height: "23px" }} />
+                                <span className='ml-2'>
+                                    03004406163
+                                </span>
+
+                            </div>
+                        </div>
+                        <div className='col-lg-4'>
+                            <div style={{ color: '#DBDBDB' }} className="d-flex pb-3">
+                                <img src={PhoneIcon} alt="PhoneIcon" className="pt-5 pt-lg-0" style={{ height: "23px" }} />
+                                <span className='ml-2'>
+                                    03332775771
+                                </span>
+
+                            </div>
+                        </div>
+                        <div className='col-lg-4'>
+                            <div style={{ color: '#DBDBDB' }} className="d-flex pb-3">
+                                <img src={PhoneIcon} alt="PhoneIcon" className="pt-5 pt-lg-0" style={{ height: "23px" }} />
+                                <span className='ml-2'>
+                                    03004406163
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div className="d-none">
