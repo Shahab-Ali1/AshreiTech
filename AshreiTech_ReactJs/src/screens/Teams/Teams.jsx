@@ -19,13 +19,13 @@ import Humra_Tahir from '../../assets/team/Humra_Tahir.png'
 import M_Khurram_Muqueem from '../../assets/team/M_Khurram_Muqueem.png'
 import Maryam from '../../assets/team/maryam.png'
 import Jamshed_Zaman from '../../assets/team/Jamshed_Zaman.png'
+import Muhammad_Ibrahim from '../../assets/team/Muhammad_Ibrahim.png'
 import Footer from "../../components/Sections/Footer/Footer";
 import './team.css';
 
 const { team_container, banner_container, gradientCircle } = style;
 
 const Teams = () => {
-    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     const teamMembers = [
         {
@@ -113,6 +113,13 @@ const Teams = () => {
             linkedInProfile: 'https://www.linkedin.com/in/mufarrah/'
         },
         {
+            name: "Myhammad Ibrahim",
+            title: "Student Coordinator",
+            image: Muhammad_Ibrahim,
+            description: "At AshreiTech Academy, Muhammad Ibrahim is the Student Coordinator, dedicated to resolving student issues and offering counseling sessions. He mentors the next generation of tech talent, guiding students and career shifters in acquiring essential skills. Passionate about innovation and growth, he is committed to equipping students with the tools they need to succeed.",
+            linkedInProfile: 'https://www.linkedin.com/in/muhammad-ibrahim-505b13235/'
+        },
+        {
             name: "Noman Ali",
             title: "Admin & Operations Lead",
             image: Noman_Ali,
@@ -147,9 +154,6 @@ const Teams = () => {
             description: "As a seasoned IT Manager, Unsar leads technology strategy and innovation, driving business transformation and growth with effective IT solutions and agile leadership. With expertise in IT service management and digital transformation, he creates impactful solutions that enhance collaboration and efficiency.",
             linkedInProfile: 'https://www.linkedin.com/in/unsar-hameed-379896106/'
         },
-
-
-
     ];
 
 

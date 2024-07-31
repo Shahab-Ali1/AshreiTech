@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./style.module.css";
-import AshrieTechWhiteLogo from "../../../assets/AshrieTechWhiteLogo.png";
+import AshrieTechWhiteLogo from "../../../assets/AshrieTechWhiteLogo.svg";
 import FedumanLogo from "../../../assets/FeduManLogo.png";
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="row px-0 px-md-5 py-0 py-md-5">
                 <div className="col-lg-6 col-md-6 col-sm-12 ">
                     <div className="row pb-4 mb-4 pt-1 pl-0 pl-lg-3 d-flex justify-content-center justify-content-lg-start">
-                        <img src={AshrieTechWhiteLogo} alt="AshrieTech Logo" className="pt-5 pt-lg-0" />
+                        <img src={AshrieTechWhiteLogo} alt="AshrieTech Logo" className="pt-5 pt-lg-0" style={{width:'60%', height:'auto'}}/>
                     </div>
                     <div className="row d-flex justify-content-center justify-content-lg-start ">
                         <div className="col-3">

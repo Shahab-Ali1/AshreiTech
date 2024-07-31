@@ -40,13 +40,13 @@ export default function WhatWeDo() {
                             </p>
                             <div className='d-flex pt-4 flex-column flex-lg-row'>
                                 <div className="col-md-6 col-sm-12 pl-0 mb-4 mb-md-0">
-                                    <h4>Technical Prowess</h4>
+                                    <h5>Technical Prowess</h5>
                                     <p className='pt-2'>Master the in-demand technical skills required for your chosen career
                                         path in emerging technologies.
                                     </p>
                                 </div>
                                 <div className="col-md-6 col-sm-12">
-                                    <h4>Entrepreneurial Mindset</h4>
+                                    <h5>Entrepreneurial Mindset</h5>
                                     <p className='pt-2'>Nurture your entrepreneurial spirit with programs designed to
                                         empower you to turn your ideas into reality.</p>
                                 </div>
@@ -84,13 +84,13 @@ export default function WhatWeDo() {
                             </p>
                             <div className='d-flex pt-4 flex-column flex-lg-row'>
                                 <div className="col-md-6 col-sm-12 pl-0 mb-4 mb-md-0">
-                                    <h4>Convenience and Flexibility</h4>
+                                    <h5>Convenience and Flexibility</h5>
                                     <p className='pt-2'>With customizable room layouts and amenities, our service offers flexible solutions for
                                         various event formats, ensuring convenience for both organizers and attendees.
                                     </p>
                                 </div>
                                 <div className="col-md-6 col-sm-12">
-                                    <h4>Professional Image</h4>
+                                    <h5>Professional Image</h5>
                                     <p className='pt-2'>Hosting your corporate events and trainings in our purpose-built facilities enhances your
                                         professional image and demonstrates your commitment to quality and excellence.</p>
                                 </div>
@@ -127,12 +127,12 @@ export default function WhatWeDo() {
                                 needs of every organization.</p>
                             <div className='d-flex pt-4 flex-column flex-lg-row'>
                                 <div className="col-md-6 col-sm-12 pl-0 mb-4 mb-md-0">
-                                    <h4>Expert Training Partners </h4>
+                                    <h5>Expert Training Partners </h5>
                                     <p className='pt-2'>Our training programs are led by top industry professionals, ensuring
                                         your employees receive the highest quality education and insights from leaders in their fields.</p>
                                 </div>
                                 <div className="col-md-6 col-sm-12">
-                                    <h4>Comprehensive Tech Training </h4>
+                                    <h5>Comprehensive Tech Training </h5>
                                     <p className='pt-2'>From foundational skills to advanced tech competencies, our
                                         extensive range of courses covers all your tech training needs, all set to empower your team.</p>
                                 </div>
@@ -169,12 +169,12 @@ export default function WhatWeDo() {
                                 that strengthens the overall GDP and ultimately benefit everything mentioned above.</p>
                             <div className='d-flex pt-4 flex-column flex-lg-row'>
                                 <div className="col-md-6 col-sm-12 pl-0 mb-4 mb-md-0">
-                                    <h4>Empower The Next Generation</h4>
+                                    <h5>Empower The Next Generation</h5>
                                     <p className='pt-2'>We are working to make CSR easy and sustainable, whether it be to promote DEI, upskill
                                         marginalized communities, or sponsor a batch.</p>
                                 </div>
                                 <div className="col-md-6 col-sm-12">
-                                    <h4>Explore Collaborative Avenues</h4>
+                                    <h5>Explore Collaborative Avenues</h5>
                                     <p className='pt-2'>We are open to hear creative approaches on how we can collectively work to develop
                                         workforce for future technologies and cater to the global IT outsourcing market.
                                     </p>

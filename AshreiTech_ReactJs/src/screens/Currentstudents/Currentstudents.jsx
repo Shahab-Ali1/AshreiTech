@@ -59,103 +59,109 @@ const Currentstudents = () => {
 
             <div className="mt-5 container-fluid d-none d-md-block">
               <div className="row d-flex justify-content-between align-items-center">
-                <div className="col-2">
+                <div className="col-3">
                   <div className="row">
                     <div className="col-12" data-aos="fade-right">
                       <div className="row d-flex">
                         <div className="col-3">
-                          <img src={st1} alt="" className={`${st_img}`} />
+                          <img src={st1} alt="" className={st_img} />
                         </div>
                         <div className="col-9"></div>
                       </div>
                     </div>
                     <div className="col-12" data-aos="fade-left">
                       <div className="row d-flex">
-                        <div className="col-9"></div>
+                        <div className="col-5"></div>
                         <div className="col-3">
-                          <img src={st2} alt="" className={`${st_img}`} />
+                          <img src={st2} alt="" className={st_img} />
                         </div>
                       </div>
                     </div>
                     <div className="col-12" data-aos="fade-right">
                       <div className="row d-flex">
                         <div className="col-3">
-                          <img src={st3} alt="" className={`${st_img}`} />
+                          <img src={st3} alt="" className={st_img} />
                         </div>
                         <div className="col-9"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className={`col-8 ${imageContainer}`}>
-                  <img src={st8} alt="" className={`${image}`} />
+                <div className={`col-6 ${imageContainer}`} style={{ width: '79%' }}>
+                  <img src={st8} alt="" className={image} />
                   <div className={`d-flex justify-content-center flex-column align-items-center ${overlay}`}>
-                    {counter &&
-                      <h2 style={{fontWeight:'bolder'}}>
+                    {counter && (
+                      <h3 style={{ fontWeight: 'bolder' }}>
                         <CountUp end={15000} prefix="" separator="," />
                         <span>+</span>
-                      </h2>}
+                      </h3>
+                    )}
                     <h2>Current students</h2>
                   </div>
-                  <div className={`col-4 d-flex justify-content-center flex-column align-items-left ${overlayRrightUp}`}>
-                    {counter &&
-                      <h4 style={{color:'#003650', fontWeight:'bold'}}>
-                        <CountUp end={1000} prefix="" separator=","  />
-                        <span>+</span>
-                      </h4>
-                    }
-                    <h6 className='font-weight-bold mt-2'>Learn Skills to get hired <br /> into my first <br /> professional job</h6>
-                  </div>
-                  <div className={`col-4 d-flex justify-content-center flex-column align-items-left ${overlayRrightDown}`}>
-                    {counter &&
-                      <h4 style={{color:'#7D2919', fontWeight:'bold'}}>
-                        <CountUp end={1000} prefix="" separator="," />
-                        <span>+</span>
-                      </h4>
-                    }
-                    <h6 className='font-weight-bold mt-2'>Switch to a different role <br /> by developing new skills</h6>
-                  </div>
                   <div className={`col-4 d-flex justify-content-center flex-column align-items-left ${overlayLeftUp}`}>
-                    {counter &&
-                      <h4 style={{color:'#FAA72E', fontWeight:'bold'}}>
-                        <CountUp end={4000} prefix="" separator="," />
-                        <span>+</span>
+                    {counter && (
+                      <h4 style={{ color: '#003650', fontWeight: 'bold' }}>
+                        <CountUp end={100} prefix="" separator="," />
+                        <span></span>
                       </h4>
-                    }
-                    <h6 className='font-weight-bold mt-2'>Develop My Skills to <br /> advanced in my current <br /> role to get a promotion</h6>
+                    )}
+                    <h6 className="font-weight-bold mt-2"> Students Are Trained, certified and placed
+                    </h6>
                   </div>
                   <div className={`col-4 d-flex justify-content-center flex-column align-items-left ${overlayLeftDown}`}>
-                    {counter &&
-                      <h4 style={{color:'#008F71', fontWeight:'bold'}}>
-                        <CountUp end={8000} prefix="" separator="," />
-                        <span>+</span>
-                      </h4>}
-                    <h6 className='font-weight-bold mt-2'>Switch to a different role<br /> by developing new skills</h6>
+                    {counter && (
+                      <h4 style={{ color: '#7D2919', fontWeight: 'bold' }}>
+                        <CountUp end={5} prefix="" separator="," />
+                        <span></span>
+                      </h4>
+                    )}
+                    <h6 className="font-weight-bold mt-2">SAP Toppers Have Scored The Highest in the SAP Global Certification</h6>
+                  </div>
+                  <div className={`col-4 d-flex justify-content-center flex-column align-items-left ${overlayRrightUp}`}>
+                    {counter && (
+                      <h4 style={{ color: '#FAA72E', fontWeight: 'bold' }}>
+                        <CountUp end={47} prefix="" separator="," />
+                        <span></span>
+                      </h4>
+                    )}
+                    <h6 className="font-weight-bold mt-2">Students Are SAP Global Certification Holders
+                    </h6>
+                  </div>
+                  <div className={`col-4 d-flex justify-content-center flex-column align-items-left ${overlayRrightDown}`}>
+                    {counter && (
+                      <h4 style={{ color: '#008F71', fontWeight: 'bold' }}>
+                        <CountUp end={12} prefix="" separator="," />
+                        <span></span>
+                      </h4>
+                    )}
+                    <h6 className="font-weight-bold mt-2">Students Are Multiple SAP Global Certification Holders
+                    </h6>
                   </div>
                 </div>
-                <div className="col-2">
+                <div className="col-3">
                   <div className="row">
                     <div className="col-12" data-aos="fade-left">
                       <div className="row d-flex">
                         <div className="col-9"></div>
                         <div className="col-3">
-                          <img src={st4} alt="" className={`${st_img}`} />
+                          <img src={st4} alt="" className={st_img} />
                         </div>
                       </div>
                     </div>
                     <div className="col-12" data-aos="fade-right">
                       <div className="row d-flex">
+                        <div className="col-4"></div>
                         <div className="col-3">
-                          <img src={st5} alt="" className={`${st_img}`} />
+                          <img src={st5} alt="" className={st_img} />
                         </div>
-                        <div className="col-9"></div>
+                        <div className="col-5"></div>
                       </div>
                     </div>
                     <div className="col-12" data-aos="fade-left">
                       <div className="row d-flex">
                         <div className="col-9"></div>
                         <div className="col-3">
-                          <img src={st7} alt="" className={`${st_img}`} />
+                          <img src={st7} alt="" className={st_img} />
                         </div>
                       </div>
                     </div>
@@ -164,10 +170,11 @@ const Currentstudents = () => {
               </div>
             </div>
 
+
             <div className="col-12 mt-5 py-3" style={{ backgroundImage: `url(${turningbg})` }}>
               <h1 className="text-center generic_heading">
                 <span style={{ color: '#000000' }}>Turning Goals Into</span>
-                <span style={{ color: '#008F71' }}>&nbsp;Wins!</span> 
+                <span style={{ color: '#008F71' }}>&nbsp;Wins!</span>
               </h1>
               <TestimonialSlider />
             </div>

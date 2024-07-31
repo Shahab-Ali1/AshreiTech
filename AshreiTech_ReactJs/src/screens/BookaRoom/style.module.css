@@ -28,3 +28,28 @@
         background-position: center;
          z-index: 0;
       }
+    
+    .gradientCircleLeftTop {
+        content: "";
+        position: absolute;
+        left: -304px;
+        bottom: 0;
+        width: 639px;
+        height: 730px;
+        background: radial-gradient(circle, rgb(0 54 80 / 20%) 30%, rgb(0 54 80 / 0%) 51%);
+        top: 20px;
+        background-position: center;
+         z-index: 0;
+      }
+    .gradientCircleLeftTwo {
+        content: "";
+        position: absolute;
+        left: -304px;
+        bottom: 0;
+        width: 639px;
+        height: 630px;
+        background: radial-gradient(circle, rgb(0 54 80 / 20%) 30%, rgb(0 54 80 / 0%) 51%);
+        top: -50px;
+        background-position: center;
+         z-index: 0;
+      }
