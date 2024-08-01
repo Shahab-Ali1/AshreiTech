@@ -139,9 +139,11 @@ Ready To Upskill
     </div>
     <div className="row"></div>
   </div>
-  <div className="container-fluid px-sm-5 py-3 py-sm-0" style={{width:""}}>
-
-  <InfoCard data={courseInfoCardData} count={false} gradient={false}/> 
+  <div className="container-fluid d-sm-block d-none px-sm-5 py-3 py-sm-0" style={{width:""}}>
+    <InfoCard data={courseInfoCardData} count={false} gradient={false}/> 
+  </div>
+  <div className="d-sm-none px-sm-5 py-3 py-sm-0" style={{width:""}}>
+    <InfoCard data={courseInfoCardData} count={false} gradient={false}/> 
   </div>
 
 </div>
@@ -213,7 +215,7 @@ Ready To Upskill
 
       <div className="d-sm-block d-none courseGradientCircleLeft "></div>
         <h1 className="text-center  generic_heading" style={{ color: '#000000' ,fontSize:43}}> How Do You decide This Course Suits You</h1>
-          <div className="container d-flex justify-content-center mt-4 " style={{background:"#ffe0c0"}}>
+          <div className="container d-flex justify-content-center mt-4 " style={{background:""}}>
             <div className="row mx-lg-5 mt-sm-5 mt-n2 justify-content-center bg-primar">
             <div  className="col-sm-3 custom-rounded mb-4 mx-2 d-flex flex-column justify-content-center align-items-center text-center text-black p-3 shadow ">
            <img src={compass1} alt="" />
