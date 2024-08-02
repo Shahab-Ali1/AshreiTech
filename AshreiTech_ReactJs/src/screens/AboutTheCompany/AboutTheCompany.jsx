@@ -56,14 +56,14 @@ const AboutTheCompany = () => {
                     padding: 0,
                 }}
             >
-                <div className={`row m-auto  ${section1_banner_container}`} style={{ width: "90%" }}>
+                <div className={`row m-auto  d-sm-flex d-none ${section1_banner_container}`} style={{ width: "90%" }}>
                     <div
                         className={`col-12 py- containr x-sm-5 ${zain}`}
                         style={{
                             backgroundImage: `url(${section1banner})`,
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
-                            height: '632px',
+                            // height: '632px',
                             width: '90%',
                             borderRadius: '50px',
                             display: "flex",
@@ -71,9 +71,33 @@ const AboutTheCompany = () => {
                         }}
                     >
                         <div className="d-flex flex-column justify-content-center align-items-center py-5 my-5 text-center w-75" style={{position:"relative",zIndex:2}}>
-                            <h1 className="font-weight-bold text-white font40" style={{width:"80%"}}>Empowering Tech Enthusiasts to shape the future</h1>
-                            <h5 className="text-white my-4 font30">At AshreiTech Academy, We are on a mission to equip individuals with the technical and soft skills they need to thrive in the ever-evolving tech industry. Our dynamic programs and collaborative learning environment provide endless opportunities for growth and innovation</h5>
-                            <button className={`border-0 rounded-3 bg-white px-sm-5  px-2 font25 ${view_all}`} style={{ borderRadius: 5 }}>View All Courses</button>
+                            <h1 className=" text-white font40" style={{width:"80%"}}>Empowering Tech Enthusiasts to shape the future</h1>
+                            <h5 className="text-white my-4 font16">At AshreiTech Academy, We are on a mission to equip individuals with the technical and soft skills they need to thrive in the ever-evolving tech industry. Our dynamic programs and collaborative learning environment provide endless opportunities for growth and innovation</h5>
+                            <button className={`border-0 rounded-3 bg-white px-sm-4  px-2 font25 ${view_all}`} style={{ borderRadius: 5 }}>View All Courses</button>
+                        </div>
+                        <div className="pb-5 mb-5"></div>
+                    </div>
+                    
+                  
+                </div>
+                <div className={`row  d-sm-none d-block m-auto  ${section1_banner_container}`} style={{ width: "90%" }}>
+                    <div 
+                        className={`col-12  px-4 ${zain}`}
+                        style={{
+                            backgroundImage: `url(${section1banner})`,
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            height: '157px',
+                            // width: '90%',
+                            // borderRadius: '50px',
+                            // display: "flex",
+                            // justifyContent: "center"
+                        }}
+                    >
+                        <div className="flex-column justify-content-center align-items-center  text-center " style={{position:"relative",zIndex:2}}>
+                            <p className="font-weight-bold text-white font15 pt-1" style={{width:""}}>Empowering Tech Enthusiasts to shape the future</p>
+                            <h5 className="text-white my-1 font12">At AshreiTech Academy, We are on a mission to equip individuals with the technical and soft skills they need to thrive in the ever-evolving tech industry. Our dynamic programs and collaborative learning environment provide endless opportunities for growth and innovation</h5>
+                            <button className={`border-0 rounded-3 bg-white   px-2  ${view_all}`} style={{ borderRadius: 5 }}>View All Courses</button>
                         </div>
                         <div className="pb-5 mb-5"></div>
                     </div>
@@ -83,7 +107,7 @@ const AboutTheCompany = () => {
                 <div className="row justify-content-center">
                     <h1 className='text-center mt-sm-5 mb-1'>How Ashrei Tech Came Into Being</h1>
                     <div className='d-flex justify-content-center text-center pb-4'>
-                        <p className='font25 w-75 text-muted lh-0'>Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
+                        <p className=' w-75 text-muted lh-0'>Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
                     </div>
                     <div className={`${banner_container}`}>
                         <img src={section2banner} alt="" srcset="" />
@@ -97,11 +121,11 @@ const AboutTheCompany = () => {
                 // backgroundSize:'cover'
             }}>
                 <div className={`col-12 col-sm-6 ${box1}`}>
-                    <h1 className='mb-sm-2'>Our Mission</h1>
+                    <h1 className='mb-2'>Our Mission</h1>
                     <p className='font25'>Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
                 </div>
                 <div className={`col-12 col-sm-6 ${box2}`}>
-                    <h1 className='mb-sm-2'>Our Vision</h1>
+                    <h1 className='mb-2'>Our Vision</h1>
                     <p className='font25'>Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
                 </div>
             </div>
