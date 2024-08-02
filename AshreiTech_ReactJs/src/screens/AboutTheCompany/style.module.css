@@ -98,6 +98,14 @@
     }
   }
   @media only screen and (max-width: 600px) {
+    .active_card{
+      width: 100% !important; 
+   
+    }
+    .card_container{
+      width: 100% !important; 
+      margin-top: 5px;
+    }
     .box1 {
       height: 300px;
       padding:0 50px;
@@ -186,5 +194,8 @@
         .card_container:hover h3, .card_container:hover p {
           font-size: 56em; /* Enlarge the text */
           transition: font-size 0.3s ease;
+        }
+        .card_discription{
+          font-size: 14px;
         }
         }
