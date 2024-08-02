@@ -18,26 +18,52 @@ const Footer = () => {
                     <div className="row pb-4 mb-4 pt-1 pl-0 pl-lg-3 d-flex justify-content-center justify-content-lg-start">
                         <img src={AshrieTechWhiteLogo} alt="AshrieTech Logo" className="pt-5 pt-lg-0" style={{ width: '40%', height: 'auto' }} />
                     </div>
-                    <div className="row d-flex justify-content-center justify-content-lg-start ">
-                        <div className="col-3">
+                    <div className="row  justify-content-center justify-content-lg-start d-none d-md-flex">
+                        <div className="mr-5 px-3">
                             <ul>
-                                {["Home", "About", "Service", "Teacher", "Review", "Contact"].map((item, index) => (
-                                    <li key={index} style={{ color: '#DBDBDB' }} className="pb-3 ">{item}</li>
+                                {["About the company", "About the team", "Book-A-Room", "Corporate Trainings"].map((item, index) => (
+                                    <li key={index} className="pb-3 ">{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="mr-5 px-3">
+                            <ul>
+                                {["Get In Touch", "Partner With Us", "Insights", "What We Do",].map((item, index) => (
+                                    <li key={index} className="pb-3">{item}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="mr-5 px-3">
+                            <ul>
+                                {["Facebook", "Twitter", "Instagram", "LinkedIn"].map((platform, index) => (
+                                    <li key={index} className="pb-3">
+                                        <i className={`fab fa-${platform.toLowerCase()} mr-4`} style={{ color: 'white' }}></i>
+                                        {platform}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="row d-flex justify-content-center justify-content-lg-start  d-md-none">
+                        <div className="col-4">
+                            <ul>
+                                {["About the company", "About the team", "Book-A-Room", "Corporate Trainings"].map((item, index) => (
+                                    <li key={index} className="pb-3 ">{item}</li>
                                 ))}
                             </ul>
                         </div>
                         <div className="col-4">
                             <ul>
-                                {["Terms of Services", "Privacy Policy", "Licenses", "Security"].map((item, index) => (
-                                    <li key={index} style={{ color: '#DBDBDB' }} className="pb-3">{item}</li>
+                                {["Get In Touch", "Partner With Us", "Insights", "What We Do",].map((item, index) => (
+                                    <li key={index} className="pb-3">{item}</li>
                                 ))}
                             </ul>
                         </div>
                         <div className="col-4">
                             <ul>
                                 {["Facebook", "Twitter", "Instagram", "LinkedIn"].map((platform, index) => (
-                                    <li key={index} style={{ color: '#DBDBDB' }} className="pb-3">
-                                        <i className={`fab fa-${platform.toLowerCase()} mr-2`} style={{ color: 'white' }}></i>
+                                    <li key={index} className="pb-3">
+                                        <i className={`fab fa-${platform.toLowerCase()} mr-2 mr-lg-4`} style={{ color: 'white' }}></i>
                                         {platform}
                                     </li>
                                 ))}
@@ -57,9 +83,9 @@ const Footer = () => {
                     }}
                 >
                     <div className='row'>
-                        <div className='col-lg-12 mt-3 text-center text-md-left'><h3>Our Branches</h3></div>
+                        <div className='col-lg-12 mt-3 text-center text-md-left px-2'><h3>Our Branches</h3></div>
                     </div>
-                    <div className="row">
+                    <div className="row p-0">
                         <div className="col-12 col-md-4 my-4">
                             <div className="row align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Minar} alt="minar" className="" style={{ height: "31px" }} /></div>
@@ -68,10 +94,10 @@ const Footer = () => {
                             <div className="row my-3 align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Map} alt="Map" className="" style={{ height: "17px" }} /></div>
                                 <div className="col-10"> <div>
-                                    G99P+Q28, Cantt, Lahore, Punjab, Pakistan , Near <br className='d-none d-md-block'/> PAF IT  University
+                                    G99P+Q28, Cantt, Lahore, Punjab, Pakistan , Near <br className='d-none d-md-block' /> PAF IT  University
                                 </div></div>
                             </div>
-                            <div className="row align-items-baseline">
+                            <div className="row ">
                                 <div className="col-2 d-flex justify-content-center align-items-center"><img src={PhoneIcon} alt="PhoneIcon" className="" style={{ height: "17px" }} /></div>
                                 <div className="col-10"> <div>03004406163</div></div>
                             </div>
@@ -90,7 +116,7 @@ const Footer = () => {
                                     Karachi
                                 </div></div>
                             </div>
-                            <div className="row align-items-baseline">
+                            <div className="row ">
                                 <div className="col-2 d-flex justify-content-center align-items-center"><img src={PhoneIcon} alt="PhoneIcon" className="" style={{ height: "17px" }} /></div>
                                 <div className="col-10"> <div>03332775771</div></div>
                             </div>
@@ -108,7 +134,7 @@ const Footer = () => {
                                     Punjab 46000
                                 </div></div>
                             </div>
-                            <div className="row align-items-baseline">
+                            <div className="row">
                                 <div className="col-2 d-flex justify-content-center align-items-center"><img src={PhoneIcon} alt="PhoneIcon" className="" style={{ height: "17px" }} /></div>
                                 <div className="col-10"> <div>03004406163</div></div>
                             </div>
@@ -117,13 +143,13 @@ const Footer = () => {
 
                 </div>
             </div>
-            <div className="container-fluid p-0">
-               <div className="row p-0">
-               <div className="col-6 d-none d-md-block"></div>
-                <div className="col-12 col-md-6  d-flex justify-content-center justify-content-md-end align-items-center ">
-                    <h2 className='text-center text-md-left d-flex flex-column flex-md-row justify-content-md-center align-items-center'>POWERED <br className='d-block d-md-none' /> BY <br className='d-block d-md-none' /><img src={FedumanLogo} alt="" className='mx-md-3 mx-0' style={{width:'35%', height:'auto'}} /> </h2> 
+            <div className="container-fluid p-0 my-5 my-md-0">
+                <div className="row p-0">
+                    <div className="col-6 d-none d-md-block"></div>
+                    <div className="col-12 col-md-6  d-flex justify-content-center justify-content-md-end align-items-center ">
+                        <h3 className='text-center text-md-left d-flex flex-column flex-md-row justify-content-md-center align-items-center'>POWERED <br className='d-block d-md-none' /> BY <br className='d-block d-md-none' /><img src={FedumanLogo} alt="" className='mx-md-3 mx-0' style={{ width: '35%', height: 'auto' }} /> </h3>
+                    </div>
                 </div>
-               </div>
             </div>
             <div className="container-fluid p-0" >
                 <hr style={{ color: "white", background: "white" }} className='container-fluid p-0' />
