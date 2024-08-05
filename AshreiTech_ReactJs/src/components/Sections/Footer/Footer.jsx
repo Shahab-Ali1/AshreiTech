@@ -96,7 +96,7 @@ const Footer = () => {
                             <div className="row my-3 align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Map} alt="Map" className="" style={{ height: "17px" }} /></div>
                                 <div className="col-10 font13"> <div>
-                                    G99P+Q28, Cantt, Lahore, Punjab, Pakistan , Near <br className='d-none d-md-block font13' /> PAF IT  University
+                                NASTP Delta, 69 Abid Majeed Road (Old Airport Building), Lahore Cantonment.
                                 </div></div>
                             </div>
                             <div className="row ">
@@ -111,12 +111,7 @@ const Footer = () => {
                             </div>
                             <div className="row my-3 align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Map} alt="Map" className="" style={{ height: "17px" }} /></div>
-                                <div className="col-10 font13"> <div>
-                                    NASTP Building, Main
-                                    Shahrah-e-Faisal Rd,
-                                    Faisal Cantonment, Karachi
-                                  
-                                </div></div>
+                                <div className="col-10 font13"> <div> NASTP Silicon, 2nd Floor, <br className='d-none d-md-block' />  Main Shahrah e Faisal, Adj. PAF S&RC <br className='d-none d-md-block'/> Karachi.</div></div>
                             </div>
                             <div className="row ">
                                 <div className="col-2 d-flex justify-content-center align-items-center"><img src={PhoneIcon} alt="PhoneIcon" className="" style={{ height: "17px" }} /></div>
@@ -131,9 +126,7 @@ const Footer = () => {
                             <div className="row my-3 align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Map} alt="Map" className="" style={{ height: "17px" }} /></div>
                                 <div className="col-10 font13"> <div>
-                                    J453+GPQ, Old Airport Rd,
-                                    Chaklala Cantt.Rawalpindi,
-                                    Punjab 46000
+                                NASTP Alpha, Main Terminal Complex, Chaklala Cantt., Rawalpindi, Punjab 46000
                                 </div></div>
                             </div>
                             <div className="row">
