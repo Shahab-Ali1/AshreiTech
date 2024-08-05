@@ -255,8 +255,10 @@ export default function BookaRoom() {
                             <div className="col-sm-5 col-lg-3">
                                 <img src={heart} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
-                            <h4 className="my-2 ">Venue At The Heart Of The City</h4>
-                            <p className="line-height-sm">Located Inside NASTP, Karachi, with Shaded Parking Space for Up To 500 Cars!</p>
+                            <h4 className="my-2 ">Venue At The Heart Of The City –
+                            </h4>
+                            <p className="line-height-sm">Located inside NASTP, Karachi, with shaded parking space for up to 500 cars!
+                            </p>
                         </div>
                     </div>
                     <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5">
@@ -264,8 +266,9 @@ export default function BookaRoom() {
                             <div className="col-sm-5 col-lg-3">
                                 <img src={pray} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
-                            <h4 className="my-2 ">Segregated Prayer Area</h4>
-                            <p className="line-height-sm">Neat And Tidy, For Ladies And Gentlemen, With Ample Rest Rooms On Every Floor!</p>
+                            <h4 className="my-2 ">Segregated Prayer Area –                            </h4>
+                            <p className="line-height-sm">Neat and tidy, for ladies and gentlemen, with ample rest rooms on every floor!
+                            </p>
                         </div>
                     </div>
                     <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5">
@@ -273,8 +276,10 @@ export default function BookaRoom() {
                             <div className="col-sm-5 col-lg-3">
                                 <img src={wifi} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
-                            <h4 className="my-2 " style={{ color: 'black !important' }} >24/7 Wi-Fi</h4>
-                            <p className="line-height-sm">Obviously, it’s Not A Luxury – It’s A Necessity, Because We Are Serving A Global World!</p>
+                            <h4 className="my-2 " style={{ color: 'black !important' }} >24/7 Wi-Fi –
+                            </h4>
+                            <p className="line-height-sm">Obviously, it’s not a luxury – it’s a necessity, because we are serving a global world!
+                            </p>
                         </div>
                     </div>
                     <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5">
@@ -282,8 +287,9 @@ export default function BookaRoom() {
                             <div className="col-sm-5 col-lg-3">
                                 <img src={tech} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
-                            <h4 className="my-2 ">High-Tech Learning Venue</h4>
-                            <p className="line-height-sm">We Are A Tech Company, And We Know The Importance Of Tech <br /> Amenities!</p>
+                            <h4 className="my-2 ">High-Tech Learning Venue –                            </h4>
+                            <p className="line-height-sm">Of Course, we are a tech company, and we know the importance of tech amenities!
+                            </p>
                         </div>
                     </div>
                 </div>

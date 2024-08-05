@@ -70,9 +70,9 @@ export default function Blog() {
         }
       },
       {
-        breakpoint: 800,
+        breakpoint: 750,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: true
@@ -81,7 +81,7 @@ export default function Blog() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 1
         }

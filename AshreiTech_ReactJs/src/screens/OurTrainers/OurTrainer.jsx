@@ -43,7 +43,7 @@ export default function OurTrainer() {
   const { TrainerContainer } = style;
 
   return (
-    <div className={`${TrainerContainer}`}>
+    <div className={`${TrainerContainer} mb-5`}>
       <div className="row" style={{ position: 'relative' }}>
         <div className="gradientCircle d-none d-lg-block"></div>
         <div className="col-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center align-items-center align-items-lg-start">

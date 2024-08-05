@@ -156,7 +156,7 @@ const Footer = () => {
                     <div className="col-12 col-md-8 text-center text-md-left">
                         Copyright © 2024 AshreiTech
                     </div>
-                    <div className="col-12 col-md-4 d-flex justify-content-end">
+                    <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end">
                         <li style={{ listStyle: 'none' }}>
                             <i className="fa-solid fa-circle " style={{ color: '#00FFCA' }}></i>
                             All System Operational &nbsp; 2024 ASHRIETECH

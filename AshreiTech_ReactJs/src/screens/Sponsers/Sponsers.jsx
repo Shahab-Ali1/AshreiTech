@@ -19,7 +19,7 @@ const Sponsers = () => {
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 position: 'relative',
-            }} className="container-fluid  px-1 px-lg-5">
+            }} className="container-fluid  px-1 px-lg-5 my-5 my-md-0">
                 <div className="gradientCircle d-none d-lg-block"></div>
                 <div className="container-fluid d-flex flex-column justify-content-center align-items-center " style={{ position: 'relative', zIndex: 2 }}>
                     <div className=" mt-0 mt-lg-5">
@@ -44,7 +44,7 @@ const Sponsers = () => {
 
                         <div className={`${sponsers_logo_container} col-3`}>
                             <a href="https://nastp.gov.pk/" target="_blank" rel="noopener noreferrer">
-                                <img src={nastp_logo} alt="" className="p-4" />
+                                <img src={nastp_logo} alt="" className="p-0 p-md-4" />
                             </a>
                         </div>
                         <div className={`${sponsers_logo_container} col-3`}>

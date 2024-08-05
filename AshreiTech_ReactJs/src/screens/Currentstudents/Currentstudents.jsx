@@ -32,7 +32,7 @@ const Currentstudents = () => {
   return (
     <>
     <ScrollTrigger onEnter={() => setCounter(true)} onExit={() => setCounter(false)}>
-      <div className="container-fluid my-5 py-5"
+      <div className="container-fluid my-3 py-0 mb-md-5 pb-md-5"
         style={{
           backgroundImage: `url(${transformingbg})`,
           backgroundSize: 'cover',
@@ -176,7 +176,7 @@ const Currentstudents = () => {
     </ScrollTrigger>
 
     <div className="container">
-    <div className="col-12 mt-5 py-5" style={{ backgroundImage: `url(${turningbg})` }}>
+    <div className="col-12 mt-0 py-0 mt-md-5 pt-md-5" style={{ backgroundImage: `url(${turningbg})` }}>
               <h1 className="text-center generic_heading">
                 <span style={{ color: '#000000' }}>Turning Goals Into</span>
                 <span style={{ color: '#008F71' }}>&nbsp;Wins!</span>
