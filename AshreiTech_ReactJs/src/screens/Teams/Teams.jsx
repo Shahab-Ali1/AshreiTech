@@ -22,7 +22,7 @@ import Jamshed_Zaman from '../../assets/team/Jamshed_Zaman.png'
 import Muhammad_Ibrahim from '../../assets/team/Muhammad_Ibrahim.png'
 import Footer from "../../components/Sections/Footer/Footer";
 
-const { team_container, banner_container, gradientCircle,team_description,card_Team,card_Team_bg } = style;
+const { team_container, banner_container, gradientCircle, team_description, card_Team, card_Team_bg } = style;
 
 const Teams = () => {
 
@@ -31,7 +31,7 @@ const Teams = () => {
             name: "Sohail Zindani",
             title: "Director and CEO",
             image: Sohail_Zindani,
-            description: "",
+            description: "A Researcher, Leadership & Innovation Consultant, and high-performance coach, he has worked with literally all major companies across Pakistan and in nearby regions.He is the Founder of Learning Minds, Curator of Insights Business Forum, and serves on the advisory boards of various development sector organizations.",
             linkedInProfile: 'https://www.linkedin.com/in/sohailzindani/'
         },
         {
@@ -42,11 +42,25 @@ const Teams = () => {
             linkedInProfile: 'https://www.linkedin.com/in/adnan-ahmed-92b80235/'
         },
         {
-            name: "Arsalan Ahmed",
-            title: "Accounts Officer",
-            image: Arsalan_Ahmed,
-            description: "As the finance officer, Arsalan supports the financial operations of this organization by processing transactions and maintaining financial records. He also excels in analyzing financial data, offering valuable insights and support to senior finance professionals.",
-            linkedInProfile: 'https://www.linkedin.com/in/arsalan-ahmed-708974106/'
+            name: "M.Khurram Muqueem Khan",
+            title: "Financial Controller",
+            image: M_Khurram_Muqueem,
+            description: "Thriving as a results-driven finance professional, he is a trusted team player and valuable partner to business and service functions. He cultivates key organizational competencies by championing simplicity, collaboration, trust, innovation, and customer-centricity, all with unwavering integrity.",
+            linkedInProfile: ''
+        },
+        {
+            name: "Talha shabbir",
+            title: "IT Administrator",
+            image: Talha_Shabbir,
+            description: "As a seasoned IT Administrator, Syed Talha orchestrates seamless network operations and fortifies security solutions, propelling business growth with cutting-edge technology infrastructure. With a mastery in system administration and network architecture, he crafts high-availability solutions that minimize downtime and amplify productivity.",
+            linkedInProfile: ''
+        },
+        {
+            name: "Mufarrah Malik",
+            title: "Head of Partnerships and Outreach",
+            image: Mufarrah_Malik,
+            description: "A dynamic and results-oriented professional with a proven track record in corporate liaison, events and stakeholder management. Experienced in cultivating impactful partnerships, executing events, and facilitating personal and professional development workshops. Skilled in communication and process optimization.",
+            linkedInProfile: 'https://www.linkedin.com/in/mufarrah/'
         },
         {
             name: "Azmeena Furniturewala",
@@ -56,13 +70,6 @@ const Teams = () => {
             linkedInProfile: 'https://www.linkedin.com/in/azmeena-k/'
         },
         {
-            name: "Farrukh Hussain Lodhi",
-            title: "Assistant Manager Accounts/Tax",
-            image: Farrukh_Hussain_Lodhi,
-            description: "",
-            linkedInProfile: ''
-        },
-        {
             name: "Ghulam Muhammad Soomro",
             title: "Community Manager",
             image: Ghulam_Muhammad_Soomro,
@@ -70,22 +77,8 @@ const Teams = () => {
             linkedInProfile: 'https://www.linkedin.com/in/gm95soomro/'
         },
         {
-            name: "Humra Tahir",
-            title: "Executive-Marcom",
-            image: Humra_Tahir,
-            description: "Humra is a final-year Mass Communication student and MarCom Executive at AshreiTech Academy. With a knack for creativity, she crafts marketing content that truly engages and stands out. Humra blends her academic knowledge with hands-on experience, bringing fresh, compelling ideas to the table.",
-            linkedInProfile: 'https://www.linkedin.com/in/humra-tahir/'
-        },
-        {
-            name: "Jamshed Zaman",
-            title: "Community Manager",
-            image: Jamshed_Zaman,
-            description: "With a diverse background spanning professional development, education, journalism, and public relations, Jamshed bring a rich tapestry of experiences and skills. In more than 4 years of professional experience in Educational Development at various renowned institutions including University of Central Punjab and Forman Christian College, Jamshed has been deeply involved in educational administration curriculum design, facilitating workshops, fostering industry connections for student opportunities.",
-            linkedInProfile: 'https://www.linkedin.com/in/jamshedzaman252/'
-        },
-        {
             name: "Kanwal Rizvi",
-            title: "Assistant Administrative",
+            title: "HR Lead",
             image: Kanwal_Rizvi,
             description: "Kanwal is a dynamic HR professional specializing in talent acquisition, employee engagement, and organizational development. She crafts innovative HR strategies that drive performance and create an inclusive workplace. With a keen eye on strategic planning and HR analytics, she’s committed to boosting efficiency and employee satisfaction.",
             linkedInProfile: 'https://www.linkedin.com/in/kanwal-abidi-a66b262ab/'
@@ -98,18 +91,39 @@ const Teams = () => {
             linkedInProfile: 'https://www.linkedin.com/in/maryiam-pervaiz-40595121/'
         },
         {
-            name: "M.Khurram Muqueem Khan",
-            title: "Financial Controller",
-            image: M_Khurram_Muqueem,
-            description: "Thriving as a results-driven finance professional, he is a trusted team player and valuable partner to business and service functions. He cultivates key organizational competencies by championing simplicity, collaboration, trust, innovation, and customer-centricity, all with unwavering integrity.",
+            name: "Samra Mazhar",
+            title: "HR & Event Manager",
+            image: Samra_Mazhar,
+            description: "Samra, the Placements and Events Lead at AshreiTech Academy, is a dynamic and approachable professional known for her enthusiasm and dedication. A true people's person, she brings a warm and engaging presence to every interaction. Passionate about her role, Samra ensures all her responsibilities are met with utmost seriousness and a smile.",
+            linkedInProfile: 'https://www.linkedin.com/in/samra-m-1782b5201/'
+        },
+        {
+            name: "Unsar Hameed",
+            title: "IT Manager",
+            image: Unsar_Hameed,
+            description: "As a seasoned IT Manager, Unsar leads technology strategy and innovation, driving business transformation and growth with effective IT solutions and agile leadership. With expertise in IT service management and digital transformation, he creates impactful solutions that enhance collaboration and efficiency.",
+            linkedInProfile: 'https://www.linkedin.com/in/unsar-hameed-379896106/'
+        },
+        {
+            name: "Arsalan Ahmed",
+            title: "Accounts Officer",
+            image: Arsalan_Ahmed,
+            description: "As the finance officer, Arsalan supports the financial operations of this organization by processing transactions and maintaining financial records. He also excels in analyzing financial data, offering valuable insights and support to senior finance professionals.",
+            linkedInProfile: 'https://www.linkedin.com/in/arsalan-ahmed-708974106/'
+        },
+        {
+            name: "Farrukh Hussain Lodhi",
+            title: "Assistant Manager Accounts/Tax",
+            image: Farrukh_Hussain_Lodhi,
+            description: "",
             linkedInProfile: ''
         },
         {
-            name: "Mufarrah Malik",
-            title: "Head of Partnerships and Outreach",
-            image: Mufarrah_Malik,
-            description: "A dynamic and results-oriented professional with a proven track record in corporate liaison, events and stakeholder management. Experienced in cultivating impactful partnerships, executing events, and facilitating personal and professional development workshops. Skilled in communication and process optimization.",
-            linkedInProfile: 'https://www.linkedin.com/in/mufarrah/'
+            name: "Humra Tahir",
+            title: "Executive-Marcom",
+            image: Humra_Tahir,
+            description: "Humra is a final-year Mass Communication student and MarCom Executive at AshreiTech Academy. With a knack for creativity, she crafts marketing content that truly engages and stands out. Humra blends her academic knowledge with hands-on experience, bringing fresh, compelling ideas to the table.",
+            linkedInProfile: 'https://www.linkedin.com/in/humra-tahir/'
         },
         {
             name: "Myhammad Ibrahim",
@@ -117,6 +131,13 @@ const Teams = () => {
             image: Muhammad_Ibrahim,
             description: "At AshreiTech Academy, Muhammad Ibrahim is the Student Coordinator, dedicated to resolving student issues and offering counseling sessions. He mentors the next generation of tech talent, guiding students and career shifters in acquiring essential skills. Passionate about innovation and growth, he is committed to equipping students with the tools they need to succeed.",
             linkedInProfile: 'https://www.linkedin.com/in/muhammad-ibrahim-505b13235/'
+        },
+        {
+            name: "Jamshed Zaman",
+            title: "Community Manager",
+            image: Jamshed_Zaman,
+            description: "With a diverse background spanning professional development, education, journalism, and public relations, Jamshed bring a rich tapestry of experiences and skills. In more than 4 years of professional experience in Educational Development at various renowned institutions including University of Central Punjab and Forman Christian College, Jamshed has been deeply involved in educational administration curriculum design, facilitating workshops, fostering industry connections for student opportunities.",
+            linkedInProfile: 'https://www.linkedin.com/in/jamshedzaman252/'
         },
         {
             name: "Noman Ali",
@@ -132,30 +153,9 @@ const Teams = () => {
             description: "As a seasoned IT Administrator, Syed Talha orchestrates seamless network operations and fortifies security solutions, propelling business growth with cutting-edge technology infrastructure. With a mastery in system administration and network architecture, he crafts high-availability solutions that minimize downtime and amplify productivity.",
             linkedInProfile: ''
         },
-        {
-            name: "Samra Mazhar",
-            title: "HR & Event Manager",
-            image: Samra_Mazhar,
-            description: "Samra, the Placements and Events Lead at AshreiTech Academy, is a dynamic and approachable professional known for her enthusiasm and dedication. A true people's person, she brings a warm and engaging presence to every interaction. Passionate about her role, Samra ensures all her responsibilities are met with utmost seriousness and a smile.",
-            linkedInProfile: 'https://www.linkedin.com/in/samra-m-1782b5201/'
-        },
-        {
-            name: "Talha shabbir",
-            title: "IT Administrator",
-            image: Talha_Shabbir,
-            description: "As a seasoned IT Administrator, Syed Talha orchestrates seamless network operations and fortifies security solutions, propelling business growth with cutting-edge technology infrastructure. With a mastery in system administration and network architecture, he crafts high-availability solutions that minimize downtime and amplify productivity.",
-            linkedInProfile: ''
-        },
-        {
-            name: "Unsar Hameed",
-            title: "IT Manager",
-            image: Unsar_Hameed,
-            description: "As a seasoned IT Manager, Unsar leads technology strategy and innovation, driving business transformation and growth with effective IT solutions and agile leadership. With expertise in IT service management and digital transformation, he creates impactful solutions that enhance collaboration and efficiency.",
-            linkedInProfile: 'https://www.linkedin.com/in/unsar-hameed-379896106/'
-        },
     ];
 
-   
+
 
     return (
         <>

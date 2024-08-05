@@ -146,7 +146,7 @@ const Footer = () => {
                     <img src={apple_playstore} alt="" srcset=""  style={{height:31}}/>
                     </div>
                     <div className="col-12 col-md-6  d-flex justify-content-center justify-content-md-end align-items-center ">
-                        <h3 className='text-center text-md-left d-flex flex-column flex-md-row justify-content-md-end align-items-center font15'>POWERED <br className='d-block d-md-none' /> BY <br className='d-block d-md-none' /><img src={FedumanLogo} alt="" className='mx-md-3 mx-0' style={{ width: '35%', height: 'auto' }} /> </h3>
+                        <h3 className='text-center text-md-left d-flex flex-column flex-md-row justify-content-md-end align-items-center font15'>POWERED <br className='d-block d-md-none' /> BY <br className='d-block d-md-none' /><img src={FedumanLogo} alt="" className='ml-md-3 mx-0' style={{ width: '35%', height: 'auto' }} /> </h3>
                     </div>
                 </div>
             </div>
