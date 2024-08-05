@@ -92,12 +92,12 @@ const Currentstudents = () => {
                   <img src={st8} alt="" className={image} />
                   <div className={`d-flex justify-content-center flex-column align-items-center ${overlay}`}>
                     {counter && (
-                      <h3 style={{ fontWeight: 'bolder' }}>
+                      <h4 style={{ fontWeight: 'bolder' }}>
                         <CountUp end={800} prefix="" separator="," />
                         <span>+</span>
-                      </h3>
+                      </h4>
                     )}
-                    <h2>Current students</h2>
+                    <h3>Current students</h3>
                   </div>
                   <div className={`col-4 d-flex justify-content-center flex-column align-items-left ${overlayLeftUp}`}>
                     {counter && (

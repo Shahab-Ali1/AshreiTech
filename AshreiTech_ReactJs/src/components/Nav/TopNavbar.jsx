@@ -86,9 +86,9 @@ export default function TopNavbar() {
                   className="dropbtn hover-rotate fa fa-chevron-right"
                 ></i>
                 <div className="dropdown-content">
-                  <Link className="" to={"/aboutthecompany"} style={{ fontSize: '15.008px' }}>
+                  {/* <Link className="" to={"/aboutthecompany"} style={{ fontSize: '15.008px' }}>
                     About The Company
-                  </Link>
+                  </Link> */}
                   <Link className="" to={"/teams"} style={{ fontSize: '15.008px' }}>
                     About The Team
                   </Link>
@@ -116,14 +116,14 @@ export default function TopNavbar() {
                 </span>
               </Link>
             </li>
-            <li className="font15 pointer">
+            <li className="font15 pointer d-none">
               <Link style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
                 <span className="animated_link">
                   Partner With Us
                 </span>
               </Link>
             </li>
-            <li className="font15 pointer">
+            <li className="font15 pointer d-none">
               <Link style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
                 <span className="animated_link">
                   Insights

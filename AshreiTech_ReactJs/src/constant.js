@@ -78,8 +78,8 @@ const departmentsFaq = [
     answer: 'Classes are held in the evenings and can be either 3 days a week or 2 days a week, each session lasting 2 hours. The specific days depend on the schedule of each training program.'
   },
   {
-    question: 'Who are the trainers at AshreiTech Academy?',
-    answer: ' Our trainers are professionals from various organizations who are experts in their respective fields.'
+    question: 'Who are the experts at AshreiTech Academy?',
+    answer: ' Our training experts are professionals from various organizations who are experienced in their respective fields.'
   },
   {
     question: ' Does AshreiTech Academy provide job placement assistance?',
@@ -112,7 +112,7 @@ const departmentsFaq = [
     answer: 'If you miss a class, our trainers will help you catch up. You can also reach out to the admin for any specific queries.'
   },
   {
-    question: 'Do I receive a certification upon completion of the course?**',
+    question: 'Do I receive a certification upon completion of the course?',
     answer: ' Yes, upon successful completion of the course and assessments, you will receive a certification from AshreiTech Academy.'
   },
 

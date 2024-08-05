@@ -37,7 +37,7 @@ export default function WhatWeDo() {
                                 <img src={WeD1} alt="" />
                                 <h3 className={`${hover_text}`}>
                                     “Things change and unless you’re open to other ideas, you’re going to be totally irrelevant.”
-                                    – Tom Whitby
+                                    <br />–Tom Whitby
                                 </h3>
                             </div>
                         </div>
@@ -82,7 +82,7 @@ export default function WhatWeDo() {
                             <h1>Rock Your Events With Your Trusted Venue Partner</h1>
                             <p className="mt-3"> Being located precisely in
                                 the center of the city, with high end safety and security, and equipped with all
-                                the high-tech amenities, you get everything you need to run a successful in-house training, meetings & networking events. Our experienced staff is wellversed in the latest audiovisual technologies, ensuring smooth operations and
+                                the high-tech amenities, you get everything you need to run a successful in-house training, meetings & networking events. Our experienced staff is well-versed in the latest audiovisual technologies, ensuring smooth operations and
                                 technical support throughout your event.
                             </p>
                             <div className='d-flex pt-4 flex-column flex-lg-row'>
@@ -104,7 +104,7 @@ export default function WhatWeDo() {
                             <div className={`${image_container}`}>
                                 <img src={WeD2} alt="" />
                                 <h3 className={`${hover_text}`}>
-                                "The classroom should be an entrance into the world, not an escape from it." – John Ciardi
+                                "The classroom should be an entrance into the world, not an escape from it."<br /> –John Ciardi
                                 </h3>
                             </div>
                         </div>
@@ -128,7 +128,7 @@ export default function WhatWeDo() {
                             <div className={`${image_container}`}>
                                 <img src={WeD3} alt="" />
                                 <h3 className={`${hover_text}`}>
-                                "Anyone who stops learning is old, at twenty or eighty. Anyone who keeps learning stays young." –  Henry Ford
+                                "Anyone who stops learning is old, at twenty or eighty. Anyone who keeps learning stays young." <br /> –Henry Ford
                                 </h3>
                             </div>
                         </div>
@@ -176,7 +176,7 @@ export default function WhatWeDo() {
                     <div className="row p-3 p-md-5 d-flex justify-content-center align-items-center">
                         <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left">
                             <h1>Become a Talent Hero</h1>
-                            <p className="mt-3">CSR Giving is perhaps one on the most sustainable forms of giving in
+                            <p className="mt-3">CSR giving is perhaps one on the most sustainable forms of giving in
                                 the overall philanthropic canvas of Pakistan. Yes, investing in healthcare, primary education,
                                 social welfare, and habitat is important, but It’s also critically important to invest in domains
                                 that strengthens the overall GDP and ultimately benefit everything mentioned above.</p>
@@ -200,7 +200,7 @@ export default function WhatWeDo() {
                             <div className={`${image_container}`}>
                                 <img src={WeD4} alt="" />
                                 <h3 className={`${hover_text}`}>
-                                "The business of business should not be about money. It should be about responsibility. It should be about public good, not private greed." – Anita Roddick 
+                                "The business of business should not be about money. It should be about responsibility. It should be about public good, not private greed." <br /> –Anita Roddick 
                                 </h3>
                             </div>
                         </div>

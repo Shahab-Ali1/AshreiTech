@@ -95,27 +95,27 @@ const Footer = () => {
                             </div>
                             <div className="row my-3 align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Map} alt="Map" className="" style={{ height: "17px" }} /></div>
-                                <div className="col-10 font13"> <div>
-                                NASTP Delta, 69 Abid Majeed Road (Old Airport Building), Lahore Cantonment.
+                                <div className="col-10 font15"> <div>
+                                NASTP Delta, 69 Abid Majeed Road (Old Airport Building).
                                 </div></div>
                             </div>
                             <div className="row ">
                                 <div className="col-2 d-flex justify-content-center align-items-center"><img src={PhoneIcon} alt="PhoneIcon" className="" style={{ height: "17px" }} /></div>
-                                <div className="col-10 font13"> <div>03004406163</div></div>
+                                <div className="col-10 font15"> <div>03004406163</div></div>
                             </div>
                         </div>
                         <div className="col-12 col-md-4 my-4">
                             <div className="row align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={pakistanIcon} alt="minar" className="" style={{ height: "31px" }} /></div>
-                                <div className="col-10 font13"><div>Karachi Branch</div></div>
+                                <div className="col-10 "><div>Karachi Branch</div></div>
                             </div>
                             <div className="row my-3 align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Map} alt="Map" className="" style={{ height: "17px" }} /></div>
-                                <div className="col-10 font13"> <div> NASTP Silicon, 2nd Floor, <br className='d-none d-md-block' />  Main Shahrah e Faisal, Adj. PAF S&RC <br className='d-none d-md-block'/> Karachi.</div></div>
+                                <div className="col-10 font15"> <div> NASTP Silicon, 2nd Floor,Main Shahrah e Faisal, Adj. PAF S&RC. </div></div>
                             </div>
                             <div className="row ">
                                 <div className="col-2 d-flex justify-content-center align-items-center"><img src={PhoneIcon} alt="PhoneIcon" className="" style={{ height: "17px" }} /></div>
-                                <div className="col-10 font13"> <div>03332775771</div></div>
+                                <div className="col-10 font15"> <div>03332775771</div></div>
                             </div>
                         </div>
                         <div className="col-12 col-md-4 my-4">
@@ -125,13 +125,13 @@ const Footer = () => {
                             </div>
                             <div className="row my-3 align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Map} alt="Map" className="" style={{ height: "17px" }} /></div>
-                                <div className="col-10 font13"> <div>
-                                NASTP Alpha, Main Terminal Complex, Chaklala Cantt., Rawalpindi, Punjab 46000
+                                <div className="col-10 font15"> <div>
+                                NASTP Alpha, Main Terminal Complex, Chaklala Cantt.
                                 </div></div>
                             </div>
                             <div className="row">
                                 <div className="col-2 d-flex justify-content-center align-items-center"><img src={PhoneIcon} alt="PhoneIcon" className="" style={{ height: "17px" }} /></div>
-                                <div className="col-10 font13"> <div>03004406163</div></div>
+                                <div className="col-10 font15"> <div>03004406163</div></div>
                             </div>
                         </div>
                     </div>
@@ -146,7 +146,7 @@ const Footer = () => {
                     <img src={apple_playstore} alt="" srcset=""  style={{height:31}}/>
                     </div>
                     <div className="col-12 col-md-6  d-flex justify-content-center justify-content-md-end align-items-center ">
-                        <h3 className='text-center text-md-left d-flex flex-column flex-md-row justify-content-md-center align-items-center font15'>POWERED <br className='d-block d-md-none' /> BY <br className='d-block d-md-none' /><img src={FedumanLogo} alt="" className='mx-md-3 mx-0' style={{ width: '35%', height: 'auto' }} /> </h3>
+                        <h3 className='text-center text-md-left d-flex flex-column flex-md-row justify-content-md-end align-items-center font15'>POWERED <br className='d-block d-md-none' /> BY <br className='d-block d-md-none' /><img src={FedumanLogo} alt="" className='mx-md-3 mx-0' style={{ width: '35%', height: 'auto' }} /> </h3>
                     </div>
                 </div>
             </div>
@@ -154,11 +154,11 @@ const Footer = () => {
                 <hr style={{ color: "white", background: "white" }} className='container-fluid p-0' />
                 <div className="row d-flex justify-content-between">
                     <div className="col-12 col-md-8 text-center text-md-left">
-                        COMPLIANCE PRIVACY TERMS TRADEMARK
+                        Copyright © 2024 AshreiTech
                     </div>
-                    <div className="col-12 col-md-4">
+                    <div className="col-12 col-md-4 d-flex justify-content-end">
                         <li style={{ listStyle: 'none' }}>
-                            <i className="fa-solid fa-circle mr-2" style={{ color: '#00FFCA' }}></i>
+                            <i className="fa-solid fa-circle " style={{ color: '#00FFCA' }}></i>
                             All System Operational &nbsp; 2024 ASHRIETECH
                         </li>
                     </div>
