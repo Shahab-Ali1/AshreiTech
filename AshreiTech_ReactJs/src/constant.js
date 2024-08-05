@@ -13,7 +13,7 @@ export const infoCardData = [
   {
     image: vector1,
     heading: 'Students',
-    discription: '500+'
+    discription: '800+'
   },
   {
     image: vector2,
@@ -28,7 +28,7 @@ export const infoCardData = [
   {
     image: vector5,
     heading: 'Cities',
-    discription: '5+'
+    discription: '3+'
   },
   {
     image: vector3,

@@ -30,8 +30,9 @@ const Currentstudents = () => {
   }, []);
 
   return (
+    <>
     <ScrollTrigger onEnter={() => setCounter(true)} onExit={() => setCounter(false)}>
-      <div className="container-fluid"
+      <div className="container-fluid my-5 py-5"
         style={{
           backgroundImage: `url(${transformingbg})`,
           backgroundSize: 'cover',
@@ -92,7 +93,7 @@ const Currentstudents = () => {
                   <div className={`d-flex justify-content-center flex-column align-items-center ${overlay}`}>
                     {counter && (
                       <h3 style={{ fontWeight: 'bolder' }}>
-                        <CountUp end={15000} prefix="" separator="," />
+                        <CountUp end={800} prefix="" separator="," />
                         <span>+</span>
                       </h3>
                     )}
@@ -101,8 +102,8 @@ const Currentstudents = () => {
                   <div className={`col-4 d-flex justify-content-center flex-column align-items-left ${overlayLeftUp}`}>
                     {counter && (
                       <h4 style={{ color: '#003650', fontWeight: 'bold' }}>
-                        <CountUp end={100} prefix="" separator="," />
-                        <span></span>
+                        <CountUp end={800} prefix="" separator="," />
+                        <span>+</span>
                       </h4>
                     )}
                     <h6 className="font-weight-bold mt-2"> Students Are Trained, certified and placed
@@ -120,7 +121,7 @@ const Currentstudents = () => {
                   <div className={`col-4 d-flex justify-content-center flex-column align-items-left ${overlayRrightUp}`}>
                     {counter && (
                       <h4 style={{ color: '#FAA72E', fontWeight: 'bold' }}>
-                        <CountUp end={47} prefix="" separator="," />
+                        <CountUp end={150 } prefix="" separator="," />
                         <span></span>
                       </h4>
                     )}
@@ -169,19 +170,21 @@ const Currentstudents = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </ScrollTrigger>
 
-
-            <div className="col-12 mt-5 py-3" style={{ backgroundImage: `url(${turningbg})` }}>
+    <div className="container">
+    <div className="col-12 mt-5 py-5" style={{ backgroundImage: `url(${turningbg})` }}>
               <h1 className="text-center generic_heading">
                 <span style={{ color: '#000000' }}>Turning Goals Into</span>
                 <span style={{ color: '#008F71' }}>&nbsp;Wins!</span>
               </h1>
               <TestimonialSlider />
             </div>
-          </div>
-        </div>
-      </div>
-    </ScrollTrigger>
+    </div>
+    </>
   );
 };
 

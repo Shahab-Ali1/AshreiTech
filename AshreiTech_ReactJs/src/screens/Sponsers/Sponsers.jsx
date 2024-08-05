@@ -28,7 +28,7 @@ const Sponsers = () => {
                                 {" "}
                                 Our Partners
                             </h1>
-                            <p className="font20 text-center  mt-4 ">
+                            <p className="font20 text-center  mt-4 d-none">
                                 Our experts are here to empower the future of tech by enabling students and professionals.
                                 ,
                             </p>
@@ -37,16 +37,25 @@ const Sponsers = () => {
                     </div>
                     <div className={`${sponsers} mb-5 mt-4`}>
                         <div className={`${sponsers_logo_container} col-3`}>
-                            <img src={integration_experts_logo} className="" alt="" />
+                            <a href="https://integrationxperts.com/" target="_blank" rel="noopener noreferrer">
+                                <img src={integration_experts_logo} className="" alt="Integration Experts Logo" />
+                            </a>
+                        </div>
+
+                        <div className={`${sponsers_logo_container} col-3`}>
+                            <a href="https://nastp.gov.pk/" target="_blank" rel="noopener noreferrer">
+                                <img src={nastp_logo} alt="" className="p-4" />
+                            </a>
                         </div>
                         <div className={`${sponsers_logo_container} col-3`}>
-                            <img src={nastp_logo} alt="" />
+                            <a href="https://www.rewterz.com/" target="_blank" rel="noopener noreferrer">
+                                <img src={rewterz_logo} alt="" />
+                            </a>
                         </div>
                         <div className={`${sponsers_logo_container} col-3`}>
-                            <img src={rewterz_logo} alt="" />
-                        </div>
-                        <div className={`${sponsers_logo_container} col-3`}>
+                            <a href="https://avanzasolutions.com/?gad_source=1&gclid=Cj0KCQjw8MG1BhCoARIsAHxSiQlH7jdzhY8JxctgkpHdef8D3FVbbtUe4Q06vE2MJ84Vchwzmx5pg9YaAi8eEALw_wcB"target="_blank" rel="noopener noreferrer">
                             <img src={avanza_logo} alt="" />
+                            </a>
                         </div>
                     </div>
 
