@@ -50,7 +50,7 @@ const Teams = () => {
         },
         {
             name: "Talha shabbir",
-            title: "IT Administrator",
+            title: "Head, Academics & Programs",
             image: Talha_Shabbir,
             description: "As a seasoned IT Administrator, Syed Talha orchestrates seamless network operations and fortifies security solutions, propelling business growth with cutting-edge technology infrastructure. With a mastery in system administration and network architecture, he crafts high-availability solutions that minimize downtime and amplify productivity.",
             linkedInProfile: ''
@@ -92,7 +92,7 @@ const Teams = () => {
         },
         {
             name: "Samra Mazhar",
-            title: "HR & Event Manager",
+            title: "Placements n Events lead",
             image: Samra_Mazhar,
             description: "Samra, the Placements and Events Lead at AshreiTech Academy, is a dynamic and approachable professional known for her enthusiasm and dedication. A true people's person, she brings a warm and engaging presence to every interaction. Passionate about her role, Samra ensures all her responsibilities are met with utmost seriousness and a smile.",
             linkedInProfile: 'https://www.linkedin.com/in/samra-m-1782b5201/'
@@ -126,7 +126,7 @@ const Teams = () => {
             linkedInProfile: 'https://www.linkedin.com/in/humra-tahir/'
         },
         {
-            name: "Myhammad Ibrahim",
+            name: "Raja Muhammad Ibrahim",
             title: "Student Coordinator",
             image: Muhammad_Ibrahim,
             description: "At AshreiTech Academy, Muhammad Ibrahim is the Student Coordinator, dedicated to resolving student issues and offering counseling sessions. He mentors the next generation of tech talent, guiding students and career shifters in acquiring essential skills. Passionate about innovation and growth, he is committed to equipping students with the tools they need to succeed.",

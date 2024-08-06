@@ -117,7 +117,7 @@
     color: #7620FF;
   }
   input:-webkit-autofill {
-    -webkit-box-shadow:0 0 0 50px #fff inset; /* Change the color to your own background color */
+    -webkit-box-shadow:0 0 0 50px #000000 inset; /* Change the color to your own background color */
     box-shadow: transparent;
     -webkit-text-fill-color: #fff;
   }
@@ -130,7 +130,7 @@
     font-weight: 400;
   }
   .container {
-    width: 100%;
+    width: 100%; 
     max-width: 1220px;
     margin: 0 auto;
     padding: 0px 30px;
@@ -241,7 +241,7 @@
  }
 
  input:-webkit-autofill {
-   -webkit-box-shadow: 0 0 0 50px #fff inset;
+   -webkit-box-shadow: 0 0 0 50px #000000 inset;
    /* Change the color to your own background color */
    box-shadow: transparent;
    -webkit-text-fill-color: #fff;

@@ -12,6 +12,7 @@ import SingleCourse from "./screens/SingleCourseScreen/SingleCourse";
 import CorporateTrainings from "./screens/CorporateTrainings/CorporateTrainings";
 import CorporateTrainingSingle from "./screens/CorporateTrainingSingle/CorporateTrainingSingle";
 import CorporateSocialResponsibility from "./screens/CorporateSocialResponsibility/CorporateSocialResponsibility";
+import NewComingSoon from "./components/Sections/CommingSoonPage/NewCommingSoon";
 
 export const router = createHashRouter([
     {
@@ -22,9 +23,13 @@ export const router = createHashRouter([
       path: "/",
       element:  <Landing />,
     },  
+    // {
+    //   path: "/CommingSoon",
+    //   element:  <CommingSoon />,
+    // },  
     {
       path: "/CommingSoon",
-      element:  <CommingSoon />,
+      element:  <NewComingSoon />,
     },  
     {
       path: "/GetInTouch",
