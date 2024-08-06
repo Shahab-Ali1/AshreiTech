@@ -13,6 +13,22 @@ import apple_playstore from "../../../assets/apple_playstore.png"
 
 const Footer = () => {
     const { footer_container, containerOne, containerOnePiece, containerTwo } = style;
+    const socialLinks = [{
+        platform: "Facebook",
+        link: "https://www.facebook.com/share/DuezdWqvykpw5pyM/?mibextid=LQQJ4d"
+    }
+        , {
+        platform: "Youtube",
+        link: "https://youtu.be/pouatBcg9FA?si=5avikfgrnWtSHWyd"
+    },
+    {
+        platform: "Instagram",
+        link: "https://www.instagram.com/ashrei.tech?igsh=MXJueWVmbXh5M2l1YQ=="
+    }
+        , {
+        platform: "LinkedIn",
+        link: "https://www.linkedin.com/company/ashrei-tech/"
+    },]
     return (
         <div className={`${footer_container} container-fluid  px-3 px-md-3 px-lg-5  pt-0 pt-md-5`}>
             <div className="row px-0 px-md-5 py-0 py-md-5 ">
@@ -23,7 +39,7 @@ const Footer = () => {
                     <div className="row  justify-content-center justify-content-lg-start d-none d-md-flex">
                         <div className="mr-5 px-3">
                             <ul>
-                                {["About the company", "About the team", "Book-A-Room", "Corporate Trainings"].map((item, index) => (
+                                {["About the Company", "About the Team", "Book-A-Room", "Corporate Trainings"].map((item, index) => (
                                     <li key={index} className="pb-3 ">{item}</li>
                                 ))}
                             </ul>
@@ -37,10 +53,13 @@ const Footer = () => {
                         </div>
                         <div className="mr-5 px-3">
                             <ul>
-                                {["Facebook", "Twitter", "Instagram", "LinkedIn"].map((platform, index) => (
+                                {socialLinks.map(({ platform, link, }, index) => (
                                     <li key={index} className="pb-3">
-                                        <i className={`fab fa-${platform.toLowerCase()} mr-3`} style={{ color: 'white' }}></i>
-                                        {platform}
+
+                                        <a href={link} className='text-white' target='_blank'>
+                                            <i className={`fab fa-${platform.toLowerCase()} mr-3`} style={{ color: 'white' }}></i>
+                                            {platform}
+                                        </a>
                                     </li>
                                 ))}
                             </ul>
@@ -63,10 +82,13 @@ const Footer = () => {
                         </div>
                         <div className="col-4">
                             <ul>
-                                {["Facebook", "Twitter", "Instagram", "LinkedIn"].map((platform, index) => (
+                                {socialLinks.map(({ platform, link, }, index) => (
                                     <li key={index} className="pb-3">
-                                        <i className={`fab fa-${platform.toLowerCase()} mr-2 mr-lg-4`} style={{ color: 'white' }}></i>
-                                        {platform}
+
+                                        <a href={link} className='text-white' target='_blank' >
+                                            <i className={`fab fa-${platform.toLowerCase()} mr-3`} style={{ color: 'white' }}></i>
+                                            {platform}
+                                        </a>
                                     </li>
                                 ))}
                             </ul>
@@ -96,7 +118,7 @@ const Footer = () => {
                             <div className="row my-3 align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Map} alt="Map" className="" style={{ height: "17px" }} /></div>
                                 <div className="col-10 font15"> <div>
-                                NASTP Delta, 69 Abid Majeed Road (Old Airport Building).
+                                    NASTP Delta, 69 Abid Majeed Road (Old Airport Building).
                                 </div></div>
                             </div>
                             <div className="row ">
@@ -126,7 +148,7 @@ const Footer = () => {
                             <div className="row my-3 align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Map} alt="Map" className="" style={{ height: "17px" }} /></div>
                                 <div className="col-10 font15"> <div>
-                                NASTP Alpha, Main Terminal Complex, Chaklala Cantt.
+                                    NASTP Alpha, Main Terminal Complex, Chaklala Cantt.
                                 </div></div>
                             </div>
                             <div className="row">
@@ -141,9 +163,9 @@ const Footer = () => {
             <div className="container-fluid p-0 my-5 my-md-0">
                 <div className="row p-0">
                     <div className="col-6 d-none d-md-block">
-                    {/* <i class="fa-brands fa-google-play"></i> */}
-                    <img src={GetitonIcon} alt="" srcset=""  style={{height:31 ,marginRight:16}}/>
-                    <img src={apple_playstore} alt="" srcset=""  style={{height:31}}/>
+                        {/* <i class="fa-brands fa-google-play"></i> */}
+                        <img src={GetitonIcon} alt="" srcset="" style={{ height: 31, marginRight: 16 }} />
+                        <img src={apple_playstore} alt="" srcset="" style={{ height: 31 }} />
                     </div>
                     <div className="col-12 col-md-6  d-flex justify-content-center justify-content-md-end align-items-center ">
                         <h3 className='text-center text-md-left d-flex flex-column flex-md-row justify-content-md-end align-items-center font15'>POWERED <br className='d-block d-md-none' /> BY <br className='d-block d-md-none' /><img src={FedumanLogo} alt="" className='ml-md-3 mx-0' style={{ width: '35%', height: 'auto' }} /> </h3>
@@ -154,12 +176,12 @@ const Footer = () => {
                 <hr style={{ color: "white", background: "white" }} className='container-fluid p-0' />
                 <div className="row d-flex justify-content-between">
                     <div className="col-12 col-md-8 text-center text-md-left">
-                        Copyright © 2024 AshreiTech
+                        All Rights Reserved 2024
                     </div>
                     <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end">
                         <li style={{ listStyle: 'none' }}>
                             <i className="fa-solid fa-circle " style={{ color: '#00FFCA' }}></i>
-                            All System Operational &nbsp; 2024 ASHRIETECH
+                            &nbsp; All Systems Operational &nbsp; 2024 ASHRIETECH
                         </li>
                     </div>
                 </div>

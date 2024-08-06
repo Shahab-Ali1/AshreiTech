@@ -211,6 +211,8 @@ export const AdmissionEnquiry = (props) => {
 
     const clickSubmit = () => {
 
+        debugger;
+
         let isValid = RequiredFields();
         if (!isValid) {
             return false;

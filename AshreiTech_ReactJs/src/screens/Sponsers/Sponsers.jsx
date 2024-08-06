@@ -7,6 +7,7 @@ import avanza_logo from '../../assets/avanza_logo.png'
 import QRandndiPh from "../../assets/Frame 7873.png"
 import rewterz_logo from '../../assets/rewterz_logo.png'
 import nastp_logo from '../../assets/nastp_logo.png'
+import EduManBlue from '../../assets/EduManBlue.png'
 import Faq from "../Faq/Faq";
 import departmentsFaq from "../../constant"
 
@@ -36,25 +37,29 @@ const Sponsers = () => {
 
                     </div>
                     <div className={`${sponsers} mb-5 mt-4`}>
-                        <div className={`${sponsers_logo_container} col-3`}>
+                        <div className={`${sponsers_logo_container} `}>
                             <a href="https://integrationxperts.com/" target="_blank" rel="noopener noreferrer">
                                 <img src={integration_experts_logo} className="" alt="Integration Experts Logo" />
                             </a>
                         </div>
-
-                        <div className={`${sponsers_logo_container} col-3`}>
+                        <div className={`${sponsers_logo_container} `}>
                             <a href="https://nastp.gov.pk/" target="_blank" rel="noopener noreferrer">
                                 <img src={nastp_logo} alt="" className="p-0 p-md-4" />
                             </a>
                         </div>
-                        <div className={`${sponsers_logo_container} col-3`}>
+                        <div className={`${sponsers_logo_container} `}>
                             <a href="https://www.rewterz.com/" target="_blank" rel="noopener noreferrer">
                                 <img src={rewterz_logo} alt="" />
                             </a>
                         </div>
-                        <div className={`${sponsers_logo_container} col-3`}>
+                        <div className={`${sponsers_logo_container} `}>
                             <a href="https://avanzasolutions.com/?gad_source=1&gclid=Cj0KCQjw8MG1BhCoARIsAHxSiQlH7jdzhY8JxctgkpHdef8D3FVbbtUe4Q06vE2MJ84Vchwzmx5pg9YaAi8eEALw_wcB"target="_blank" rel="noopener noreferrer">
                             <img src={avanza_logo} alt="" />
+                            </a>
+                        </div>
+                        <div className={`${sponsers_logo_container} `}>
+                            <a href="https://edu-man.com/" target="_blank" rel="noopener noreferrer">
+                                <img src={EduManBlue} className="p-0 p-md-3" alt="Integration Experts Logo" />
                             </a>
                         </div>
                     </div>

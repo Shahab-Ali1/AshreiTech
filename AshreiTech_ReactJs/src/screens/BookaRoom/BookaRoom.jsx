@@ -135,14 +135,13 @@ export default function BookaRoom() {
                 </div>
             </div>
 
-            <div className="container-fluid py-4"
-                style={{ position: 'relative', zIndex: -2 }}
-            >
+            <div className="container-fluid py-4" style={{ position: 'relative', zIndex: 1 }}>
                 <div className={`${gradientCircleLeftTop} d-none d-md-block`}></div>
                 <div className="row p-0 p-lg-5 d-flex justify-content-center align-items-center">
                     <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left px-0 px-lg-5">
-                        <h1 >Professional Ambiance</h1>
-                        <p className="mt-3" style={{ color: '#6D6D6D' }}>Our rooms are meticulously designed to create a professional atmosphere
+                        <h1>Professional Ambiance</h1>
+                        <p className="mt-3" style={{ color: '#6D6D6D' }}>
+                            Our rooms are meticulously designed to create a professional atmosphere
                             conducive to productivity and focus. <br />
                             Each room is customized to suit various types and room layouts of
                             corporate events and trainings, whether it's a board meeting, seminar,
@@ -151,10 +150,12 @@ export default function BookaRoom() {
                         <button className="slider_btn d-none">Explore Our Rooms</button>
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-12">
-                        <video controls style={{
+                        <video controls autoPlay muted loop style={{
                             width: '100%',
                             height: 'auto',
                             borderRadius: '15px',
+                            zIndex: 2,
+                            position: 'relative'
                         }}>
                             <source src={videoOne} type="video/mp4" />
                             Your browser does not support the video tag.
@@ -162,19 +163,18 @@ export default function BookaRoom() {
                     </div>
                 </div>
             </div>
-            <div
-                className="container-fluid"
-                style={{
-                    backgroundColor: '#5A8C75',
-                    backgroundImage: `url(${wave3})`,
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                }}
-            >
+
+
+            <div className="container-fluid" style={{
+                backgroundColor: '#5A8C75',
+                backgroundImage: `url(${wave3})`,
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+            }}>
                 <div className="py-4">
                     <div className="row p-0 p-lg-5 d-flex justify-content-center align-items-center">
                         <div className="col-lg-6 col-md-6 col-sm-12">
-                            <video controls style={{
+                            <video controls autoPlay muted loop style={{
                                 width: '100%',
                                 height: 'auto',
                                 borderRadius: '15px',
@@ -185,11 +185,12 @@ export default function BookaRoom() {
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left text-white px-0 px-lg-5">
                             <h1>High-Tech Equipment</h1>
-                            <p className="mt-3">State-of-the-art audiovisual equipment ensures seamless
+                            <p className="mt-3">
+                                State-of-the-art audiovisual equipment ensures seamless
                                 presentations and interactive sessions.
                                 <br />
                                 High-resolution latest commercial grade screen and traditional
-                                whiteboards covers all the training needs of communication and
+                                whiteboards cover all the training needs of communication and
                                 collaboration.
                             </p>
                             <button className="slider_btn d-none">Learn More</button>
@@ -197,19 +198,20 @@ export default function BookaRoom() {
                     </div>
                 </div>
             </div>
-            <div className="container-fluid py-4"
-                style={{ position: 'relative', zIndex: -2 }}>
+
+            <div className="container-fluid py-4" style={{ position: 'relative', zIndex: 1 }}>
                 <div className={`${gradientCircleLeftTwo} d-none d-md-block`}></div>
-                <div className="row p-0 p-lg-5 d-flex justify-content-center align-items-center ">
+                <div className="row p-0 p-lg-5 d-flex justify-content-center align-items-center">
                     <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left px-0 px-lg-5">
                         <h1>Customizable Amenities</h1>
-                        <p className="mt-3" style={{ color: '#6D6D6D' }}>We offer customizable amenities such as catering services, coffee stations,
+                        <p className="mt-3" style={{ color: '#6D6D6D' }}>
+                            We offer customizable amenities such as catering services, coffee stations,
                             and breakout areas to meet specific event requirements.
                             <br />
                             Our dedicated staff is available to assist with setup, technical support, and
                             any other logistical needs, ensuring a seamless event experience.
                         </p>
-                        <div className='d-none d-lg-block' style={{
+                        <div className="d-none d-lg-block" style={{
                             width: '10px',
                             height: '10px',
                             backgroundColor: '#525FE1',
@@ -217,15 +219,16 @@ export default function BookaRoom() {
                             marginLeft: '100px',
                             marginTop: '50px',
                             border: '1px solid white',
-
                         }}></div>
                         <button className="slider_btn d-none">View Packages</button>
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-12">
-                        <video controls style={{
+                        <video controls autoPlay muted loop style={{
                             width: '100%',
                             height: 'auto',
                             borderRadius: '15px',
+                            zIndex: 2,
+                            position: 'relative'
                         }}>
                             <source src={videoThree} type="video/mp4" />
                             Your browser does not support the video tag.
@@ -233,6 +236,8 @@ export default function BookaRoom() {
                     </div>
                 </div>
             </div>
+
+
             <div
                 className="container-fluid py-4 "
                 style={{

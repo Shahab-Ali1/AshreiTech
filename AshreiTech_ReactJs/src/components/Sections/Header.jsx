@@ -21,12 +21,12 @@ export default function Header() {
           {/* <li data-target="#arouselExampleIndicators" data-slide-to="1" cl></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> */}
         </ol>
-        <div className="carousel-inner"> 
-          <div className="carousel-item active  mb-3  " style={{  width: '100%', background:"transparent",height: 'auto',backgroundRepeat:'no-repeat', backgroundSize:'cover', backgroundPosition:'center' }}>
-          <video autoPlay loop muted style={{width:"100%",height:"100%"}}>
-          <source src={homebannervideo} type="video/mp4" style={{width:"100%",height:"100%"}} />
-          Your Browser Does Not Support The Video Tag.
-        </video>
+        <div className="carousel-inner">
+          <div className="carousel-item active  mb-3  " style={{ width: '100%', background: "transparent", height: 'auto', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <video autoPlay loop muted playsInline style={{ width: "100%", height: "100%" }}>
+              <source src={homebannervideo} type="video/mp4" />
+              Your Browser Does Not Support The Video Tag.
+            </video>
             {/* <div className="d-flex flex-column justify-content-center align-items-center py-5 my-5 ">
               <h1 className="pt-3 text-center text-md-left">
                 Complexity <span style={{ color: "#008F71" }}>Simplified,</span>
@@ -80,7 +80,7 @@ export default function Header() {
           <span className="sr-only">Next</span>
         </a>
       </div>
-      <InfoCard data={infoCardData}   count={true}/>
+      <InfoCard data={infoCardData} count={true} />
     </>
   );
 }

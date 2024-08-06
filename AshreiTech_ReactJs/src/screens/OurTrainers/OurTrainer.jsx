@@ -2,6 +2,10 @@ import React from 'react';
 import style from './style.module.css';
 import Usman from '../../assets/Usman.png';
 import Abdullah from '../../assets/abdullah.png';
+import Fahad from '../../assets/Fahad.png';
+import Shahzaib from '../../assets/Shahzaib.png';
+import Tayyab from '../../assets/Tayyab.png';
+import Najeeb from '../../assets/Najeeb.png';
 import Slider from "react-slick";
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
@@ -61,9 +65,11 @@ export default function OurTrainer() {
                 <div className="p-5 m-2 card-style1">
                   <img src={Usman} className="card-img-top" alt="..." />
                   <div className='text-center'>
-                    <h5 className='mt-3'> Usman</h5>
+                    <h6 className='mt-3'> Usman</h6>
                     <p style={{ fontSize: '14px' }}>Associate SAP Consultant</p>
+                    <a href="https://www.linkedin.com/in/theusmansidd/">
                     <i className="fab fa-linkedin mr-2 fa-2x mt-1"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -71,29 +77,59 @@ export default function OurTrainer() {
                 <div className="p-5 m-2 card-style2">
                   <img src={Abdullah} className="card-img-top" alt="..." />
                   <div className='text-center'>
-                    <h5 className='mt-3'>Abdullah</h5>
+                    <h6 className='mt-3'>Abdullah</h6>
                     <p style={{ fontSize: '14px' }}>Associate SAP Consultant</p>
+                    <a href="https://www.linkedin.com/in/syed-muhammad-abdullah-1724971b0/">
                     <i className="fab fa-linkedin mr-2 fa-2x mt-1"></i>
+                    </a>
                   </div>
                 </div>
               </div>
               <div className="d-flex justify-content-center align-items-center">
-                <div className="p-5 m-2 card-style1">
-                  <img src={Usman} className="card-img-top" alt="..." />
+                <div className="p-5 m-2 card-style3">
+                  <img src={Fahad} className="card-img-top" alt="..." />
                   <div className='text-center'>
-                    <h5 className='mt-3'> Usman</h5>
-                    <p style={{ fontSize: '14px' }}>Associate SAP Consultant</p>
+                    <h6 className='mt-3'> Fahad Khan</h6>
+                    <p style={{ fontSize: '14px' }}>Salesforce Consultant</p>
+                    <a href="https://www.linkedin.com/in/fahad29?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                     <i className="fab fa-linkedin mr-2 fa-2x mt-1"></i>
+                    </a>
                   </div>
                 </div>
               </div>
               <div className="d-flex justify-content-center align-items-center">
-                <div className="p-5 m-2 card-style2">
-                  <img src={Abdullah} className="card-img-top" alt="..." />
+                <div className="p-5 m-2 card-style4">
+                  <img src={Shahzaib} className="card-img-top" alt="..." />
                   <div className='text-center'>
-                    <h5 className='mt-3'>Abdullah</h5>
-                    <p style={{ fontSize: '14px' }}>Associate SAP Consultant</p>
+                    <h6 className='mt-3'>Shahzaib Soomro</h6>
+                    <p style={{ fontSize: '14px' }}>Python Driving - AI Engineer</p>
+                    <a href="https://www.linkedin.com/in/shahzaibsoomro66/">
                     <i className="fab fa-linkedin mr-2 fa-2x mt-1"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex justify-content-center align-items-center">
+                <div className="p-5 m-2 card-style5">
+                  <img src={Tayyab} className="card-img-top" alt="..." />
+                  <div className='text-center'>
+                    <h6 className='mt-3'>Sayed Tayyab Akhtar</h6>
+                    <p style={{ fontSize: '14px' }}>VAPT Analyst</p>
+                    <a href="https://www.linkedin.com/in/tayyab-akhtar-06a1383a/">
+                    <i className="fab fa-linkedin mr-2 fa-2x mt-1"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="d-flex justify-content-center align-items-center">
+                <div className="p-5 m-2 card-style6">
+                  <img src={Najeeb} className="card-img-top" alt="..." />
+                  <div className='text-center'>
+                    <h6 className='mt-3'>Najeeb Ahmed Qureshi</h6>
+                    <p style={{ fontSize: '14px' }}>Salesforce Consultant</p>
+                    <a href="">
+                    <i className="fab fa-linkedin mr-2 fa-2x mt-1"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -123,6 +159,34 @@ const SliderWrapper = styled.div`
     height:400px;
     border-radius: 16px;
     border: 1px solid #8FCEC1;
+    background-color: white;
+  }
+  .card-style3 {
+    width: 18rem;
+    height:400px;
+    border-radius: 16px;
+    border: 1px solid #c3b25a;
+    background-color: white;
+  }
+  .card-style4 {
+    width: 18rem;
+    height:400px;
+    border-radius: 16px;
+    border: 1px solid #60bd92;
+    background-color: white;
+  }
+  .card-style5 {
+    width: 18rem;
+    height:400px;
+    border-radius: 16px;
+    border: 1px solid #ac6558;
+    background-color: white;
+  }
+  .card-style6 {
+    width: 18rem;
+    height:400px;
+    border-radius: 16px;
+    border: 1px solid #81b5ad;
     background-color: white;
   }
   .slick-prev, .slick-next {
