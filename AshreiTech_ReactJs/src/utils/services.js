@@ -20,6 +20,7 @@ export const getMethod = async (method) => {
     return response.data;
   } catch (error) {
     console.error('Error fetching service:', error);
+    throw error;
   }
 };
 
@@ -37,6 +38,7 @@ export const PostMethod = async (method, data) => {
     return response.data;
   } catch (error) {
     console.error('Error posting data:', error);
+    throw error;
   }
 };
 
