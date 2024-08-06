@@ -36,7 +36,6 @@ export const AdmissionEnquiry = (props) => {
 
     useEffect(() => {
         getCity();
-        // getCourseCategory();
         getGender();
         getStudentStatus();
         getjobStatus();
@@ -59,7 +58,6 @@ export const AdmissionEnquiry = (props) => {
 
     const getCourseCategory = (cityid) => {
         try {
-            // getMethod("lov/v2/list/COTY")
             getMethod(`SMCourse/V2/CourseAgainstCityid/${cityid}`)
                 .then((data) => {
                     if (data) {
@@ -177,7 +175,7 @@ export const AdmissionEnquiry = (props) => {
         }
         if (name === "courses") {
             let row = courses.find(x => x.id === Number(value))
-            setEntityId(row.entityid)
+            setEntityId({entityid: row.entityid, batchid:row.batchid})
         }
         else if (name === "city") {
             getCourseCategory(value)
@@ -246,7 +244,7 @@ export const AdmissionEnquiry = (props) => {
                 "phone": null,
                 "cellno": formData.cellno,
                 "email": null,
-                "entityid": EntityId,
+                "entityid": EntityId?.entityid,
                 "sourcetypeid": 3651,
                 "description": null,
                 "assignto": 64046,
@@ -257,7 +255,7 @@ export const AdmissionEnquiry = (props) => {
                 "statusid": null,
                 "followup": null,
                 "id": null,
-                "batchid": 14751,
+                "batchid": EntityId?.batchid,
                 "testdate": null,
                 "picktime": null,
                 "droptime": null,
