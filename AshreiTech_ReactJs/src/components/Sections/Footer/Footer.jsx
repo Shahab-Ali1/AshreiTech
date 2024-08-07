@@ -31,15 +31,15 @@ const Footer = () => {
     },]
 
     const linkOne = [
-        { name: "About the company", url: "/#/CommingSoon" },
+        { name: "About the company", url: "/#/CommingSoonPage" },
         { name: "About the team", url: "/#/teams" },
         { name: "Book-A-Room", url: "/#/BookaRoom" },
         { name: "Corporate Trainings", url: "/#/CommingSoon" }
     ];
     const linkTwo = [
         { name: "Get In Touch", url: "/#/GetInTouch" },
-        { name: "Partner With Us", url: "/#/CommingSoon" },
-        { name: "Insights", url: "/#/CommingSoon" },
+        { name: "Partner With Us", url: "/#/CommingSoonPage" },
+        { name: "Insights", url: "/#/CommingSoonPage" },
         { name: "What We Do", url: "/#/WhatWeDo" }
     ];
 
@@ -53,18 +53,18 @@ const Footer = () => {
                     <div className="row  justify-content-center justify-content-lg-start d-none d-md-flex">
                         <div className="mr-5 px-3">
                             <ul>
-                            {linkOne.map((link, index) => (
+                                {linkOne.map((link, index) => (
                                     <li key={index} className="pb-3">
-                                        <a href={link.url} style={{color:'white'}}>{link.name}</a>
+                                        <a href={link.url} style={{ color: 'white' }}>{link.name}</a>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                         <div className="mr-5 px-3">
                             <ul>
-                            {linkTwo.map((link, index) => (
+                                {linkTwo.map((link, index) => (
                                     <li key={index} className="pb-3">
-                                        <a href={link.url} style={{color:'white'}}>{link.name}</a>
+                                        <a href={link.url} style={{ color: 'white' }}>{link.name}</a>
                                     </li>
                                 ))}
                             </ul>
@@ -86,9 +86,9 @@ const Footer = () => {
                     <div className="row d-flex justify-content-center justify-content-lg-start  d-md-none">
                         <div className="col-4">
                             <ul>
-                            {linkOne.map((link, index) => (
+                                {linkOne.map((link, index) => (
                                     <li key={index} className="pb-3">
-                                        <a href={link.url} style={{color:'white'}}>{link.name}</a>
+                                        <a href={link.url} style={{ color: 'white' }}>{link.name}</a>
                                     </li>
                                 ))}
 
@@ -98,7 +98,7 @@ const Footer = () => {
                             <ul>
                                 {linkTwo.map((link, index) => (
                                     <li key={index} className="pb-3">
-                                        <a href={link.url} style={{color:'white'}}>{link.name}</a>
+                                        <a href={link.url} style={{ color: 'white' }}>{link.name}</a>
                                     </li>
                                 ))}
                             </ul>
@@ -186,9 +186,13 @@ const Footer = () => {
             <div className="container-fluid p-0 my-5 my-md-0">
                 <div className="row p-0">
                     <div className="col-6 d-none d-md-block">
-                        {/* <i class="fa-brands fa-google-play"></i> */}
-                        <img src={GetitonIcon} alt="" srcset="" style={{ height: 31, marginRight: 16 }} />
-                        <img src={apple_playstore} alt="" srcset="" style={{ height: 31 }} />
+                        <a href="https://play.google.com/store/apps/details?id=com.ashreitechapp&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
+                            <img src={GetitonIcon} alt="" style={{ height: 31, marginRight: 16 }} />
+                        </a>
+                        <a href="https://apps.apple.com/pk/app/ashreitech/id6466579678" target="_blank" rel="noopener noreferrer">
+                            <img src={apple_playstore} alt="" srcset="" style={{ height: 31 }} />
+                        </a>
+
                     </div>
                     <div className="col-12 col-md-6  d-flex justify-content-center justify-content-md-end align-items-center ">
                         <h3 className='text-center text-md-left d-flex flex-column flex-md-row justify-content-md-end align-items-center font15'>POWERED <br className='d-block d-md-none' /> BY <br className='d-block d-md-none' /><img src={FedumanLogo} alt="" className='ml-md-3 mx-0' style={{ width: '35%', height: 'auto' }} /> </h3>

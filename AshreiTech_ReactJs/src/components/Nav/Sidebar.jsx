@@ -19,22 +19,22 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
 
       <UlStyle className="flexNullCenter flexColumn">
         <li className="semiBold font15 pointer">
-          <Link to="/CommingSoon" className="whiteColor">
+          <Link to="/CommingSoonPage" className="whiteColor">
             Sign In
           </Link>
         </li>
         <li className="semiBold font15 pointer">
-          <Link to="/CommingSoon" className="whiteColor">
+          <Link to="/CommingSoonPage" className="whiteColor">
             Find Tech Talent
           </Link>
         </li>
         <li className="semiBold font15 pointer">
-          <Link to="/CommingSoon" className="whiteColor">
+          <Link to="/CommingSoonPage" className="whiteColor">
             Digital Academy
           </Link>
         </li>
         <li className="semiBold font15 pointer">
-          <Link to="/CommingSoon" className="whiteColor">
+          <Link to="/CommingSoonPage" className="whiteColor">
             About the company
           </Link>
         </li>
@@ -53,20 +53,10 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             What We Do
           </Link>
         </li>
-        {/* <li className="semiBold font15 pointer">
-          <Link to="/CommingSoon" className="whiteColor">
-            Partner with Us
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer">
-          <Link to="/CommingSoon" className="whiteColor">
-            Insights
-          </Link>
-        </li> */}
       </UlStyle>
       <UlStyle className="flexSpaceCenter">
         <li className="semiBold font15 pointer">
-        <Link to="/CommingSoon" className="whiteColor" style={{ padding: "10px 30px 10px 0" }}>
+        <Link to="/CommingSoonPage" className="whiteColor" style={{ padding: "10px 30px 10px 0" }}>
         Log In
           </Link>
         </li>

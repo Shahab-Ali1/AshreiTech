@@ -44,17 +44,17 @@ export default function TopNavbar() {
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
       <div className="justify-content-end align-items-center top_menu d-none d-lg-flex" style={{ padding: "10px 45px", gap: "30px", height: 50, background: "#ecf6f4" }}>
-        <Link style={{ padding: "10px 15px" }} to="/CommingSoon" spy={true} smooth={true} offset={-80}>
+        <Link style={{ padding: "10px 15px" }} to="/CommingSoonPage" spy={true} smooth={true} offset={-80}>
           <span className="animated_link" style={{ color: '#008F71' }}>
             Find Tech Talent
           </span>
         </Link>
-        <Link style={{ padding: "10px 15px" }} to="/CommingSoon" spy={true} smooth={true} offset={-80}>
+        <Link style={{ padding: "10px 15px" }} to="/CommingSoonPage" spy={true} smooth={true} offset={-80}>
           <span className="animated_link" style={{ color: '#008F71' }}>
             Digital Academy
           </span>
         </Link>
-        <Link style={{ padding: "10px 15px" }} to="/CommingSoon" spy={true} smooth={true} offset={-80}>
+        <Link style={{ padding: "10px 15px" }} to="/CommingSoonPage" spy={true} smooth={true} offset={-80}>
           <span className="animated_link" style={{ color: '#008F71' }}>
             Sign In
           </span>
@@ -91,9 +91,6 @@ export default function TopNavbar() {
                   className="dropbtn hover-rotate fa fa-chevron-right"
                 ></i>
                 <div className="dropdown-content">
-                  {/* <Link className="" to={"/aboutthecompany"} style={{ fontSize: '15.008px' }}>
-                    About The Company
-                  </Link> */}
                   <Link className="" to={"/teams"} style={{ fontSize: '15.008px' }}>
                     About The Team
                   </Link>
@@ -155,11 +152,11 @@ export default function TopNavbar() {
                 <div className="container-fluid d-flex justify-content-center align-items-center">
                     <div className="row">
                         <div className="col-6 d-flex justify-content-center align-items-center flex-column">
-                            <img src={IOS_QR} alt="iOS QR Code" className="pt-5 mt-5" />
+                            <img src={IOS_QR} alt="iOS QR Code" className="pt-5 mt-5" height={"200px"} />
                             <div style={{ color: "#008F71" }}>iOS</div>
                         </div>
                         <div className="col-6 d-flex justify-content-center align-items-center flex-column">
-                            <img src={Androi_QR} alt="Android QR Code" className="pt-5 mt-5" />
+                            <img src={Androi_QR} alt="Android QR Code" className="pt-5 mt-5" height={"200px"} />
                             <div style={{ color: "#008F71" }}>Android</div>
                         </div>
                     </div>
