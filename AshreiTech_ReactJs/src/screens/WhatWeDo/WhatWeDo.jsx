@@ -17,6 +17,7 @@ export default function WhatWeDo() {
         navigate('/CorporateTrainings');
     };
     const { hover_text, image_container, } = style
+    
     return (
         <>
             <TopNavbar />
@@ -54,7 +55,7 @@ export default function WhatWeDo() {
                                     <p className='pt-2'>Nurture your entrepreneurial spirit with programs designed to empower you to turn your ideas into reality.</p>
                                 </div>
                             </div>
-                            <button className="slider_btn">View All Courses</button>
+                            <button className="slider_btn" onClick={()=> navigate('/#coursesWeOffer')} >View All Courses</button>
                         </div>
                     </div>
                 </div>
@@ -98,13 +99,13 @@ export default function WhatWeDo() {
                                         professional image and demonstrates your commitment to quality and excellence.</p>
                                 </div>
                             </div>
-                            <button className="slider_btn">Book Your Space</button>
+                            <button className="slider_btn" onClick={()=> navigate('/BookaRoom')}>Book Your Space</button>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12">
                             <div className={`${image_container}`}>
                                 <img src={WeD2} alt="" />
                                 <h3 className={`${hover_text}`}>
-                                "The classroom should be an entrance into the world, not an escape from it."<br /> –John Ciardi
+                                    "The classroom should be an entrance into the world, not an escape from it."<br /> –John Ciardi
                                 </h3>
                             </div>
                         </div>
@@ -124,11 +125,11 @@ export default function WhatWeDo() {
             >
                 <div className="container py-2">
                     <div className="row p-3 p-md-5 d-flex justify-content-center align-items-center">
-                    <div className="col-lg-6 col-md-6 col-sm-12">
+                        <div className="col-lg-6 col-md-6 col-sm-12">
                             <div className={`${image_container}`}>
                                 <img src={WeD3} alt="" />
                                 <h3 className={`${hover_text}`}>
-                                "Anyone who stops learning is old, at twenty or eighty. Anyone who keeps learning stays young." <br /> –Henry Ford
+                                    "Anyone who stops learning is old, at twenty or eighty. Anyone who keeps learning stays young." <br /> –Henry Ford
                                 </h3>
                             </div>
                         </div>
@@ -200,7 +201,7 @@ export default function WhatWeDo() {
                             <div className={`${image_container}`}>
                                 <img src={WeD4} alt="" />
                                 <h3 className={`${hover_text}`}>
-                                "The business of business should not be about money. It should be about responsibility. It should be about public good, not private greed." <br /> –Anita Roddick 
+                                    "The business of business should not be about money. It should be about responsibility. It should be about public good, not private greed." <br /> –Anita Roddick
                                 </h3>
                             </div>
                         </div>

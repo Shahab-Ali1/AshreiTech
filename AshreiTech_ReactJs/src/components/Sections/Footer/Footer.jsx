@@ -86,7 +86,7 @@ const Footer = () => {
                                     <li key={index} className="pb-3">
 
                                         <a href={link} className='text-white' target='_blank' >
-                                            <i className={`fab fa-${platform.toLowerCase()} mr-3`} style={{ color: 'white' }}></i>
+                                            <i className={`fab fa-${platform.toLowerCase()} mr-2`} style={{ color: 'white' }}></i>
                                             {platform}
                                         </a>
                                     </li>
@@ -175,10 +175,10 @@ const Footer = () => {
             <div className="container-fluid p-0" >
                 <hr style={{ color: "white", background: "white" }} className='container-fluid p-0' />
                 <div className="row d-flex justify-content-between">
-                    <div className="col-12 col-md-8 text-center text-md-left">
+                    <div className="col-12 col-md-6 text-center text-md-left">
                         All Rights Reserved 2024
                     </div>
-                    <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end">
+                    <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
                         <li style={{ listStyle: 'none' }}>
                             <i className="fa-solid fa-circle " style={{ color: '#00FFCA' }}></i>
                             &nbsp; All Systems Operational &nbsp;2024 ASHREITECH

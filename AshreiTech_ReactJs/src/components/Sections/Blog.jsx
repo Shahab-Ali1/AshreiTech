@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import offerbg from '../../assets/offerbg.png';
 import { getMethod, codeError, ClientId } from "../../utils/services";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Blog() {
   const navigate = useNavigate();
@@ -49,6 +49,16 @@ export default function Blog() {
       console.log(error);
     }
   };
+  
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [hash]);
 
   useEffect(() => {
     loadCategory();
@@ -96,6 +106,7 @@ export default function Blog() {
       }
     ]
   };
+  
 
   return (
     <div className="container-fluid px-5 py-5"
@@ -105,6 +116,7 @@ export default function Blog() {
         backgroundRepeat: 'no-repeat',
         position: 'relative'
       }}
+      id="coursesWeOffer"
     >
       <div className="w-100">
         <h1 className="text-center  generic_heading" > <span style={{ color: '#000000' }}>Courses We</span> <span style={{ color: '#008F71' }}>&nbsp;Offer</span></h1>
