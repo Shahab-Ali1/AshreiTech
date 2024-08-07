@@ -24,6 +24,9 @@ import videoOne from '../../assets/video/video1.mp4'
 import videoTwo from '../../assets/video/video2.mp4'
 import videoThree from '../../assets/video/video3.mp4'
 import { BookaRoomForm } from './BookaRoomForm';
+import videoFour from '../../assets/video/video4.mp4'
+import videoFive from '../../assets/video/video5.mp4'
+import videoSix from '../../assets/video/video6.mp4'
 
 
 export default function BookaRoom() {
@@ -126,9 +129,9 @@ export default function BookaRoom() {
                         <div className="d-flex flex-column justify-content-center align-items-center py-5 my-5 text-center" style={{ position: 'relative' }}>
                             <h2 className="font-weight-bold text-white pt-5 mt-5">The Trusted Venue Partner for all your Corporate
                                 Events & Conferences</h2>
-                            <h6 className="text-white mt-3">No matters if it’s a 10-person strategy meeting or a
+                            <h6 className="text-white mt-3">No matter if it’s a 10-person strategy meeting or a
                                 1000-person conference, we’ve got your back.</h6>
-                            <button className="slider_btn" data-toggle="modal" data-target="#bookingModal">Register Now</button>
+                            <button className="slider_btn" data-toggle="modal" data-target="#bookingModal">Book Now</button>
                         </div>
                         <div className="pb-5 mb-5"></div>
                     </div>
@@ -157,7 +160,8 @@ export default function BookaRoom() {
                             zIndex: 2,
                             position: 'relative'
                         }}>
-                            <source src={videoOne} type="video/mp4" />
+                            {/* <source src={videoOne} type="video/mp4" /> */}
+                            <source src={videoFour} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -179,7 +183,8 @@ export default function BookaRoom() {
                                 height: 'auto',
                                 borderRadius: '15px',
                             }}>
-                                <source src={videoTwo} type="video/mp4" />
+                                {/* <source src={videoTwo} type="video/mp4" /> */}
+                                <source src={videoFive} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -230,7 +235,8 @@ export default function BookaRoom() {
                             zIndex: 2,
                             position: 'relative'
                         }}>
-                            <source src={videoThree} type="video/mp4" />
+                            {/* <source src={videoThree} type="video/mp4" /> */}
+                            <source src={videoSix} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </div>

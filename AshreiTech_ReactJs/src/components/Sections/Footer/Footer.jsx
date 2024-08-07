@@ -181,7 +181,7 @@ const Footer = () => {
                     <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-end">
                         <li style={{ listStyle: 'none' }}>
                             <i className="fa-solid fa-circle " style={{ color: '#00FFCA' }}></i>
-                            &nbsp; All Systems Operational &nbsp; 2024 ASHRIETECH
+                            &nbsp; All Systems Operational &nbsp; 2024 ASHREITECH
                         </li>
                     </div>
                 </div>
