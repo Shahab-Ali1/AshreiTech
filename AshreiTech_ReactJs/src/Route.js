@@ -19,6 +19,10 @@ export const router = createHashRouter([
       path: "/",
       element:  <Landing />,
     },  
+    // {
+    //   path: "/CommingSoon",
+    //   element:  <CommingSoon />,
+    // }, 
     {
       path: "/CommingSoon",
       element:  <NewComingSoon />,
@@ -48,7 +52,7 @@ export const router = createHashRouter([
       element: <AboutTheCompany/>,
     },
     {
-      path: "/services",
+      path: "/CommingSoonPage",
       element: <CommingSoon/>,
     },
     {

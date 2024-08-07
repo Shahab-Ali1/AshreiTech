@@ -20,6 +20,7 @@ import M_Khurram_Muqueem from '../../assets/team/M_Khurram_Muqueem.png'
 import Maryam from '../../assets/team/maryam.png'
 import Jamshed_Zaman from '../../assets/team/Jamshed_Zaman.png'
 import Muhammad_Ibrahim from '../../assets/team/Muhammad_Ibrahim.png'
+import syed_sajjad_hussain from '../../assets/team/syed_sajjad_hussain.png'
 import Footer from "../../components/Sections/Footer/Footer";
 
 const { team_container, banner_container, gradientCircle, team_description, card_Team, card_Team_bg } = style;
@@ -36,7 +37,7 @@ const Teams = () => {
         },
         {
             name: "Adnan Ahmed",
-            title: "Operation Head",
+            title: "Head of Operations and IT",
             image: adnan_ahmed,
             description: "Academy, is pivotal for keeping things running smoothly and maintaining a friendly atmosphere. The team often seeks him out for his problem-solving skills and practical advice, which helps keep the workplace dynamic and harmonious. His commitment ensures that everything at the academy works well, making him a crucial member of the team.",
             linkedInProfile: 'https://www.linkedin.com/in/adnan-ahmed-92b80235/'
@@ -63,7 +64,7 @@ const Teams = () => {
             linkedInProfile: 'https://www.linkedin.com/in/mufarrah/'
         },
         {
-            name: "Azmeena Furniturewala",
+            name: "Azmeena Furniturewalla",
             title: "Head of Marketing and Communication",
             image: Azmeena_Furniturewala,
             description: "A MarCom professional with over 9 years of experience, in simple words, \"Work inspires her.\" Embarking on a journey from science to advertising, her evolution into a strategic and adaptive marketer has been nothing short of thrilling.",
@@ -71,13 +72,13 @@ const Teams = () => {
         },
         {
             name: "Ghulam Muhammad Soomro",
-            title: "Community Manager",
+            title: "Community Manager- KHI",
             image: Ghulam_Muhammad_Soomro,
             description: "At AshreiTech Academy, G.M is the driving force behind a vibrant tech community. Leveraging his entrepreneurial experience, he nurtures the next generation of tech talent by guiding students and career shifters in acquiring essential skills. Passionate about innovation and growth, he fosters a thriving tech community.",
             linkedInProfile: 'https://www.linkedin.com/in/gm95soomro/'
         },
         {
-            name: "Kanwal Rizvi",
+            name: "Kanwal Abidi",
             title: "HR Lead",
             image: Kanwal_Rizvi,
             description: "Kanwal is a dynamic HR professional specializing in talent acquisition, employee engagement, and organizational development. She crafts innovative HR strategies that drive performance and create an inclusive workplace. With a keen eye on strategic planning and HR analytics, she’s committed to boosting efficiency and employee satisfaction.",
@@ -85,14 +86,14 @@ const Teams = () => {
         },
         {
             name: "Maryiam Pervaiz",
-            title: "Manager Communication and PR / LHR",
+            title: "Manager Communication and PR- LHR",
             image: Maryam,
             description: "Maryam is a seasoned professional with over 15 years of extensive experience in journalism, media, marketing, and public relations. Her diverse skill set and strategic insight have been instrumental in building sustainable and trustworthy relationships with our clients and the corporate world. Maryam's multifaceted expertise makes her an invaluable asset to our organization, consistently driving our marketing initiatives to new heights. Her ability to blend creativity with strategic thinking ensures that our brand remains at the forefront of industry trends and client expectations. At our company, Maryam continues to lead with excellence, fostering a culture of innovation and reliability.",
             linkedInProfile: 'https://www.linkedin.com/in/maryiam-pervaiz-40595121/'
         },
         {
             name: "Samra Mazhar",
-            title: "Placements n Events lead",
+            title: "Placements and Events Lead",
             image: Samra_Mazhar,
             description: "Samra, the Placements and Events Lead at AshreiTech Academy, is a dynamic and approachable professional known for her enthusiasm and dedication. A true people's person, she brings a warm and engaging presence to every interaction. Passionate about her role, Samra ensures all her responsibilities are met with utmost seriousness and a smile.",
             linkedInProfile: 'https://www.linkedin.com/in/samra-m-1782b5201/'
@@ -120,7 +121,7 @@ const Teams = () => {
         },
         {
             name: "Humra Tahir",
-            title: "Executive-Marcom",
+            title: "Executive- Marcom",
             image: Humra_Tahir,
             description: "Humra is a final-year Mass Communication student and MarCom Executive at AshreiTech Academy. With a knack for creativity, she crafts marketing content that truly engages and stands out. Humra blends her academic knowledge with hands-on experience, bringing fresh, compelling ideas to the table.",
             linkedInProfile: 'https://www.linkedin.com/in/humra-tahir/'
@@ -134,7 +135,7 @@ const Teams = () => {
         },
         {
             name: "Jamshed Zaman",
-            title: "Community Manager",
+            title: "Community Manager- LHR",
             image: Jamshed_Zaman,
             description: "With a diverse background spanning professional development, education, journalism, and public relations, Jamshed bring a rich tapestry of experiences and skills. In more than 4 years of professional experience in Educational Development at various renowned institutions including University of Central Punjab and Forman Christian College, Jamshed has been deeply involved in educational administration curriculum design, facilitating workshops, fostering industry connections for student opportunities.",
             linkedInProfile: 'https://www.linkedin.com/in/jamshedzaman252/'
@@ -181,8 +182,8 @@ const Teams = () => {
                                     </a>
                                 </div>
                             </div>
-                            <div className="d-flex justify-content-center flex-column align-items-center mt-4">
-                                <h4>{member.name}</h4>
+                            <div className="d-flex justify-content-center flex-column align-items-center">
+                                <h5>{member.name}</h5>
                                 <h6 className="text-center">{member.title}</h6>
                             </div>
                         </div>
