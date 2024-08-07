@@ -65,14 +65,19 @@ export default function TopNavbar() {
           </li>
         </UlWrapperRight>
       </div>
-      <div className="d-flex justify-content-between align-items-center py-3 px-lg-5 px-0 " >
-        <div className="d-flex justify-content-between  ">
-          <Link className="pointer flexNullCenter" to="/" smooth={true}>
-            <img src={Logo} className="main_logo ml-4 ml-lg-0" alt="" srcSet="" style={{ width: '200px', height: 'auto' }} />
+      <div className="d-flex justify-content-center justify-content-md-between  align-items-center py-3 px-md-5 px-2 " >
+        <div className="row ">
+          <div className="col-8">
+          <Link className="pointer " to="/" smooth={true}>
+            <img src={Logo} className="" alt="" srcSet="" style={{ width: '100%', height: 'auto' }} />
           </Link>
-          <BurderWrapper className="pointer mt-1 mt-lg-0 ml-5 ml-lg-0" onClick={() => toggleSidebar(!sidebarOpen)}>
-            <BurgerIcon className=" ml-5 ml-lg-0" />
+          </div>
+          <div className="col-2"></div>
+          <div className="col-2 d-flex justify-content-center p-0 align-items-center">
+          <BurderWrapper className="pointer p-0" onClick={() => toggleSidebar(!sidebarOpen)}>
+            <BurgerIcon className="p-0 " />
           </BurderWrapper>
+          </div>
         </div>
         <div className="d-flex">
           <UlWrapper className="flexNullCenter header_menu">
@@ -110,7 +115,7 @@ export default function TopNavbar() {
               </Link>
             </li>
             <li className="font15 pointer">
-              <Link style={{ padding: "10px 15px" }} to={"/CommingSoon"} spy={true} smooth={true} offset={-80}>
+              <Link style={{ padding: "10px 15px" }} to={"/Chart"} spy={true} smooth={true} offset={-80}>
                 <span className="animated_link">
                 Corporate Trainings
                 </span>

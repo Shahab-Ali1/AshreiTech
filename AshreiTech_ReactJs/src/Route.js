@@ -1,5 +1,4 @@
 import { createHashRouter } from "react-router-dom";
-import {AdmissionEnquiry} from "./screens/AsheriTechComponents/AdmissionEnquiery/AdmissionEnquiery";
 import Landing from "./screens/Landing";
 import { GetInTouch } from "./screens/AsheriTechComponents/GetInTouch/GetInTouch";
 import { RegistrationForm } from "./screens/AsheriTechComponents/RegistrationForm/RegistrationForm";
@@ -13,20 +12,13 @@ import CorporateTrainings from "./screens/CorporateTrainings/CorporateTrainings"
 import CorporateTrainingSingle from "./screens/CorporateTrainingSingle/CorporateTrainingSingle";
 import CorporateSocialResponsibility from "./screens/CorporateSocialResponsibility/CorporateSocialResponsibility";
 import NewComingSoon from "./components/Sections/CommingSoonPage/NewCommingSoon";
+import Chart from "./components/Sections/CommingSoonPage/Chart";
 
 export const router = createHashRouter([
-    {
-      path: "/test",
-      element:  <Landing />,
-    },  
     {
       path: "/",
       element:  <Landing />,
     },  
-    // {
-    //   path: "/CommingSoon",
-    //   element:  <CommingSoon />,
-    // },  
     {
       path: "/CommingSoon",
       element:  <NewComingSoon />,
@@ -74,6 +66,10 @@ export const router = createHashRouter([
     {
       path: "/CorporateSocialResponsibility",
       element: <CorporateSocialResponsibility/>,
+    },
+    {
+      path: "/chart",
+      element: <Chart/>,
     },
   
   ]);

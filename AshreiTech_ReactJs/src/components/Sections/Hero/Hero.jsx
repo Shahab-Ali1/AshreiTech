@@ -44,7 +44,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="col-12 col-md-6">
-            <video autoPlay loop muted style={{ width: '100%', height: 'auto', borderRadius: '50px' }}>
+            <video autoPlay loop muted playsInline style={{ width: '100%', height: '100%', borderRadius: '50px' }}>
               <source src={herovideo} type="video/mp4" />
               Your Browser Does Not Support The Video Tag.
             </video>
@@ -52,7 +52,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
-  );
+  );  
 };
 
 export default Hero;

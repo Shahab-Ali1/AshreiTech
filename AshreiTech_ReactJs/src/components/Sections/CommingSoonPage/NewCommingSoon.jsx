@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Chart from '../../../assets/chart.png';
+
 export default function NewComingSoon() {
     const [time, setTime] = useState({
         days: 9,
@@ -58,8 +58,7 @@ export default function NewComingSoon() {
             position: 'absolute',
             height: '100%',
             width: '100%',
-            // objectFit: 'cover',
-            objectFit: 'contain',
+            objectFit: 'cover',
             zIndex: '-1',
         },
         overlay: {
@@ -72,7 +71,7 @@ export default function NewComingSoon() {
             opacity: 0.2,
         },
         header: {
-            fontSize: '60px',
+            fontSize: '50px',
             color: '#fff',
             fontWeight: '600',
             textAlign: 'center',
@@ -158,52 +157,47 @@ export default function NewComingSoon() {
     };
 
     return (
-        // <section style={styles.container}>
-        //     <img
-        //         src="https://images.unsplash.com/photo-1625558298116-38f0173a522c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-        //         alt=""
-        //         style={styles.image}
-        //     />
-        //     <div style={styles.overlay}></div>
-        //     <header style={styles.header}>Page Is Coming Soon</header>
-        //     <p style={styles.p}>
-        //         We are excited to announce that we will be launching soon and can't wait to
-        //         share our new Page with you.
-        //     </p>
-        //     <div style={styles.timeContent}>
-        //         <div style={{ ...styles.time, ...styles.days }}>
-        //             <span style={styles.number}>{time.days < 10 ? `0${time.days}` : time.days}</span>
-        //             <span style={styles.text}>days</span>
-        //         </div>
-        //         <div style={{ ...styles.time, ...styles.hours }}>
-        //             <span style={styles.number}>{time.hours < 10 ? `0${time.hours}` : time.hours}</span>
-        //             <span style={styles.text}>hours</span>
-        //         </div>
-        //         <div style={{ ...styles.time, ...styles.minutes }}>
-        //             <span style={styles.number}>{time.minutes < 10 ? `0${time.minutes}` : time.minutes}</span>
-        //             <span style={styles.text}>minutes</span>
-        //         </div>
-        //         <div style={{ ...styles.time, ...styles.seconds }}>
-        //             <span style={styles.number}>{time.seconds < 10 ? `0${time.seconds}` : time.seconds}</span>
-        //             <span style={styles.text}>seconds</span>
-        //         </div>
-        //     </div>
-        //     <div style={styles.emailContent} className='d-none'>
-        //         <p style={styles.p}>Subscribe now to get the latest updates!</p>
-        //         <div style={styles.inputBox}>
-        //             <input type="email" placeholder="Enter your email..." style={styles.input} />
-        //             <button
-        //                 style={{ ...styles.button, ':hover': styles.buttonHover }}
-        //             >
-        //                 Notify Me
-        //             </button>
-        //         </div>
-        //     </div>
-        // </section>
-        <img
-            src={Chart}
-            alt=""
-            style={styles.image}
-        />
+        <section style={styles.container}>
+            <img
+                src="https://images.unsplash.com/photo-1625558298116-38f0173a522c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt=""
+                style={styles.image}
+            />
+            <div style={styles.overlay}></div>
+            <header style={styles.header} >Page Is Coming Soon</header>
+            <p style={styles.p}>
+                We are excited to announce that we will be launching soon and can't wait to
+                share our new Page with you.
+            </p>
+            <div style={styles.timeContent}>
+                <div style={{ ...styles.time, ...styles.days }}>
+                    <span style={styles.number}>{time.days < 10 ? `0${time.days}` : time.days}</span>
+                    <span style={styles.text}>days</span>
+                </div>
+                <div style={{ ...styles.time, ...styles.hours }}>
+                    <span style={styles.number}>{time.hours < 10 ? `0${time.hours}` : time.hours}</span>
+                    <span style={styles.text}>hours</span>
+                </div>
+                <div style={{ ...styles.time, ...styles.minutes }}>
+                    <span style={styles.number}>{time.minutes < 10 ? `0${time.minutes}` : time.minutes}</span>
+                    <span style={styles.text}>minutes</span>
+                </div>
+                <div style={{ ...styles.time, ...styles.seconds }}>
+                    <span style={styles.number}>{time.seconds < 10 ? `0${time.seconds}` : time.seconds}</span>
+                    <span style={styles.text}>seconds</span>
+                </div>
+            </div>
+            <div style={styles.emailContent} className='d-none'>
+                <p style={styles.p}>Subscribe now to get the latest updates!</p>
+                <div style={styles.inputBox}>
+                    <input type="email" placeholder="Enter your email..." style={styles.input} />
+                    <button
+                        style={{ ...styles.button, ':hover': styles.buttonHover }}
+                    >
+                        Notify Me
+                    </button>
+                </div>
+            </div>
+        </section>
     );
 }
