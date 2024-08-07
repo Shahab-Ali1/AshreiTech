@@ -71,7 +71,7 @@ export default function NewComingSoon() {
             opacity: 0.2,
         },
         header: {
-            fontSize: '60px',
+            fontSize: '50px',
             color: '#fff',
             fontWeight: '600',
             textAlign: 'center',
@@ -164,7 +164,7 @@ export default function NewComingSoon() {
                 style={styles.image}
             />
             <div style={styles.overlay}></div>
-            <header style={styles.header}>Page Is Coming Soon</header>
+            <header style={styles.header} >Page Is Coming Soon</header>
             <p style={styles.p}>
                 We are excited to announce that we will be launching soon and can't wait to
                 share our new Page with you.

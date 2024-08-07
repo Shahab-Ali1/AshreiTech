@@ -194,7 +194,7 @@ export default function WhatWeDo() {
                                     </p>
                                 </div>
                             </div>
-                            <button className="slider_btn">Make An Impact
+                            <button className="slider_btn" onClick={()=> navigate('/CommingSoon')}>Make An Impact
                             </button>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12">

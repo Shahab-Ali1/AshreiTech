@@ -84,9 +84,7 @@
 //     </>
 //   );
 // }
-
-
-import React from "react";
+import React, { useState } from "react";
 import homebannervideo from '../../assets/video/headervideo.mp4';
 import InfoCard from "../../screens/InfoCard/InfoCard";
 import { infoCardData } from "../../constant";
@@ -99,28 +97,57 @@ const videoStyles = {
     width: '100%',
     height: '100%',
     overflow: 'hidden',
+    zIndex: 1,
   },
   video: {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
   },
+  loader: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    zIndex: 2,
+    color: 'black', // Adjust this based on your loader style
+  },
 };
 
 export default function Header() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleCanPlay = () => {
+    setIsLoading(false);
+  };
+
+  const handleError = (e) => {
+    console.error('Video error:', e);
+  };
+
+  const handleLoadedMetadata = (e) => {
+    console.log('Video metadata loaded:', e);
+  };
+
   return (
     <>
+      <div className="container-fluid p-1 p-md-0">
       <div style={videoStyles.container}>
+        {isLoading && <div style={videoStyles.loader}>Loading...</div>}
         <video
           autoPlay
           loop
           muted
           playsInline
           style={videoStyles.video}
+          onCanPlay={handleCanPlay}
+          onError={handleError}
+          onLoadedMetadata={handleLoadedMetadata}
         >
           <source src={homebannervideo} type="video/mp4" />
           Your Browser Does Not Support The Video Tag.
         </video>
+      </div>
       </div>
 
       <InfoCard data={infoCardData} count={true} />

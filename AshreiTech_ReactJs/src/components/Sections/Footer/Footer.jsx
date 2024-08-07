@@ -29,6 +29,20 @@ const Footer = () => {
         platform: "LinkedIn",
         link: "https://www.linkedin.com/company/ashrei-tech/"
     },]
+
+    const linkOne = [
+        { name: "About the company", url: "/#/CommingSoon" },
+        { name: "About the team", url: "/#/teams" },
+        { name: "Book-A-Room", url: "/#/BookaRoom" },
+        { name: "Corporate Trainings", url: "/#/CommingSoon" }
+    ];
+    const linkTwo = [
+        { name: "Get In Touch", url: "/#/GetInTouch" },
+        { name: "Partner With Us", url: "/#/CommingSoon" },
+        { name: "Insights", url: "/#/CommingSoon" },
+        { name: "What We Do", url: "/#/WhatWeDo" }
+    ];
+
     return (
         <div className={`${footer_container} container-fluid  px-3 px-md-3 px-lg-5  pt-0 pt-md-5`}>
             <div className="row px-0 px-md-5 py-0 py-md-5 ">
@@ -39,15 +53,19 @@ const Footer = () => {
                     <div className="row  justify-content-center justify-content-lg-start d-none d-md-flex">
                         <div className="mr-5 px-3">
                             <ul>
-                                {["About the Company", "About the Team", "Book-A-Room", "Corporate Trainings"].map((item, index) => (
-                                    <li key={index} className="pb-3 ">{item}</li>
+                            {linkOne.map((link, index) => (
+                                    <li key={index} className="pb-3">
+                                        <a href={link.url} style={{color:'white'}}>{link.name}</a>
+                                    </li>
                                 ))}
                             </ul>
                         </div>
                         <div className="mr-5 px-3">
                             <ul>
-                                {["Get In Touch", "Partner With Us", "Insights", "What We Do",].map((item, index) => (
-                                    <li key={index} className="pb-3">{item}</li>
+                            {linkTwo.map((link, index) => (
+                                    <li key={index} className="pb-3">
+                                        <a href={link.url} style={{color:'white'}}>{link.name}</a>
+                                    </li>
                                 ))}
                             </ul>
                         </div>
@@ -68,15 +86,20 @@ const Footer = () => {
                     <div className="row d-flex justify-content-center justify-content-lg-start  d-md-none">
                         <div className="col-4">
                             <ul>
-                                {["About the company", "About the team", "Book-A-Room", "Corporate Trainings"].map((item, index) => (
-                                    <li key={index} className="pb-3 ">{item}</li>
+                            {linkOne.map((link, index) => (
+                                    <li key={index} className="pb-3">
+                                        <a href={link.url} style={{color:'white'}}>{link.name}</a>
+                                    </li>
                                 ))}
+
                             </ul>
                         </div>
                         <div className="col-4">
                             <ul>
-                                {["Get In Touch", "Partner With Us", "Insights", "What We Do",].map((item, index) => (
-                                    <li key={index} className="pb-3">{item}</li>
+                                {linkTwo.map((link, index) => (
+                                    <li key={index} className="pb-3">
+                                        <a href={link.url} style={{color:'white'}}>{link.name}</a>
+                                    </li>
                                 ))}
                             </ul>
                         </div>
