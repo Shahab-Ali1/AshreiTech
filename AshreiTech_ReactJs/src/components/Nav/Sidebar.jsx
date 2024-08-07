@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 // Assets
 import CloseIcon from "../../assets/svg/CloseIcon";
 import LogoIcon from "../../assets/logo.png";
@@ -18,118 +18,62 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
       </SidebarHeader>
 
       <UlStyle className="flexNullCenter flexColumn">
-        <li className="semiBold font15 pointer ">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-
-          >
+        <li className="semiBold font15 pointer">
+          <Link to="/CommingSoon" className="whiteColor">
             Sign In
           </Link>
         </li>
-        <li className="semiBold font15 pointer ">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-
-          >
+        <li className="semiBold font15 pointer">
+          <Link to="/CommingSoon" className="whiteColor">
             Find Tech Talent
           </Link>
         </li>
-        <li className="semiBold font15 pointer ">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-
-
-          >
+        <li className="semiBold font15 pointer">
+          <Link to="/CommingSoon" className="whiteColor">
             Digital Academy
           </Link>
         </li>
         <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to={"/CommingSoon"}
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            About the  company
+          <Link to="/CommingSoon" className="whiteColor">
+            About the company
           </Link>
         </li>
         <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to={"/teams"}
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
+          <Link to="/teams" className="whiteColor">
             About the team
           </Link>
         </li>
         <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to={"/BookaRoom"}
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
+          <Link to="/BookaRoom" className="whiteColor">
             Book a Room
           </Link>
         </li>
         <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to={"/CommingSoon"}
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
+          <Link to="/WhatWeDo" className="whiteColor">
+            What We Do
+          </Link>
+        </li>
+        {/* <li className="semiBold font15 pointer">
+          <Link to="/CommingSoon" className="whiteColor">
             Partner with Us
           </Link>
         </li>
         <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebarOpen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to={"/CommingSoon"}
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
+          <Link to="/CommingSoon" className="whiteColor">
             Insights
           </Link>
-        </li>
+        </li> */}
       </UlStyle>
       <UlStyle className="flexSpaceCenter">
         <li className="semiBold font15 pointer">
-          <a href="/" style={{ padding: "10px 30px 10px 0" }} className="whiteColor">
-            Log in
-          </a>
+        <Link to="/CommingSoon" className="whiteColor" style={{ padding: "10px 30px 10px 0" }}>
+        Log In
+          </Link>
         </li>
         <li className="semiBold font15 pointer flexCenter">
-          <a href="/" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
-            Get in Touch
-          </a>
+        <Link to="/GetInTouch" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
+        Get in Touch
+          </Link>
         </li>
       </UlStyle>
     </Wrapper>
@@ -138,7 +82,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
 
 const Wrapper = styled.nav`
   width: 400px;
-  background-color: #008F71;
+  background-color: #008f71;
   height: 100vh;
   position: fixed;
   top: 0;

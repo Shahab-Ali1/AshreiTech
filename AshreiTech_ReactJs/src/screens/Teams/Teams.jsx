@@ -165,7 +165,7 @@ const Teams = () => {
                     <img src={teams_banner} alt="Team Banner" />
                 </div>
                 <div className="mt-5 pt-5 d-flex justify-content-center align-items-center">
-                    <h1>With over years of experience combined.</h1>
+                    <h1 className="text-center text-md-left">With over years of experience combined.</h1>
                 </div>
                 <div className="row my-5" style={{ position: 'relative' }}>
                     <div className={gradientCircle}></div>
