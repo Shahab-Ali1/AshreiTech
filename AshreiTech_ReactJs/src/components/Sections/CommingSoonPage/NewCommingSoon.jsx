@@ -52,6 +52,7 @@ export default function NewComingSoon() {
             width: '100%',
             overflow: 'hidden',
             position: 'relative',
+            padding: '20px', // added padding for smaller screens
         },
         image: {
             position: 'absolute',
@@ -92,6 +93,8 @@ export default function NewComingSoon() {
             padding: '2rem 2.5rem',
             borderRadius: '0.5rem',
             background: 'rgba(250, 250, 250, 0.2)',
+            flexWrap: 'wrap', // added flex wrap for smaller screens
+            justifyContent: 'center', // center items for smaller screens
         },
         time: {
             display: 'flex',
@@ -103,6 +106,9 @@ export default function NewComingSoon() {
             fontSize: '80px',
             lineHeight: 1,
             color: '#eee',
+            '@media (max-width: 768px)': {
+                fontSize: '60px', // reduced font size for smaller screens
+            },
         },
         text: {
             textTransform: 'capitalize',
