@@ -208,14 +208,10 @@ export const AdmissionEnquiry = (props) => {
 
 
     const clickSubmit = () => {
-
-        debugger;
-
         let isValid = RequiredFields();
         if (!isValid) {
             return false;
         }
-
         let bb = {
             "Data": {
                 "FOAdmEnquirydtls": [
@@ -265,7 +261,6 @@ export const AdmissionEnquiry = (props) => {
             "DataAddon": {},
             "ReturnObject": true
         }
-
         PostMethod("FOAdmEnquiry/v2/", bb)
             .then((data) => {
                 if (data) {
@@ -350,7 +345,7 @@ export const AdmissionEnquiry = (props) => {
         try {
             let body = {
                 "Data": {
-                    sendfrom: "zusama729@gmail.com",
+                    sendfrom: "academics@ashreitech.edu.pk",
                     sendto: formData.email,
                     subject: "Enquiry Form",
                     body: "Welcome",
