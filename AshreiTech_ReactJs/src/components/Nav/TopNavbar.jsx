@@ -83,12 +83,12 @@ export default function TopNavbar() {
           <UlWrapper className="flexNullCenter header_menu">
             <li className="HeaderPaddingRight">
               <div className="dropdown">
-                <span className="link2 font15 pointer">
+                <span className="whoweare">
                   Who We Are
                 </span>
                 <i
-                  style={{ marginTop: "0px", marginLeft: "10px" }}
-                  className="dropbtn hover-rotate fa fa-chevron-right"
+                  style={{ marginTop: "0px", marginLeft: "10px",  }}
+                  className="dropbtn hover-rotate fa fa-chevron-right whoweare"
                 ></i>
                 <div className="dropdown-content">
                   <NavLink className="" to={"/teams"} style={{ fontSize: '15.008px' }}>

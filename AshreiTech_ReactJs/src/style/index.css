@@ -814,8 +814,17 @@
    font-size: 15.008px;
    color: #808080;
  }
+ .whoweare {
+   position: relative;
+   cursor: pointer;
+   font-size: 15.008px;
+   color: #808080;
+ }
 
  .animated_link:hover{
+  color: #000000;
+ }
+ .whoweare:hover{
   color: #000000;
  }
 
