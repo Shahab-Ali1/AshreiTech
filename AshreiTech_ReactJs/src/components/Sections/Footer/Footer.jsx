@@ -130,13 +130,13 @@ const Footer = () => {
                     }}
                 >
                     <div className='row'>
-                        <div className='col-lg-12 mt-3 text-center text-md-left px-2'><h3>Our Branches</h3></div>
+                        <div className='col-lg-12 mt-3 text-center text-md-left px-2'><h3>Our Campuses</h3></div>
                     </div>
                     <div className="row p-0">
                         <div className="col-12 col-md-4 my-4">
                             <div className="row align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Minar} alt="minar" className="" style={{ height: "31px" }} /></div>
-                                <div className="col-10"><div>Lahore Branch</div></div>
+                                <div className="col-10"><div>Lahore Campus</div></div>
                             </div>
                             <div className="row my-3 align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Map} alt="Map" className="" style={{ height: "17px" }} /></div>
@@ -152,7 +152,7 @@ const Footer = () => {
                         <div className="col-12 col-md-4 my-4">
                             <div className="row align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={pakistanIcon} alt="minar" className="" style={{ height: "31px" }} /></div>
-                                <div className="col-10 "><div>Karachi Branch</div></div>
+                                <div className="col-10 "><div>Karachi Campus</div></div>
                             </div>
                             <div className="row my-3 align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Map} alt="Map" className="" style={{ height: "17px" }} /></div>
@@ -166,7 +166,7 @@ const Footer = () => {
                         <div className="col-12 col-md-4 my-4">
                             <div className="row align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={mosqueIcon} alt="minar" className="" style={{ height: "31px" }} /></div>
-                                <div className="col-10"><div>Islamabad Branch</div></div>
+                                <div className="col-10"><div>Islamabad Campus</div></div>
                             </div>
                             <div className="row my-3 align-items-baseline">
                                 <div className="col-2 d-flex justify-content-center align-items-start"><img src={Map} alt="Map" className="" style={{ height: "17px" }} /></div>
