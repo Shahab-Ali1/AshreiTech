@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link, NavLink } from "react-router-dom"; 
 import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
 import Logo from "../../assets/logo.png";
@@ -44,21 +44,21 @@ export default function TopNavbar() {
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
       <div className="justify-content-end align-items-center top_menu d-none d-lg-flex" style={{ padding: "10px 45px", gap: "30px", height: 50, background: "#ecf6f4" }}>
-        <Link style={{ padding: "10px 15px" }} to="/CommingSoonPage" spy={true} smooth={true} offset={-80}>
+        <NavLink style={{ padding: "10px 15px" }} to="/CommingSoonPage" spy={true} smooth={true} offset={-80}>
           <span className="animated_link" style={{ color: '#008F71' }}>
             Find Tech Talent
           </span>
-        </Link>
-        <Link style={{ padding: "10px 15px" }} to="/CommingSoonPage" spy={true} smooth={true} offset={-80}>
+        </NavLink>
+        <NavLink style={{ padding: "10px 15px" }} to="/CommingSoonPage" spy={true} smooth={true} offset={-80}>
           <span className="animated_link" style={{ color: '#008F71' }}>
             Digital Academy
           </span>
-        </Link>
-        <Link style={{ padding: "10px 15px" }} to="/CommingSoonPage" spy={true} smooth={true} offset={-80}>
+        </NavLink>
+        <NavLink style={{ padding: "10px 15px" }} to="/CommingSoonPage" spy={true} smooth={true} offset={-80}>
           <span className="animated_link" style={{ color: '#008F71' }}>
             Sign In
           </span>
-        </Link>
+        </NavLink>
         <UlWrapperRight className="flexNullCenter">
           <li onClick={() => navigate("/GetInTouch")} className=" navbtn p-2 ml-2">
             Get In Touch
@@ -68,7 +68,7 @@ export default function TopNavbar() {
       <div className="d-flex justify-content-center justify-content-md-between  align-items-center py-3 px-md-5 px-2 " >
         <div className="row ">
           <div className="col-8">
-          <Link className="pointer " to="/" smooth={true}>
+          <Link className="pointer " to={"/"} smooth={true}>
             <img src={Logo} className="" alt="" srcSet="" style={{ width: '100%', height: 'auto' }} />
           </Link>
           </div>
@@ -83,54 +83,54 @@ export default function TopNavbar() {
           <UlWrapper className="flexNullCenter header_menu">
             <li className="HeaderPaddingRight">
               <div className="dropdown">
-                <span className="link2 font15 pointer">
+                <span className="whoweare">
                   Who We Are
                 </span>
                 <i
-                  style={{ marginTop: "0px", marginLeft: "10px" }}
-                  className="dropbtn hover-rotate fa fa-chevron-right"
+                  style={{ marginTop: "0px", marginLeft: "10px",  }}
+                  className="dropbtn hover-rotate fa fa-chevron-right whoweare"
                 ></i>
                 <div className="dropdown-content">
-                  <Link className="" to={"/teams"} style={{ fontSize: '15.008px' }}>
+                  <NavLink className="" to={"/teams"} style={{ fontSize: '15.008px' }}>
                     About The Team
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </li>
             <li className="font15 pointer">
-              <Link style={{ padding: "10px 15px" }} to={"/WhatWeDo"} spy={true} smooth={true} offset={-80}>
+              <NavLink style={{ padding: "10px 15px" }} to={"/WhatWeDo"} spy={true} smooth={true} offset={-80}>
                 <span className="animated_link">
                   What We Do
                 </span>
-              </Link>
+              </NavLink>
             </li>
             <li className="font15 pointer">
-              <Link style={{ padding: "10px 15px" }} to={"/BookaRoom"} spy={true} smooth={true} offset={-80}>
-                <span className="animated_link">
+              <NavLink style={{ padding: "10px 15px" }} to={"/BookaRoom"} spy={true} smooth={true} offset={-80} >
+              <span className="animated_link">
                   Book A Room
                 </span>
-              </Link>
+              </NavLink>
             </li>
             <li className="font15 pointer">
-              <Link style={{ padding: "10px 15px" }} to={"/Chart"} spy={true} smooth={true} offset={-80}>
+              <NavLink style={{ padding: "10px 15px" }} to={"/Chart"} spy={true} smooth={true} offset={-80}>
                 <span className="animated_link">
                 Corporate Trainings
                 </span>
-              </Link>
+              </NavLink>
             </li>
             <li className="font15 pointer d-none">
-              <Link style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
+              <NavLink style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
                 <span className="animated_link">
                   Partner With Us
                 </span>
-              </Link>
+              </NavLink>
             </li>
             <li className="font15 pointer d-none">
-              <Link style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
+              <NavLink style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
                 <span className="animated_link">
                   Insights
                 </span>
-              </Link>
+              </NavLink>
             </li>
             <li className="font15 pointer" >
               <LightTooltip title="Click to get our app" placement="top" arrow>
@@ -199,4 +199,5 @@ const UlWrapperRight = styled.ul`
   @media (max-width: 760px) {
     display: none;
   }
+  
 `;

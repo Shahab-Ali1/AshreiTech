@@ -85,7 +85,7 @@
 //   );
 // }
 import React, { useState } from "react";
-import homebannervideo from '../../assets/video/headervideo.mp4';
+import homebannervideo from '../../assets/video/headervideo.webm';
 import InfoCard from "../../screens/InfoCard/InfoCard";
 import { infoCardData } from "../../constant";
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./style.module.css";
 import TopNavbar from "../../components/Nav/TopNavbar";
-import teams_banner from "../../assets/teams_banner.png";
+import teams_banner from "../../assets/teams_banner1.png";
 import Sohail_Zindani from '../../assets/team/Sohail_Zindani.png'
 import adnan_ahmed from '../../assets/team/adnan_ahmed.png'
 import Syed_Talha_Asad from '../../assets/team/Syed_Talha_Asad.png'
@@ -20,10 +20,9 @@ import M_Khurram_Muqueem from '../../assets/team/M_Khurram_Muqueem.png'
 import Maryam from '../../assets/team/maryam.png'
 import Jamshed_Zaman from '../../assets/team/Jamshed_Zaman.png'
 import Muhammad_Ibrahim from '../../assets/team/Muhammad_Ibrahim.png'
-import syed_sajjad_hussain from '../../assets/team/syed_sajjad_hussain.png'
 import Footer from "../../components/Sections/Footer/Footer";
 
-const { team_container, banner_container, gradientCircle, team_description, card_Team, card_Team_bg } = style;
+const { team_container, banner_container, gradientCircle, team_description, card_Team, card_Team_bg, overlay_text, banner_overlay } = style;
 
 const Teams = () => {
 
@@ -156,7 +155,7 @@ const Teams = () => {
         },
     ];
 
-
+    
 
     return (
         <>
@@ -164,6 +163,9 @@ const Teams = () => {
             <div className={`${team_container} container-fluid`}>
                 <div className={`${banner_container}`}>
                     <img src={teams_banner} alt="Team Banner" />
+                    <div  className={`${banner_overlay}`}>
+                        <h1 className={`${overlay_text}`}>Our Team</h1>
+                    </div>
                 </div>
                 <div className="mt-5 pt-5 d-flex justify-content-center align-items-center">
                     <h1 className="text-center text-md-left">With over years of experience combined.</h1>

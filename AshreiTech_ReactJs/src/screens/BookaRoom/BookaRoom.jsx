@@ -138,6 +138,57 @@ export default function BookaRoom() {
                 </div>
             </div>
 
+            <div className="container-fluid py-5" style={{ position: 'relative', zIndex: 2 }}>
+                <div className={`${gradientCircle} d-none d-md-block`}></div>
+                <div className={`${gradientCircleLeft} d-none d-md-block`}></div>
+                <div className='d-none d-lg-block' style={{
+                    width: '10px',
+                    height: '10px',
+                    backgroundColor: '#525FE1',
+                    borderRadius: '50%',
+                    marginLeft: '1200px',
+                    top: '40px',
+                    position: 'relative',
+                }}>
+                    <div className='d-none d-lg-block' style={{
+                        width: '15px',
+                        height: '15px',
+                        backgroundColor: '#FFCF59',
+                        borderRadius: '50%',
+                        border: '1px solid white',
+                        top: '-40px',
+                        left: '-50px',
+                        position: 'absolute'
+                    }}></div>
+                </div>
+                <div className="row d-flex flex-column justify-content-center align-items-center ">
+                    <div className="col-12 mb-4">
+                        <h1 className='generic_heading'>Rooms</h1>
+                    </div>
+                </div>
+                <div className="row d-flex justify-content-center p-0 p-lg-5">
+                    <div className="col-sm-12 col-md-10 col-lg-12  justify-content-center ">
+                        <SliderWrapper>
+                            <Slider {...settings}>
+                                {cardData.map((card, index) => (
+                                    <div key={index} className="d-flex justify-content-center align-items-center col-12 ">
+                                        <div className="">
+                                            <img src={card.src} alt={card.alt} className='slick-slide' />
+                                            <div className="info">
+                                                <h2>{card.title}</h2>
+                                            </div>
+                                            <div className="overlay">
+                                                <h4>{card.capacity}</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </Slider>
+                        </SliderWrapper>
+                    </div>
+                </div>
+            </div>
+
             <div className="container-fluid py-4" style={{ position: 'relative', zIndex: 1 }}>
                 <div className={`${gradientCircleLeftTop} d-none d-md-block`}></div>
                 <div className="row p-0 p-lg-5 d-flex justify-content-center align-items-center">
@@ -184,7 +235,7 @@ export default function BookaRoom() {
                                 borderRadius: '15px',
                             }}>
                                 {/* <source src={videoTwo} type="video/mp4" /> */}
-                                <source src={videoFive} type="video/mp4" />
+                                <source src={videoSix} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
@@ -236,7 +287,7 @@ export default function BookaRoom() {
                             position: 'relative'
                         }}>
                             {/* <source src={videoThree} type="video/mp4" /> */}
-                            <source src={videoSix} type="video/mp4" />
+                            <source src={videoFive} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -363,56 +414,7 @@ export default function BookaRoom() {
                 </div>
             </div>
 
-            <div className="container-fluid py-5" style={{ position: 'relative', zIndex: 2 }}>
-                <div className={`${gradientCircle} d-none d-md-block`}></div>
-                <div className={`${gradientCircleLeft} d-none d-md-block`}></div>
-                <div className='d-none d-lg-block' style={{
-                    width: '10px',
-                    height: '10px',
-                    backgroundColor: '#525FE1',
-                    borderRadius: '50%',
-                    marginLeft: '1200px',
-                    top: '40px',
-                    position: 'relative',
-                }}>
-                    <div className='d-none d-lg-block' style={{
-                        width: '15px',
-                        height: '15px',
-                        backgroundColor: '#FFCF59',
-                        borderRadius: '50%',
-                        border: '1px solid white',
-                        top: '-40px',
-                        left: '-50px',
-                        position: 'absolute'
-                    }}></div>
-                </div>
-                <div className="row d-flex flex-column justify-content-center align-items-center ">
-                    <div className="col-12 mb-4">
-                        <h1 className='generic_heading'>Rooms</h1>
-                    </div>
-                </div>
-                <div className="row d-flex justify-content-center p-0 p-lg-5">
-                    <div className="col-sm-12 col-md-10 col-lg-12  justify-content-center ">
-                        <SliderWrapper>
-                            <Slider {...settings}>
-                                {cardData.map((card, index) => (
-                                    <div key={index} className="d-flex justify-content-center align-items-center col-12 ">
-                                        <div className="">
-                                            <img src={card.src} alt={card.alt} className='slick-slide' />
-                                            <div className="info">
-                                                <h2>{card.title}</h2>
-                                            </div>
-                                            <div className="overlay">
-                                                <h4>{card.capacity}</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </Slider>
-                        </SliderWrapper>
-                    </div>
-                </div>
-            </div>
+            
 
             <div className="modal fade" id="bookingModal" tabIndex="-1" role="dialog" aria-labelledby="bookingModalLabel" aria-hidden="true">
                 <div className={`${modallg} modal-dialog`} id='modalForm' role="document">
