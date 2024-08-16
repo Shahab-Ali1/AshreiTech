@@ -812,18 +812,22 @@
    position: relative;
    cursor: pointer;
    font-size: 15.008px;
-   color: #808080;
+   color: black;
+   transition: color 0.3s ease;
  }
- .whoweare {
-   position: relative;
-   cursor: pointer;
-   font-size: 15.008px;
-   color: #808080;
- }
-
  .animated_link:hover{
-  color: #000000;
- }
+   color: #000000;
+  }
+  .animated_link.dimmed {
+    color: #d3d3d3; /* Lighter color for non-hovered links */
+  }
+
+  .whoweare {
+    position: relative;
+    cursor: pointer;
+    font-size: 15.008px;
+    color: #808080;
+  }
  .whoweare:hover{
   color: #000000;
  }

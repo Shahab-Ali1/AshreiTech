@@ -34,7 +34,7 @@ const Footer = () => {
         { name: "About the company", url: "/#/CommingSoonPage" },
         { name: "About the team", url: "/#/teams" },
         { name: "Book-A-Room", url: "/#/BookaRoom" },
-        { name: "Corporate Trainings", url: "/#/CommingSoon" }
+        { name: "Corporate Trainings", url: "/#/CorporateTrainings" }
     ];
     const linkTwo = [
         { name: "Get In Touch", url: "/#/GetInTouch" },
