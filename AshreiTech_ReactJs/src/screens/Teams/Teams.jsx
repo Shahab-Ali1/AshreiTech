@@ -50,7 +50,7 @@ const Teams = () => {
             linkedInProfile: ''
         },
         {
-            name: "Talha shabbir",
+            name: "Talha Shabbir",
             title: "Head, Academics & Programs",
             image: Talha_Shabbir,
             description: "As a seasoned IT Administrator, Syed Talha orchestrates seamless network operations and fortifies security solutions, propelling business growth with cutting-edge technology infrastructure. With a mastery in system administration and network architecture, he crafts high-availability solutions that minimize downtime and amplify productivity.",
@@ -65,7 +65,7 @@ const Teams = () => {
         },
         {
             name: "Azmeena Furniturewalla",
-            title: "Head of Marketing and Communication",
+            title: "Head of Marketing and Communications",
             image: Azmeena_Furniturewala,
             description: "A MarCom professional with over 9 years of experience, in simple words, \"Work inspires her.\" Embarking on a journey from science to advertising, her evolution into a strategic and adaptive marketer has been nothing short of thrilling.",
             linkedInProfile: 'https://www.linkedin.com/in/azmeena-k/'
