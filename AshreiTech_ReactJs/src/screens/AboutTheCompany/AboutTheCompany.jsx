@@ -17,8 +17,13 @@ import animation2 from '../../assets/aboutAnimation2.png'
 import animation3 from '../../assets/aboutAnimation3.png'
 import animation4 from '../../assets/aboutAnimation4.png'
  import azharAli from '../../assets/aboutTheCompany/azharAli.png'
- import azharAliabout from '../../assets/aboutTheCompany/azharAliabout.png'
- import azharali2 from '../../assets/aboutTheCompany/azharAli2.png'
+ import azharAliabout from '../../assets/aboutTheCompany/azharAliAbout.png'
+ import shohailZindaniAbout from '../../assets/aboutTheCompany/shohailZindaniAbout.png'
+ import haiderWaheedAbout from '../../assets/aboutTheCompany/haiderWaheedAbout.png'
+ import rahimIqbalAbout from '../../assets/aboutTheCompany/rahimIqbalAbout.png'
+ import EhsanSayaAbout from '../../assets/aboutTheCompany/EhsanSayaAbout.png'
+ import ibrahiShamsiAbout from '../../assets/aboutTheCompany/ibrahiShamsiAbout.png'
+//  import azharali2 from '../../assets/aboutTheCompany/azharAli2.png'
 
  const card=[
     {
@@ -43,20 +48,30 @@ import animation4 from '../../assets/aboutAnimation4.png'
     },
  ]
  const cardColors = ['#ffd393', '#9fffeb', '#eae1b0', '#93c7af',];
-
+ const images = [
+    { thumbnail: azharAli, full: azharAliabout },
+    { thumbnail: azharAli, full: shohailZindaniAbout },
+    { thumbnail: azharAli, full: haiderWaheedAbout },
+    { thumbnail: azharAli, full: rahimIqbalAbout },
+    { thumbnail: azharAli, full: EhsanSayaAbout },
+    { thumbnail: azharAli, full: ibrahiShamsiAbout },
+];
 const AboutTheCompany = () => {
-    const { box1, box2, parent_box,zain, section_2,card_discription,card_title, banner_container, view_all, section1_banner_container ,card_hover,card_container,active_card,blur_container} = style
+    const { box1, box2, parent_box,zain, transition_image,section_2,card_discription,card_title, banner_container, view_all, section1_banner_container ,card_hover,card_container,active_card,blur_container} = style
     const [hoveredIndex, setHoveredIndex] = useState(0);
-    const [hoverImage , setHoverImage] = useState(false)
+    const [hoverImage , setHoverImage] = useState(null)
     const [active , setActive] = useState(false)
 
-    const handleMouseEnter = () => {
-        setHoverImage(true);
+    const handleMouseEnter = (index) => {
+        setTimeout(() => {
+            
+            setHoverImage(index);
+        }, 120);
     };
 
     const handleMouseLeave = () => {
         console.log("Mouse left"); 
-        setHoverImage(false);
+        setHoverImage(null);
     };
     return (
         <>
@@ -165,42 +180,42 @@ const AboutTheCompany = () => {
                         <img src={section2banner} alt="" srcset="" />
                     </div> */}
                 </div>
-
+             <div className="">
                 {
-                    hoverImage ? <div   onMouseLeave={()=>{
-                        debugger;
-                        handleMouseLeave()
-                    }} className='row' style={{background:""}}>
-                        <div className="">
-                        <img src={azharAliabout} alt="" srcset=""  style={{width:"100%",height:"100%"}}/>
-
-                        </div>
-                   
-                    </div> :  <div className="row" style={{flexWrap:"nowrap"}}>
-                    <div className="col p-0 mr-1 "                             onMouseEnter={()=>{
-                        handleMouseEnter()
-                    }}
-                          
- >
-                     <img src={azharAli} alt="" className='container-  h-auto w-100' srcset="" />
-                    </div>
-                    <div className="col p-0 mr-1 ">
-                     <img src={azharAli} alt="" className='container-  h-auto w-100'   srcset="" />
-                    </div>
-                    <div className="col p-0 mr-1 ">
-                     <img src={azharAli} alt="" className='container-  h-auto w-100'   srcset="" />
-                    </div>
-                    <div className="col p-0 mr-1 ">
-                     <img src={azharAli} alt="" className='container-  h-auto w-100'   srcset="" />
-                    </div>
-                    <div className="col p-0 mr-1 ">
-                     <img src={azharAli} alt="" className='container-  h-auto w-100'   srcset="" />
-                    </div>
-                    <div className="col p-0 mr-1 ">
-                     <img src={azharAli} alt="" className='container-  h-auto w-100'   srcset="" />
-                    </div>
-                </div>
+                    images.map(({full},index)=>{
+                        return <>
+                             {
+                                index ==  hoverImage ?  <div   onMouseLeave={()=>{
+                                    debugger;
+                                    handleMouseLeave()
+                                }} className='row' style={{background:""}}>
+                                    <div className="">
+                                    <img src={full} alt="" srcset=""  className={`${transition_image}`} style={{width:"100%",height:"100%"}}/>
+            
+                                    </div>
+                               
+                                </div>: ""
+                             }
+                        </>
+                    })
                 }
+             </div>
+
+
+
+<div className="row" style={{flexWrap:"nowrap"}}>
+{
+    null ==  hoverImage? 
+    images.map(({thumbnail},index)=>{
+        return    <div className="col p-0 mr-1 "                             onMouseEnter={()=>{
+            handleMouseEnter(index)
+        }}
+>
+         <img src={thumbnail} alt="" className='container-  h-auto w-100' srcset="" />
+        </div>
+    }): ""
+}
+</div>
                
             </div>
 
