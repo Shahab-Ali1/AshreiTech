@@ -67,7 +67,7 @@ const Teams = () => {
         },
         {
             name: "Azmeena Furniturewalla",
-            title: "Head of Marketing and Communication",
+            title: "Head of Marketing and Communication's",
             image: Azmeena_Furniturewala,
             description: "A MarCom professional with over 9 years of experience, in simple words, \"Work inspires her.\" Embarking on a journey from science to advertising, her evolution into a strategic and adaptive marketer has been nothing short of thrilling.",
             linkedInProfile: 'https://www.linkedin.com/in/azmeena-k/'
@@ -88,7 +88,7 @@ const Teams = () => {
         },
         {
             name: "Maryiam Pervaiz",
-            title: "Manager Communication and PR- LHR",
+            title: "Manager Communication's and PR- LHR",
             image: Maryam,
             description: "Maryam is a seasoned professional with over 15 years of extensive experience in journalism, media, marketing, and public relations. Her diverse skill set and strategic insight have been instrumental in building sustainable and trustworthy relationships with our clients and the corporate world. Maryam's multifaceted expertise makes her an invaluable asset to our organization, consistently driving our marketing initiatives to new heights. Her ability to blend creativity with strategic thinking ensures that our brand remains at the forefront of industry trends and client expectations. At our company, Maryam continues to lead with excellence, fostering a culture of innovation and reliability.",
             linkedInProfile: 'https://www.linkedin.com/in/maryiam-pervaiz-40595121/'
@@ -125,7 +125,7 @@ const Teams = () => {
             name: "Humra Tahir",
             title: "Executive- Marcom",
             image: Humra_Tahir,
-            description: "Humra is a final-year Mass Communication student and MarCom Executive at AshreiTech Academy. With a knack for creativity, she crafts marketing content that truly engages and stands out. Humra blends her academic knowledge with hands-on experience, bringing fresh, compelling ideas to the table.",
+            description: "Humra is a final-year Mass Communication's student and MarCom Executive at AshreiTech Academy. With a knack for creativity, she crafts marketing content that truly engages and stands out. Humra blends her academic knowledge with hands-on experience, bringing fresh, compelling ideas to the table.",
             linkedInProfile: 'https://www.linkedin.com/in/humra-tahir/'
         },
         {
@@ -178,8 +178,6 @@ const Teams = () => {
             linkedInProfile: 'http://linkedin.com/in/hunain-mianoor-69308b322'
         },
     ];
-
-    
 
     return (
         <>

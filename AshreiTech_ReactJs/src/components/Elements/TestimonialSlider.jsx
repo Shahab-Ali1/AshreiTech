@@ -32,7 +32,7 @@ const cardData = [
     name: "Adeel Ahmed",
     title: "Student",
     text: "The classes are really interactive, and every week, we experiment with something new in cyber security. There has been a profound addition to my knowledge and which has broadened my skillset – all thanks to my trainers!",
-    date: "08:21 PM - Jan 4, 2023",
+    date: "08:21 PM - Jan 4, 2024",
     rating: 4,
     linkedinUrl: "https://www.linkedin.com/in/adeel-ahmed-1842b6315?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
@@ -41,7 +41,7 @@ const cardData = [
     name: "Mahnoor Khan",
     title: "Student",
     text: "Being a student at AshreiTech has been a transformative experience for me. The quality of education and the dedication of the faculty are truly exceptional. The curriculum is well-structured, providing a perfect balance of theoretical knowledge and practical application.",
-    date: "08:21 PM - Jan 4, 2023",
+    date: "01:10 PM - March 23, 2024",
     rating: 4,
     linkedinUrl: "https://www.linkedin.com/in/mahnoor-khan-8143722a2/"
   },
@@ -50,7 +50,7 @@ const cardData = [
     name: "Muhammad Ibrahim",
     title: "Student",
     text: "The instructors were knowledgeable and supportive, the curriculum was comprehensive, and the hands-on projects were invaluable. I now feel well-prepared for my career in procurement, thanks to AshreiTech Academy.",
-    date: "08:21 PM - Jan 4, 2023",
+    date: "05:50 PM - Jan 15, 2023",
     rating: 4,
     linkedinUrl: "https://www.linkedin.com/in/muhammad-ibrahim-505b13235/"
   },
@@ -59,7 +59,7 @@ const cardData = [
     name: "Tehreem Fatima",
     title: "Student",
     text: "AshreiTech was a constant source of support, offering personalized advice and career guidance at every stage. I am thriving in my dream tech job!",
-    date: "08:21 PM - Jan 4, 2023",
+    date: "03:30 PM - Dec 4, 2023",
     rating: 4,
     linkedinUrl: "https://www.linkedin.com/in/tehreem-fatimaa/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   }
