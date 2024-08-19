@@ -3,7 +3,7 @@
     }
 
 
-    .gradientCircle:before {
+    .gradientCircle {
         content: "";
         position: absolute;
         right: -100px;

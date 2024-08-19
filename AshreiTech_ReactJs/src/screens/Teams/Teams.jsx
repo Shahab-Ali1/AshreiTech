@@ -20,6 +20,9 @@ import M_Khurram_Muqueem from '../../assets/team/M_Khurram_Muqueem.png'
 import Maryam from '../../assets/team/maryam.png'
 import Jamshed_Zaman from '../../assets/team/Jamshed_Zaman.png'
 import Muhammad_Ibrahim from '../../assets/team/Muhammad_Ibrahim.png'
+import Haris_Bin_Rafat from '../../assets/team/Haris_Bin_Rafat.png'
+import green_Omar_Siddique from '../../assets/team/green_Omar_Siddique.png'
+import Hunain_Shah from '../../assets/team/Hunain_Shah.png'
 import Footer from "../../components/Sections/Footer/Footer";
 
 const { team_container, banner_container, gradientCircle, team_description, card_Team, card_Team_bg, overlay_text, banner_overlay } = style;
@@ -126,6 +129,20 @@ const Teams = () => {
             linkedInProfile: 'https://www.linkedin.com/in/humra-tahir/'
         },
         {
+            name: "Omar Siddique",
+            title: "Creative Designer",
+            image: green_Omar_Siddique,
+            description: "As a Creative Designer, Omar envisions design as more than just aesthetics; he sees it as a vibrant tapestry that weaves together meaningful connections, delivers impactful messages, and beautifully reflects the company's core aims in every visual element. For Omar, every design is a story waiting to be told, a bridge between creativity and purpose.",
+            linkedInProfile: 'https://www.linkedin.com/in/omar-siddiqui-3b9a99204/'
+        },
+        {
+            name: "Haris Bin Rafat",
+            title: "Photographer & Videographer",
+            image: Haris_Bin_Rafat,
+            description: "As a passionate photographer and videographer, Haris is constantly on the lookout for captivating stories to capture and share. Whether framing the serene beauty of a landscape or filming the dynamic energy of a live event, Haris is dedicated to creating content that not only engages but resonates deeply with his audience. For him, every shot is a new adventure, a unique story waiting to be told.",
+            linkedInProfile: 'https://www.linkedin.com/in/haris-bin-rafat-657474ab/'
+        },
+        {
             name: "Raja Muhammad Ibrahim",
             title: "Student Coordinator",
             image: Muhammad_Ibrahim,
@@ -152,6 +169,13 @@ const Teams = () => {
             image: Syed_Talha_Asad,
             description: "As a seasoned IT Administrator, Syed Talha orchestrates seamless network operations and fortifies security solutions, propelling business growth with cutting-edge technology infrastructure. With a mastery in system administration and network architecture, he crafts high-availability solutions that minimize downtime and amplify productivity.",
             linkedInProfile: ''
+        },
+        {
+            name: "Hunain Amin",
+            title: "IT Support Officer",
+            image: Hunain_Shah,
+            description: "As an IT Support Officer, Hunain Amin excels in delivering technical assistance and support to users within the organization. With a robust background in troubleshooting hardware and software issues, he swiftly resolves IT-related challenges with precision. Driven by a commitment to exceptional customer service and technical proficiency, Hunain strives to elevate the overall IT experience for every user.",
+            linkedInProfile: 'http://linkedin.com/in/hunain-mianoor-69308b322'
         },
     ];
 
@@ -186,7 +210,7 @@ const Teams = () => {
                             </div>
                             <div className="d-flex justify-content-center flex-column align-items-center">
                                 <h5>{member.name}</h5>
-                                <h6 className="text-center">{member.title}</h6>
+                                <h6 className="text-center" style={{fontSize:"15px",  fontWeight:"500"}}>{member.title}</h6>
                             </div>
                         </div>
                     ))}
