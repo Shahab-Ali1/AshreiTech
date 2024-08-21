@@ -52,7 +52,7 @@ const Teams = () => {
             linkedInProfile: ''
         },
         {
-            name: "Talha shabbir",
+            name: "Talha Shabbir",
             title: "Head, Academics & Programs",
             image: Talha_Shabbir,
             description: "As a seasoned IT Administrator, Syed Talha orchestrates seamless network operations and fortifies security solutions, propelling business growth with cutting-edge technology infrastructure. With a mastery in system administration and network architecture, he crafts high-availability solutions that minimize downtime and amplify productivity.",
