@@ -43,7 +43,7 @@ export default function WhatWeDo() {
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left text-white">
-                            <h1>Enable Yourselves By Becoming A Tech Learner</h1>
+                            <h1>We Enable You With Tech Education:</h1>
                             <p className="mt-3">Build or enhance your tech career by enrolling in our tech courses and get globally certified. From in-demand areas like cloud computing and cyber security, to coveted platform partner certifications including Microsoft, SAP, Oracle, Salesforce amongst others, we offer a diverse range of courses and training programs tailored to industry demands.</p>
                             <div className='d-flex pt-4 flex-column flex-lg-row'>
                                 <div className="col-md-6 col-sm-12 pl-0 mb-4 mb-md-0">
@@ -80,7 +80,7 @@ export default function WhatWeDo() {
                 <div className="container">
                     <div className="row p-3 p-md-5 d-flex justify-content-center align-items-center">
                         <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left">
-                            <h1>Rock Your Events With Your Trusted Venue Partner</h1>
+                            <h1>We Help You Rock Your In-House Events:</h1>
                             <p className="mt-3"> Being located precisely in
                                 the center of the city, with high end safety and security, and equipped with all
                                 the high-tech amenities, you get everything you need to run a successful in-house training, meetings & networking events. Our experienced staff is well-versed in the latest audiovisual technologies, ensuring smooth operations and
@@ -134,7 +134,7 @@ export default function WhatWeDo() {
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left text-white">
-                            <h1>Level Up Your Workforce With Our Comprehensive Training Programs</h1>
+                            <h1>We Drive Your Workforce to the Next Level:</h1>
                             <p className="mt-3">At AshreiTech, we recognize the critical role of continuous learning in maintaining a competitive
                                 edge in today’s fast-paced digital landscape. That’s why we partner with industry-renowned
                                 experts to offer customized corporate tech training programs tailored to meet the unique
@@ -176,7 +176,7 @@ export default function WhatWeDo() {
                 <div className="container">
                     <div className="row p-3 p-md-5 d-flex justify-content-center align-items-center">
                         <div className="col-lg-6 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center text-lg-left">
-                            <h1>Become a Talent Hero</h1>
+                            <h1>We Let You Empower Futures and Become a Talent Hero:</h1>
                             <p className="mt-3">CSR giving is perhaps one on the most sustainable forms of giving in
                                 the overall philanthropic canvas of Pakistan. Yes, investing in healthcare, primary education,
                                 social welfare, and habitat is important, but It’s also critically important to invest in domains
