@@ -115,14 +115,14 @@ export default function TopNavbar() {
                   <span
                     className=""
                     style={{
-                      color: hoveredIndex ===  0 ? '#000000' : hoveredIndex !== null ? '#808080' : '#000000',
+                      color: hoveredIndex ===  0 ? '#000000' : hoveredIndex !== null ? '#808080' : '#000000', transition: 'color 0.3s ease',
                     }}
                   >
                     Who we are
                   </span>
                     <i
-                      style={{ marginTop: "0px", marginLeft: "10px", }}
-                      className="dropbtn hover-rotate fa fa-chevron-right whoweare"
+                      style={{ marginTop: "0px", marginLeft: "10px"}}
+                      className="dropbtn hover-rotate fa fa-chevron-right "
                     ></i>
                     <div className="dropdown-content">
                       <NavLink className="" to={"/teams"} style={{ fontSize: '15.008px' }}
@@ -158,7 +158,7 @@ export default function TopNavbar() {
             ))}
             <li className="font15 pointer">
               <LightTooltip title="Click to get our app" placement="top" arrow>
-                <img src={QRTopNav} alt="QR Code Icon" data-toggle="modal" data-target="#qrCodeModal" style={{ width: '35px', height: 'auto' }} />
+                <img src={QRTopNav} alt="QR Code Icon" data-toggle="modal" data-target="#qrCodeModal" style={{ width: '35px', height: 'auto', }} />
               </LightTooltip>
             </li>
           </UlWrapper>
