@@ -37,19 +37,20 @@ const Teams = () => {
             description: "A Researcher, Leadership & Innovation Consultant, and high-performance coach, he has worked with literally all major companies across Pakistan and in nearby regions.He is the Founder of Learning Minds, Curator of Insights Business Forum, and serves on the advisory boards of various development sector organizations.",
             linkedInProfile: 'https://www.linkedin.com/in/sohailzindani/'
         },
-        {
-            name: "Adnan Ahmed",
-            title: "Head of Operations and IT",
-            image: adnan_ahmed,
-            description: "Academy, is pivotal for keeping things running smoothly and maintaining a friendly atmosphere. The team often seeks him out for his problem-solving skills and practical advice, which helps keep the workplace dynamic and harmonious. His commitment ensures that everything at the academy works well, making him a crucial member of the team.",
-            linkedInProfile: 'https://www.linkedin.com/in/adnan-ahmed-92b80235/'
-        },
+     
         {
             name: "M.Khurram Muqueem Khan",
             title: "Financial Controller",
             image: M_Khurram_Muqueem,
             description: "Thriving as a results-driven finance professional, he is a trusted team player and valuable partner to business and service functions. He cultivates key organizational competencies by championing simplicity, collaboration, trust, innovation, and customer-centricity, all with unwavering integrity.",
             linkedInProfile: ''
+        },
+        {
+            name: "Adnan Ahmed",
+            title: "Head of Operations and IT",
+            image: adnan_ahmed,
+            description: "Academy, is pivotal for keeping things running smoothly and maintaining a friendly atmosphere. The team often seeks him out for his problem-solving skills and practical advice, which helps keep the workplace dynamic and harmonious. His commitment ensures that everything at the academy works well, making him a crucial member of the team.",
+            linkedInProfile: 'https://www.linkedin.com/in/adnan-ahmed-92b80235/'
         },
         {
             name: "Talha Shabbir",

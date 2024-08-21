@@ -23,6 +23,13 @@ import animation4 from '../../assets/aboutAnimation4.png'
  import rahimIqbalAbout from '../../assets/aboutTheCompany/rahimIqbalAbout.png'
  import EhsanSayaAbout from '../../assets/aboutTheCompany/EhsanSayaAbout.png'
  import ibrahiShamsiAbout from '../../assets/aboutTheCompany/ibrahiShamsiAbout.png'
+ import companyLogo1 from '../../assets/aboutTheCompany/companyLogo1.png'
+ import companyLogo2 from '../../assets/aboutTheCompany/companyLogo2.png'
+ import companyLogo3 from '../../assets/aboutTheCompany/companyLogo3.png'
+ import companyLogo4 from '../../assets/aboutTheCompany/companyLogo4.png'
+ import companyLogo5 from '../../assets/aboutTheCompany/companyLogo5.png'
+ import companyLogo6 from '../../assets/aboutTheCompany/companyLogo6.png'
+ import companyLogo7 from '../../assets/aboutTheCompany/companyLogo7.png'
 //  import azharali2 from '../../assets/aboutTheCompany/azharAli2.png'
 
  const card=[
@@ -56,6 +63,37 @@ import animation4 from '../../assets/aboutAnimation4.png'
     { thumbnail: azharAli, full: EhsanSayaAbout },
     { thumbnail: azharAli, full: ibrahiShamsiAbout },
 ];
+const logos = [
+    {
+        logo: companyLogo1,
+        description: 'Empowering Innovation and Excellence'
+    },
+    {
+        logo: companyLogo2,
+        description: 'Commitment to Quality and Integrity'
+    },
+    {
+        logo: companyLogo3,
+        description: 'Driven by Passion and Purpose'
+    },
+    {
+        logo: companyLogo4,
+        description: 'Collaboration for Greater Impact'
+    },
+    {
+        logo: companyLogo5,
+        description: 'Sustainability at the Core'
+    },
+    {
+        logo: companyLogo6,
+        description: 'Customer-Centric Approach'
+    },
+    {
+        logo: companyLogo7,
+        description: 'Continuous Learning and Growth'
+    }
+];
+
 const AboutTheCompany = () => {
     const { box1, box2, parent_box,zain, transition_image,section_2,card_discription,card_title, banner_container, view_all, section1_banner_container ,card_hover,card_container,active_card,blur_container} = style
     const [hoveredIndex, setHoveredIndex] = useState(0);
@@ -219,49 +257,45 @@ const AboutTheCompany = () => {
                
             </div>
 
-
-      
-            <div
-                className="container-fluid py-4 "
-                style={{
-                    // backgroundImage: `url(${wave2})`,
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center',
-                    padding: 0,
-                    background:"rgba(255, 222, 142, 1)"
-                }}
-            >
-                <div className="row d-flex justify-content-center align-items-center py-4">
-                    <div className="col-lg-12 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center ">
-                        <h1 className=" pb-sm-4 pb-lg-0" id="">What Makes Us Unqiue</h1>
-                        <p className="col-md-12  col-lg-8 pt-2 mt-4 font25">Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
+            <div className="row px-5">
+    <h1>Our Core Values: The Pillars of Our Success</h1>
+    <h5>Guiding Principles that Shape Our Vision and Drive Our Mission</h5>
+    <div className="col-8">
+        <div className="row">
+            {logos?.map(({ logo, description }, index) => (
+                <div className="col-5 mb-3" key={index}>
+                    <div className="row align-items-center">
+                        <div className="col-2">
+                            <img src={logo} alt={`Company Logo ${index + 1}`} />
+                        </div>
+                        <div className="col-10">
+                            <p>{description}</p>
+                        </div>
                     </div>
                 </div>
-                
-                <div className={`row mx-2 px-sm-5`}  >
-                    {
-                        card?.map(({logo,title,discription},index)=>{
-                            const backgroundColor = hoveredIndex === index ? cardColors[index % cardColors.length] : 'white';
-                            return    <div style={
-                                {backgroundColor } } onMouseEnter={() => {
-                                setHoveredIndex(index)
-                              }}
-                            onMouseLeave={() => setHoveredIndex(0)} className={`  ${hoveredIndex == index ? active_card: card_container} text-black p-4 ${hoveredIndex}  ${card_hover}`}>
-                    <img src={logo} style={{height:80}} alt=""  className='mb-xl-5 mb-lg-3'/>
-                    <p className={`my-2 font-weight-bolder font20 mt-3 ${card_title}`}>{title}</p>
-                    <p className={`line-height-sm ${card_discription}`}>{discription}</p>
-                </div>
-                        })
-                    }
+            ))}
 
-{/* {`col-sm-3 d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ${card_hover}` */}
+{/* <div className="col-5 mb-3 p-0" key={index}>
+            <div className="row align-items-center">
+                <div className="col-2 d-flex justify-content-center align-items-center">
+                    <div className={`${circle} d-flex justify-content-center align-items-center`}>
+                        <img src={logo} alt={`Company Logo ${index + 1}`} className={`${logo_img}`} />
+                    </div>
+                </div>
+                <div className="col-10">
+                    <p>{description}</p>
                 </div>
             </div>
+        </div> */}
+        </div>
+    </div>
+    <div className="col-4"></div>
+</div>
+
+
             <div
                 className="container-fluid py-4 "
                 style={{
-                    // backgroundImage: `url(${wave2})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',

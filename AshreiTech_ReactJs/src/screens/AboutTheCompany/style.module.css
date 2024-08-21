@@ -163,6 +163,18 @@
   list-style: 15px;
 }
 
+.circle {
+  width: 80px; /* Adjust the size as needed */
+  height: 80px; /* Adjust the size as needed */
+  border-radius: 50%;
+  overflow: hidden; /* Ensures the image fits within the circle */
+  background-color: rgba(233, 248, 248, 1); /* Replace with your desired color */
+}
+
+.logo_img {
+  max-width: 70%; /* Adjust to fit the logo nicely */
+  max-height: 70%; /* Adjust to fit the logo nicely */
+}
 
 @media only screen and  (max-width: 580px)  {
 .zain::after {
