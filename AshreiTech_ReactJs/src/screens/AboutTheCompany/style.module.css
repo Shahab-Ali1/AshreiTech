@@ -108,6 +108,15 @@
   }
 }
 @media only screen and (max-width: 600px) {
+  .circle {
+    width: 50px;
+    height: 50px;
+}
+
+.logo_img {
+    max-width: 50%;
+    max-height: 50%;
+}
   .active_card{
     width: 100% !important; 
  
@@ -225,6 +234,9 @@ left: -1px;
       font-size: 30px;
       transition: font-size  .9s ease;
     }
+    .circle{
+      height: 75px;
+    }
   
     }
     @media only screen and (min-width: 1400px) and (max-width: 2200px)  {
@@ -253,3 +265,56 @@ left: -1px;
         font-size: 14px;
       }
       }
+
+      /* Media query for 1152px */
+@media (max-width: 1152px) {
+  .circle {
+      width: 70px;
+      height: 60px;
+  }
+
+  .logo_img {
+      max-width: 65%;
+      max-height: 65%;
+  }
+}
+
+/* Media query for 1024px */
+@media (max-width: 1024px) {
+  .circle {
+      width: 65px;
+      height: 55px;
+  }
+
+  .logo_img {
+      max-width: 60%;
+      max-height: 60%;
+  }
+}
+
+/* Media query for 800px */
+@media (max-width: 800px) {
+  .circle {
+      width: 60px;
+      height: 60px;
+  }
+
+  .logo_img {
+      max-width: 55%;
+      max-height: 55%;
+  }
+}
+
+/* Media query for 768px */
+@media (max-width: 768px) {
+  .circle {
+      width: 60px; 
+      height: 60px; 
+  }
+
+  .logo_img {
+      max-width: 60%;
+      max-height: 60%;
+  }
+}
+

@@ -1,101 +1,60 @@
-import React, { useState } from 'react'
-import style from "./style.module.css"
-import TopNavbar from '../../components/Nav/TopNavbar'
-import section2banner from '../../assets/aboutSection2banner.png'
-import section1banner from '../../assets/aboutSection1banner.png'
-import Footer from '../../components/Sections/Footer/Footer'
+import React, { useEffect, useState } from 'react';
+import style from "./style.module.css";
+import TopNavbar from '../../components/Nav/TopNavbar';
+import Footer from '../../components/Sections/Footer/Footer';
 
-import vector1 from '../../assets/aboutcard1.png'
-import vector2 from '../../assets/aboutcard2.png'
-import vector3 from '../../assets/aboutcard3.png'
-import vector4 from '../../assets/aboutcard4.png'
-import BookaScreenHeroContainer from '../../assets/BookaScreen/BookaScreenHeroContainer.png';
-import BookaScreenHero from '../../assets/BookaScreen/BookaScreenHero.png';
-import bg from '../../assets/missonbackground.png'
-import animation1 from '../../assets/aboutAnimation1.png'
-import animation2 from '../../assets/aboutAnimation2.png'
-import animation3 from '../../assets/aboutAnimation3.png'
-import animation4 from '../../assets/aboutAnimation4.png'
- import azharAli from '../../assets/aboutTheCompany/azharAli.png'
- import azharAliabout from '../../assets/aboutTheCompany/azharAliAbout.png'
- import shohailZindaniAbout from '../../assets/aboutTheCompany/shohailZindaniAbout.png'
- import haiderWaheedAbout from '../../assets/aboutTheCompany/haiderWaheedAbout.png'
- import rahimIqbalAbout from '../../assets/aboutTheCompany/rahimIqbalAbout.png'
- import EhsanSayaAbout from '../../assets/aboutTheCompany/EhsanSayaAbout.png'
- import ibrahiShamsiAbout from '../../assets/aboutTheCompany/ibrahiShamsiAbout.png'
- import companyLogo1 from '../../assets/aboutTheCompany/companyLogo1.png'
- import companyLogo2 from '../../assets/aboutTheCompany/companyLogo2.png'
- import companyLogo3 from '../../assets/aboutTheCompany/companyLogo3.png'
- import companyLogo4 from '../../assets/aboutTheCompany/companyLogo4.png'
- import companyLogo5 from '../../assets/aboutTheCompany/companyLogo5.png'
- import companyLogo6 from '../../assets/aboutTheCompany/companyLogo6.png'
- import companyLogo7 from '../../assets/aboutTheCompany/companyLogo7.png'
-//  import azharali2 from '../../assets/aboutTheCompany/azharAli2.png'
+// Assets
+import section1banner from '../../assets/aboutSection1banner.png';
+import section_banner from '../../assets/aboutTheCompany/section_banner.png';
+import animation1 from '../../assets/aboutAnimation1.png';
+import animation2 from '../../assets/aboutAnimation2.png';
+import animation3 from '../../assets/aboutAnimation3.png';
+import azharAli from '../../assets/aboutTheCompany/azharAli.png';
+import azharAliabout from '../../assets/aboutTheCompany/azharAliAbout.png';
+import shohailZindaniAbout from '../../assets/aboutTheCompany/shohailZindaniAbout.png';
+import shohailZindani from '../../assets/aboutTheCompany/shohailZindani.png';
+import haiderWaheedAbout from '../../assets/aboutTheCompany/haiderWaheedAbout.png';
+import haiderWaheed from '../../assets/aboutTheCompany/haiderWaheed.png';
+import rahimIqbal from '../../assets/aboutTheCompany/rahimIqbal.png';
+import rahimIqbalAbout from '../../assets/aboutTheCompany/rahimIqbalAbout.png';
+import EhsanSaya from '../../assets/aboutTheCompany/EhsanSaya.png';
+import EhsanSayaAbout from '../../assets/aboutTheCompany/EhsanSayaAbout.png';
+import ibrahiShamsi from '../../assets/aboutTheCompany/ibrahiShamsi.png';
+import ibrahiShamsiAbout from '../../assets/aboutTheCompany/ibrahiShamsiAbout.png';
+import companyLogo1 from '../../assets/aboutTheCompany/companyLogo1.png';
+import companyLogo2 from '../../assets/aboutTheCompany/companyLogo2.png';
+import companyLogo3 from '../../assets/aboutTheCompany/companyLogo3.png';
+import companyLogo4 from '../../assets/aboutTheCompany/companyLogo4.png';
+import companyLogo5 from '../../assets/aboutTheCompany/companyLogo5.png';
+import companyLogo6 from '../../assets/aboutTheCompany/companyLogo6.png';
+import companyLogo7 from '../../assets/aboutTheCompany/companyLogo7.png';
+import vector1 from '../../assets/aboutcard1.png';
+import vector2 from '../../assets/aboutcard2.png';
+import vector3 from '../../assets/aboutcard3.png';
+import vector4 from '../../assets/aboutcard4.png';
 
- const card=[
-    {
-        logo:animation1,
-        title:"Learning is our choice.",
-        discription:"We embrace continuous learning and view every challenge as an opportunity for growth."
-    },
-    {
-        logo:animation2,
-        title:"Learning is our choice.",
-        discription:"We embrace continuous learning and view every challenge as an opportunity for growth."
-    },
-    {
-        logo:animation3,
-        title:"Learning is our choice.",
-        discription:"We embrace continuous learning and view every challenge as an opportunity for growth."
-    },
-    {
-        logo:animation3,
-        title:"Learning is our choice.",
-        discription:"We embrace continuous learning and view every challenge as an opportunity for growth."
-    },
- ]
- const cardColors = ['#ffd393', '#9fffeb', '#eae1b0', '#93c7af',];
- const images = [
+const cardColors = ['#ffd393', '#9fffeb', '#eae1b0', '#93c7af'];
+
+const images = [
     { thumbnail: azharAli, full: azharAliabout },
-    { thumbnail: azharAli, full: shohailZindaniAbout },
-    { thumbnail: azharAli, full: haiderWaheedAbout },
-    { thumbnail: azharAli, full: rahimIqbalAbout },
-    { thumbnail: azharAli, full: EhsanSayaAbout },
-    { thumbnail: azharAli, full: ibrahiShamsiAbout },
-];
-const logos = [
-    {
-        logo: companyLogo1,
-        description: 'Empowering Innovation and Excellence'
-    },
-    {
-        logo: companyLogo2,
-        description: 'Commitment to Quality and Integrity'
-    },
-    {
-        logo: companyLogo3,
-        description: 'Driven by Passion and Purpose'
-    },
-    {
-        logo: companyLogo4,
-        description: 'Collaboration for Greater Impact'
-    },
-    {
-        logo: companyLogo5,
-        description: 'Sustainability at the Core'
-    },
-    {
-        logo: companyLogo6,
-        description: 'Customer-Centric Approach'
-    },
-    {
-        logo: companyLogo7,
-        description: 'Continuous Learning and Growth'
-    }
+    { thumbnail: shohailZindani, full: shohailZindaniAbout },
+    { thumbnail: haiderWaheed, full: haiderWaheedAbout },
+    { thumbnail: rahimIqbal, full: rahimIqbalAbout },
+    { thumbnail: EhsanSaya, full: EhsanSayaAbout },
+    { thumbnail: ibrahiShamsi, full: ibrahiShamsiAbout },
 ];
 
+const logos = [
+    { logo: companyLogo1, description: 'Generosity is our Way' },
+    { logo: companyLogo2, description: 'Inclusion is our Mantra' },
+    { logo: companyLogo3, description: 'Global is our Scale' },
+    { logo: companyLogo4, description: 'Growth is our Passion' },
+    { logo: companyLogo5, description: 'Sustainability at the Core' },
+    { logo: companyLogo6, description: 'Innovation is our Method' },
+    { logo: companyLogo7, description: 'Simplicity is our Strategy' },
+];
 const AboutTheCompany = () => {
-    const { box1, box2, parent_box,zain, transition_image,section_2,card_discription,card_title, banner_container, view_all, section1_banner_container ,card_hover,card_container,active_card,blur_container} = style
+    const { box1, box2,circle,logo_img, parent_box,zain, transition_image,section_2,card_discription,card_title, banner_container, view_all, section1_banner_container ,card_hover,card_container,active_card,blur_container} = style
     const [hoveredIndex, setHoveredIndex] = useState(0);
     const [hoverImage , setHoverImage] = useState(null)
     const [active , setActive] = useState(false)
@@ -111,6 +70,12 @@ const AboutTheCompany = () => {
         console.log("Mouse left"); 
         setHoverImage(null);
     };
+    useEffect(() => {
+        images.forEach(({ full }) => {
+            const img = new Image();
+            img.src = full;
+        });
+    }, []);
     return (
         <>
             <TopNavbar />
@@ -181,6 +146,36 @@ const AboutTheCompany = () => {
             }
                
             </div>
+            <div className="row mx-5 pt-md-5">
+    <h1 className='mb-md-3'>Our Core Values: The Pillars of Our Success</h1>
+    <h5 className='mb-md-5'>Guiding Principles that Shape Our Vision and Drive Our Mission</h5>
+    <div className="col-lg-7">
+        <div className="row">
+            {logos?.map(({ logo, description }, index) => (
+                <div className="col-lg-6 mb-lg-3 p-0" key={index}>
+            <div className="row align-items-center">
+                <div className="col-2 p-0 d-flex justify-content-center align-items-center">
+                    <div className={`${circle} d-flex justify-content-center align-items-center`}>
+                        <img src={logo} alt={`Company Logo ${index + 1}`} className={`${logo_img}`} />
+                    </div>
+                </div>
+                <div className="col-10">
+                    <p className='font-weight-bold'>{description}</p>
+                </div>
+            </div>
+        </div> 
+            ))}
+
+        </div>
+    </div>
+    <div className="col-5 p-0 d-none d-sm-block">
+        <img src={section_banner} alt="" className='container-fluid p-0 w-100' srcset="" />
+    </div>
+   
+</div>
+<div className=" px-2 mt-3 d-block d-sm-none">
+        <img src={section_banner} alt="" className='container-fluid p-0 w-100' srcset="" />
+    </div>
                 <div className={`row  d-sm-none d-block m-auto  ${section1_banner_container}`} style={{ width: "90%" }}>
                     <div 
                         className={`col-12  px-4 ${zain}`}
@@ -213,10 +208,6 @@ const AboutTheCompany = () => {
 
                         </div>
                     </div>
-                 
-                    {/* <div className={`${banner_container}`}>
-                        <img src={section2banner} alt="" srcset="" />
-                    </div> */}
                 </div>
              <div className="">
                 {
@@ -238,9 +229,6 @@ const AboutTheCompany = () => {
                     })
                 }
              </div>
-
-
-
 <div className="row" style={{flexWrap:"nowrap"}}>
 {
     null ==  hoverImage? 
@@ -254,45 +242,7 @@ const AboutTheCompany = () => {
     }): ""
 }
 </div>
-               
             </div>
-
-            <div className="row px-5">
-    <h1>Our Core Values: The Pillars of Our Success</h1>
-    <h5>Guiding Principles that Shape Our Vision and Drive Our Mission</h5>
-    <div className="col-8">
-        <div className="row">
-            {logos?.map(({ logo, description }, index) => (
-                <div className="col-5 mb-3" key={index}>
-                    <div className="row align-items-center">
-                        <div className="col-2">
-                            <img src={logo} alt={`Company Logo ${index + 1}`} />
-                        </div>
-                        <div className="col-10">
-                            <p>{description}</p>
-                        </div>
-                    </div>
-                </div>
-            ))}
-
-{/* <div className="col-5 mb-3 p-0" key={index}>
-            <div className="row align-items-center">
-                <div className="col-2 d-flex justify-content-center align-items-center">
-                    <div className={`${circle} d-flex justify-content-center align-items-center`}>
-                        <img src={logo} alt={`Company Logo ${index + 1}`} className={`${logo_img}`} />
-                    </div>
-                </div>
-                <div className="col-10">
-                    <p>{description}</p>
-                </div>
-            </div>
-        </div> */}
-        </div>
-    </div>
-    <div className="col-4"></div>
-</div>
-
-
             <div
                 className="container-fluid py-4 "
                 style={{

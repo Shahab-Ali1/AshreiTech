@@ -23,17 +23,17 @@ import styled from "styled-components";
 
 
 const sponsersLogo = [
-    { logo: integration_experts_logo, link: 'https://integrationxperts.com/' },
-    { logo: nastp_logo, link: 'https://nastp.gov.pk/' },
-    { logo: rewterz_logo, link: 'https://www.rewterz.com/' },
-    { logo: avanza_logo, link: 'https://avanzasolutions.com/' },
-    { logo: EduManBlue, link: 'https://edu-man.com/' },
-    { logo: al_baraka, link: 'https://www.albaraka.com.pk/' },
-    { logo: lrnglog, link: 'https://www.learningmindsgroup.com/' },
-    { logo: martin_dow, link: 'https://www.martindow.com/' },
-    { logo: strive, link: 'https://stryvve.com/' },
-    { logo: strata, link: 'https://www.strata.com/' },
-    { logo: tpl_map, link: 'https://tplmaps.com/' }
+    { logo: tpl_map, link: 'https://tplmaps.com/' ,width :"71%"},
+    { logo: martin_dow, link: 'https://www.martindow.com/',width :"60%" },
+    { logo: strive, link: 'https://stryvve.com/',marginTop:-9 ,width :"75%"},
+    { logo: integration_experts_logo, link: 'https://integrationxperts.com/' ,width :"100%"},
+    { logo: nastp_logo, link: 'https://nastp.gov.pk/' ,width :"100%"},
+    { logo: rewterz_logo, link: 'https://www.rewterz.com/' ,width :"100%"},
+    { logo: avanza_logo, link: 'https://avanzasolutions.com/' ,width :"100%"},
+    { logo: EduManBlue, link: 'https://edu-man.com/',width :"95%" },
+    { logo: al_baraka, link: 'https://www.albaraka.com.pk/' ,width :"71%"},
+    { logo: lrnglog, link: 'https://www.learningmindsgroup.com/',width :"100%" },
+    { logo: strata, link: 'https://www.strata.com/',width :"100%" },
 ];
 
 const settings = {
@@ -43,7 +43,7 @@ const settings = {
     slidesToScroll: 1, // This can be kept as 1 for continuous scroll
     autoplay: true,
     autoplaySpeed: 0, // Set to 0 for continuous autoplay
-    cssEase: "linear", // Linear transition for smooth scrolling
+    cssEase: "linear", 
     arrows: false, // Hide arrows for continuous scroll
     pauseOnHover: true,
     responsive: [
@@ -86,12 +86,17 @@ const Sponsers = () => {
                 <div className=" " >
       <SliderWrapper>
         <Slider {...settings}>
-          {sponsersLogo.map(({logo,link}, index) => (
+          {sponsersLogo.map(({logo,link,width}, index) => (
            
                 
               <div className={`${sponsers_logo_container} mb-3`}>
-                                <a href={link} target="_blank" rel="noopener noreferrer">
-                                    <img src={logo} className="container-fluid w-100"  alt="Integration Experts Logo" />
+                <a href={link} className="" target="_blank" rel="noopener noreferrer">
+                <img
+                        src={logo}
+                        className="container-fluid"
+                        style={{ width, height: "100%", objectFit: "conain" }}
+                        alt={`Sponsor Logo ${index + 1}`}
+                    />
                                 </a>
                             </div>
           ))}

@@ -38,7 +38,8 @@
     object-fit: cover;
   }
   .sponsers_logo_container{
-   
+   display: flex;
+   align-items: center;
     height: 100%;
     width: 20% ;
   }
