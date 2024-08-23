@@ -182,10 +182,14 @@
 
 .logo_img {
   max-width: 70%; /* Adjust to fit the logo nicely */
-  max-height: 70%; /* Adjust to fit the logo nicely */
+  max-height: 50%; /* Adjust to fit the logo nicely */
+  
 }
 
 @media only screen and  (max-width: 580px)  {
+  .parent_box{
+    display: none;
+  }
 .zain::after {
 position: absolute;
 content: "";
@@ -235,7 +239,7 @@ left: -1px;
       transition: font-size  .9s ease;
     }
     .circle{
-      height: 75px;
+      height: 63px;
     }
   
     }
@@ -243,6 +247,7 @@ left: -1px;
       .active_card .card_title{
         font-size: 30px;
       }
+     
     }
 
     @media only screen and (min-width: 1024px) and (max-width: 1200px)  {
@@ -265,12 +270,22 @@ left: -1px;
         font-size: 14px;
       }
       }
+      @media only screen and (min-width: 1153px) and (max-width: 1299px)  {
+        .circle {
+       height: 63px;
+      }
+      }
 
+      @media only screen and (min-width: 1400px) and (max-width: 1500px)  {
+        .circle{
+          height: 67px;
+        }
+      }
       /* Media query for 1152px */
 @media (max-width: 1152px) {
   .circle {
       width: 70px;
-      height: 60px;
+      height: 56px;
   }
 
   .logo_img {
@@ -283,7 +298,7 @@ left: -1px;
 @media (max-width: 1024px) {
   .circle {
       width: 65px;
-      height: 55px;
+      height: 48px;
   }
 
   .logo_img {
@@ -293,6 +308,11 @@ left: -1px;
 }
 
 /* Media query for 800px */
+@media (max-width: 992px) {
+  .circle {
+      width: 49px;
+  }
+}
 @media (max-width: 800px) {
   .circle {
       width: 60px;

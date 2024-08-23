@@ -60,10 +60,7 @@ const AboutTheCompany = () => {
     const [active , setActive] = useState(false)
 
     const handleMouseEnter = (index) => {
-        setTimeout(() => {
-            
             setHoverImage(index);
-        }, 120);
     };
 
     const handleMouseLeave = () => {
@@ -80,7 +77,7 @@ const AboutTheCompany = () => {
         <>
             <TopNavbar />
             <div
-                className="container-fluid py-4"
+                className="container-fluid py-lg-4"
                 style={{
                     // backgroundImage: `url(${BookaScreenHeroContainer})`,
                     backgroundSize: 'cover',
@@ -117,7 +114,31 @@ const AboutTheCompany = () => {
                     
                   
                 </div>
-                <div className={`${parent_box}  row`} style={{
+                <div className={`row   d-sm-none d-block m-auto  ${section1_banner_container}`} style={{ width: "90%" }}>
+                    <div 
+                        className={`col-12  px-4 py-4 ${zain}`}
+                        style={{
+                            backgroundImage: `url(${section1banner})`,
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            // height: '157px',
+                            // width: '90%',
+                            // borderRadius: '50px',
+                            display: "flex",
+                            // justifyContent: "center",
+                            backgroundPosition:"center",
+                            borderRadius:10
+                        }}
+                    >
+                        <div className="flex-column justify-content-center align-items-center  text-center " style={{position:"relative",zIndex:2}}>
+                            <p className="font-weight-bold text-white font15 pt-1" style={{width:""}}>Empowering Tech Enthusiasts to shape the future</p>
+                            <h5 className="text-white my-1 font12">At AshreiTech Academy, We are on a mission to equip individuals with the technical and soft skills they need to thrive in the ever-evolving tech industry. Our dynamic programs and collaborative learning environment provide endless opportunities for growth and innovation</h5>
+                            <button className={`border-0 rounded-3 bg-white   px-2  ${view_all}`} style={{ borderRadius: 5 }}>View All Courses</button>
+                        </div>
+                        <div className="pb-5 mb-5"></div>
+                    </div>
+                </div>
+                <div className={`${parent_box}   row`} style={{
                 // backgroundImage: `url(${bg})`,
               
             }}
@@ -146,9 +167,12 @@ const AboutTheCompany = () => {
             }
                
             </div>
-            <div className="row mx-5 pt-md-5">
-    <h1 className='mb-md-3'>Our Core Values: The Pillars of Our Success</h1>
-    <h5 className='mb-md-5'>Guiding Principles that Shape Our Vision and Drive Our Mission</h5>
+            <div className="container-fluid pt-md-5 mx-md-5">
+   <div className="">
+   <h1 className='mb-md-3 ml-n3 my-2 my-md-0'>Our Core Values: The Pillars of Our Success</h1>
+   <h5 className='mb-md-5 ml-n3'>Guiding Principles that Shape Our Vision and Drive Our Mission</h5>
+   </div>
+            <div className="row  mx-2 ">
     <div className="col-lg-7">
         <div className="row">
             {logos?.map(({ logo, description }, index) => (
@@ -173,31 +197,12 @@ const AboutTheCompany = () => {
     </div>
    
 </div>
+            </div>
+  
 <div className=" px-2 mt-3 d-block d-sm-none">
         <img src={section_banner} alt="" className='container-fluid p-0 w-100' srcset="" />
     </div>
-                <div className={`row  d-sm-none d-block m-auto  ${section1_banner_container}`} style={{ width: "90%" }}>
-                    <div 
-                        className={`col-12  px-4 ${zain}`}
-                        style={{
-                            backgroundImage: `url(${section1banner})`,
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat',
-                            height: '157px',
-                            // width: '90%',
-                            // borderRadius: '50px',
-                            // display: "flex",
-                            // justifyContent: "center"
-                        }}
-                    >
-                        <div className="flex-column justify-content-center align-items-center  text-center " style={{position:"relative",zIndex:2}}>
-                            <p className="font-weight-bold text-white font15 pt-1" style={{width:""}}>Empowering Tech Enthusiasts to shape the future</p>
-                            <h5 className="text-white my-1 font12">At AshreiTech Academy, We are on a mission to equip individuals with the technical and soft skills they need to thrive in the ever-evolving tech industry. Our dynamic programs and collaborative learning environment provide endless opportunities for growth and innovation</h5>
-                            <button className={`border-0 rounded-3 bg-white   px-2  ${view_all}`} style={{ borderRadius: 5 }}>View All Courses</button>
-                        </div>
-                        <div className="pb-5 mb-5"></div>
-                    </div>
-                </div>
+                
             </div>
             <div className={`${section_2}`}>
                 <div className="row justify-content-center">
@@ -209,42 +214,42 @@ const AboutTheCompany = () => {
                         </div>
                     </div>
                 </div>
-             <div className="">
-                {
-                    images.map(({full},index)=>{
-                        return <>
-                             {
-                                index ==  hoverImage ?  <div   onMouseLeave={()=>{
-                                    debugger;
-                                    handleMouseLeave()
-                                }} className='row' style={{background:""}}>
-                                    <div className="">
-                                    <img src={full} alt="" srcset=""  className={`${transition_image}`} style={{width:"100%",height:"100%"}}/>
-            
-                                    </div>
-                               
-                                </div>: ""
-                             }
-                        </>
-                    })
-                }
-             </div>
-<div className="row" style={{flexWrap:"nowrap"}}>
-{
-    null ==  hoverImage? 
-    images.map(({thumbnail},index)=>{
-        return    <div className="col p-0 mr-1 "                             onMouseEnter={()=>{
-            handleMouseEnter(index)
-        }}
->
-         <img src={thumbnail} alt="" className='container-  h-auto w-100' srcset="" />
-        </div>
-    }): ""
-}
+                <div className="">
+<div className="row" >
+    {
+        hoverImage !== null && 
+        (() => {
+            const hoveredImage = images.find((_, index) => index === hoverImage);
+            return (
+                <div onMouseLeave={handleMouseLeave}   className="col p-0 mr-1" >
+                        <img src={hoveredImage.full} alt="" className={transition_image} style={{ width: "100%", height: "100%" }} />
+                </div>
+            );
+        })()
+    }
+    {/* <div className="" style={{height:100,width:'100%',background:'red'}}></div> */}
 </div>
+
+<div className="row" style={{ flexWrap: "nowrap" }}>
+    {
+        hoverImage === null && 
+        images.map(({ thumbnail }, index) => (
+            <div 
+                key={index} 
+                className="col p-0 mr-1" 
+                onMouseEnter={() => handleMouseEnter(index)}
+            >
+                <img src={thumbnail} alt="" className='container- h-auto w-100' />
+            </div>
+        ))
+    }
+</div>
+                </div>
+
+
             </div>
             <div
-                className="container-fluid py-4 "
+                className="container-fluid py-md-4 "
                 style={{
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',

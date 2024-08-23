@@ -45,13 +45,13 @@ const Footer = () => {
 
     return (
         <div className={`${footer_container} container-fluid  px-3 px-md-3 px-lg-5  pt-0 pt-md-5`}>
-            <div className="row px-0 px-md-5 py-0 py-md-5 ">
+            <div className="row px-0 px-md- py-0 py-md-5 ">
                 <div className="col-lg-6 col-md-6 col-sm-12 ">
                     <div className="row pb-4 mb-4 pt-1 pl-0 pl-lg-3 d-flex justify-content-center justify-content-lg-start">
                         <img src={AshrieTechWhiteLogo} alt="AshrieTech Logo" className="pt-5 pt-lg-0" style={{ width: '40%', height: 'auto' }} />
                     </div>
                     <div className="row  justify-content-center justify-content-lg-start d-none d-md-flex">
-                        <div className="mr-5 px-3">
+                        <div className="col-4 ">
                             <ul>
                                 {linkOne.map((link, index) => (
                                     <li key={index} className="pb-3">
@@ -60,7 +60,7 @@ const Footer = () => {
                                 ))}
                             </ul>
                         </div>
-                        <div className="mr-5 px-3">
+                        <div className="col-4 ">
                             <ul>
                                 {linkTwo.map((link, index) => (
                                     <li key={index} className="pb-3">
@@ -69,7 +69,7 @@ const Footer = () => {
                                 ))}
                             </ul>
                         </div>
-                        <div className="mr-5 px-3">
+                        <div className="col-4 ">
                             <ul>
                                 {socialLinks.map(({ platform, link, }, index) => (
                                     <li key={index} className="pb-3">

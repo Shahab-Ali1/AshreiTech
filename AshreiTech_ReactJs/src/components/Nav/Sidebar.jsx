@@ -34,7 +34,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
           </Link>
         </li>
         <li className="semiBold font15 pointer">
-          <Link to="/CommingSoonPage" className="whiteColor">
+          <Link to="/aboutthecompany" className="whiteColor">
             About the company
           </Link>
         </li>
