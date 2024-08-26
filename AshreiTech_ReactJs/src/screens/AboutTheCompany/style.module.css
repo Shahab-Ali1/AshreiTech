@@ -3,8 +3,8 @@
   /* background-color: aqua; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 90px;
+  /* justify-content: center; */
+  padding: 110px 90px;
 }
 .box1 h1,
 .box2 h1 {
@@ -15,11 +15,12 @@
   height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
 
   position: relative;
   z-index: -1;
-  padding: 0 90px;
+  padding: 110px 90px;
+
   /* background-color: #00adff4f; */
 }
 .parent_box{

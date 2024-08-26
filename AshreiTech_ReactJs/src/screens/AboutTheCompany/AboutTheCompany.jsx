@@ -10,7 +10,7 @@ import animation1 from '../../assets/aboutAnimation1.png';
 import animation2 from '../../assets/aboutAnimation2.png';
 import animation3 from '../../assets/aboutAnimation3.png';
 import azharAli from '../../assets/aboutTheCompany/azharAli.png';
-import azharAliabout from '../../assets/aboutTheCompany/azharAliAbout.png';
+import azharAliabout from '../../assets/aboutTheCompany/azharAliabout.png';
 import shohailZindaniAbout from '../../assets/aboutTheCompany/shohailZindaniAbout.png';
 import shohailZindani from '../../assets/aboutTheCompany/shohailZindani.png';
 import haiderWaheedAbout from '../../assets/aboutTheCompany/haiderWaheedAbout.png';
@@ -45,15 +45,16 @@ const images = [
 ];
 
 const logos = [
+    { logo: companyLogo6, description: 'Innovation is our Method' },
+    { logo: companyLogo2, description: 'Learning is our Choice' },
     { logo: companyLogo1, description: 'Generosity is our Way' },
-    { logo: companyLogo2, description: 'Inclusion is our Mantra' },
     { logo: companyLogo3, description: 'Global is our Scale' },
     { logo: companyLogo4, description: 'Growth is our Passion' },
     { logo: companyLogo5, description: 'Sustainability at the Core' },
-    { logo: companyLogo6, description: 'Innovation is our Method' },
     { logo: companyLogo7, description: 'Simplicity is our Strategy' },
 ];
 const AboutTheCompany = () => {
+    debugger;
     const { box1, box2,circle,logo_img, parent_box,zain, transition_image,section_2,card_discription,card_title, banner_container, view_all, section1_banner_container ,card_hover,card_container,active_card,blur_container} = style
     const [hoveredIndex, setHoveredIndex] = useState(0);
     const [hoverImage , setHoverImage] = useState(null)
@@ -100,11 +101,13 @@ const AboutTheCompany = () => {
                         }}
                     >
                         <div className="d-flex flex-column justify-content-center align-items-center py-5 my-5 text-center w-75" style={{position:"relative",zIndex:2}}>
-                            <h1 className=" text-white font40" style={{width:"80%"}}>Empowering Tech Enthusiasts to shape the future</h1>
+                            <h1 className=" text-white font40" style={{width:"80%"}}>Empowering Tomorrow's Tech Leaders, One Learner at a Time
+                            </h1>
                             <div className="row justify-content-center" >
                                 <div className="col-lg-10">
 
-                            <h5 className="text-white my-4 font16">At AshreiTech Academy, We are on a mission to equip individuals with the technical and soft skills they need to thrive in the ever-evolving tech industry. Our dynamic programs and collaborative learning environment provide endless opportunities for growth and innovation</h5>
+                            <h5 className="text-white my-4 font16">In a world where technology never stands still, staying ahead means continuous learning. With unmatched expertise of our experts, we're here to guide you and your organization to tech mastery. Join us on a journey to unlock your full potential and lead the future of innovation.
+                            </h5>
                                 </div>
                             </div>
                             <button className={`border-0 rounded-3 bg-white px-sm-4  px-2 font25 ${view_all}`} style={{ borderRadius: 5 }}>View All Courses</button>
@@ -148,20 +151,22 @@ const AboutTheCompany = () => {
             {
                 active?  <div className={`row ${blur_container}`}>
                 <div className={`col-12 col-sm-6 text-center ${box1}`}>
-                    <h1 className='mb-2'>Our Mission</h1>
-                    <p className='font25'>Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
+                    <h1 className='mb-2'>Mission</h1>
+                    <p className='font25'>AshreiTech Academy at National Aerospace Science and Technology Park stands as a Center of Excellence, with a mission to revolutionize the IT education of Pakistan by equipping graduates with top-notch IT education ensuring they meet the demands of the evolving & competitive global market.
+                    </p>
                 </div>
                 <div className={`col-12 col-sm-6 text-center ${box2}`}>
-                    <h1 className='mb-2'>Our Vision</h1>
-                    <p className='font25'>Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
+                    <h1 className='mb-2'>Vision</h1>
+                    <p className='font25'>To establish ourselves as the flagbearer of a sustainable and futuristic Tech Academy, driving the creation of global tech employment opportunities and fostering tech entrepreneurship.
+                    </p>
                 </div>
                 </div> :
                 <>
                     <div className={`col-12 col-sm-6 text-center ${box1}`}>
-                    <h1 className='mb-2'>Our <br/> Mission</h1>
+                    <h1 className='mb-2'><br/> Mission</h1>
                 </div>
                 <div className={`col-12 col-sm-6 text-center ${box2}`}>
-                    <h1 className='mb-2'>Our <br/> Vision</h1>
+                    <h1 className='mb-2'><br/> Vision</h1>
                 </div>
                 </>
             }
@@ -218,28 +223,30 @@ const AboutTheCompany = () => {
 <div className="row" >
     {
         hoverImage !== null && 
-        (() => {
-            const hoveredImage = images.find((_, index) => index === hoverImage);
-            return (
-                <div onMouseLeave={handleMouseLeave}   className="col p-0 mr-1" >
-                        <img src={hoveredImage.full} alt="" className={transition_image} style={{ width: "100%", height: "100%" }} />
+        (
+                <div onMouseLeave={()=>{
+                    handleMouseLeave()
+                }}   className="col p-0 mr-1" 
+                style={{height:"auto",width:"100%",}}
+                >
+                        <img src={hoverImage} alt="" className={`container-fluid p-0`} style={{ width: "100%", height: "auto",objectFit:"cover" }} />
                 </div>
-            );
-        })()
+       )
     }
     {/* <div className="" style={{height:100,width:'100%',background:'red'}}></div> */}
 </div>
 
 <div className="row" style={{ flexWrap: "nowrap" }}>
     {
-        hoverImage === null && 
-        images.map(({ thumbnail }, index) => (
+       hoverImage == null && 
+        images.map(({ thumbnail,full}, index) => (
             <div 
                 key={index} 
-                className="col p-0 mr-1" 
-                onMouseEnter={() => handleMouseEnter(index)}
+                style={{width:"16.6666666667%",height:"auto",}}
+                className=" p-0 mr-1" 
+                onMouseEnter={() => handleMouseEnter(full)}
             >
-                <img src={thumbnail} alt="" className='container- h-auto w-100' />
+                <img src={thumbnail}    style={{height:"100%",width:"100%",objectFit:'cotain'}} alt="" className='cotainer-fluid p-0 ' />
             </div>
         ))
     }
@@ -248,6 +255,7 @@ const AboutTheCompany = () => {
 
 
             </div>
+            {/* <div className="" style={{height:600,width:600,background:'red'}}></div> */}
             <div
                 className="container-fluid py-md-4 "
                 style={{
@@ -259,31 +267,38 @@ const AboutTheCompany = () => {
             >
                 <div className="row d-flex justify-content-center align-items-center py-4">
                     <div className="col-lg-12 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center ">
-                        <h1 className=" pb-sm-4 pb-lg-0" id="generic_heading_BookRoom">Our Achievements</h1>
-                        <p className="col-sm-8 pt-2 mt-4 font25">Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
+                        <h1 className=" pb-sm-4 pb-lg-0" id="generic_heading_BookRoom">Achievements</h1>
+                        {/* <p className="col-sm-8 pt-2 mt-4 font25">Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p> */}
                     </div>
                 </div>
                 
                 <div className="row px-5 justify-content-end">
-                    <div className="col-sm-3 d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ">
+                    <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
                         <img src={vector1} alt="" />
-                        <h3 className="my-2 font-weight-bolder">Learning is our choice.</h3>
-                        <p className="line-height-sm">We embrace continuous learning and view every challenge as an opportunity for growth.</p>
+                        <h3 className="my-2 font-weight-bolder">100 students
+                        </h3>
+                        <p className="line-height-sm">Are Trained, certified and placed
+                        </p>
                     </div>
-                    <div className="col-sm-3 d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ">
+                    <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
                         <img src={vector2} alt="" />
-                        <h3 className="my-2 font-weight-bolder">Learning is our choice.</h3>
-                        <p className="line-height-sm">We embrace continuous learning and view every challenge as an opportunity for growth.</p>
+                        <h3 className="my-2 font-weight-bolder">5 SAP Toppers
+                        </h3>
+                        <p className="line-height-sm">Have Scored The Highest in the SAP Global Certification
+                        </p>
                     </div>
-                    <div className="col-sm-3 d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ">
+                    <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
                         <img src={vector3} alt="" />
-                        <h3 className="my-2 font-weight-bolder">Learning is our choice.</h3>
-                        <p className="line-height-sm">We embrace continuous learning and view every challenge as an opportunity for growth.</p>
+                        <h3 className="my-2 font-weight-bolder">47 students
+                        </h3>
+                        <p className="line-height-sm">Are SAP Global Certification Holders</p>
                     </div>
-                    <div className="col-sm-3 d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ">
+                    <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
                         <img src={vector4} alt="" />
-                        <h3 className="my-2 font-weight-bolder">Learning is our choice.</h3>
-                        <p className="line-height-sm">We embrace continuous learning and view every challenge as an opportunity for growth.</p>
+                        <h3 className="my-2 font-weight-bolder">12 students
+                        </h3>
+                        <p className="line-height-sm">Are Multiple SAP Global Certification Holders
+</p>
                     </div>
 
                 </div>

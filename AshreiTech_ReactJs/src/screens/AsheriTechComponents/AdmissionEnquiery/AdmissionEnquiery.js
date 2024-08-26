@@ -22,6 +22,7 @@ const INITIAL_STATE = {
     ownlaptop: false,
     zakat: false,
     jobStatus: "",
+    getFreeDemo:false,
 }
 export const AdmissionEnquiry = (props) => {
     const [formData, setFormData] = useState({ ...INITIAL_STATE })
@@ -137,6 +138,7 @@ export const AdmissionEnquiry = (props) => {
     }
 
     const handleFormData = (event) => {
+        debugger;
         if (!event) {
             return
         }
@@ -223,6 +225,7 @@ export const AdmissionEnquiry = (props) => {
                         "childname": formData.fname + formData.lname,
                         "studentstatus": formData.stdStatus,
                         "ownlaptop": formData.ownlaptop,
+                        "getFreeDemo": formData.getFreeDemo,
                         "whatsappno": formData.whatsappno,
                         "email": formData.email,
                         "cellno": formData.cellno,
@@ -657,7 +660,7 @@ export const AdmissionEnquiry = (props) => {
                                 />
                             </div>
                         </div>
-                        <div className='row mt-3'>
+                        <div className='row '>
                             <div className='col-lg-6'>
                                 <FormControlLabel
                                     control={
@@ -686,6 +689,21 @@ export const AdmissionEnquiry = (props) => {
                                         />
                                     }
                                     label="Do you have your own laptop?"
+                                    sx={{ '& .MuiFormControlLabel-label': { fontSize: 12, } }}
+                                />
+                            </div>
+                            <div className='col-lg-12 mt-n3'>
+                                <FormControlLabel
+                                    control={
+                                        <Checkbox
+                                            name="getFreeDemo"
+                                            checked={formData?.getFreeDemo}
+                                            onClick={handleFormData}
+                                            // color="success"
+                                            style={{ color: "#008F71" }}
+                                        />
+                                    }
+                                    label="Get a Free Demo ( Get a free 3 days demo )"
                                     sx={{ '& .MuiFormControlLabel-label': { fontSize: 12, } }}
                                 />
                             </div>
