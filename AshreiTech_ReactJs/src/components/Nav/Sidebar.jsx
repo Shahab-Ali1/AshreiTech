@@ -10,37 +10,34 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
     <Wrapper className="text-white" sidebarOpen={sidebarOpen}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
-          <img src={LogoIcon} alt="" />
+          <img src={LogoIcon} alt="" style={{height:35,width:"auto"}}/>
         </div>
         <CloseBtn onClick={() => toggleSidebar(!sidebarOpen)} className="animate pointer">
           <CloseIcon />
         </CloseBtn>
       </SidebarHeader>
-
-      <UlStyle className="flexNullCenter flexColumn">
-        <li className="semiBold font15 pointer">
+<div className="row">
+  <div className="col">
+  <UlStyle className="flexNullCenter flexColumn">
+        {/* <li className="semiBold font15 pointer">
           <Link to="/CommingSoonPage" className="whiteColor">
             Sign In
           </Link>
-        </li>
-        <li className="semiBold font15 pointer">
-          <Link to="/CommingSoonPage" className="whiteColor">
-            Find Tech Talent
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer">
-          <Link to="/CommingSoonPage" className="whiteColor">
-            Digital Academy
+        </li> */}
+             
+             <li className="semiBold font15 pointer">
+          <Link to="/" className="whiteColor">
+            Home
           </Link>
         </li>
         <li className="semiBold font15 pointer">
           <Link to="/aboutthecompany" className="whiteColor">
-            About the company
+            About The Company
           </Link>
         </li>
         <li className="semiBold font15 pointer">
           <Link to="/teams" className="whiteColor">
-            About the team
+            About The Team
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -53,8 +50,20 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             What We Do
           </Link>
         </li>
+        <li className="semiBold font15 pointer">
+          <Link to="/CommingSoonPage" className="whiteColor">
+            Find Tech Talent
+          </Link>
+        </li>
+        <li className="semiBold font15 pointer">
+          <Link to="/CommingSoonPage" className="whiteColor">
+            Digital Academy
+          </Link>
+        </li>
       </UlStyle>
-      <UlStyle className="flexSpaceCenter">
+  </div>
+  <div className="col p-0">
+  <UlStyle className="flexSpaceCenter">
         <li className="semiBold font15 pointer">
         <Link to="/CommingSoonPage" className="whiteColor" style={{ padding: "10px 30px 10px 0" }}>
         Log In
@@ -66,6 +75,10 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
           </Link>
         </li>
       </UlStyle>
+  </div>
+</div>
+    
+     
     </Wrapper>
   );
 }
@@ -73,10 +86,11 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
 const Wrapper = styled.nav`
   width: 400px;
   background-color: #008f71;
-  height: 100vh;
+  // height: 100vh;
   position: fixed;
   top: 0;
   padding: 0 30px;
+  overflow-y: scroll;
   right: ${(props) => (props.sidebarOpen ? "0px" : "-400px")};
   z-index: 9999;
   @media (max-width: 400px) {

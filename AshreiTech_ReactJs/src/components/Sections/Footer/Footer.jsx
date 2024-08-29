@@ -9,7 +9,7 @@ import mosqueIcon from "../../../assets/mosqueIcon.png";
 import wmap from "../../../assets/wmap.png";
 import FedumanLogo from "../../../assets/FeduManLogo.png";
 import GetitonIcon from '../../../assets/GetitonIcon.png';
-import apple_playstore from "../../../assets/apple_playstore.png"
+import apple_playstore from "../../../assets/apple_playstore.jpg"
 
 const Footer = () => {
     const { footer_container, containerOne, containerOnePiece, containerTwo } = style;
@@ -31,7 +31,7 @@ const Footer = () => {
     },]
 
     const linkOne = [
-        { name: "About the company", url: "/#/CommingSoonPage" },
+        { name: "About the company", url: "/#/aboutthecompany" },
         { name: "About the team", url: "/#/teams" },
         { name: "Book-A-Room", url: "/#/BookaRoom" },
         { name: "Corporate Trainings", url: "/#/CorporateTrainings" }
@@ -190,7 +190,7 @@ const Footer = () => {
                             <img src={GetitonIcon} alt="" style={{ height: 31, marginRight: 16 }} />
                         </a>
                         <a href="https://apps.apple.com/pk/app/ashreitech/id6466579678" target="_blank" rel="noopener noreferrer">
-                            <img src={apple_playstore} alt="" srcset="" style={{ height: 31 }} />
+                            <img src={apple_playstore} alt="" srcset="" style={{ height: 31 ,borderRadius:4}} />
                         </a>
 
                     </div>

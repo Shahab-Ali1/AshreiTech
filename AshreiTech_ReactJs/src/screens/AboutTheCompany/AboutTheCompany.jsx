@@ -62,6 +62,7 @@ const AboutTheCompany = () => {
 
     const handleMouseEnter = (index) => {
             setHoverImage(index);
+            
     };
 
     const handleMouseLeave = () => {
@@ -74,6 +75,7 @@ const AboutTheCompany = () => {
             img.src = full;
         });
     }, []);
+    
     return (
         <>
             <TopNavbar />
@@ -219,7 +221,7 @@ const AboutTheCompany = () => {
                         </div>
                     </div>
                 </div>
-                <div className="">
+                <div className="container-fluid" style={{overflow:'hidden'}}>
 <div className="row" >
     {
         hoverImage !== null && 
@@ -227,9 +229,9 @@ const AboutTheCompany = () => {
                 <div onMouseLeave={()=>{
                     handleMouseLeave()
                 }}   className="col p-0 mr-1" 
-                style={{height:"auto",width:"100%",}}
+                style={{height:"",width:"100%",}}
                 >
-                        <img src={hoverImage} alt="" className={`container-fluid p-0`} style={{ width: "100%", height: "auto",objectFit:"cover" }} />
+                        <img src={hoverImage} alt="" className={`container-fluid p-0`} style={{ width: "100%", height: "100%",objectFit:"over" }} />
                 </div>
        )
     }
@@ -242,9 +244,10 @@ const AboutTheCompany = () => {
         images.map(({ thumbnail,full}, index) => (
             <div 
                 key={index} 
-                style={{width:"16.6666666667%",height:"auto",}}
+                style={{width:"16.6666666667%",height:"",}}
                 className=" p-0 mr-1" 
                 onMouseEnter={() => handleMouseEnter(full)}
+                sytr
             >
                 <img src={thumbnail}    style={{height:"100%",width:"100%",objectFit:'cotain'}} alt="" className='cotainer-fluid p-0 ' />
             </div>

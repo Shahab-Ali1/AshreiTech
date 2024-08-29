@@ -20,20 +20,22 @@ import departmentsFaq from "../../constant"
 import Slider from "react-slick";
 // import  Card  from "@mui/material";
 import styled from "styled-components";
+import Androi_QR from '../../assets/Android.png'
+import IOS_QR from '../../assets/IOS.png'
 
 
 const sponsersLogo = [
-    { logo: tpl_map, link: 'https://tplmaps.com/' ,width :"71%"},
-    { logo: martin_dow, link: 'https://www.martindow.com/',width :"60%" },
-    { logo: strive, link: 'https://stryvve.com/',marginTop:-9 ,width :"75%"},
-    { logo: integration_experts_logo, link: 'https://integrationxperts.com/' ,width :"100%"},
-    { logo: nastp_logo, link: 'https://nastp.gov.pk/' ,width :"100%"},
-    { logo: rewterz_logo, link: 'https://www.rewterz.com/' ,width :"100%"},
-    { logo: avanza_logo, link: 'https://avanzasolutions.com/' ,width :"100%"},
-    { logo: EduManBlue, link: 'https://edu-man.com/',width :"95%" },
-    { logo: al_baraka, link: 'https://www.albaraka.com.pk/' ,width :"71%"},
-    { logo: lrnglog, link: 'https://www.learningmindsgroup.com/',width :"100%" },
-    { logo: strata, link: 'https://www.strata.com/',width :"100%" },
+    { logo: tpl_map, link: 'https://tplmaps.com/', width: "71%" },
+    { logo: martin_dow, link: 'https://www.martindow.com/', width: "60%" },
+    { logo: strive, link: 'https://stryvve.com/', marginTop: -9, width: "75%" },
+    { logo: integration_experts_logo, link: 'https://integrationxperts.com/', width: "100%" },
+    { logo: nastp_logo, link: 'https://nastp.gov.pk/', width: "100%" },
+    { logo: rewterz_logo, link: 'https://www.rewterz.com/', width: "100%" },
+    { logo: avanza_logo, link: 'https://avanzasolutions.com/', width: "100%" },
+    { logo: EduManBlue, link: 'https://edu-man.com/', width: "95%" },
+    { logo: al_baraka, link: 'https://www.albaraka.com.pk/', width: "71%" },
+    { logo: lrnglog, link: 'https://www.learningmindsgroup.com/', width: "100%" },
+    { logo: strata, link: 'https://www.strata.com/', width: "100%" },
 ];
 
 const settings = {
@@ -43,7 +45,7 @@ const settings = {
     slidesToScroll: 1, // This can be kept as 1 for continuous scroll
     autoplay: true,
     autoplaySpeed: 0, // Set to 0 for continuous autoplay
-    cssEase: "linear", 
+    cssEase: "linear",
     arrows: false, // Hide arrows for continuous scroll
     pauseOnHover: true,
     responsive: [
@@ -79,30 +81,30 @@ const Sponsers = () => {
 
                     </div>
                     <div className={`${sponsers} mb-5 mt-4`}>
-                  
+
                     </div>
 
                 </div>
                 <div className=" " >
-      <SliderWrapper>
-        <Slider {...settings}>
-          {sponsersLogo.map(({logo,link,width}, index) => (
-           
-                
-              <div className={`${sponsers_logo_container} mb-3`}>
-                <a href={link} className="" target="_blank" rel="noopener noreferrer">
-                <img
-                        src={logo}
-                        className="container-fluid"
-                        style={{ width, height: "100%", objectFit: "conain" }}
-                        alt={`Sponsor Logo ${index + 1}`}
-                    />
-                                </a>
-                            </div>
-          ))}
-        </Slider>
-      </SliderWrapper>
-    </div>
+                    <SliderWrapper>
+                        <Slider {...settings}>
+                            {sponsersLogo.map(({ logo, link, width }, index) => (
+
+
+                                <div className={`${sponsers_logo_container} mb-3`}>
+                                    <a href={link} className="" target="_blank" rel="noopener noreferrer">
+                                        <img
+                                            src={logo}
+                                            className="container-fluid"
+                                            style={{ width, height: "100%", objectFit: "conain" }}
+                                            alt={`Sponsor Logo ${index + 1}`}
+                                        />
+                                    </a>
+                                </div>
+                            ))}
+                        </Slider>
+                    </SliderWrapper>
+                </div>
                 <div className={`${box} container-fluid`}>
                     <div className="row">
                         <div className="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center text-center text-md-left text-lg-left ">
@@ -116,9 +118,28 @@ const Sponsers = () => {
                                     {/* <button type="button" className={`${custom_btn_outline_dark} px-4 mt-4`}>
                                     Learn More
                                 </button> */}
-                                    <div>
+                                    {/* <div>
                                         <img src={QRandndiPh} alt="" className="pt-4" />
 
+                                    </div> */}
+                                    <div className="row pt-4">
+                                        <div className="col-lg-6 ">
+                                        <div className="row">
+                                        <div className="col-6 p-0 text-center">
+                                        <img src={Androi_QR} alt="" className=" "  style={{width:100,height:"auto"}}/>
+                                        <p>Ios</p>
+
+                                        </div>
+                                        <div className="col-6 p-0 text-center">
+                                        <img src={IOS_QR} alt="" className=" "  style={{width:100,height:"auto"}}/>
+                                        <p>Android</p>
+
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div className="col-lg-6"></div>
+                                        
+                                       
                                     </div>
                                 </div>
                             </div>

@@ -115,7 +115,7 @@ export default function TopNavbar() {
                   <span
                     className=""
                     style={{
-                      color: hoveredIndex ===  0 ? '#000000' : hoveredIndex !== null ? '#808080' : '#000000', transition: 'color 0.3s ease',
+                      color: hoveredIndex ===   0 ? '#000000' : hoveredIndex !== null ? '#808080' : '#000000', transition: 'color 0.3s ease',
                     }}
                   >
                     Who we are
@@ -175,11 +175,11 @@ export default function TopNavbar() {
               <div className="container-fluid d-flex justify-content-center align-items-center">
                 <div className="row">
                   <div className="col-6 d-flex justify-content-center align-items-center flex-column">
-                    <img src={IOS_QR} alt="iOS QR Code" className="pt-5 mt-5" height={"200px"} />
+                    <img src={Androi_QR} alt="iOS QR Code" className="pt-5 mt-5" height={"200px"} />
                     <div style={{ color: "#008F71" }}>iOS</div>
                   </div>
                   <div className="col-6 d-flex justify-content-center align-items-center flex-column">
-                    <img src={Androi_QR} alt="Android QR Code" className="pt-5 mt-5" height={"200px"} />
+                    <img src={IOS_QR} alt="Android QR Code" className="pt-5 mt-5" height={"200px"} />
                     <div style={{ color: "#008F71" }}>Android</div>
                   </div>
                 </div>
