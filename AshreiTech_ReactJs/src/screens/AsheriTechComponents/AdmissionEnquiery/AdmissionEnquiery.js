@@ -281,7 +281,7 @@ export const AdmissionEnquiry = (props) => {
 
     function isValidEmail(email) {
         // Define the regular expression for a valid email address
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.com$/;
 
         // Test the email against the regex
         return emailRegex.test(email);
