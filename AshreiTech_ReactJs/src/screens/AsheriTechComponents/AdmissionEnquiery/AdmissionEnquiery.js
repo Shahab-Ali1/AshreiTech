@@ -225,13 +225,14 @@ export const AdmissionEnquiry = (props) => {
                         "childname": formData.fname + formData.lname,
                         "studentstatus": formData.stdStatus,
                         "ownlaptop": formData.ownlaptop,
-                        "getFreeDemo": formData.getFreeDemo,
+                        "getdemo": formData.getFreeDemo,
                         "whatsappno": formData.whatsappno,
                         "email": formData.email,
                         "cellno": formData.cellno,
                         "lasteducation": formData.lasteducation,
                         "dob": formData?.dob,
-                        "ezakat": formData?.zakat ? 1 : 0
+                        "ezakat": formData?.zakat ? 1 : 0,
+                        "cnicno": formData?.cnicno
                     }
                 ],
                 //   "noofchild": 1,
