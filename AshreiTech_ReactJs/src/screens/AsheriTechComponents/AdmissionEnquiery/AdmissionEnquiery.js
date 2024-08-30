@@ -225,13 +225,14 @@ export const AdmissionEnquiry = (props) => {
                         "childname": formData.fname + formData.lname,
                         "studentstatus": formData.stdStatus,
                         "ownlaptop": formData.ownlaptop,
-                        "getFreeDemo": formData.getFreeDemo,
+                        "getdemo": formData.getFreeDemo,
                         "whatsappno": formData.whatsappno,
                         "email": formData.email,
                         "cellno": formData.cellno,
                         "lasteducation": formData.lasteducation,
                         "dob": formData?.dob,
-                        "ezakat": formData?.zakat ? 1 : 0
+                        "ezakat": formData?.zakat ? 1 : 0,
+                        "cnicno": formData?.cnicno
                     }
                 ],
                 //   "noofchild": 1,
@@ -280,7 +281,7 @@ export const AdmissionEnquiry = (props) => {
 
     function isValidEmail(email) {
         // Define the regular expression for a valid email address
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.com$/;
 
         // Test the email against the regex
         return emailRegex.test(email);
