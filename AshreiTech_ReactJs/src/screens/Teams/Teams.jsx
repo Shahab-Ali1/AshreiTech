@@ -56,7 +56,7 @@ const Teams = () => {
             name: "Talha Shabbir",
             title: "Head, Academics & Programs",
             image: Talha_Shabbir,
-            description: "As a seasoned IT Administrator, Syed Talha orchestrates seamless network operations and fortifies security solutions, propelling business growth with cutting-edge technology infrastructure. With a mastery in system administration and network architecture, he crafts high-availability solutions that minimize downtime and amplify productivity.",
+            description: "Talha heads Corporate Trainings & Events at AshreiTech, where his 10+ years of expertise in event management, business development, and strategy shine. Thriving under pressure, he crafts standout marketing strategies and leverages digital platforms with finesse. A growth enthusiast, Talha loves traveling, playing cricket, and tackling new challenges, making him an invaluable asset to any team.",
             linkedInProfile: ''
         },
         {
