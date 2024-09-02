@@ -28,10 +28,14 @@ import companyLogo4 from '../../assets/aboutTheCompany/companyLogo4.png';
 import companyLogo5 from '../../assets/aboutTheCompany/companyLogo5.png';
 import companyLogo6 from '../../assets/aboutTheCompany/companyLogo6.png';
 import companyLogo7 from '../../assets/aboutTheCompany/companyLogo7.png';
-import vector1 from '../../assets/aboutcard1.png';
-import vector2 from '../../assets/aboutcard2.png';
-import vector3 from '../../assets/aboutcard3.png';
-import vector4 from '../../assets/aboutcard4.png';
+// import vector1 from '../../assets/aboutcard1.png';
+// import vector2 from '../../assets/aboutcard2.png';
+// import vector3 from '../../assets/aboutcard3.png';
+// import vector4 from '../../assets/aboutcard4.png';
+import vector1 from '../../assets/vector1.gif';
+import vector2 from '../../assets/vector2.gif';
+import vector3 from '../../assets/vector3.gif';
+import vector4 from '../../assets/vector4.gif';
 
 const cardColors = ['#ffd393', '#9fffeb', '#eae1b0', '#93c7af'];
 
@@ -96,10 +100,12 @@ const AboutTheCompany = () => {
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                             // height: '632px',
-                            width: '90%',
+                            width: '100%',
+                            height:"100%",
                             borderRadius: '50px',
                             display: "flex",
-                            justifyContent: "center"
+                            justifyContent: "center",
+                            backgroundPosition:"center"
                         }}
                     >
                         <div className="d-flex flex-column justify-content-center align-items-center py-5 my-5 text-center w-75" style={{position:"relative",zIndex:2}}>
@@ -108,11 +114,14 @@ const AboutTheCompany = () => {
                             <div className="row justify-content-center" >
                                 <div className="col-lg-10">
 
-                            <h5 className="text-white my-4 font16">In a world where technology never stands still, staying ahead means continuous learning. With unmatched expertise of our experts, we're here to guide you and your organization to tech mastery. Join us on a journey to unlock your full potential and lead the future of innovation.
+                            <h5 className="text-white my-4 font20">In a world where technology never stands still, staying ahead means continuous learning. With unmatched expertise of our experts, we're here to guide you and your organization to tech mastery. Join us on a journey to unlock your full potential and lead the future of innovation.
                             </h5>
                                 </div>
                             </div>
-                            <button className={`border-0 rounded-3 bg-white px-sm-4  px-2 font25 ${view_all}`} style={{ borderRadius: 5 }}>View All Courses</button>
+                            {/* <button className={` rounded-3  px-sm-4  px-2 font25 ${view_all}`} style={{ borderRadius: 5 }}>View All Courses</button> */}
+                            <div  className={`  navbtn p-2 ${view_all}`}>
+                            View All Courses
+      </div>
                         </div>
                         <div className="pb-5 mb-5"></div>
                     </div>
@@ -232,9 +241,9 @@ const AboutTheCompany = () => {
                 <div onMouseLeave={()=>{
                     handleMouseLeave()
                 }}   className="col p-0 mr-1" 
-                style={{height:"",width:"100%",}}
+                style={{height:"700px",width:"100%",}}
                 >
-                        <img src={hoverImage} alt="" className={`container-fluid p-0`} style={{ width: "100%", height: "100%",objectFit:"over" }} />
+                        <img src={hoverImage} alt="" className={`container-fluid p-0`} style={{ width: "100%", height: "",objectFit:"cover" }} />
                 </div>
        )
     }
@@ -247,12 +256,12 @@ const AboutTheCompany = () => {
         images.map(({ thumbnail,full}, index) => (
             <div 
                 key={index} 
-                style={{width:"16.6666666667%",height:"",}}
+                style={{width:"16.6666666667%",height:"700px",}}
                 className=" p-0 mr-1" 
                 onMouseEnter={() => handleMouseEnter(full)}
                 sytr
             >
-                <img src={thumbnail}    style={{height:"100%",width:"100%",objectFit:'cotain'}} alt="" className='cotainer-fluid p-0 ' />
+                <img src={thumbnail}    style={{height:"",width:"100%",objectFit:'cover'}} alt="" className='cotainer-fluid p-0 ' />
             </div>
         ))
     }
@@ -280,27 +289,27 @@ const AboutTheCompany = () => {
                 
                 <div className="row px-5 justify-content-end">
                     <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={vector1} alt="" />
+                        <img src={vector1} alt="" style={{height:"auto",width:"40%"}}/>
                         <h3 className="my-2 font-weight-bolder">100 students
                         </h3>
                         <p className="line-height-sm">Are Trained, certified and placed
                         </p>
                     </div>
                     <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={vector2} alt="" />
+                        <img src={vector2} alt="" style={{height:"auto",width:"40%"}}/>
                         <h3 className="my-2 font-weight-bolder">5 SAP Toppers
                         </h3>
                         <p className="line-height-sm">Have Scored The Highest in the SAP Global Certification
                         </p>
                     </div>
                     <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={vector3} alt="" />
+                        <img src={vector3} alt="" style={{height:"auto",width:"40%"}}/>
                         <h3 className="my-2 font-weight-bolder">47 students
                         </h3>
                         <p className="line-height-sm">Are SAP Global Certification Holders</p>
                     </div>
                     <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={vector4} alt="" />
+                        <img src={vector4} alt="" style={{height:"auto",width:"40%"}} />
                         <h3 className="my-2 font-weight-bolder">12 students
                         </h3>
                         <p className="line-height-sm">Are Multiple SAP Global Certification Holders

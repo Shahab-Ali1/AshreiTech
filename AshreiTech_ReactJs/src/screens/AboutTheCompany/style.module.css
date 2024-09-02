@@ -38,7 +38,7 @@
   position: absolute;
   content: "";
   height: 100%;
-  background-color: rgba(0 0 0 / 38%);
+  background-color: rgba(0 0 0 / 50%);
   width: 100%;
   border-radius: 47px;
 }
@@ -72,8 +72,14 @@
   object-fit: cover;
 }
 .view_all {
-  position: relative !important;
-  overflow: hidden !important;
+
+    font-size: 15.008px;
+   border: 1px solid #008F71;
+   border-radius: 5px;
+   background-color: #008F71;
+   color: white;
+   font-weight: 500 !important;
+   cursor: pointer;
 }
 
 .view_all::before {
