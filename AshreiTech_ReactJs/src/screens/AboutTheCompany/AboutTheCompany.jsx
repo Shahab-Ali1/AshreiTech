@@ -176,8 +176,11 @@ const AboutTheCompany = () => {
             </div>
             <div className="container-fluid pt-md-5 mx-md-5">
    <div className="">
-   <h1 className='mb-md-3 ml-n3 my-2 my-md-0'>Our Core Values: The Pillars of Our Success</h1>
-   <h5 className='mb-md-5 ml-n3'>Guiding Principles that Shape Our Vision and Drive Our Mission</h5>
+   <h1 className='mb-md-3 ml-n3 my-2 my-md-0 d-sm-block d-none'>Our Core Values: The Pillars of Our Success</h1>
+   <h5 className='mb-md-5 ml-n3 d-sm-block d-none'>Guiding Principles that Shape Our Vision and Drive Our Mission</h5>
+
+   <p className='mb-md-3 ml-n3 my-2 my-md-0 font25 font-weight-bold mt-3 d-sm-none d-block'>Our Core Values: The Pillars of Our Success</p>
+   <p className='mb-md-5 ml-n3 mb-2 d-sm-none d-block font-weight-bold font15'>Guiding Principles that Shape Our Vision and Drive Our Mission</p>
    </div>
             <div className="row  mx-2 ">
     <div className="col-lg-7">
@@ -215,7 +218,7 @@ const AboutTheCompany = () => {
                 <div className="row justify-content-center">
                     <h1 className='text-center mt-sm-5 mb-1'>How Ashrei Tech Came Into Being</h1>
                     <div className='row justify-content-center text-center pb-4'>
-                        <div className="col-7">
+                        <div className="col-7 p-0">
                         <p className='  text-muted font20 lh-0'>Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
 
                         </div>

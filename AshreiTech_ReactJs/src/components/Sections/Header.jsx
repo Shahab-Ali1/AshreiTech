@@ -119,14 +119,19 @@ export default function Header() {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleCanPlay = () => {
+    debugger;
     setIsLoading(false);
   };
 
   const handleError = (e) => {
+    debugger;
+
     console.error('Video error:', e);
   };
 
   const handleLoadedMetadata = (e) => {
+    debugger;
+
     console.log('Video metadata loaded:', e);
   };
 
