@@ -1183,7 +1183,7 @@ display: none;
 
  .dropdown-content {
    display: none;
-   position: fixed;
+   position: absolute;
    background-color: #ffffff;
    /* min-width: 160px; */
    font-size: 18px;
@@ -1192,6 +1192,9 @@ display: none;
    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
    z-index: 9999;
    padding: 16px 0px;
+   white-space: nowrap;
+   min-width: 142px;
+   max-width: 170px;
  }
 
  .dropdown-content-translate {
