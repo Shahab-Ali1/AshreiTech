@@ -162,34 +162,36 @@ const AboutTheCompany = () => {
             {
                 active?  <div className={`row ${blur_container}`}>
                 <div className={`col-12 col-sm-6 text-center ${box1}`}>
-                    <h1 className='mb-2'>Mission</h1>
+                    <h1 className='my-2 mb-md-3'>Mission</h1>
                     <p className='font25'>AshreiTech Academy at National Aerospace Science and Technology Park stands as a Center of Excellence, with a mission to revolutionize the IT education of Pakistan by equipping graduates with top-notch IT education ensuring they meet the demands of the evolving & competitive global market.
                     </p>
                 </div>
                 <div className={`col-12 col-sm-6 text-center ${box2}`}>
-                    <h1 className='mb-2'>Vision</h1>
+                    <h1 className='my-2 mb-md-3'>Vision</h1>
                     <p className='font25'>To establish ourselves as the flagbearer of a sustainable and futuristic Tech Academy, driving the creation of global tech employment opportunities and fostering tech entrepreneurship.
                     </p>
                 </div>
                 </div> :
                 <>
-                    <div className={`col-12 col-sm-6 text-center ${box1}`}>
-                    <h1 className='mb-2'><br/> Mission</h1>
+                    <div className={`col-12 col-sm-6 text-center ml-n2 ${box1}`}>
+                    <h1 className='mb-2 mt-2'>Mission</h1>
+   {/* <p className='mb-md-3 ml-n3 my-2 my-md-0 font25 font-weight-bold mt-3 d-sm-none d-block'>Mission</p> */}
+
                 </div>
                 <div className={`col-12 col-sm-6 text-center ${box2}`}>
-                    <h1 className='mb-2'><br/> Vision</h1>
+                    <h1 className='mb-2 ml-3 mt-2 '> <span className='mr-3'>{'‎'}</span>Vision</h1>
                 </div>
                 </>
             }
                
             </div>
-            <div className="container-fluid pt-md-5 mx-md-5">
+            <div className="container-fluid pt-md-5 mx-md-5 mt-md-4">
    <div className="">
-   <h1 className='mb-md-3 ml-n3 my-2 my-md-0 d-sm-block d-none'>Our Core Values: The Pillars of Our Success</h1>
-   <h5 className='mb-md-5 ml-n3 d-sm-block d-none'>Guiding Principles that Shape Our Vision and Drive Our Mission</h5>
+   <h1 className='mb-md-3 ml-n3 my-2 my-md-0 d-sm-block d-none text-center'>Our Core Values: The Pillars of Our Success</h1>
+   <h5 className='mb-md-5 ml-n3 d-sm-block d-none text-center text-muted'>Guiding Principles that Shape Our Vision and Drive Our Mission</h5>
 
-   <p className='mb-md-3 ml-n3 my-2 my-md-0 font25 font-weight-bold mt-3 d-sm-none d-block'>Our Core Values: The Pillars of Our Success</p>
-   <p className='mb-md-5 ml-n3 mb-2 d-sm-none d-block font-weight-bold font15'>Guiding Principles that Shape Our Vision and Drive Our Mission</p>
+   <p className='mb-md-3 ml-n3 my-2 my-md-0 font25 font-weight-bold mt-3 text-center d-sm-none d-block'>Our Core Values: The Pillars of Our Success</p>
+   <p className='mb-md-5 ml-n3 mb-2 d-sm-none d-block font-weight-bold  text-center font15 text-muted'>Guiding Principles that Shape Our Vision and Drive Our Mission</p>
    </div>
             <div className="row  mx-2 ">
     <div className="col-lg-7">
@@ -223,9 +225,9 @@ const AboutTheCompany = () => {
     </div>
                 
             </div>
-            <div className={`${section_2}`}>
+            <div className={`${section_2} d-sm-block d-none`}>
                 <div className="row justify-content-center">
-                    <h1 className='text-center mt-sm-5 mb-1'>How Ashrei Tech Came Into Being</h1>
+                    <h1 className='text-center mt-sm-5  mb-md-3'>How Ashrei Tech Came Into Being</h1>
                     <div className='row justify-content-center text-center pb-4'>
                         <div className="col-7 p-0">
                         <p className='  text-muted font20 lh-0'>Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p>
@@ -233,46 +235,50 @@ const AboutTheCompany = () => {
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid" style={{overflow:'hidden'}}>
-<div className="row" >
-    {
-        hoverImage !== null && 
-        (
-                <div onMouseLeave={()=>{
-                    handleMouseLeave()
-                }}   className="col p-0 mr-1" 
-                style={{height:"700px",width:"100%",}}
-                >
-                        <img src={hoverImage} alt="" className={`container-fluid p-0`} style={{ width: "100%", height: "",objectFit:"cover" }} />
-                </div>
-       )
-    }
-    {/* <div className="" style={{height:100,width:'100%',background:'red'}}></div> */}
+                <div className="" style={{ overflow: 'hidden' }}>
+  <div className="row">
+    {hoverImage !== null && (
+      <div
+        onMouseLeave={handleMouseLeave}
+        className="col p-0 mr-1"
+        style={{ height: '100vh', width: '100%' }}
+      >
+        <img
+          src={hoverImage}
+          alt=""
+          className={`container-fluid p-0`}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
+      </div>
+    )}
+  </div>
+
+  <div className="row" style={{ flexWrap: 'nowrap' }}>
+    {hoverImage == null &&
+      images.map(({ thumbnail, full }, index) => (
+        <div
+          key={index}
+          style={{ width: '16.6666666667%', height: '100vh' }}
+          className="p-0 mr-1"
+          onMouseEnter={() => handleMouseEnter(full)}
+        >
+          <img
+            src={thumbnail}
+            style={{ height: '100%', width: '100%', objectFit: 'contain' }}
+            alt=""
+            className="container-fluid p-0"
+          />
+        </div>
+      ))}
+  </div>
 </div>
 
-<div className="row" style={{ flexWrap: "nowrap" }}>
-    {
-       hoverImage == null && 
-        images.map(({ thumbnail,full}, index) => (
-            <div 
-                key={index} 
-                style={{width:"16.6666666667%",height:"700px",}}
-                className=" p-0 mr-1" 
-                onMouseEnter={() => handleMouseEnter(full)}
-                sytr
-            >
-                <img src={thumbnail}    style={{height:"",width:"100%",objectFit:'cover'}} alt="" className='cotainer-fluid p-0 ' />
-            </div>
-        ))
-    }
-</div>
-                </div>
 
 
             </div>
             {/* <div className="" style={{height:600,width:600,background:'red'}}></div> */}
             <div
-                className="container-fluid py-md-4 "
+                className="container-fluid py-md-5 "
                 style={{
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
@@ -282,34 +288,34 @@ const AboutTheCompany = () => {
             >
                 <div className="row d-flex justify-content-center align-items-center py-4">
                     <div className="col-lg-12 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center ">
-                        <h1 className=" pb-sm-4 pb-lg-0" id="generic_heading_BookRoom">Achievements</h1>
+                        <h1 className=" mb-md-3 pb-lg-0" id="generic_heading_BookRoom">Achievements</h1>
                         {/* <p className="col-sm-8 pt-2 mt-4 font25">Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p> */}
                     </div>
                 </div>
                 
                 <div className="row px-5 justify-content-end">
                     <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={vector1} alt="" style={{height:"auto",width:"40%"}}/>
+                        <img src={vector1} alt="" style={{height:"auto",width:"25%"}}/>
                         <h3 className="my-2 font-weight-bolder">100 students
                         </h3>
                         <p className="line-height-sm">Are Trained, certified and placed
                         </p>
                     </div>
                     <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={vector2} alt="" style={{height:"auto",width:"40%"}}/>
+                        <img src={vector2} alt="" style={{height:"auto",width:"25%"}}/>
                         <h3 className="my-2 font-weight-bolder">5 SAP Toppers
                         </h3>
                         <p className="line-height-sm">Have Scored The Highest in the SAP Global Certification
                         </p>
                     </div>
                     <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={vector3} alt="" style={{height:"auto",width:"40%"}}/>
+                        <img src={vector3} alt="" style={{height:"auto",width:"25%"}}/>
                         <h3 className="my-2 font-weight-bolder">47 students
                         </h3>
                         <p className="line-height-sm">Are SAP Global Certification Holders</p>
                     </div>
                     <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={vector4} alt="" style={{height:"auto",width:"40%"}} />
+                        <img src={vector4} alt="" style={{height:"auto",width:"25%"}} />
                         <h3 className="my-2 font-weight-bolder">12 students
                         </h3>
                         <p className="line-height-sm">Are Multiple SAP Global Certification Holders
