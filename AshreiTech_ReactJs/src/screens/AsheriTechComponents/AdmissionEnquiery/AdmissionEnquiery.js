@@ -222,7 +222,7 @@ export const AdmissionEnquiry = (props) => {
                         //   "courseid": formData.courses,
                         "courseid": +formData.courses,
                         "genderid": formData.gender,
-                        "childname": formData.fname + formData.lname,
+                        "childname": formData.fname +" "+ formData.lname,
                         "studentstatus": formData.stdStatus,
                         "ownlaptop": formData.ownlaptop,
                         "getdemo": formData.getFreeDemo,
@@ -232,7 +232,8 @@ export const AdmissionEnquiry = (props) => {
                         "lasteducation": formData.lasteducation,
                         "dob": formData?.dob,
                         "ezakat": formData?.zakat ? 1 : 0,
-                        "cnicno": formData?.cnicno
+                        "cnicno": formData?.cnicno,
+                        "enquirystatusid": 1172
                     }
                 ],
                 //   "noofchild": 1,
