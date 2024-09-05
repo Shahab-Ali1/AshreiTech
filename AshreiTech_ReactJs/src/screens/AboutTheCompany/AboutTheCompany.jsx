@@ -7,7 +7,7 @@ import Footer from '../../components/Sections/Footer/Footer';
 import section1banner from '../../assets/aboutSection1banner.png';
 import section_banner from '../../assets/aboutTheCompany/section_banner.png';
 import animation1 from '../../assets/aboutAnimation1.png';
-import animation2 from '../../assets/aboutAnimation2.png';
+import animatio3 from '../../assets/aboutAnimation2.png';
 import animation3 from '../../assets/aboutAnimation3.png';
 import azharAli from '../../assets/aboutTheCompany/azharAli.png';
 import azharAliabout from '../../assets/aboutTheCompany/azharAliabout.png';
@@ -84,42 +84,39 @@ const AboutTheCompany = () => {
         <>
             <TopNavbar />
             <div
-                className="container-fluid py-lg-4"
-                style={{
-                    // backgroundImage: `url(${BookaScreenHeroContainer})`,
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    padding: 0,
-                }}
+                className="container-flui py-lg-4"
+
             >
                 <div className={`row m-auto  d-sm-flex d-none ${section1_banner_container}`} style={{ width: "90%" }}>
                     <div
-                        className={`col-12 py- containr x-sm-5 ${zain}`}
+                        className={`col-12 p-0 containr x-sm-5 ${zain}`}
                         style={{
                             backgroundImage: `url(${section1banner})`,
                             backgroundSize: 'cover',
                             backgroundRepeat: 'no-repeat',
                             // height: '632px',
                             width: '100%',
-                            height:"100%",
+                            height:"auto",
                             borderRadius: '50px',
-                            display: "flex",
-                            justifyContent: "center",
-                            backgroundPosition:"center"
+                            // display: "flex",
+                            // justifyContent: "center",
                         }}
                     >
-                        <div className="d-flex flex-column justify-content-center align-items-center py-5 my-5 text-center w-75" style={{position:"relative",zIndex:2}}>
-                            <h1 className=" text-white font40" style={{width:"80%"}}>Empowering Tomorrow's Tech Leaders, One Learner at a Time
-                            </h1>
+                        <div 
+                        className="d-flex flex-column justify-content-center align-items-center py-5 my-5 text-center w-75 m-auto" style={{position:"relative",zIndex:2}}>
+                        <h2 className="font-weight-bold text-white pt-5 mt-5">Empowering Tomorrow's Tech Leaders, One Learner at a Time</h2>
+                            {/* <h1 className=" text-white font40" style={{width:"80%"}}>Empowering Tomorrow's Tech Leaders, One Learner at a Time
+                            </h1> */}
                             <div className="row justify-content-center" >
                                 <div className="col-lg-10">
 
-                            <h5 className="text-white my-4 font20">In a world where technology never stands still, staying ahead means continuous learning. With unmatched expertise of our experts, we're here to guide you and your organization to tech mastery. Join us on a journey to unlock your full potential and lead the future of innovation.
-                            </h5>
+                            {/* <h5 className="text-white my-4 font20">In a world where technology never stands still, staying ahead means continuous learning. With unmatched expertise of our experts, we're here to guide you and your organization to tech mastery. Join us on a journey to unlock your full potential and lead the future of innovation.
+                            </h5> */}
+                            <h6 className="text-white mt-4 mb-1">In a world where technology never stands still, staying ahead means continuous learning. With unmatched expertise of our experts, we're here to guide you and your organization to tech mastery. Join us on a journey to unlock your full potential and lead the future of innovation.</h6>
                                 </div>
                             </div>
                             {/* <button className={` rounded-3  px-sm-4  px-2 font25 ${view_all}`} style={{ borderRadius: 5 }}>View All Courses</button> */}
-                            <div  className={`  navbtn p-2 ${view_all}`}>
+                            <div  className={` mt-4 navbtn p-2 ${view_all}`}>
                             View All Courses
       </div>
                         </div>
@@ -160,26 +157,26 @@ const AboutTheCompany = () => {
             onMouseLeave={()=>setActive(false)}
             >  
             {
-                active?  <div className={`row ${blur_container}`}>
+                active?  <div className={`d-flex ${blur_container}`}>
                 <div className={`col-12 col-sm-6 text-center ${box1}`}>
                     <h1 className='my-2 mb-md-3'>Mission</h1>
-                    <p className='font25'>AshreiTech Academy at National Aerospace Science and Technology Park stands as a Center of Excellence, with a mission to revolutionize the IT education of Pakistan by equipping graduates with top-notch IT education ensuring they meet the demands of the evolving & competitive global market.
-                    </p>
+                    <h5 className='  text-muted'>AshreiTech Academy stands as a Center of Excellence, with a mission to revolutionize the IT education of Pakistan by equipping graduates with top-notch IT education ensuring they meet the demands of the evolving & competitive global market.
+                    </h5>
                 </div>
                 <div className={`col-12 col-sm-6 text-center ${box2}`}>
                     <h1 className='my-2 mb-md-3'>Vision</h1>
-                    <p className='font25'>To establish ourselves as the flagbearer of a sustainable and futuristic Tech Academy, driving the creation of global tech employment opportunities and fostering tech entrepreneurship.
-                    </p>
+                    <h5 className='  text-muted'>To establish ourselves as the flagbearer of a sustainable and futuristic Tech Academy, driving the creation of global tech employment opportunities and fostering tech entrepreneurship.
+                    </h5>
                 </div>
                 </div> :
                 <>
-                    <div className={`col-12 col-sm-6 text-center ml-n2 ${box1}`}>
+                    <div className={`col-12 col-sm-6 text-center ml- ${box1}`}>
                     <h1 className='mb-2 mt-2'>Mission</h1>
    {/* <p className='mb-md-3 ml-n3 my-2 my-md-0 font25 font-weight-bold mt-3 d-sm-none d-block'>Mission</p> */}
 
                 </div>
                 <div className={`col-12 col-sm-6 text-center ${box2}`}>
-                    <h1 className='mb-2 ml-3 mt-2 '> <span className='mr-3'>{'‎'}</span>Vision</h1>
+                    <h1 className='mb-2 ml-3 mt-2 '> <span className='ml-n3'>{'‎'}</span>Vision</h1>
                 </div>
                 </>
             }
@@ -205,7 +202,7 @@ const AboutTheCompany = () => {
                     </div>
                 </div>
                 <div className="col-10">
-                    <p className='font-weight-bold'>{description}</p>
+                    <h5 className=''>{description}</h5>
                 </div>
             </div>
         </div> 
@@ -298,27 +295,27 @@ const AboutTheCompany = () => {
                         <img src={vector1} alt="" style={{height:"auto",width:"25%"}}/>
                         <h3 className="my-2 font-weight-bolder">100 students
                         </h3>
-                        <p className="line-height-sm">Are Trained, certified and placed
+                        <p className="line-height-sm  text-muted">Are Trained, certified and placed
                         </p>
                     </div>
                     <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
                         <img src={vector2} alt="" style={{height:"auto",width:"25%"}}/>
                         <h3 className="my-2 font-weight-bolder">5 SAP Toppers
                         </h3>
-                        <p className="line-height-sm">Have Scored The Highest in the SAP Global Certification
+                        <p className="line-height-sm  text-muted">Have Scored The Highest in the SAP Global Certification
                         </p>
                     </div>
                     <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
                         <img src={vector3} alt="" style={{height:"auto",width:"25%"}}/>
                         <h3 className="my-2 font-weight-bolder">47 students
                         </h3>
-                        <p className="line-height-sm">Are SAP Global Certification Holders</p>
+                        <p className="line-height-sm  text-muted">Are SAP Global Certification Holders</p>
                     </div>
                     <div className="col-sm-3 d-flex flex-column align-items-center text-center text-black p-4 ">
                         <img src={vector4} alt="" style={{height:"auto",width:"25%"}} />
                         <h3 className="my-2 font-weight-bolder">12 students
                         </h3>
-                        <p className="line-height-sm">Are Multiple SAP Global Certification Holders
+                        <p className="line-height-sm  text-muted">Are Multiple SAP Global Certification Holders
 </p>
                     </div>
 

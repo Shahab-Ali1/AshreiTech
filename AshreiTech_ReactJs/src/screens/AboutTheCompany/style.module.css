@@ -6,7 +6,7 @@
   /* justify-content: center; */
   padding: 110px 90px;
 }
-.box1 ,
+/* .box1 ,
 .box2  {
   overflow-y: scroll;
 }
@@ -23,7 +23,7 @@
 .box1::-webkit-scrollbar-track,
 .box2::-webkit-scrollbar-track {
     background-color: transparent;
-}
+} */
 .box2 {
   /* background-color: red; */
   height: 500px;
@@ -37,11 +37,14 @@
 
   /* background-color: #00adff4f; */
 }
+.section1_banner_container{
+  position: relative;
+}
 .parent_box{
   position: absolute;
   content: "";
   height: auto;
-  width: 100%;
+  width: auto;
   background-image: url("../../assets/missonbackground.png");
   background-size: cover;
   background-position: center;
@@ -50,9 +53,10 @@
 
 .zain::after {
   position: absolute;
+  top: 0;
   content: "";
   height: 100%;
-  background-color: rgba(0 0 0 / 50%);
+  background-color: rgba(0 0 0 / 55%);
   width: 100%;
   border-radius: 47px;
 }

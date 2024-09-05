@@ -19,7 +19,9 @@ import GeoCraftMapping from '../../assets/pdf/GeoCraftMapping.pdf';
 import ITGovernanceandRiskManagement from '../../assets/pdf/ITGovernanceandRiskManagement.pdf';
 import SAPERPFinanceandCostControlling from '../../assets/pdf/SAPERPFinanceandCostControlling.pdf';
 import SAPMaterialManagement from '../../assets/pdf/SAPMaterialManagement.pdf';
+import GeoCraftMappingtheFuture from '../../assets/pdf/GeoCraftMappingtheFuture.pdf';
 import Governance from '../../assets/pdf/Governance.png';
+import GeoCraftMappingThumbnail from '../../assets/pdf/GeoCraftMappingThumbnail.jpg';
 import Governance1 from '../../assets/pdf/Governance1.jpg';
 import world from '../../assets/pdf/world.jpg';
 import map from '../../assets/pdf/map.jpg';
@@ -148,6 +150,15 @@ export default function CorporateTrainings() {
             dndt: '06 & 07 Aug 2024',
             pdfs: strategicpdf
         },
+        {
+            title: 'GeoCraft: Mapping the Future',
+            description: 'Master GIS and mapping to enhance decision-making and optimize business operations.',
+            image: GeoCraftMappingThumbnail,
+            startDate: '2024-09-19',
+            endDate: '2024-09-19',
+            dndt: '19th sep 2024',
+            pdfs: GeoCraftMappingtheFuture
+        },
         // {
         //     title: 'Techpro Workshops Strategic It Oversight',
         //     description: 'Workshop on IT governance principles, frameworks and risk management',
@@ -260,7 +271,7 @@ export default function CorporateTrainings() {
                     <div className="col-12 d-none">
                         <h1 className={`${generic_heading_center} text-center text-md-left `}>Future Trainings</h1>
                     </div>
-                    <div className='mt-5 row d-flex justify-content-center align-items-center flex-column flex-md-row text-center text-md-left'>
+                    <div className='mt-5 row d-flex justify-content-cente align-items-center flex-column flex-md-row text-center text-md-left'>
                         {futureTrainings.map((training, index) => (
                             <div className="col-md-3 col-sm-12 mb-4" key={index}>
                                 <div className={`${card} card`}>
