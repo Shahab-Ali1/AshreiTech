@@ -991,6 +991,9 @@
     width: 100% !important;
     border-radius: 5px !important;
   }
+  #generic_heading_BookRoom::before{
+    display: none;
+  }
 
   .course_container::after{
     display: none;

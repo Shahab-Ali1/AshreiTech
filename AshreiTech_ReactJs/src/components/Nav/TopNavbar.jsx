@@ -118,7 +118,7 @@ export default function TopNavbar() {
                       color: hoveredIndex ===   0 ? '#000000' : hoveredIndex !== null ? '#808080' : '#000000', transition: 'color 0.3s ease',
                     }}
                   >
-                    Who we are
+                    Who We Are
                   </span>
                     <i
                       style={{ marginTop: "0px", marginLeft: "10px"}}

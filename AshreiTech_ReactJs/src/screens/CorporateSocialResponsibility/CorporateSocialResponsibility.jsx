@@ -4,38 +4,43 @@ import TopNavbar from '../../components/Nav/TopNavbar'
 import TestimonialSlider from '../../components/Elements/TestimonialSlider'
 import companyLogo4 from '../../assets/aboutTheCompany/companyLogo4.png';
 import AshrieTechBanner from '../../assets/AshrieTechBanner.png'
-import vector1 from '../../assets/vector1.gif';
-import vector2 from '../../assets/vector2.gif';
-import vector3 from '../../assets/vector3.gif';
-import vector4 from '../../assets/vector4.gif';
+import AnraizUncle from '../../assets/CorporateSocialResponsibilty/AnraizUncle.png';
+import CardImage1 from '../../assets/CorporateSocialResponsibilty/CardImage1.png';
+import CardImage2 from '../../assets/CorporateSocialResponsibilty/CardImage2.png';
+import CardImage3 from '../../assets/CorporateSocialResponsibilty/CardImage3.png';
+import CardImage4 from '../../assets/CorporateSocialResponsibilty/CardImage4.png';
 import wave from '../../assets/WhatWeDo/Wave2.png'
-
+import style from "./style.module.css"
+import chandImage from '../../assets/CorporateSocialResponsibilty/chandImage.png'
 
 
 // import Sohail_zindani from '../../assets/Sohail_zindani.png'
 // import CSRbg from '../../assets/CSRbg.png'
 
 export default function CorporateSocialResponsibility() {
+    const {box,generic_heading_left}=style
   return (
     <>
       <TopNavbar />
 
 
       <div className="container-fluid" style={{backgroundColor:"#f7fde8"}}>
-        <div className="row px-4 mb-4 d-flex justify-content-center align-items-center">
-          <div className="col-lg-6 p-0">
-            <h1 style={{lineHeight:'0.9'}} className='mb-4'>Meet Our <br /> <span style={{fontSize:'28px', backgroundColor:'#053750', padding:'5px 12px',  borderRadius:'5px', color:'white' , letterSpacing:'4px'}}>Founder</span> </h1>
-            <p>Sohail is on a mission to "create a world of work where everyone can be their natural best, feel belonged and experience advancement."
+        <div className="row px-4 mb-4 d-flex justify-content-center align-items-cente">
+          <div className="col-lg-6 p-0 py-3">
+            <h1 style={{lineHeight:'0.9'}} className=''>Meet Our</h1>
+            <h1 className='mb-4 mt-2' style={{fontSize:'28px', backgroundColor:'#053750', padding:'5px 12px',  borderRadius:'5px', color:'white' , letterSpacing:'4px',display:'inline-block'}}>Founder</h1>
+            <p className='font20'>Sohail is on a mission to "create a world of work where everyone can be their natural best, feel belonged and experience advancement."
               He has devoted his life to sharing his thinking in order to help other leaders and organizations develop an agile learning culture.
               Sohail's unconventional and disruptive views on talent, learning
               leadership and business have attracted significant attention.
               Sohail spends a significant time studying individuals, teams and organizations to understand what makes world-class performers, summarizing it, and sharing it with the world.</p>
           </div>
-          <div className="col-6">
-            {/* <img src={Sohail_zindani} alt=""  style={{ width:'100%' , height:'auto' }}/> */}
+          <div className="col-6 d-inline-flex align-items-end">
+            <img src={chandImage} alt="" className='p-0'  style={{ width:'100%' , height:'auto' }}/>
           </div>
         </div>
       </div>
+        {/* <div className="gradientCircle"></div> */}
       <div
                 className="container-fluid mt-4"
                 style={{
@@ -49,7 +54,7 @@ export default function CorporateSocialResponsibility() {
                 <div className="container py-5 ">
                     <div className="row p-3 p-md-5 d-flex justify-content-center align-items-center">
                       
-                        <div className="col-lg-9 col-md-6 col-sm-12 pb-4 pb-lg-0 text-center ">
+                        <div className="col-lg-9 col-md-10 col-sm-12 pb-4 pb-lg-0 text-center ">
                             <h1 className='text-center ' id="generic_heading_BookRoom">Our approach to build a Tech-able Pakistan</h1>
                             <br />
                             <p className="mt-3 text-center text-white">Through the rigorous marketing and outreach efforts across Pakistan, we were able to create awareness and generate 10,000 leads. <br />
@@ -89,46 +94,35 @@ export default function CorporateSocialResponsibility() {
                     </div>
                 </div>
                 <div className='d-sm-block d-md-none d-lg-none '>
-                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5">
-                        <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
-                            <div className="col-sm-5 col-lg-3">
-                                <img src={companyLogo4} alt="" style={{ width: '55px', height: '55px' }} />
-                            </div>
-                            <h4 className="my-2 ">Venue At The Heart Of The City –
+                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
+                        <div  className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
+                            <p className="line-height-sm">Projection of Revenue in the IT Outsourcing market (2028)
+                            </p>
+                            <h4 className="my-2 " style={{color:'#5A8C75'}}>US$783.60m (0.15% of the total share)
                             </h4>
-                            <p className="line-height-sm">Located inside NASTP, Karachi, with shaded parking space for up to 500 cars!
+                        </div>
+                    </div>
+                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
+                        <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black py-4" style={{ borderRadius: '24px' }}>
+                            <p className="line-height-sm">Pakistan’s contribution (2028)
+                            <h4 className="my-2 "style={{color:'#5A8C75'}}>US$1,523.00m (0.19% of the total share)           </h4>
                             </p>
                         </div>
                     </div>
-                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5">
+                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
                         <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black py-4" style={{ borderRadius: '24px' }}>
-                            <div className="col-sm-5 col-lg-3">
-                                <img src={companyLogo4} alt="" style={{ width: '55px', height: '55px' }} />
-                            </div>
-                            <h4 className="my-2 ">Segregated Prayer Area –                            </h4>
-                            <p className="line-height-sm">Neat and tidy, for ladies and gentlemen, with ample rest rooms on every floor!
-                            </p>
-                        </div>
-                    </div>
-                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5">
-                        <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black py-4" style={{ borderRadius: '24px' }}>
-                            <div className="col-sm-5 col-lg-3">
-                                <img src={companyLogo4} alt="" style={{ width: '55px', height: '55px' }} />
-                            </div>
-                            <h4 className="my-2 " style={{ color: 'black !important' }} >24/7 Wi-Fi –
+                        <p className="line-height-sm">Projection of Revenue in the IT Outsourcing market (2028)
+                        </p>
+                            <h4 className="my-2 "style={{color:'#5A8C75'}}>US$783.60m (0.15% of the total share)
                             </h4>
-                            <p className="line-height-sm">Obviously, it’s not a luxury – it’s a necessity, because we are serving a global world!
-                            </p>
+                           
                         </div>
                     </div>
-                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5">
+                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
                         <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black py-4" style={{ borderRadius: '24px' }}>
-                            <div className="col-sm-5 col-lg-3">
-                                <img src={companyLogo4} alt="" style={{ width: '55px', height: '55px' }} />
-                            </div>
-                            <h4 className="my-2 ">High-Tech Learning Venue –                            </h4>
-                            <p className="line-height-sm">Of Course, we are a tech company, and we know the importance of tech amenities!
-                            </p>
+                        <p className="line-height-sm">Pakistan’s contribution (2028)
+                        </p>
+                            <h4 className="my-2 "style={{color:'#5A8C75'}}>US$1,523.00m (0.19% of the total share)                           </h4>
                         </div>
                     </div>
                 </div>
@@ -174,11 +168,11 @@ export default function CorporateSocialResponsibility() {
                         <h4 className="my-2  pb-4" style={{color:'#5A8C75'}}>US$783.60m (0.15% of the total share)</h4>
                     </div>
                     <div className="col-lg-5 p-5 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ml-5" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
-                      <div className="co-lg-9">
+                      {/* <div className="co-lg-9"> */}
                       <p className="line-height-sm pt-5 w-75">Pakistan’s contribution (2028)</p>
                       <h4 className="my-2 pb-4 text-center" style={{color:'#5A8C75'}}>US$1,523.00m (0.19% of the total share)</h4>
 
-                      </div>
+                      {/* </div> */}
                     </div>
                 </div>
 
@@ -186,14 +180,14 @@ export default function CorporateSocialResponsibility() {
 
 
 
-
+       <div className="d-none d-sm-block" style={{marginTop:140}}></div>
                 <div
                 className="container-flud"
             >
                 <div className="containe px-3 py-2">
                  
-                  <h1>That’s not low – that is embarrassingly low. <span style={{color:'#5A8C75'}}> But there’s a <br /> hope!</span> </h1>
-                    <div className="row  mb-5  d-flex justify-content-center align-items-center">
+                  <h1>That’s not low – that is embarrassingly low. <span style={{color:'#5A8C75'}}> But there’s a <br className='d-none d-sm-block'/> hope!</span> </h1>
+                    <div className="row  mb-sm-5 mb-3  d-flex justify-content-center align-items-center">
                         <div className="col-lg-5 col-md-6 col-sm-12 py-2">
                                 <img src={AshrieTechBanner} alt=""  className='container-fluid p-0 py-md-4 pr-md-5'/>
                         </div>
@@ -204,40 +198,79 @@ export default function CorporateSocialResponsibility() {
                           
                         </div>
                     </div>
-                    <br />
+                    <br className='d-none d-sm-block'/>
                     <h3 className='text-center  mb-3'>And this can’t be done alone.</h3>
                     <h1 className='text-center'>And that’s where <span style={{color:'#5A8C75'}}>YOU</span>   come in.</h1>
 
                 </div>
             </div>
             </div>
-            <div className="row px-5 justify-content-end">
-                    <div className="col-sm-3 px-5 d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={vector1} alt="" style={{height:"auto",width:"25%"}}/>
+            <div className="container-fluid px-5 ">
+                    <h1 className='text-center py-sm-5 py-4'>A Word from our Partners</h1>
+                <div className={`${box} container-fluid `}>
+                    <div className="row py-sm-0 py-4 px-3 px-xm-0">
+                        <div className="col-lg-8 col-md-8 col-sm-12 d-flex flex-column justify-content-center text-center text-md-left text-lg-left ">
+                            <div className="">
+                                <h3 className='mb-sm-3' style={{color:"#5A8C75"}}>NASTP</h3>
+                                <h1  className={`${generic_heading_left} mt-4`} style={{color:"#5A8C75"}}>
+                                Run this course in-house
+                                </h1>
+                                <div className="mt-sm-5 mt-3">
+                                    <p>Informa Connect Academy’s customised training solutions have helped organisations deliver tailored learning in different languages to suit every requirement.</p>
+                                    <br />
+                                    <p>Bespoke training designed for your organisation only, combining traditional classroom setting, blended and online learning models</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-4 py-sm-5 py-3 col-sm-12 d-flex justify-content-center align-items-center">
+                            <img
+                                className={`${"Laptop_Image"}`}
+                                style={{ width: "100%", height: "auto" }}
+                                src={AnraizUncle}
+                                alt="Laptop Image"
+                            />
+                        </div>
+                    </div>
+                </div>
+                </div>
+           <div className="container-fluid mt-5">
+           <div className="row d-flex justify-content-center align-items-center py-4">
+                    <div className="col-lg-12 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center ">
+                        <h1 className=" mb-md-3 pb-lg-0" id="generic_heading_BookRoom">How you can Partner with us</h1>
+                        {/* <p className="col-sm-8 pt-2 mt-4 font25">Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p> */}
+                    </div>
+                </div>
+           <div className="row px-5 justify-content-end">
+                    <div className="col-sm-6 col-md-3  px-sm-5 d-flex flex-column align-items-center text-center text-black p-4 ">
+                        <img src={CardImage1} alt="" style={{height:"auto",width:"45%"}}/>
                       
-                        <p className="line-height-sm  text-muted">Support on exisiting
+                        <p className="line-height-sm mt-2 text-muted">Support on exisiting
                         state-level intervention
                         </p>
                     </div>
-                    <div className="col-sm-3  px-5  d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={vector2} alt="" style={{height:"auto",width:"25%"}}/>
-                        <p className="line-height-sm  text-muted">Facilitate Career guidance
+                    <div className="col-sm-6 col-md-3   px-sm-5  d-flex flex-column align-items-center text-center text-black p-4 ">
+                        <img src={CardImage2} alt="" style={{height:"auto",width:"45%"}}/>
+                        <p className="line-height-sm mt-2 text-muted">Facilitate Career guidance
                         for existing students
                         </p>
                     </div>
-                    <div className="col-sm-3 px-5  d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={vector3} alt="" style={{height:"auto",width:"25%"}}/>
-                        <p className="line-height-sm  text-muted">Sponsor Scholarships and
+                    <div className="col-sm-6 col-md-3  px-sm-5  d-flex flex-column align-items-center text-center text-black p-4 ">
+                        <img src={CardImage3} alt="" style={{height:"auto",width:"45%"}}/>
+                        <p className="line-height-sm mt-2 text-muted">Sponsor Scholarships and
                         Finance Assistance</p>
                     </div>
-                    <div className="col-sm-3 px-5  d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={vector4} alt="" style={{height:"auto",width:"25%"}} />
-                        <p className="line-height-sm  text-muted">Co-create adolescent 
+                    <div className="col-sm-6 col-md-3  px-sm-5  d-flex flex-column align-items-center text-center text-black p-4 ">
+                        <img src={CardImage4} alt="" style={{height:"auto",width:"45%"}} />
+                        <p className="line-height-sm mt-2 text-muted">Co-create adolescent 
                         expowerment & intervention
 </p>
                     </div>
 
                 </div>
+           </div>
+            
+               
+  
       <TestimonialSlider/>
       <Footer />
     </>

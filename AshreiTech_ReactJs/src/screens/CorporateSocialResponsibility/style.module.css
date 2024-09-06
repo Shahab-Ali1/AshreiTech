@@ -1,0 +1,29 @@
+.box{
+    background-color: 
+    #EEEEEE;  
+    /* color: #ffffff; */
+    border-radius: 50px;
+    z-index: 2;
+  }
+  .generic_heading_left {
+    position: relative;
+    align-items: end;
+    margin-bottom: 50px !important;
+    margin: auto !important;
+}
+
+.generic_heading_left::before {
+    content: ' ';
+    width: 164px;
+    height: 8px;
+    background-color: #5A8C75;
+    position: absolute;
+    top: 59px;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 600px) {
+
+  .generic_heading_left::before {
+    display: none;
+}
+}  
