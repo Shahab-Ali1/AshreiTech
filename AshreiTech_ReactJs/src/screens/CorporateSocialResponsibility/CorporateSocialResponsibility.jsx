@@ -12,6 +12,7 @@ import CardImage4 from '../../assets/CorporateSocialResponsibilty/CardImage4.png
 import wave from '../../assets/WhatWeDo/Wave2.png'
 import style from "./style.module.css"
 import chandImage from '../../assets/CorporateSocialResponsibilty/chandImage.png'
+import { Barchart } from '../../components/Sections/Barchart/Barchart';
 
 
 // import Sohail_zindani from '../../assets/Sohail_zindani.png'
@@ -76,6 +77,12 @@ export default function CorporateSocialResponsibility() {
         </div>
       </div>
       </div> */}
+      <div className="row position-relative mt-5">
+      <div className="gradientCircleLeft"></div>
+      <Barchart/>
+      </div>
+ 
+      <div className="d-none d-sm-block" style={{marginTop:90}}></div>
       <div
                 className="container-fluid py-4 "
                 style={{
@@ -126,7 +133,7 @@ export default function CorporateSocialResponsibility() {
                         </div>
                     </div>
                 </div>
-
+ 
                 <div className="col-12  px-5 justify-content-center align-items-center py-4 d-none d-md-flex d-lg-flex">
                     <div className="col-lg-5 p-5 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 " style={{ borderRadius: '24px',border:'3px solid #5A8C75' }}>
                         
@@ -204,6 +211,10 @@ export default function CorporateSocialResponsibility() {
 
                 </div>
             </div>
+            </div>
+            <div className="mt-2">
+            <h1 className='text-center py-sm-5 py-4'>Short-term Outcomes</h1>
+            <Barchart/>
             </div>
             <div className="container-fluid px-5 ">
                     <h1 className='text-center py-sm-5 py-4'>A Word from our Partners</h1>
