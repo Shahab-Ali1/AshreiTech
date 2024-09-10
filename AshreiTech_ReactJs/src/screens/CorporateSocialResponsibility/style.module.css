@@ -21,6 +21,30 @@
     top: 59px;
     border-radius: 5px;
 }
+.gradientCircle:before  {
+  content: "";
+  position: absolute;
+  right: -99px;
+  bottom: 0;
+  width: 343px;
+  height: 625px;
+  background: radial-gradient(circle, rgb(158 212 180 / 39%) 30%, rgb(255 255 255 / 0%) 51%);
+  top: 95px;
+  background-position: center;
+  z-index: 3 !important;
+}
+.gradientCircle1:before  {
+  content: "";
+  position: absolute;
+  right: -154px;
+  bottom: 0;
+  width: 343px;
+  height: 625px;
+  background: radial-gradient(circle, rgb(158 212 180 / 39%) 30%, rgb(255 255 255 / 0%) 51%);
+  top: 272px;
+  background-position: center;
+  z-index: 3 !important;
+}
 @media only screen and (max-width: 600px) {
 
   .generic_heading_left::before {

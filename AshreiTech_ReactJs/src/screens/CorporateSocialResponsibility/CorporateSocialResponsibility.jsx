@@ -13,13 +13,63 @@ import wave from '../../assets/WhatWeDo/Wave2.png'
 import style from "./style.module.css"
 import chandImage from '../../assets/CorporateSocialResponsibilty/chandImage.png'
 import { Barchart } from '../../components/Sections/Barchart/Barchart';
-
-
-// import Sohail_zindani from '../../assets/Sohail_zindani.png'
-// import CSRbg from '../../assets/CSRbg.png'
+import offerbg from '../../assets/offerbg.png';
 
 export default function CorporateSocialResponsibility() {
+    const {gradientCircle,gradientCircle1}=style
     const {box,generic_heading_left}=style
+    const data = {
+        labels: ['January', 'February', 'March', 'April',],
+        datasets: [
+          {
+            label: 'SAP',
+            data: [81, 56, 55, 40],
+            backgroundColor: 'rgba(244, 165, 45)',
+      
+          },
+          {
+            label: 'Saleforce',
+            data: [ 19, 86, 27, 90],
+            backgroundColor: 'rgba(208, 181, 42)',
+      
+          },
+          {
+            label: 'Tableau',
+            data: [ 50, 90, 65, 80], 
+            backgroundColor: 'rgba(85, 185, 159)',
+      
+          },
+        ],
+      };
+      const singleBardata = {
+        labels: ['January',],
+        datasets: [
+          {
+            label: 'Leadership Academy',
+            data: [81, ],
+            backgroundColor: 'rgba(244, 165, 45)',
+      
+          },
+          {
+            label: 'Interveiw Prep',
+            data: [ 19, ],
+            backgroundColor: 'rgba(208, 181, 42)',
+      
+          },
+          {
+            label: 'Work Prep',
+            data: [ 50, ], 
+            backgroundColor: 'rgba(85, 185, 159)',
+      
+          },
+          {
+            label: 'Hiring Summit',
+            data: [ 50, ], 
+            backgroundColor: 'rgba(0,142,112,255)',
+      
+          },
+        ],
+      };
   return (
     <>
       <TopNavbar />
@@ -77,9 +127,16 @@ export default function CorporateSocialResponsibility() {
         </div>
       </div>
       </div> */}
-      <div className="row position-relative mt-5">
+      <div    style={{
+        backgroundImage: `url(${offerbg})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        position: 'relative'
+      }} className="row position-relative mt-5">
       <div className="gradientCircleLeft"></div>
-      <Barchart/>
+      {/* <div className="gradientCircle d-none d-lg-block"></div> */}
+      <div className={`${gradientCircle} d-none d-lg-block`}></div>
+      <Barchart data={data}/>
       </div>
  
       <div className="d-none d-sm-block" style={{marginTop:90}}></div>
@@ -91,8 +148,11 @@ export default function CorporateSocialResponsibility() {
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
+                    position:"relative"
                 }}
             >
+      
+
                 <div className="row d-flex justify-content-center align-items-center py-4">
                     <div  className="col-lg-12 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center  ">
                         <h1 className="pb-md-4 pb-lg-0 generic_heading mt-lg-2"  style={{color:'#5A8C75'}}>LET’S TALK NUMBERS</h1>
@@ -187,11 +247,13 @@ export default function CorporateSocialResponsibility() {
 
 
 
-       <div className="d-none d-sm-block" style={{marginTop:140}}></div>
+       <div className="d-none d-sm-block" style={{marginTop:140,width:"100%",position:"relative"}}>
+       </div>
                 <div
                 className="container-flud"
             >
-                <div className="containe px-3 py-2">
+                <div className="containe px-3 py-2 position-relative">
+       <div className={`${gradientCircle1}  d-none d-lg-block`}></div>
                  
                   <h1>That’s not low – that is embarrassingly low. <span style={{color:'#5A8C75'}}> But there’s a <br className='d-none d-sm-block'/> hope!</span> </h1>
                     <div className="row  mb-sm-5 mb-3  d-flex justify-content-center align-items-center">
@@ -214,7 +276,8 @@ export default function CorporateSocialResponsibility() {
             </div>
             <div className="mt-2">
             <h1 className='text-center py-sm-5 py-4'>Short-term Outcomes</h1>
-            <Barchart/>
+            <Barchart data={singleBardata}/>
+            <h3 className='text-center py-4'> Trust in their ability to succeed in the technical internship.</h3>
             </div>
             <div className="container-fluid px-5 ">
                     <h1 className='text-center py-sm-5 py-4'>A Word from our Partners</h1>
@@ -281,8 +344,13 @@ export default function CorporateSocialResponsibility() {
            </div>
             
                
-  
-      <TestimonialSlider/>
+  <div className="mt-sm-5">
+    <h1 className='text-center'>Stories of impact</h1>
+    <div className="mt-n3 pb-sm-5">
+    <TestimonialSlider/>
+    </div>
+  </div>
+      
       <Footer />
     </>
   )

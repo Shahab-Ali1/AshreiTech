@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -23,28 +23,33 @@ ChartJS.register(
 );
 
 const data = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  labels: ['January', 'February', 'March', 'April',],
   datasets: [
     {
       label: 'SAP',
-      data: [65, 59, 80, 81, 56, 55, 40],
+      data: [81, 56, 55, 40],
       backgroundColor: 'rgba(244, 165, 45)',
 
     },
     {
       label: 'Saleforce',
-      data: [28, 48, 40, 19, 86, 27, 90],
+      data: [ 19, 86, 27, 90],
       backgroundColor: 'rgba(208, 181, 42)',
 
     },
     {
       label: 'Tableau',
-      data: [40, 60, 70, 50, 90, 65, 80], 
+      data: [ 50, 90, 65, 80], 
       backgroundColor: 'rgba(85, 185, 159)',
 
     },
   ],
 };
+const verticalTitlePlugin = {
+  id: 'verticalTitlePlugin',
+  beforeDraw: (chart) => {
+    const ctx = chart.ctx;
+    const { width, height } = chart;
 
 const options = {
   responsive: true,
@@ -56,6 +61,16 @@ const options = {
         boxWidth: 30,
         boxHeight: 30,
         padding: 15,
+        generateLabels: function (chart) {
+          const original = ChartJS.defaults.plugins.legend.labels.generateLabels;
+          const labelsOriginal = original.call(this, chart);
+
+          labelsOriginal.forEach(label => {
+            label.borderRadius = 10; 
+          });
+
+          return labelsOriginal;
+        },
       },
     },
     title: {
@@ -94,10 +109,24 @@ const options = {
         display: false,
       },
       border: {
+        display: true,
         color: 'red',
-        width: 20,
+        width: 200,
       },
+      ticks: {
+        display: false, 
+      },
+      grid: {
+        display: false,
+        borderColor: 'rgba(97,102,105,255)', 
+        borderWidth: 10, 
+      offset: true,
+      position: 'bottom', 
+   
     },
+    barPercentage: 0.1, 
+    categoryPercentage: 0.1,
+  },
     y: {
       beginAtZero: true,
       grid: {
@@ -105,16 +134,21 @@ const options = {
         borderDash: [10, 5],
         borderColor: 'rgba(0, 0, 0, 0)',
       },
+      border: {
+        display: false,
+      },
     },
   },
   elements: {
     bar: {
       borderRadius: 10,
+      barThickness: 10, 
+      maxBarThickness: 20, 
     },
   },
 };
 
-export const Barchart = () => {
+export const Barchart = (props) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -131,10 +165,11 @@ export const Barchart = () => {
     <>
       <div className="container-fluid " >
         <div className="row justify-content-center">
-          <div style={{background:"white"}} className="col-lg-9 ">
+          <div style={{background:"white",marginLeft:102}} className="col-lg-9 ">
             <Bar
-              data={data}
+              data={props?.data}
               options={options}
+              ref={chartRef}
             />
           </div>
         </div>
