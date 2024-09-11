@@ -194,13 +194,13 @@ export default function CorporateSocialResponsibility() {
                     </div>
                 </div>
  
-                <div className="col-12  px-5 justify-content-center align-items-center py-4 d-none d-md-flex d-lg-flex">
+                <div className="row  px-5 justify-content-center align-items-center py-4 d-none d-md-flex d-lg-flex">
                     <div className="col-lg-5 p-5 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 " style={{ borderRadius: '24px',border:'3px solid #5A8C75' }}>
                         
                         <p className="line-height-sm w-75 pt-4">Projection of Revenue in the IT Outsourcing market (2024)</p>
                         <h4 className="my-2 pb-4" style={{color:'#5A8C75'}}>US$512.50bn</h4>
                     </div>
-                    <div className="col-lg-5 p-5 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ml-5" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
+                    <div className="col-lg-5 p-5 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ml-lg-5 mt-5 mt-lg-0" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
                         <p className="line-height-sm pt-4 w-75">Projection of Revenue in the IT Outsourcing market (2024)</p>
                         <h4 className="my-2 pb-4" style={{color:'#5A8C75'}}>US$512.50bn</h4>
                     </div>
@@ -229,12 +229,12 @@ export default function CorporateSocialResponsibility() {
 
                     </div>
                 </div>
-                <div className="col-12 px-5  justify-content-center align-items-center  pb-4 d-none d-md-flex d-lg-flex">
-                    <div className="col-lg-5 p-5 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
+                <div className="row px-5  justify-content-center align-items-center  pb-4 d-none d-md-flex d-lg-flex">
+                    <div className="col-lg-5 mt-4 mt-lg-0 p-5 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
                         <p className="line-height-sm pt-4 w-75">Projection of Revenue in the IT Outsourcing market (2028)</p>
                         <h4 className="my-2  pb-4" style={{color:'#5A8C75'}}>US$783.60m (0.15% of the total share)</h4>
                     </div>
-                    <div className="col-lg-5 p-5 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ml-5" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
+                    <div className="col-lg-5 p-5 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ml-lg-5 mt-5 mt-lg-0" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
                       {/* <div className="co-lg-9"> */}
                       <p className="line-height-sm pt-5 w-75">Pakistan’s contribution (2028)</p>
                       <h4 className="my-2 pb-4 text-center" style={{color:'#5A8C75'}}>US$1,523.00m (0.19% of the total share)</h4>
@@ -279,11 +279,11 @@ export default function CorporateSocialResponsibility() {
             <Barchart data={singleBardata}/>
             <h3 className='text-center py-4'> Trust in their ability to succeed in the technical internship.</h3>
             </div>
-            <div className="container-fluid px-5 ">
+            <div className="container-fluid px-sm-5 ">
                     <h1 className='text-center py-sm-5 py-4'>A Word from our Partners</h1>
                 <div className={`${box} container-fluid `}>
-                    <div className="row py-sm-0 py-4 px-3 px-xm-0">
-                        <div className="col-lg-8 col-md-8 col-sm-12 d-flex flex-column justify-content-center text-center text-md-left text-lg-left ">
+                    <div className="row py-sm-0 py-4 px-sm-3 px-xm-0">
+                        <div className="col-lg-8 col-md-8 p-0 p-sm-3 col-sm-12 d-flex flex-column justify-content-center text-center text-md-left text-lg-left ">
                             <div className="">
                                 <h3 className='mb-sm-3' style={{color:"#5A8C75"}}>NASTP</h3>
                                 <h1  className={`${generic_heading_left} mt-4`} style={{color:"#5A8C75"}}>
@@ -316,14 +316,14 @@ export default function CorporateSocialResponsibility() {
                 </div>
            <div className="row px-5 justify-content-end">
                     <div className="col-sm-6 col-md-3  px-sm-5 d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={CardImage1} alt="" style={{height:"auto",width:"45%"}}/>
+                        <img src={CardImage2} alt="" style={{height:"auto",width:"45%"}}/>
                       
                         <p className="line-height-sm mt-2 text-muted">Support on exisiting
                         state-level intervention
                         </p>
                     </div>
                     <div className="col-sm-6 col-md-3   px-sm-5  d-flex flex-column align-items-center text-center text-black p-4 ">
-                        <img src={CardImage2} alt="" style={{height:"auto",width:"45%"}}/>
+                        <img src={CardImage1} alt="" style={{height:"auto",width:"45%"}}/>
                         <p className="line-height-sm mt-2 text-muted">Facilitate Career guidance
                         for existing students
                         </p>

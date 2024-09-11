@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
+import style  from './style.module.css'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -45,111 +46,25 @@ const data = {
     },
   ],
 };
-const verticalTitlePlugin = {
-  id: 'verticalTitlePlugin',
-  beforeDraw: (chart) => {
-    const ctx = chart.ctx;
-    const { width, height } = chart;
 
-const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'right',
-      top: 20,
-      labels: {
-        boxWidth: 30,
-        boxHeight: 30,
-        padding: 15,
-        generateLabels: function (chart) {
-          const original = ChartJS.defaults.plugins.legend.labels.generateLabels;
-          const labelsOriginal = original.call(this, chart);
 
-          labelsOriginal.forEach(label => {
-            label.borderRadius = 10; 
-          });
-
-          return labelsOriginal;
-        },
-      },
-    },
-    title: {
-      position: 'right',
-      align: 'end',
-      display: false,
-      text: 'Key',
-      position: 'top',
-      padding: {
-        top: 10,
-      },
-
-      font: {
-        size: 18, 
-      },
-    },
-    datalabels: {
-      display: true,
-      color: '#ffffff',
-      anchor: 'end',
-      align: 'end',
-      // formatter: (value, context) => {
-      //   // Calculate the percentage
-      //   const total = context.dataset.data.reduce((acc, curr) => acc + curr, 0);
-      //   const percentage = ((value / total) * 100).toFixed(2);
-      //   return `${percentage}%`;
-      // },
-      formatter: (value) => `${value}%`,
-      offset: -30,
-    },
-  },
-  scales: {
-    x: {
-      beginAtZero: true,
-      grid: {
-        display: false,
-      },
-      border: {
-        display: true,
-        color: 'red',
-        width: 200,
-      },
-      ticks: {
-        display: false, 
-      },
-      grid: {
-        display: false,
-        borderColor: 'rgba(97,102,105,255)', 
-        borderWidth: 10, 
-      offset: true,
-      position: 'bottom', 
-   
-    },
-    barPercentage: 0.1, 
-    categoryPercentage: 0.1,
-  },
-    y: {
-      beginAtZero: true,
-      grid: {
-        display: true,
-        borderDash: [10, 5],
-        borderColor: 'rgba(0, 0, 0, 0)',
-      },
-      border: {
-        display: false,
-      },
-    },
-  },
-  elements: {
-    bar: {
-      borderRadius: 10,
-      barThickness: 10, 
-      maxBarThickness: 20, 
-    },
-  },
-};
 
 export const Barchart = (props) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const {bar_container}=style
+  const chartRef = useRef(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (chartRef.current) {
+        chartRef.current.reset(); 
+        chartRef.current.update(); 
+      }
+    }, 5000); 
+
+    return () => clearInterval(interval); 
+  }, []);
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -161,15 +76,134 @@ export const Barchart = (props) => {
     };
   }, []);
 
+  const options = {
+    responsive: true,
+    animation: {
+      duration: 1500, 
+      // easing: 'easeInCubic', 
+    },
+    plugins: {
+      legend: {
+        position: windowWidth  <=600 ?'bottom' :'right',
+        top: 20,
+        labels: {
+          boxWidth: 30,
+          boxHeight: 30,
+          padding: 15,
+          generateLabels: function (chart) {
+            const original = ChartJS.defaults.plugins.legend.labels.generateLabels;
+            const labelsOriginal = original.call(this, chart);
+  
+            labelsOriginal.forEach(label => {
+              label.borderRadius = 10; 
+            });
+  
+            return labelsOriginal;
+          },
+          onResize: function(chart, size) {
+            debugger
+            if (size.width < 768) { // Example breakpoint for mobile screens
+              chart.options.plugins.legend.position = 'bottom';
+            } else {
+              chart.options.plugins.legend.position = 'right';
+            }
+          }
+        },
+      },
+      title: {
+        position: 'right',
+        align: 'end',
+        display: false,
+        text: 'Key',
+        position: 'top',
+        padding: {
+          top: 10,
+        },
+  
+        font: {
+          size: 18, 
+        },
+      },
+      datalabels: {
+        display: true,
+        color: '#ffffff',
+        anchor: 'end',
+        align: 'end',
+        // formatter: (value, context) => {
+        //   // Calculate the percentage
+        //   const total = context.dataset.data.reduce((acc, curr) => acc + curr, 0);
+        //   const percentage = ((value / total) * 100).toFixed(2);
+        //   return `${percentage}%`;
+        // },
+        formatter: (value) => `${value}%`,
+        offset: -30,
+      },
+    },
+    scales: {
+      x: {
+        beginAtZero: true,
+        grid: {
+          display: false,
+        },
+        border: {
+          display: true,
+          color: 'red',
+          width: 200,
+        },
+        ticks: {
+          display: false, 
+        },
+        grid: {
+          display: false,
+          borderColor: 'rgba(97,102,105,255)', 
+          borderWidth: 10, 
+        offset: true,
+        position: 'bottom', 
+     
+      },
+      barPercentage: 0.1, 
+      categoryPercentage: 0.1,
+    },
+      y: {
+        beginAtZero: true,
+        grid: {
+          display: true,
+          borderDash: [10, 5],
+          borderColor: 'rgba(0, 0, 0, 0)',
+        },
+        border: {
+          display: false,
+        },
+      },
+    },
+    elements: {
+      bar: {
+        borderRadius: 10,
+        barThickness: 10, 
+        maxBarThickness: 20, 
+      },
+    },
+  };
+  
   return (
     <>
       <div className="container-fluid " >
         <div className="row justify-content-center">
-          <div style={{background:"white",marginLeft:102}} className="col-lg-9 ">
+          <div  className={` ${bar_container} col-lg-9 `}>
             <Bar
               data={props?.data}
               options={options}
               ref={chartRef}
+              height={
+                windowWidth <= 600
+                && 350
+                  
+              }
+              width={
+                windowWidth <= 600
+                  && 390
+                  
+              }
             />
           </div>
         </div>

@@ -6,6 +6,14 @@ import "./style/flexboxgrid.min.css";
 import './style/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import TagManager from 'react-gtm-module';
+
+
+const tagManagerArgs = {
+  gtmId: 'GTM-P9H6ZJL9'  
+};
+
+TagManager.initialize(tagManagerArgs);
 
 ReactDOM.render(
   <>
