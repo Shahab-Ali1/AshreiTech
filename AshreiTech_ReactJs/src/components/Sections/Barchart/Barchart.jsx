@@ -136,8 +136,14 @@ export const Barchart = (props) => {
         //   return `${percentage}%`;
         // },
         formatter: (value) => `${value}%`,
-        offset: -30,
-      },
+        offset: windowWidth <= 600 ? -35 : -30,
+        rotation: windowWidth <= 600 ? -40 : 0,
+        font: {
+          size: windowWidth <= 600 ? 10 : 14, // Responsive font size
+          weight: 'bold', // Optional: Adjust font weight
+        },
+      }
+      
     },
     scales: {
       x: {

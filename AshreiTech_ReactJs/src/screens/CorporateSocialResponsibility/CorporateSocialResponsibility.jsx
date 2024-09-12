@@ -102,13 +102,13 @@ export default function CorporateSocialResponsibility() {
                     padding: 0,
                 }}
             >
-                <div className="container py-5 ">
+                <div className="container py-md-5 ">
                     <div className="row p-3 p-md-5 d-flex justify-content-center align-items-center">
                       
                         <div className="col-lg-9 col-md-10 col-sm-12 pb-4 pb-lg-0 text-center ">
                             <h1 className='text-center ' id="generic_heading_BookRoom">Our approach to build a Tech-able Pakistan</h1>
                             <br />
-                            <p className="mt-3 text-center text-white">Through the rigorous marketing and outreach efforts across Pakistan, we were able to create awareness and generate 10,000 leads. <br />
+                            <p className="mt-md-3 text-center text-white">Through the rigorous marketing and outreach efforts across Pakistan, we were able to create awareness and generate 10,000 leads. <br />
                             Within a period of 9 months, over 6000 students were provided free tech mentorship, over 500 students have been trained so far, out of which, over 300 students were sponsored for high-tech courses. By now, over 40 students have been globally certified, and over ___ students have been hired in companies, namely, Interation Xperts, Macpac Films, TMC, SuperNova, and Rewterz.</p>
                         </div>
                     </div>
@@ -132,7 +132,7 @@ export default function CorporateSocialResponsibility() {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         position: 'relative'
-      }} className="row position-relative mt-5">
+      }} className="row position-relative mt-sm-5 mt-4">
       <div className="gradientCircleLeft"></div>
       {/* <div className="gradientCircle d-none d-lg-block"></div> */}
       <div className={`${gradientCircle} d-none d-lg-block`}></div>
@@ -153,7 +153,7 @@ export default function CorporateSocialResponsibility() {
             >
       
 
-                <div className="row d-flex justify-content-center align-items-center py-4">
+                <div className="row d-flex justify-content-center align-items-center py-md-4">
                     <div  className="col-lg-12 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center  ">
                         <h1 className="pb-md-4 pb-lg-0 generic_heading mt-lg-2"  style={{color:'#5A8C75'}}>LET’S TALK NUMBERS</h1>
                         <br />
@@ -161,7 +161,7 @@ export default function CorporateSocialResponsibility() {
                     </div>
                 </div>
                 <div className='d-sm-block d-md-none d-lg-none '>
-                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
+                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-md-5 my-3" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
                         <div  className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
                             <p className="line-height-sm">Projection of Revenue in the IT Outsourcing market (2028)
                             </p>
@@ -185,7 +185,7 @@ export default function CorporateSocialResponsibility() {
                            
                         </div>
                     </div>
-                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
+                    <div className="col-12 d-flex justify-content-center align-items-center p-0 my-4" style={{ borderRadius: '24px',border:'3px solid #5A8C75'  }}>
                         <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black py-4" style={{ borderRadius: '24px' }}>
                         <p className="line-height-sm">Pakistan’s contribution (2028)
                         </p>
@@ -308,7 +308,7 @@ export default function CorporateSocialResponsibility() {
                 </div>
                 </div>
            <div className="container-fluid mt-5">
-           <div className="row d-flex justify-content-center align-items-center py-4">
+           <div className="row d-flex justify-content-center align-items-center py-sm-4">
                     <div className="col-lg-12 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center ">
                         <h1 className=" mb-md-3 pb-lg-0" id="generic_heading_BookRoom">How you can Partner with us</h1>
                         {/* <p className="col-sm-8 pt-2 mt-4 font25">Welcome to the first step in your journey towards an inspiring educational experience at our academy. We offer state-of-the-art facilities designed to foster learning, creativity, and collaboration.</p> */}
