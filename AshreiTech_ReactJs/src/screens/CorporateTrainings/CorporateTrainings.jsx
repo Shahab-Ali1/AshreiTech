@@ -20,8 +20,11 @@ import ITGovernanceandRiskManagement from '../../assets/pdf/ITGovernanceandRiskM
 import SAPERPFinanceandCostControlling from '../../assets/pdf/SAPERPFinanceandCostControlling.pdf';
 import SAPMaterialManagement from '../../assets/pdf/SAPMaterialManagement.pdf';
 import GeoCraftMappingtheFuture from '../../assets/pdf/GeoCraftMappingtheFuture.pdf';
+import GeoCraftMappingtheFuture1 from '../../assets/pdf/GeoCraftMappingtheFuture1.pdf';
+import ManagingTransformativeProjects from '../../assets/pdf/ManagingTransformativeProjects.pdf';
 import Governance from '../../assets/pdf/Governance.png';
 import GeoCraftMappingThumbnail from '../../assets/pdf/GeoCraftMappingThumbnail.jpg';
+import ManagingTransformativeProjectsThumbnail from '../../assets/pdf/ManagingTransformativeProjectsThumbnail.jpg';
 import Governance1 from '../../assets/pdf/Governance1.jpg';
 import world from '../../assets/pdf/world.jpg';
 import map from '../../assets/pdf/map.jpg';
@@ -158,6 +161,24 @@ export default function CorporateTrainings() {
             endDate: '2024-09-19',
             dndt: '19th sep 2024',
             pdfs: GeoCraftMappingtheFuture
+        },
+        {
+            title: 'GeoCraft: Mapping the Future',
+            description: 'Master GIS and mapping to enhance decision-making and optimize business operations.',
+            image: GeoCraftMappingThumbnail,
+            startDate: '2024-10-08',
+            endDate: '2024-10-08',
+            dndt: '8th Oct 2024',
+            pdfs: GeoCraftMappingtheFuture1
+        },
+         {
+            title: 'Managing Transformative Projects',
+            description: 'Learn to lead, manage, and deliver transformative projects with strategic vision and adaptability.',
+            image: ManagingTransformativeProjectsThumbnail,
+            startDate: '2024-10-24',
+            endDate: '2024-10-25',
+            dndt: '24th & 25th Oct 2024',
+            pdfs: ManagingTransformativeProjects
         },
         // {
         //     title: 'Techpro Workshops Strategic It Oversight',

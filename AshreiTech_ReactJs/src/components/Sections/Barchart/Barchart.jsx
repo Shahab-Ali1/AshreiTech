@@ -80,16 +80,15 @@ export const Barchart = (props) => {
     responsive: true,
     animation: {
       duration: 1500, 
-      // easing: 'easeInCubic', 
     },
     plugins: {
       legend: {
-        position: windowWidth  <=600 ?'bottom' :'right',
-        top: 20,
+        position: windowWidth <= 600 ? 'top' : 'right',
+        align: 'start', 
         labels: {
           boxWidth: 30,
           boxHeight: 30,
-          padding: 15,
+          padding: windowWidth <= 600 ? 10 : 40,
           generateLabels: function (chart) {
             const original = ChartJS.defaults.plugins.legend.labels.generateLabels;
             const labelsOriginal = original.call(this, chart);
@@ -100,28 +99,21 @@ export const Barchart = (props) => {
   
             return labelsOriginal;
           },
-          onResize: function(chart, size) {
-            debugger
-            if (size.width < 768) { // Example breakpoint for mobile screens
-              chart.options.plugins.legend.position = 'bottom';
-            } else {
-              chart.options.plugins.legend.position = 'right';
-            }
-          }
         },
       },
       title: {
-        position: 'right',
-        align: 'end',
-        display: false,
-        text: 'Key',
-        position: 'top',
+        position: windowWidth <= 600 ? 'bottom' : 'left', // Move title to top on mobile
+        align: windowWidth <= 600 ? 'center' : 'start', // Center title on mobile
+        display: true,
+        text: '% of Student that Improved',
         padding: {
-          top: 10,
+          top: windowWidth <= 600 ? 10 : 20, // Adjust padding for mobile view
+          right: windowWidth <= 600 ? 0 : 20, 
+          bottom: windowWidth <= 600 ? 10 : 5, 
         },
-  
         font: {
-          size: 18, 
+          size: windowWidth <= 600 ? 18 : 37,
+          weight: 'normal',
         },
       },
       datalabels: {
@@ -129,21 +121,14 @@ export const Barchart = (props) => {
         color: '#ffffff',
         anchor: 'end',
         align: 'end',
-        // formatter: (value, context) => {
-        //   // Calculate the percentage
-        //   const total = context.dataset.data.reduce((acc, curr) => acc + curr, 0);
-        //   const percentage = ((value / total) * 100).toFixed(2);
-        //   return `${percentage}%`;
-        // },
         formatter: (value) => `${value}%`,
         offset: windowWidth <= 600 ? -35 : -30,
         rotation: windowWidth <= 600 ? -40 : 0,
         font: {
-          size: windowWidth <= 600 ? 10 : 14, // Responsive font size
-          weight: 'bold', // Optional: Adjust font weight
+          size: windowWidth <= 600 ? 10 : 14,
+          weight: 'bold',
         },
-      }
-      
+      },
     },
     scales: {
       x: {
@@ -154,22 +139,20 @@ export const Barchart = (props) => {
         border: {
           display: true,
           color: 'red',
-          width: 200,
         },
         ticks: {
-          display: false, 
+          display: false,
         },
         grid: {
           display: false,
           borderColor: 'rgba(97,102,105,255)', 
           borderWidth: 10, 
-        offset: true,
-        position: 'bottom', 
-     
+          offset: true,
+          position: 'bottom', 
+        },
+        barPercentage: 0.1, 
+        categoryPercentage: 0.1,
       },
-      barPercentage: 0.1, 
-      categoryPercentage: 0.1,
-    },
       y: {
         beginAtZero: true,
         grid: {
@@ -191,11 +174,14 @@ export const Barchart = (props) => {
     },
   };
   
+  
+  
   return (
     <>
       <div className="container-fluid " >
         <div className="row justify-content-center">
-          <div  className={` ${bar_container} col-lg-9 `}>
+          <div  className={` ${bar_container} col-lg-9 positon-relative`}>
+            <h1 className={` pr-4 text-muted ${ windowWidth <= 600 ? '':'text-right'}`} >Key</h1>
             <Bar
               data={props?.data}
               options={options}

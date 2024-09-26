@@ -13,6 +13,8 @@ import CorporateTrainingSingle from "./screens/CorporateTrainingSingle/Corporate
 import CorporateSocialResponsibility from "./screens/CorporateSocialResponsibility/CorporateSocialResponsibility";
 import NewComingSoon from "./components/Sections/CommingSoonPage/NewCommingSoon";
 import Chart from "./components/Sections/CommingSoonPage/Chart";
+import FindTechTalent from "./screens/FindTechTalent/FindTechTalent";
+
 
 export const router = createHashRouter([
     {
@@ -75,5 +77,8 @@ export const router = createHashRouter([
       path: "/chart",
       element: <Chart/>,
     },
-  
+    {
+      path: "/findtechtalent",
+      element: <FindTechTalent/>,
+    },
   ]);

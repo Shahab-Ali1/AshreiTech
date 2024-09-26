@@ -4,12 +4,14 @@ import TopNavbar from '../../components/Nav/TopNavbar';
 import Footer from '../../components/Sections/Footer/Footer';
 
 // Assets
-import section1banner from '../../assets/aboutSection1banner.png';
+// import section1banner from '../../assets/aboutSection1banner.png';
+import section1banner from '../../assets/aboutTheCompany/aboutSection1banner.png';
 import section_banner from '../../assets/aboutTheCompany/section_banner.png';
 import animation1 from '../../assets/aboutAnimation1.png';
 import animatio3 from '../../assets/aboutAnimation2.png';
 import animation3 from '../../assets/aboutAnimation3.png';
 import azharAli from '../../assets/aboutTheCompany/azharAli.png';
+// import azharAli from '../../assets/aboutTheCompany/azharAli1.png';
 import azharAliabout from '../../assets/aboutTheCompany/azharAliabout.png';
 import shohailZindaniAbout from '../../assets/aboutTheCompany/shohailZindaniAbout.png';
 import shohailZindani from '../../assets/aboutTheCompany/shohailZindani.png';
@@ -19,7 +21,8 @@ import rahimIqbal from '../../assets/aboutTheCompany/rahimIqbal.png';
 import rahimIqbalAbout from '../../assets/aboutTheCompany/rahimIqbalAbout.png';
 import EhsanSaya from '../../assets/aboutTheCompany/EhsanSaya.png';
 import EhsanSayaAbout from '../../assets/aboutTheCompany/EhsanSayaAbout.png';
-import ibrahiShamsi from '../../assets/aboutTheCompany/ibrahiShamsi.png';
+// import ibrahiShamsi from '../../assets/aboutTheCompany/ibrahiShamsi.png';
+import ibrahiShamsi from '../../assets/aboutTheCompany/ibrahiShamsi1.png';
 import ibrahiShamsiAbout from '../../assets/aboutTheCompany/ibrahiShamsiAbout.png';
 import companyLogo1 from '../../assets/aboutTheCompany/companyLogo1.png';
 import companyLogo2 from '../../assets/aboutTheCompany/companyLogo2.png';
@@ -232,19 +235,19 @@ const AboutTheCompany = () => {
                         </div>
                     </div>
                 </div>
-                <div className="" style={{ overflow: 'hidden' }}>
+                <div className="container-fluid" style={{ overflow: 'hidden' }}>
   <div className="row">
     {hoverImage !== null && (
       <div
         onMouseLeave={handleMouseLeave}
         className="col p-0 mr-1"
-        style={{ height: '100vh', width: '100%' }}
+        style={{ height: 570, width: '100%' }}
       >
         <img
           src={hoverImage}
           alt=""
           className={`container-fluid p-0`}
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          style={{ width: '100%', height: 570, objectFit: 'cover' }}
         />
       </div>
     )}
@@ -255,7 +258,7 @@ const AboutTheCompany = () => {
       images.map(({ thumbnail, full }, index) => (
         <div
           key={index}
-          style={{ width: '16.6666666667%', height: '100vh' }}
+          style={{ width: '16.6666666667%', }}
           className="p-0 mr-1"
           onMouseEnter={() => handleMouseEnter(full)}
         >
@@ -263,7 +266,7 @@ const AboutTheCompany = () => {
             src={thumbnail}
             style={{ height: '100%', width: '100%', objectFit: 'contain' }}
             alt=""
-            className="container-fluid p-0"
+            className="containr-fluid p-0"
           />
         </div>
       ))}

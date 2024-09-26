@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import style from "./style.module.css";
 import TopNavbar from "../../components/Nav/TopNavbar";
-import teams_banner from "../../assets/teams_banner1.png";
+// import teams_banner from "../../assets/teams_banner1.png";
+import teams_banner from "../../assets/team/teams_banner1.png"
 import Sohail_Zindani from '../../assets/team/Sohail_Zindani.png'
 import adnan_ahmed from '../../assets/team/adnan_ahmed.png'
 import Syed_Talha_Asad from '../../assets/team/Syed_Talha_Asad.png'
@@ -24,6 +25,7 @@ import Haris_Bin_Rafat from '../../assets/team/Haris_Bin_Rafat.png'
 import green_Omar_Siddique from '../../assets/team/green_Omar_Siddique.png'
 import Hunain_Shah from '../../assets/team/Hunain_Shah.png'
 import Footer from "../../components/Sections/Footer/Footer";
+import section1banner from '../../assets/aboutTheCompany/aboutSection1banner.png';
 
 const { team_container, banner_container, gradientCircle, team_description, card_Team, card_Team_bg, overlay_text, banner_overlay } = style;
 

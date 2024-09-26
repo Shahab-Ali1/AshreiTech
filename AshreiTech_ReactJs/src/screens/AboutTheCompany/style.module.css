@@ -92,11 +92,11 @@
 .view_all {
 
     font-size: 15.008px;
-   border: 1px solid #008F71 !important;
+   border: 1px solid #008F71 ;
    border-radius: 5px;
    background-color: #008F71 ;
    color: white;
-   font-weight: 500 !important;
+   font-weight: 500 ;
    cursor: pointer;
 }
 

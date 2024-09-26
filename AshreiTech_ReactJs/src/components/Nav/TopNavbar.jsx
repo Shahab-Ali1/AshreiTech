@@ -65,6 +65,7 @@ export default function TopNavbar() {
     { to: "/CorporateTrainings", text: "Corporate Trainings" }
   ];
  
+ 
 
   return (
     <>
@@ -130,6 +131,12 @@ export default function TopNavbar() {
                        onMouseLeave={handleMouseLeave}
                       >
                         About The Team
+                      </NavLink>
+                      <NavLink className="" to={"/aboutthecompany"} style={{ fontSize: '15.008px' }}
+                       onMouseEnter={handleMouseEnter}
+                       onMouseLeave={handleMouseLeave}
+                      >
+                        About The Company
                       </NavLink>
                     </div>
                   </div>

@@ -135,7 +135,7 @@ const Footer = () => {
                     <div className="row p-0">
                         <div className="col-12 col-md-4 my-4">
                             <div className="row align-items-baseline">
-                                <div className="col-2 d-flex justify-content-center align-items-start"><img src={Minar} alt="minar" className="" style={{ height: "31px" }} /></div>
+                                <div className="col-2 p d-flex justify-content-center align-items-start"><img src={Minar} alt="minar" className="" style={{ height: "31px" }} /></div>
                                 <div className="col-10"><div>Lahore</div></div>
                             </div>
                             <div className="row my-3 align-items-baseline">

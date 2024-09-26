@@ -163,18 +163,18 @@ const SliderWrapper = styled.div`
   }
 `;
 
-const Card = styled.div`
-  width: 16rem; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the card */
-  background-color: white; /* White background for the card */
-  border-radius: 10px; /* Optional: Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
-  padding: 10px; /* Optional: Padding inside the card */
-  .card {
-    width: 100%;
-    margin: 0 10px; /* Space between cards */
-  }
-`;
+// const Card = styled.div`
+//   width: 16rem; /* Adjust the width as needed */
+//   margin: 0 auto; /* Center the card */
+//   background-color: white; /* White background for the card */
+//   border-radius: 10px; /* Optional: Rounded corners */
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Box shadow for a subtle effect */
+//   padding: 10px; /* Optional: Padding inside the card */
+//   .card {
+//     width: 100%;
+//     margin: 0 10px; /* Space between cards */
+//   }
+// `;
 
 const Rating = styled.div`
   .rating {
@@ -183,5 +183,28 @@ const Rating = styled.div`
   }
   .disable_rating {
     color: grey !important;
+  }
+`;
+
+const Card = styled.div`
+  width: 16rem;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+
+  a {
+    color: inherit; /* Initial color */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+
+    &:hover {
+      color: #0077b5; /* LinkedIn blue */
+    }
+  }
+
+  .card {
+    width: 100%;
+    margin: 0 10px;
   }
 `;
