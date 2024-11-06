@@ -12,29 +12,30 @@ export default function TabsComponent() {
     };
 
     return (
-        <Paper square>
-            <Tabs
-                value={value}
-                // indicatorColor="secondry"
-                // textColor="Primary"
-                centered
-                onChange={handleChange}
-                className='tab'
-                TabIndicatorProps={{
-                    style: {
-                      backgroundColor: "#008F71"
-                    }
-                  }}
+        // <Paper square>
+        //     <Tabs
+        //         value={value}
+        //         // indicatorColor="secondry"
+        //         // textColor="Primary"
+        //         centered
+        //         onChange={handleChange}
+        //         className='tab'
+        //         TabIndicatorProps={{
+        //             style: {
+        //               backgroundColor: "#008F71"
+        //             }
+        //           }}
                 
-            >
-                <Tab label="Student" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
-                <Tab disabled label="Trainer" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline d-none' />
-                <Tab  disabled label="Sponsor" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline d-none' />
-            </Tabs>
-            {value === 0 && <AdmissionEnquiry />}
-            {value === 1 && <TabContent2 />}
-            {value === 2 && <TabContent3 />}
-        </Paper>
+        //     >
+        //         <Tab label="Student" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline' />
+        //         <Tab disabled label="Trainer" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline d-none' />
+        //         <Tab  disabled label="Sponsor" sx={{ margin: '0 20px', textTransform: "capitalize" }} className='no-outline d-none' />
+        //     </Tabs>
+        //     {value === 0 && <AdmissionEnquiry />}
+        //     {value === 1 && <TabContent2 />}
+        //     {value === 2 && <TabContent3 />}
+        // </Paper>
+        <AdmissionEnquiry />
     );
 }
 

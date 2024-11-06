@@ -22,22 +22,291 @@ import compass3 from '../../assets/compass3.png'
 import usmanProf from '../../assets/usmanProf.png'
 import prof1 from '../../assets/prof1.png'
 import prof2 from '../../assets/prof2.png'
+import { useLocation } from 'react-router-dom';
 
+const Data = [
+  {
+    id: 26196,
+    skills: [
+      "Procurement Process Fundamentals",
+      "Supplier Management in SAP Ariba",
+      "Contract Management",
+      "Strategic Sourcing",
+      "Spend Analysis and Reporting",
+      "Compliance and Risk Management",
+      "SAP Ariba Procurement Integrations",
+      "Hands-On Practice and Case Studies"
+    ],
+    aboutTheCourse: `This course provides a comprehensive understanding of procurement processes, supplier management, and contract lifecycle management within SAP Ariba. Key topics include data analysis, strategic sourcing, compliance management, and integration with ERP systems. The curriculum combines theoretical insights with practical exercises to build hands-on skills in managing procurement operations, maximizing efficiency, and achieving cost savings.`,
+    courseOutline: [
+      {
+        title: "Introduction to SAP Ariba Procurement",
+        details: [
+          "Overview of Ariba",
+          "Key features and benefits of Ariba Procurement"
+        ]
+      },
+      {
+        title: "Procurement Process Fundamentals",
+        details: [
+          "Understanding procurement processes and workflows",
+          "Purchase requisitions and purchase orders",
+          "Catalog management and guided buying"
+        ]
+      },
+      {
+        title: "Supplier Management in SAP Ariba",
+        details: [
+          "Supplier on-boarding and qualification",
+          "Supplier relationship management",
+          "Evaluating supplier performance"
+        ]
+      },
+      {
+        title: "Strategic Sourcing",
+        details: [
+          "Creating and managing sourcing events",
+          "Conducting auctions and bids",
+          "Supplier negotiation and collaboration"
+        ]
+      },
+      {
+        title: "Contract Management",
+        details: [
+          "Contract creation and templates",
+          "Contract approval and tracking",
+          "Managing contract compliance"
+        ]
+      },
+      {
+        title: "Spend Analysis and Reporting",
+        details: [
+          "Data analysis and spend visibility",
+          "Generating procurement reports and dashboards",
+          "Identifying cost-saving opportunities"
+        ]
+      },
+      {
+        title: "Compliance and Risk Management",
+        details: [
+          "Compliance management tools in SAP Ariba",
+          "Risk assessment and mitigation",
+          "Regulatory compliance and audit controls"
+        ]
+      },
+      {
+        title: "Hands-On Practice and Case Studies",
+        details: [
+          "Practical exercises with procurement scenarios",
+          "Case studies on successful SAP Ariba implementations"
+        ]
+      },
+      {
+        title: "SAP Ariba Procurement Integrations",
+        details: [
+          "Integrating SAP Ariba with ERP and financial systems",
+          "Overview of API-based and third-party integrations",
+          "Real-time data synchronization"
+        ]
+      }
+    ]
+  },
+  {
+    id: 1,
+    skills: [
+      "Data Preprocessing and Cleaning",
+      "Statistical Analysis and Data Visualization",
+      "Machine Learning Algorithms",
+      "Deep Learning and Neural Networks",
+      "Predictive Modeling and Evaluation",
+      "AI Model Deployment and Optimization"
+    ],
+    aboutTheCourse: `This course offers training in data science techniques and artificial intelligence applications. It covers essential topics like data preprocessing, machine learning, and predictive analytics. By the end, participants gain hands-on experience with real-world datasets, equipping them to build intelligent systems and make data-driven decisions.`,
+    courseOutline: [
+      {
+        title: "Introduction to Data Science and AI",
+        details: [
+          "Overview of Data Science and AI",
+          "Applications of Data Science in various industries",
+          "AI in decision-making and automation"
+        ]
+      },
+      {
+        title: "Data Preprocessing and Cleaning",
+        details: [
+          "Data collection and understanding data types",
+          "Data cleaning techniques (handling missing data, outliers, etc.)",
+          "Data transformation and feature scaling"
+        ]
+      },
+      {
+        title: "Exploratory Data Analysis (EDA) and Visualization",
+        details: [
+          "Statistical analysis and data summarization",
+          "Data visualization with libraries (e.g., Matplotlib, Seaborn)",
+          "Identifying patterns and insights through EDA"
+        ]
+      },
+      {
+        title: "Machine Learning Fundamentals",
+        details: [
+          "Supervised vs. Unsupervised learning",
+          "Key algorithms (Linear Regression, Decision Trees, Clustering, etc.)",
+          "Model training, testing, and evaluation metrics"
+        ]
+      },
+      {
+        title: "Advanced Machine Learning Techniques",
+        details: [
+          "Ensemble methods (Random Forest, Gradient Boosting)",
+          "Dimensionality reduction (PCA, t-SNE)",
+          "Hyperparameter tuning and cross-validation"
+        ]
+      },
+      {
+        title: "Natural Language Processing (NLP) and Text Analytics",
+        details: [
+          "Basics of NLP and text pre-processing",
+          "Sentiment analysis and topic modeling",
+          "Word embeddings and advanced NLP models"
+        ]
+      },
+      {
+        title: "AI Model Deployment",
+        details: [
+          "Model serving and deployment in production",
+          "Introduction to cloud-based deployment (e.g., AWS, Azure)",
+          "Monitoring and maintaining deployed models"
+        ]
+      },
+      {
+        title: "Real-World Project and Capstone",
+        details: [
+          "Hands-on project integrating all course concepts",
+          "Working with real datasets to solve practical problems",
+          "Final project presentation and feedback"
+        ]
+      }
+    ]
+  },
+  {
+    id: 26599,
+    skills: [
+      "Python Programming for Data Science",
+      "Neural Network Architecture Design",
+      "Model Training and Optimization",
+      "TensorFlow and PyTorch Frameworks",
+      "Handling and Processing Large Datasets"
+    ],
+    aboutTheCourse: `This course is designed to equip you with fundamental and advanced Python programming skills specifically applied to deep learning. It covers essential concepts in neural networks, including training models, handling large datasets, and using popular frameworks. This course is ideal for those interested in building AI-powered applications and advancing in machine learning and artificial intelligence.`,
+    courseOutline: [
+      {
+        title: "Introduction to Python for AI and Deep Learning",
+        details: [
+          "Master Python basics, including essential data structures and functions.",
+          "Explore libraries like NumPy, Pandas, and Matplotlib for data preprocessing and visualization."
+        ]
+      },
+      {
+        title: "Convolutional Neural Networks (CNNs)",
+        details: [
+          "Dive into CNN architecture for image processing and computer vision applications.",
+          "Implement transfer learning and fine-tune pretrained models for specific tasks."
+        ]
+      },
+      {
+        title: "Machine Learning Fundamentals and Neural Networks",
+        details: [
+          "Learn foundational machine learning concepts, including supervised and unsupervised learning.",
+          "Understand neural networks, activation functions, and backpropagation."
+        ]
+      },
+      {
+        title: "Recurrent Neural Networks (RNNs) and Natural Language Processing (NLP)",
+        details: [
+          "Study RNNs, LSTMs, and GRUs for sequential data and time-series analysis.",
+          "Learn NLP basics for text processing, sentiment analysis, and language generation."
+        ]
+      },
+      {
+        title: "Deep Learning with TensorFlow and Keras",
+        details: [
+          "Get hands-on with TensorFlow and Keras to build, train, and evaluate deep learning models.",
+          "Focus on model optimization, regularization, and overfitting prevention techniques."
+        ]
+      }
+    ]
+  },
+  {
+    id: 26598,
+    skills: [
+      "User Management",
+      "Data Management",
+      "Automation Skills",
+      "Reporting and Dashboards",
+      "Security and Access Control",
+      "Salesforce Platform Customization",
+      "AppExchange Utilization"
+    ],
+    aboutTheCourse: `This course is designed to equip you with essential skills to manage and configure the Salesforce platform, streamline business processes, and support user productivity. This course covers core topics like dashboard creation, data management, automation, and security settings. Perfect for aspiring CRM managers, it prepares participants to confidently handle administrative tasks and support organizational growth.`,
+    courseOutline: [
+      {
+        title: "Introduction to Salesforce",
+        details: [
+          "Overview of CRM and Salesforce Platform",
+          "Navigating the Salesforce Interface",
+          "Salesforce Ecosystem: Overview of Clouds and Applications"
+        ]
+      },
+      {
+        title: "User Management",
+        details: [
+          "Creating and Managing Users",
+          "Roles, Profiles, and Permission Sets",
+          "Password Policies and Login Access Management"
+        ]
+      },
+      {
+        title: "Data Management",
+        details: [
+          "Data Modeling: Objects, Fields, and Relationships",
+          "Data Import and Export (Data Loader, Import Wizard)",
+          "Data Quality and Deduplication Techniques"
+        ]
+      }
+    ]
+  }
+];
 
 const SingleCourse = () => {
+  debugger;
   const {sap_btn,ready_to_upskill_btn}=style
+  const [courseData, setcourseData] = useState([])
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const location = useLocation();
+  const state = location.state;
+  
+  useEffect(() => {
+    if (state) {
+      const filteredCourseData = Data.find((course) => course.id === state.Id);
+      setcourseData(filteredCourseData ? { ...state, ...filteredCourseData } : { ...Data[1], ...state });
+    } else {
+      setcourseData(Data[1]);
+    }
+  }, [state]);
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
-
+    
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  console.log("Dataa",courseData)
   return (
     <>
       <TopNavbar />
@@ -61,8 +330,8 @@ const SingleCourse = () => {
               <button className={` font18 bg_khaigreen border-0 text-white custom-rounded px-4 py-1`} style={{width:'110px'}}>SAP</button>
             </div>
             <div className='mt-5 '>
-              <h1 className='text-center text-sm-left' style={{fontSize:58}}>Ariba Procurement</h1>
-              <p className='mt-2 font13 text-center text-sm-left'>Learn how to use SAP Ariba for managing procurement processes, including supplier management and purchase orders.</p>
+              <h1 className='text-center text-sm-left' style={{fontSize:58}}>{courseData?.stxt}</h1>
+              <p className='mt-2 font13 text-center text-sm-left'>{courseData?.discription}</p>
               <div className='d-flex justify-content-center justify-content-sm-start font11 mt-1 '>
                 <div>5.0</div>
                 <div className='mx-1'>
@@ -155,15 +424,17 @@ Ready To Upskill
       <div className="row gutter-0 p-0" >
         <div className="col-sm-6 col-md-8  col-lg-7 p-0">
           <h1 className='left_underline'>About This Course</h1>
-          <p className='my-sm-5 my-2 font13 mb-3 mb-sm-0'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities await.</p>
+          <p className='my-sm-5 my-2 font13 mb-3 mb-sm-0'>{courseData?.aboutTheCourse}</p>
         </div>
-        <div className="col-sm-6 p-0 col-md-4 col-lg-5  d-flex justify-content-sm-center mb-sm-5 mb-2 mb-sm-0  justify-content-sm-end align-items-center ">
+        <div className="col-sm-6 p-0 col-md-4 col-lg-5  d-flex justify-content-sm-center mb-2 mb-sm-0  justify-content-sm-end align-items-center ">
           <div className="">
           <h1 className='left_underline'>Skills You’ll Gain</h1>
           <ul className='my-sm-5 my-2'>
-            <li className='font13'><i class="fa-solid fa-circle-check mr-1" style={{color:'#008F71'}}></i> skills</li>
-            <li className='font13'><i class="fa-solid fa-circle-check mr-1" style={{color:'#008F71'}}></i> skills</li>
-            <li className='font13'><i class="fa-solid fa-circle-check mr-1" style={{color:'#008F71'}}></i> skills</li>
+            {
+            courseData?.skills?.map((skills)=>{
+                return <li className='font13'><i class="fa-solid fa-circle-check mr-1" style={{color:'#008F71'}}></i> {skills}</li>
+              })
+            }
           </ul>
           </div>
         
@@ -171,20 +442,41 @@ Ready To Upskill
         </div>
       </div>
       <div className="row gutter-0">
-       <div className=" col-sm-6 col-md-8  mt-3 mt-sm-0 col-lg-7 bg-white mb-4  d-flex flex-column text-black  shadow custom-rounded border border-dark " style={{position:'relative',zIndex:1}}>
-  <div className="row ">
-    <div className="col px-sm-4 py-sm-4 py-1  text-bold border-bottom border-dark "><h3>Syllabus</h3></div>
+       <div className=" col-sm-6 col-md-8  p-0 mt-3 mt-sm-0 col-lg-7 bg-white mb-4  d-flex flex-column text-black  shadow custom-rounded border border-dark " style={{position:'relative',zIndex:1}}>
+  <div className="row px-3">
+    <div className="col  px-sm- py-sm-4 py-1  text-bold border-bottom border-dark "><h3> Course Outline</h3></div>
   </div>
-  <div className=" py-sm-4 py-3 px-sm-2 justify-content-center h-100">
-    <h4 className='mt-sm-3 mb-1'>Intro to Generative AI</h4>
-    <h6 className='text-disable font13 mb-sm-3 mb-2 text-grey'>Learn About the Different Types Of Generative AI!</h6>
-  <p className='font13 mb-2 mb-sm-0'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
-  <br className='d-none d-sm-block '/>
-  <p className='font13 mb-2 mb-sm-0'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
-  <br className='d-none d-sm-block'/>
-
-  <p className='font13'>Ignite your tech passion with our cutting-edge programs, expertly designed to fuse vital technical and soft skills. Whether you're aiming for a global career or advancing your current path, our academy provides the perfect launchpad. Gain a competitive edge with opportunities for international certifications that elevate your professional profile. Dive into a world of innovation and collaboration, where endless possibilities </p>
-  </div>
+  <table className='table-rounded-bottom' style={{ width: "100%",  }}>
+      {/* <thead>
+        <tr>
+          <th className='px-4 py-2' colSpan="2" style={{ fontSize: "1.5em", textAlign: "left", borderBottom: "1px solid #000" }}>
+            Course Outline
+          </th>
+        </tr>
+      </thead> */}
+      <tbody>
+        {courseData?.courseOutline?.map((item, index) => (
+          <tr key={index}>
+            <td style={{ width: "50%", border: "1px solid #000", padding: "10px 14px", verticalAlign: "top" }}>
+              <strong>{item?.title}</strong>
+              {item?.details?.map((detail, idx) => (
+                <p className='font12' key={idx} >{detail}</p>
+              ))}
+            </td>
+            {index + 1 < courseData.courseOutline.length ? (
+              <td style={{ width: "50%", border: "1px solid #000", padding: "10px 14px", verticalAlign: "top" }}>
+                <strong>{courseData?.courseOutline[index + 1]?.title}</strong>
+                {courseData?.courseOutline[index + 1]?.details?.map((detail, idx) => (
+                  <p key={idx} className='font12' >{detail}</p>
+                ))}
+              </td>
+            ) : (
+              <td style={{ width: "50%", border: "1px solid #000", padding: "10px 14px", verticalAlign: "top" }} />
+            )}
+          </tr>
+        ))}
+      </tbody>
+    </table>
 </div>
         <div className="col-sm-6 p-0 pt-2 pt-sm-0 col-md-4 col-lg-5 d-flex justify-content-sm-end align-items-center">
           <div className="coursegradientCircle"></div>

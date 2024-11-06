@@ -73,7 +73,7 @@ export default function OurTrainer() {
                   </div>
                 </div>
               </div>
-              <div className="d-flex justify-content-center align-items-center">
+              {/* <div className="d-flex justify-content-center align-items-center">
                 <div className="p-5 m-2 card-style2">
                   <img src={Abdullah} className="card-img-top" alt="..." />
                   <div className='text-center'>
@@ -84,7 +84,7 @@ export default function OurTrainer() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="d-flex justify-content-center align-items-center">
                 <div className="p-5 m-2 card-style3">
                   <img src={Fahad} className="card-img-top" alt="..." />

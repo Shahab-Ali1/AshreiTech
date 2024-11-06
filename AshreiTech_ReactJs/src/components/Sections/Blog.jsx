@@ -34,12 +34,29 @@ export default function Blog() {
     }
   };
 
+  const mergeData = (apiData, data) => {
+  
+    return data.map(course => {
+      
+      const matchingApiCourse = apiData.find(apiCourse => apiCourse.Id === course.id);
+      if (matchingApiCourse) {
+        return {
+          ...course,
+          ...matchingApiCourse, 
+        };
+      }
+      return course; 
+    });
+  };
+
   const loadCourses = (vtype) => {
     try {
       getMethod(`SMCourse/V2/ClientCourseWithoutToken/${ClientId}/${vtype}`)
         .then((data) => {
+          debugger;
           if (data?.IsSuccess) {
-            setImagesData(data.Data);
+            // const mergedData = mergeData(data.Data, dataaa);
+            setImagesData(data.Data); 
           }
         })
         .catch(error => {
@@ -50,6 +67,10 @@ export default function Blog() {
     }
   };
   
+  
+
+
+
   const { hash } = useLocation();
   useEffect(() => {
     if (hash) {
@@ -160,7 +181,7 @@ export default function Blog() {
                           <div className="pclass p-1 d-flex justify-content-center px-3"><p>{item?.category}</p></div>
                           <h5 className="card-title mt-4 text-center text-lg-left text-md-left" id='odder_card-h'>{item?.stxt}</h5>
                           <p className="card-text mb-4 text-center text-lg-left text-md-left" id="offer_card">{item?.discription}</p>
-                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }} onClick={() => navigate("/GetInTouch")}>Register Here</p></div>
+                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }} onClick={() => navigate("/courses",{state:{...ImagesData[index]}})}>Learn more</p></div>
                         </WrapperForP>
                       </div>
                     </div>
@@ -179,7 +200,7 @@ export default function Blog() {
                           <div className="pclass p-1 d-flex justify-content-center px-3"><p>{item?.category}</p></div>
                           <h5 className="card-title mt-4 text-center text-lg-left text-md-left" id='odder_card-h'>{item?.stxt}</h5>
                           <p className="card-text mb-4 text-center text-lg-left text-md-left" id="offer_card">{item?.discription}</p>
-                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }} onClick={() => navigate("/GetInTouch")}>Register Here</p></div>
+                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }} onClick={() => navigate("/courses",{state:{...ImagesData[index]}})}>Learn more</p></div>
                         </WrapperForP>
                       </div>
                     </div>

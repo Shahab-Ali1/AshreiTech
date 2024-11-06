@@ -89,6 +89,7 @@ import React, { useState } from "react";
 import homebannervideo from '../../assets/video/headervideo1.mp4';
 import InfoCard from "../../screens/InfoCard/InfoCard";
 import { infoCardData } from "../../constant";
+import { useNavigate } from "react-router-dom";
 
 const videoStyles = {
   container: {
@@ -134,10 +135,11 @@ export default function Header() {
 
     console.log('Video metadata loaded:', e);
   };
+  const navigate=useNavigate()
 
   return (
     <>
-      <div className="container-fluid p-1 p-md-0">
+      <div className="container-fluid p-1 p-md-0 postion-relative">
       <div style={videoStyles.container}>
         {isLoading && <div style={videoStyles.loader}>Loading...</div>}
         <video
@@ -153,6 +155,9 @@ export default function Header() {
           <source src={homebannervideo} type="video/mp4" />
           Your Browser Does Not Support The Video Tag.
         </video>
+        <div className="col-12 d-flex  align-items-center my-4 Upcoming_Courses_Container" >
+                        <button className='  Upcoming_Courses' onClick={()=> navigate('/GetInTouch')}>Upcoming Courses</button>
+                    </div>
       </div>
       </div>
 

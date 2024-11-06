@@ -374,7 +374,7 @@ export const AdmissionEnquiry = (props) => {
 
     return (
         <>
-            <div className="background">
+            <div className="background mt-n5">
                 <div className="form-container" style={{
                     borderStyle: 'solid',
                     borderWidth: '6px',
@@ -383,7 +383,7 @@ export const AdmissionEnquiry = (props) => {
                     borderRadius: '10px',
                 }}>
                     <form>
-                        <h2 className="text-center mb-3">Enquiry Form</h2>
+                        {/* <h2 className="text-center mb-3">Enquiry Form</h2> */}
                         <div className='row'>
                             <div className='col-12 col-lg-6'>
                                 <TextField
@@ -694,7 +694,7 @@ export const AdmissionEnquiry = (props) => {
                                     sx={{ '& .MuiFormControlLabel-label': { fontSize: 12, } }}
                                 />
                             </div>
-                            <div className='col-lg-12 mt-n3'>
+                            {/* <div className='col-lg-12 mt-n3'>
                                 <FormControlLabel
                                     control={
                                         <Checkbox
@@ -708,11 +708,11 @@ export const AdmissionEnquiry = (props) => {
                                     label="Get a Free Demo ( Get a free 3 days demo )"
                                     sx={{ '& .MuiFormControlLabel-label': { fontSize: 12, } }}
                                 />
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className='row'>
-                            <div className='col-lg-12 d-flex justify-content-center'>
+                            <div className='col-12 d-flex justify-content-center'>
                                 <button type="button" className="actionBtn" onClick={clickSubmit}>Submit</button>
                             </div>
                         </div>

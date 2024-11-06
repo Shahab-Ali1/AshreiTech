@@ -24,7 +24,7 @@ import GeoCraftMappingtheFuture1 from '../../assets/pdf/GeoCraftMappingtheFuture
 import ManagingTransformativeProjects from '../../assets/pdf/ManagingTransformativeProjects.pdf';
 import Governance from '../../assets/pdf/Governance.png';
 import GeoCraftMappingThumbnail from '../../assets/pdf/GeoCraftMappingThumbnail.jpg';
-import ManagingTransformativeProjectsThumbnail from '../../assets/pdf/ManagingTransformativeProjectsThumbnail.jpg';
+import ManagingTransformativeProjectsThumbnail from '../../assets/pdf/ManagingTransformativeProjectsThumbnail.png';
 import Governance1 from '../../assets/pdf/Governance1.jpg';
 import world from '../../assets/pdf/world.jpg';
 import map from '../../assets/pdf/map.jpg';
@@ -177,7 +177,7 @@ export default function CorporateTrainings() {
             image: ManagingTransformativeProjectsThumbnail,
             startDate: '2024-10-24',
             endDate: '2024-10-25',
-            dndt: '24th & 25th Oct 2024',
+            dndt: '13th & 14th Nov 2024',
             pdfs: ManagingTransformativeProjects
         },
         // {
@@ -288,7 +288,7 @@ export default function CorporateTrainings() {
                 ))}
 
                 <div className={`${gradientCircleLeftcontainer} row px-5 d-flex justify-content-center align-items-center `} id="trainings">
-                    <div className={`${gradientCircleLeft} d-none d-md-block`}></div>
+                    {/* <div className={`${gradientCircleLeft} d-none d-md-block`}></div> */}
                     <div className="col-12 d-none">
                         <h1 className={`${generic_heading_center} text-center text-md-left `}>Future Trainings</h1>
                     </div>

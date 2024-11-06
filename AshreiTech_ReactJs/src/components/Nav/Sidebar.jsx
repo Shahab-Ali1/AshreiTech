@@ -17,7 +17,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
         </CloseBtn>
       </SidebarHeader>
 <div className="row">
-  <div className="col">
+  <div className="col-12">
   <UlStyle className="flexNullCenter flexColumn">
         {/* <li className="semiBold font15 pointer">
           <Link to="/CommingSoonPage" className="whiteColor">
@@ -62,7 +62,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
         </li>
       </UlStyle>
   </div>
-  <div className="col p-0">
+  <div className="col-12 p-0">
   <UlStyle className="flexSpaceCenter">
         <li className="semiBold font15 pointer">
         <Link to="/CommingSoonPage" className="whiteColor" style={{ padding: "10px 30px 10px 0" }}>
@@ -84,7 +84,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
 }
 
 const Wrapper = styled.nav`
-  width: 400px;
+
   background-color: #008f71;
   // height: 100vh;
   position: fixed;
@@ -107,7 +107,6 @@ const CloseBtn = styled.button`
   padding: 10px;
 `;
 const UlStyle = styled.ul`
-  padding: 40px;
   li {
     margin: 20px 0;
   }

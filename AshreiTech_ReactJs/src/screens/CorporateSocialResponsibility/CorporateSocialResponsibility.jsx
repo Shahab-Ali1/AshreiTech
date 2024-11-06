@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../../components/Sections/Footer/Footer'
 import TopNavbar from '../../components/Nav/TopNavbar'
 import TestimonialSlider from '../../components/Elements/TestimonialSlider'
@@ -16,6 +16,7 @@ import style from "./style.module.css"
 import chandImage from '../../assets/CorporateSocialResponsibilty/chandImage.png'
 import banner from '../../assets/CorporateSocialResponsibilty/banner.png'
 import banner1 from '../../assets/CorporateSocialResponsibilty/banner1.png'
+import banner2 from '../../assets/CorporateSocialResponsibilty/banner2.png'
 import { Barchart } from '../../components/Sections/Barchart/Barchart';
 import offerbg from '../../assets/offerbg.png';
 import compass1 from '../../assets/CorporateSocialResponsibilty/compass1.png'
@@ -30,7 +31,7 @@ import barChartbackground from '../../assets/CorporateSocialResponsibilty/barCha
 import down_arrow from '../../assets/CorporateSocialResponsibilty/down_arrow.png'
 
 export default function CorporateSocialResponsibility() {
-    const {gradientCircleleft,gradientCircle1,arrow_img,gradientCircleFooter,chartgradientCircle}=style
+    const {gradientCircleleft,gradientCircle1,zain,arrow_img,mobile_arrow,gradientCircleFooter,chartgradientCircle}=style
     const {box,generic_heading_left,BookRoom_heading}=style
     const data = {
         labels: ['January', 'February', 'March', 'April',],
@@ -84,49 +85,111 @@ export default function CorporateSocialResponsibility() {
           },
         ],
       };
+      const [overlayHeight, setOverlayHeight] = useState(0);
+      const imgRef = useRef(null);
+      const overlayRef = useRef(null);
+    
+      useEffect(() => {
+        const updateOverlayHeight = () => {
+          if (imgRef.current) {
+            setOverlayHeight(imgRef.current.clientHeight);
+          }
+        };
+        updateOverlayHeight();
+        window.addEventListener('resize', updateOverlayHeight);
+        return () => {
+          window.removeEventListener('resize', updateOverlayHeight);
+        };
+      }, []);
+   
+      
+    
   return (
     <>
       <TopNavbar />
 
-      <div className={`row m-auto  d-sm-flex d-none `} style={{ width: "90%" }}>
-                    <div
-                        className={`col-12 p-0 containr x-sm-5 `}
-                        style={{
-                            backgroundImage: `url(${banner})`,
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat',
-                            // height: '632px',
-                            width: '100%',
-                            height:"500px",
-                            borderRadius: '50px',
-                            // display: "flex",
-                            // justifyContent: "center",
-                        }}
-                    >
-                       
-                        <div className="pb-5 mb-5"></div>
-                    </div>
-                    
-                  
-                </div>
+      <div
+                className="container-flui py-lg-4"
 
-      {/* <div className="container-fluid" style={{backgroundColor:"#f7fde8"}}>
-        <div className="row px-4 mb-4 d-flex justify-content-center align-items-cente">
-          <div className="col-lg-6 p-0 py-3">
-            <h1 style={{lineHeight:'0.9'}} className=''>Meet Our</h1>
-            <h1 className='mb-4 mt-2' style={{fontSize:'28px', backgroundColor:'#053750', padding:'5px 12px',  borderRadius:'5px', color:'white' , letterSpacing:'4px',display:'inline-block'}}>Founder</h1>
-            <p className='font20'>Sohail is on a mission to "create a world of work where everyone can be their natural best, feel belonged and experience advancement."
-              He has devoted his life to sharing his thinking in order to help other leaders and organizations develop an agile learning culture.
-              Sohail's unconventional and disruptive views on talent, learning
-              leadership and business have attracted significant attention.
-              Sohail spends a significant time studying individuals, teams and organizations to understand what makes world-class performers, summarizing it, and sharing it with the world.</p>
+            >
+           <div className="row m-auto d-sm-flex d-none position-relative" style={{ width: '90%' }}>
+      <div
+        className={`col-12 p-0 containr x-sm-5 zain`}
+        ref={imgRef}  
+        style={{
+          backgroundImage: `url(${banner2})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition:"center",
+          width: '100%',
+          height: 'auto',
+          borderRadius: '50px',
+        }}
+      >
+        <div 
+   
+          className="d-flex flex-column justify-content-center align-items-center py-5 my-5 text-center w-75 m-auto" 
+          style={{ position: 'relative', zIndex: 2 }}
+        >
+       <div className="row justify-content-center pt-5 mt-5">
+            <div className="col-lg-10">
+              <h6 className="text-white mt-4 mb-1">
+              “ We had no prior knowledge of IT but after we took admission in AshreiTech we got to learn a lot and both of us secured jobs as soon as we acquired our certifications ”
+              </h6>
+            </div>
           </div>
-          <div className="col-6 d-inline-flex align-items-end">
-            <img src={chandImage} alt="" className='p-0'  style={{ width:'100%' , height:'auto' }}/>
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <h6 className="text-white mt-4 mb-1">
+              Reena Korejo and Noor Jehan Korejo Salesforce Associates from AshreiTech,
+                            now employed at Integration Xperts.
+              </h6>
+            </div>
           </div>
         </div>
-      </div> */}
-        {/* <div className="gradientCircle"></div> */}
+
+        <div
+          ref={overlayRef}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: `${overlayHeight}px`,
+            backgroundColor: 'rgba(0, 0, 0, 0.55)',
+            zIndex: 1,
+            borderRadius: '50px', 
+          }}
+        ></div>
+
+        <div className="pb-5 mb-5"></div>
+      </div>
+    </div>
+            </div>
+
+
+            <div className={`row   d-sm-none d-block m-auto postion-relative`} style={{ width: "90%" }}>
+                    <div 
+                        className={`col-12  px-4 py-4 ${zain}`}
+                        style={{
+                            backgroundImage: `url(${banner2})`,
+                            backgroundSize: 'cover',
+                            backgroundRepeat: 'no-repeat',
+                            display: "flex",
+                            backgroundPosition:"center",
+                            borderRadius:10
+                        }}
+                    >
+                        <div className="flex-column justify-content-center align-items-center  text-center " style={{position:"relative",zIndex:2}}>
+                        <h5 className="text-white my-1 font12">“ We had no prior knowledge of IT but after we took admission in AshreiTech we got to learn a lot and both of us secured jobs as soon as we acquired our certifications ”</h5>
+
+                            <h5 className="text-white mt-3 font12">Reena Korejo and Noor Jehan Korejo Salesforce Associates from AshreiTech,
+                            now employed at Integration Xperts.</h5>
+                        </div>
+                        <div className="pb-5 mb-5"></div>
+                    </div>
+                </div>
+
         <div
                 className="container-fluid p-0 m-0"
               style={{background:"#FEFFFC"}}  
@@ -141,7 +204,7 @@ export default function CorporateSocialResponsibility() {
                     position:"relative"
                 }}>
   
-<div className="row d-flex justify-content-center align-items-center py-md-4">
+<div className="row d-flex justify-content-center align-items-center py-4">
                     <div  className="col-lg-12 col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-center text-center  ">
                         <h1 className="pb-md-4 pb-lg-0 generic_heading mt-lg-2"  style={{color:'#008F71'}}>LET’S TALK NUMBERS</h1>
                         <br />
@@ -271,7 +334,7 @@ export default function CorporateSocialResponsibility() {
           <div className="  justify-content-center mt-4 " style={{background:""}}>
 
 
-          <div className="row mt-sm-5 mt-n2  bg-primar justify-content-center">
+          <div className="row mt-sm-5 mt-n2 d-none d-sm-flex bg-primar justify-content-center">
         
           <div  className="col-sm-2  p-0 d-flex flex-column justify-content-center align-items-center ">
            <img src={compass5} style={{width:"100%"}} alt ="" />
@@ -299,7 +362,47 @@ export default function CorporateSocialResponsibility() {
          
 
                       </div>
-                      <div className="row  px-5 mt-n5 justify-content-between bg-primar align-items-baseline">
+
+                      <div className="  justify-content-center mt-4 " style={{background:""}}>
+
+
+<div className="row mt-sm-5 mt-n2 d-block d-sm-none bg-primar justify-content-center">
+
+<div  className="col-sm-2  p-0 d-flex flex-column justify-content-center align-items-center ">
+ <img src={compass5} style={{width:"60%"}} alt ="" />
+
+ <p className=" font18 px-2 mt-n4 text-center">With a laser-sharp focus of developing
+workforce for future technologies
+and catering to the global IT
+outsourcing market.</p>
+</div>
+
+<div  className="col-sm-2 p-0  d-flex flex-column justify-content-center align-items-center text-center text-black py-2  ">
+<img src={arrow} className={`${mobile_arrow}`} alt="" style={{width:"40%"}} />
+</div>
+ 
+<div  className="col-sm-2  p-0 d-flex flex-column justify-content-center align-items-center ">
+ <img src={compass6} style={{width:"60%"}} alt ="" />
+ <p className=" font18 px-2 mt-n4 text-center">We are on a mission to take this share
+ from 0.15% to at-least 1% by 2030.</p>
+</div>
+<div  className="col-sm-2 p-0  d-flex flex-column justify-content-center align-items-center text-center text-black py-2  ">
+<img src={arrow} className={`${mobile_arrow}`} alt=""  style={{width:"40%"}} />
+</div>
+<div  className="col-sm-2 p-0  d-flex flex-column justify-content-center align-items-center position-relative " >
+ <img src={compass7} style={{width:"60%"}} alt =""  />
+ <p className=" font18 px-2 mt-n4 text-center mb-5">And this can’t be done alone.</p>
+</div>
+{/* <div  className="col-sm-2 p-0  d-flex flex-column justify-content-center align-items-center position-relative " >
+ <img src={down_arrow} style={{width:"70%"}} alt ="" />
+</div> */}
+
+  </div>
+
+
+
+            </div>
+                      <div className="row d-none d-sm-flex px-5 mt-n5 justify-content-between bg-primar align-items-baseline">
             <div  className="col-sm-3 text-center text-black py-2  ">
    
            <p className=" font18">With a laser-sharp focus of developing
@@ -473,7 +576,7 @@ style={{
         
                         </div>
                    </div> */}
-                   <div className="container-flui mt-5 pt-5 ladderbox"
+                   <div className="container-flui mt-5 pt-sm-5 ladderbox"
               style={{
                 // backgroundImage: `url(${ladder_background})`,
                 backgroundSize: 'cover',
@@ -520,7 +623,7 @@ style={{
             </div>
                        
           <div className="mt-sm-5 position-relative">
-          <h1 className="text-center  mt-sm-5" style={{ color: '#000000' ,fontSize:43}}> Let's Hear It From  <span style={{color:'#008F71'}}>Our Students</span></h1>
+          <h1 className="text-center  mt-5" style={{ color: '#000000' ,fontSize:43}}> Let's Hear It From  <span style={{color:'#008F71'}}>Our Students</span></h1>
             <div className="mt-n3 pb-sm-5">
             <TestimonialSlider/>
             <div className={`${gradientCircleFooter} d-none d-lg-block`}></div> 

@@ -709,8 +709,12 @@
    color: black;
    margin-bottom: 20px;
  }
-
- .slider_btn {
+.Upcoming_Courses_Container{
+  position: absolute;
+  bottom: 20%;
+  margin-left: 7%;
+}
+ .slider_btn,.Upcoming_Courses {
    background-color: #008F71 !important;
    border: none;
    color: white;
@@ -719,7 +723,7 @@
    padding: 10px;
  }
 
- .slider_btn:hover {
+ .slider_btn:hover ,.Upcoming_Courses :hover{
    background-color: #00194e !important;
    border: none;
    color: white;
@@ -998,6 +1002,14 @@
   }
   #generic_heading_BookRoom::before{
     display: none;
+  }
+  .Upcoming_Courses {
+   font-size: 12px;
+   padding: 6px;
+  }
+  .Upcoming_Courses_Container{
+    bottom: 0%;
+    margin-left: 4%;
   }
 
   .course_container::after{
@@ -1559,4 +1571,13 @@ color: #969696;
     height: 46%;
     width: 170px;
 }
+}
+.table-rounded-bottom {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-width: 1px;
+  border-bottom-left-radius: 18px; 
+  border-bottom-right-radius: 18px; 
+  border: none;
 }

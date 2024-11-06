@@ -208,8 +208,8 @@ export default function BookaRoom() {
                 </div>
                 <div className='d-sm-block d-md-none d-lg-none '>
                     <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5">
-                        <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
-                            <div className="col-sm-5 col-lg-3">
+                        <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px',height:258 }}>
+                            <div >
                                 <img src={heart} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
                             <h4 className="my-2 ">Venue At The Heart Of The City –
@@ -240,8 +240,8 @@ export default function BookaRoom() {
                         </div>
                     </div>
                     <div className="col-12 d-flex justify-content-center align-items-center p-0 my-5">
-                        <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black py-4" style={{ borderRadius: '24px' }}>
-                            <div className="col-sm-5 col-lg-3">
+                        <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black py-4" style={{ borderRadius: '24px',height:258 }}>
+                            <div >
                                 <img src={tech} alt="" style={{ width: '55px', height: '55px' }} />
                             </div>
                             <h4 className="my-2 ">High-Tech Learning Venue –                            </h4>
@@ -252,15 +252,15 @@ export default function BookaRoom() {
                 </div>
 
                 <div className="col-12 justify-content-center align-items-center py-4 d-none d-md-flex d-lg-flex">
-                    <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 " style={{ borderRadius: '24px' }}>
-                        <div className="col-md-6 col-lg-3">
+                    <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 " style={{ borderRadius: '24px',height:258 }}>
+                        <div >
                             <img src={heart} alt="" style={{ width: '55px', height: '55px' }} />
                         </div>
                         <h4 className="my-2 ">Venue At The Heart Of The City –</h4>
                         <p className="line-height-sm">Located inside NASTP, Karachi, with shaded parking space for up to 500 cars!</p>
                     </div>
-                    <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ml-5" style={{ borderRadius: '24px' }}>
-                        <div className="col-md-6 col-lg-3">
+                    <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ml-5" style={{ borderRadius: '24px',height:258 }}>
+                        <div >
                             <img src={pray} alt="" style={{ width: '55px', height: '55px' }} />
                         </div>
                         <h4 className="my-2 ">Segregated Prayer Area –</h4>
@@ -292,15 +292,15 @@ export default function BookaRoom() {
                     </div>
                 </div>
                 <div className="col-12 justify-content-center align-items-center py-4 d-none d-md-flex d-lg-flex">
-                    <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px' }}>
-                        <div className="col-md-6 col-lg-3">
+                    <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4" style={{ borderRadius: '24px',height:258 }}>
+                        <div >
                             <img src={wifi} alt="" style={{ width: '55px', height: '55px' }} />
                         </div>
                         <h4 className="my-2  " style={{ color: 'black !important' }} >24/7 Wi-Fi –</h4>
                         <p className="line-height-sm">Obviously, it’s not a luxury – it’s a necessity, because we are serving a global world!</p>
                     </div>
-                    <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ml-5" style={{ borderRadius: '24px' }}>
-                        <div className="col-md-6 col-lg-3">
+                    <div className="col-lg-4 col-md-4 col-sm-12 bg-white d-flex flex-column justify-content-center align-items-center text-center text-black p-4 ml-5" style={{ borderRadius: '24px',height:258 }}>
+                        <div >
                             <img src={tech} alt="" style={{ width: '55px', height: '55px' }} />
                         </div>
                         <h4 className="my-2 ">High-Tech Learning Venue –</h4>

@@ -110,4 +110,24 @@ right: 34%;
   .generic_heading_left::before {
     display: none;
 }
+.mobile_arrow{
+transform: rotate(90deg);
+}
 }  
+.zain {
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden; 
+}
+
+.zain::after {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55); 
+  border-radius: inherit; 
+  z-index: 1; 
+}

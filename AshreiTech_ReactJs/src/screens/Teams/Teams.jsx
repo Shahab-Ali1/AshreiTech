@@ -39,7 +39,6 @@ const Teams = () => {
             description: "A Researcher, Leadership & Innovation Consultant, and high-performance coach, he has worked with literally all major companies across Pakistan and in nearby regions.He is the Founder of Learning Minds, Curator of Insights Business Forum, and serves on the advisory boards of various development sector organizations.",
             linkedInProfile: 'https://www.linkedin.com/in/sohailzindani/'
         },
-     
         {
             name: "M.Khurram Muqueem Khan",
             title: "Financial Controller",
@@ -68,13 +67,13 @@ const Teams = () => {
             description: "A dynamic and results-oriented professional with a proven track record in corporate liaison, events and stakeholder management. Experienced in cultivating impactful partnerships, executing events, and facilitating personal and professional development workshops. Skilled in communication and process optimization.",
             linkedInProfile: 'https://www.linkedin.com/in/mufarrah/'
         },
-        {
-            name: "Azmeena Furniturewalla",
-            title: "Head of Marketing and Communications",
-            image: Azmeena_Furniturewala,
-            description: "A MarCom professional with over 9 years of experience, in simple words, \"Work inspires her.\" Embarking on a journey from science to advertising, her evolution into a strategic and adaptive marketer has been nothing short of thrilling.",
-            linkedInProfile: 'https://www.linkedin.com/in/azmeena-k/'
-        },
+        // {
+        //     name: "Azmeena Furniturewalla",
+        //     title: "Head of Marketing and Communications",
+        //     image: Azmeena_Furniturewala,
+        //     description: "A MarCom professional with over 9 years of experience, in simple words, \"Work inspires her.\" Embarking on a journey from science to advertising, her evolution into a strategic and adaptive marketer has been nothing short of thrilling.",
+        //     linkedInProfile: 'https://www.linkedin.com/in/azmeena-k/'
+        // },
         {
             name: "Ghulam Muhammad Soomro",
             title: "Community Manager- KHI",
@@ -96,13 +95,13 @@ const Teams = () => {
             description: "Maryam is a seasoned professional with over 15 years of extensive experience in journalism, media, marketing, and public relations. Her diverse skill set and strategic insight have been instrumental in building sustainable and trustworthy relationships with our clients and the corporate world. Maryam's multifaceted expertise makes her an invaluable asset to our organization, consistently driving our marketing initiatives to new heights. Her ability to blend creativity with strategic thinking ensures that our brand remains at the forefront of industry trends and client expectations. At our company, Maryam continues to lead with excellence, fostering a culture of innovation and reliability.",
             linkedInProfile: 'https://www.linkedin.com/in/maryiam-pervaiz-40595121/'
         },
-        {
-            name: "Samra Mazhar",
-            title: "Placements and Events Lead",
-            image: Samra_Mazhar,
-            description: "Samra, the Placements and Events Lead at AshreiTech Academy, is a dynamic and approachable professional known for her enthusiasm and dedication. A true people's person, she brings a warm and engaging presence to every interaction. Passionate about her role, Samra ensures all her responsibilities are met with utmost seriousness and a smile.",
-            linkedInProfile: 'https://www.linkedin.com/in/samra-m-1782b5201/'
-        },
+        // {
+        //     name: "Samra Mazhar",
+        //     title: "Placements and Events Lead",
+        //     image: Samra_Mazhar,
+        //     description: "Samra, the Placements and Events Lead at AshreiTech Academy, is a dynamic and approachable professional known for her enthusiasm and dedication. A true people's person, she brings a warm and engaging presence to every interaction. Passionate about her role, Samra ensures all her responsibilities are met with utmost seriousness and a smile.",
+        //     linkedInProfile: 'https://www.linkedin.com/in/samra-m-1782b5201/'
+        // },
         {
             name: "Unsar Hameed",
             title: "IT Manager",
@@ -124,13 +123,13 @@ const Teams = () => {
             description: "",
             linkedInProfile: ''
         },
-        {
-            name: "Humra Tahir",
-            title: "Executive- Marcom",
-            image: Humra_Tahir,
-            description: "Humra is a final-year Mass Communication's student and MarCom Executive at AshreiTech Academy. With a knack for creativity, she crafts marketing content that truly engages and stands out. Humra blends her academic knowledge with hands-on experience, bringing fresh, compelling ideas to the table.",
-            linkedInProfile: 'https://www.linkedin.com/in/humra-tahir/'
-        },
+        // {
+        //     name: "Humra Tahir",
+        //     title: "Executive- Marcom",
+        //     image: Humra_Tahir,
+        //     description: "Humra is a final-year Mass Communication's student and MarCom Executive at AshreiTech Academy. With a knack for creativity, she crafts marketing content that truly engages and stands out. Humra blends her academic knowledge with hands-on experience, bringing fresh, compelling ideas to the table.",
+        //     linkedInProfile: 'https://www.linkedin.com/in/humra-tahir/'
+        // },
         {
             name: "Omar Siddique",
             title: "Creative Designer",
