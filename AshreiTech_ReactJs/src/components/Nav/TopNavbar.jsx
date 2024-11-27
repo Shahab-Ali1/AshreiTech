@@ -62,7 +62,8 @@ export default function TopNavbar() {
     { to: "/CommingSoonPage", text: "Sign In" },
     { to: "/WhatWeDo", text: "What We Do" },
     { to: "/BookaRoom", text: "Book A Room" },
-    { to: "/CorporateTrainings", text: "Corporate Trainings" }
+    { to: "/CorporateTrainings", text: "Corporate Trainings" },
+    { to: "/blog", text: "Blog" }
   ];
  
  

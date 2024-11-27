@@ -62,6 +62,16 @@ export const courseInfoCardData = [
 
 const departmentsFaq = [
   {
+question:"What does AshreiTech Academy offer?",
+answer:`AshreiTech Academy offers training in a range of high-tech skills, including;
+   - SAP - Success Factors, FI, Ariba Sourcing, Material Management and ABAP.
+  ⁠- Sales force - focusing on both Associate and Administrator levels.
+   - ⁠Cyber Security - Security Operations Center (SOC).
+   - ⁠Artificial Intelligence - including Data Science and Python with Deep Learning.
+   - Microsoft Dynamics 365 - Financial Operations, Customer Experience, Supply Chain and Power Platform Functional training.`
+  }
+  ,
+  {
     question: 'What courses does AshreiTech Academy offer?',
     answer: 'AshreiTech Academy offers training in a range of high-tech skills, including:\n' +
       'SAP: Covering SuccessFactors Employee Central, FICO, Customer Experience, and Ariba Strategic Sourcing.\n' +

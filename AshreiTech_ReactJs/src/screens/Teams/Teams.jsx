@@ -8,8 +8,15 @@ import adnan_ahmed from '../../assets/team/adnan_ahmed.png'
 import Syed_Talha_Asad from '../../assets/team/Syed_Talha_Asad.png'
 import Unsar_Hameed from '../../assets/team/Unsar_Hameed.png'
 import Arsalan_Ahmed from '../../assets/team/Arsalan_Ahmed.png'
+import Syeda_Anoosha_Arif from '../../assets/team/Syeda_Anoosha_Arif.png'
+import Arnold_Ibrahim from '../../assets/team/Arnold_Ibrahim.png'
+import Ghulam_Mustafa from '../../assets/team/Ghulam_Mustafa.png'
+import Hissham_Mohiuddin from '../../assets/team/Hissham_Mohiuddin.png'
+import Jawaid_Iqbal from '../../assets/team/Jawaid_Iqbal.png'
+import Kiran_Amin from '../../assets/team/Kiran_Amin.png'
 import Azmeena_Furniturewala from '../../assets/team/Azmeena_Furniturewala.png'
 import Farrukh_Hussain_Lodhi from '../../assets/team/Farrukh_Hussain_Lodhi.png'
+// import Ghulam_Mustafa from '../../assets/team/Ghulam_Mustafa.jpg'
 import Ghulam_Muhammad_Soomro from '../../assets/team/Ghulam_Muhammad_Soomro.png'
 import Kanwal_Rizvi from '../../assets/team/Kanwal_Rizvi.png'
 import Mufarrah_Malik from '../../assets/team/Mufarrah_Malik.png'
@@ -40,19 +47,26 @@ const Teams = () => {
             linkedInProfile: 'https://www.linkedin.com/in/sohailzindani/'
         },
         {
-            name: "M.Khurram Muqueem Khan",
-            title: "Financial Controller",
-            image: M_Khurram_Muqueem,
-            description: "Thriving as a results-driven finance professional, he is a trusted team player and valuable partner to business and service functions. He cultivates key organizational competencies by championing simplicity, collaboration, trust, innovation, and customer-centricity, all with unwavering integrity.",
-            linkedInProfile: ''
-        },
-        {
             name: "Adnan Ahmed",
             title: "Head of Operations and IT",
             image: adnan_ahmed,
             description: "Academy, is pivotal for keeping things running smoothly and maintaining a friendly atmosphere. The team often seeks him out for his problem-solving skills and practical advice, which helps keep the workplace dynamic and harmonious. His commitment ensures that everything at the academy works well, making him a crucial member of the team.",
             linkedInProfile: 'https://www.linkedin.com/in/adnan-ahmed-92b80235/'
         },
+        {
+            name: "M.Khurram Muqueem Khan",
+            title: "Financial Controller",
+            image: M_Khurram_Muqueem,
+            description: "Thriving as a results-driven finance professional, he is a trusted team player and valuable partner to business and service functions. He cultivates key organizational competencies by championing simplicity, collaboration, trust, innovation, and customer-centricity, all with unwavering integrity.",
+            linkedInProfile: ''
+        },
+        // {
+        //     name: "Adnan Ahmed",
+        //     title: "Head of Operations and IT",
+        //     image: adnan_ahmed,
+        //     description: "Academy, is pivotal for keeping things running smoothly and maintaining a friendly atmosphere. The team often seeks him out for his problem-solving skills and practical advice, which helps keep the workplace dynamic and harmonious. His commitment ensures that everything at the academy works well, making him a crucial member of the team.",
+        //     linkedInProfile: 'https://www.linkedin.com/in/adnan-ahmed-92b80235/'
+        // },
         {
             name: "Talha Shabbir",
             title: "Head, Academics & Programs",
@@ -75,13 +89,6 @@ const Teams = () => {
         //     linkedInProfile: 'https://www.linkedin.com/in/azmeena-k/'
         // },
         {
-            name: "Ghulam Muhammad Soomro",
-            title: "Community Manager- KHI",
-            image: Ghulam_Muhammad_Soomro,
-            description: "At AshreiTech Academy, G.M is the driving force behind a vibrant tech community. Leveraging his entrepreneurial experience, he nurtures the next generation of tech talent by guiding students and career shifters in acquiring essential skills. Passionate about innovation and growth, he fosters a thriving tech community.",
-            linkedInProfile: 'https://www.linkedin.com/in/gm95soomro/'
-        },
-        {
             name: "Kanwal Abidi",
             title: "HR Lead",
             image: Kanwal_Rizvi,
@@ -89,12 +96,28 @@ const Teams = () => {
             linkedInProfile: 'https://www.linkedin.com/in/kanwal-abidi-a66b262ab/'
         },
         {
-            name: "Maryiam Pervaiz",
-            title: "Manager Communications and PR- LHR",
-            image: Maryam,
-            description: "Maryam is a seasoned professional with over 15 years of extensive experience in journalism, media, marketing, and public relations. Her diverse skill set and strategic insight have been instrumental in building sustainable and trustworthy relationships with our clients and the corporate world. Maryam's multifaceted expertise makes her an invaluable asset to our organization, consistently driving our marketing initiatives to new heights. Her ability to blend creativity with strategic thinking ensures that our brand remains at the forefront of industry trends and client expectations. At our company, Maryam continues to lead with excellence, fostering a culture of innovation and reliability.",
-            linkedInProfile: 'https://www.linkedin.com/in/maryiam-pervaiz-40595121/'
+            name: "Ghulam Muhammad Soomro",
+            title: "Community Manager- KHI",
+            image: Ghulam_Muhammad_Soomro,
+            description: "At AshreiTech Academy, G.M is the driving force behind a vibrant tech community. Leveraging his entrepreneurial experience, he nurtures the next generation of tech talent by guiding students and career shifters in acquiring essential skills. Passionate about innovation and growth, he fosters a thriving tech community.",
+            linkedInProfile: 'https://www.linkedin.com/in/gm95soomro/'
         },
+        {
+            name: "Syeda Anoosha Arif",
+            title: "Marketing and Communications Manager",
+            image: Syeda_Anoosha_Arif,
+            description: `	Anoosha serves as the Marketing and Communications Manager, where she leads the development and execution of strategic marketing campaigns and drive engagement. In her role, she oversees content creation, social media strategy, and public relations efforts, ensuring that all communications are aligned with the company’s mission and values.
+            Her expertise shapes a unified brand message that appeals to a broad audience, enhancing the company’s reputation and promoting a strong, positive brand image.`,
+            linkedInProfile: '	https://www.linkedin.com/in/syeda-anoosha-arif-511284244/'
+        },
+      
+        // {
+        //     name: "Maryiam Pervaiz",
+        //     title: "Manager Communications and PR- LHR",
+        //     image: Maryam,
+        //     description: "Maryam is a seasoned professional with over 15 years of extensive experience in journalism, media, marketing, and public relations. Her diverse skill set and strategic insight have been instrumental in building sustainable and trustworthy relationships with our clients and the corporate world. Maryam's multifaceted expertise makes her an invaluable asset to our organization, consistently driving our marketing initiatives to new heights. Her ability to blend creativity with strategic thinking ensures that our brand remains at the forefront of industry trends and client expectations. At our company, Maryam continues to lead with excellence, fostering a culture of innovation and reliability.",
+        //     linkedInProfile: 'https://www.linkedin.com/in/maryiam-pervaiz-40595121/'
+        // },
         // {
         //     name: "Samra Mazhar",
         //     title: "Placements and Events Lead",
@@ -110,17 +133,60 @@ const Teams = () => {
             linkedInProfile: 'https://www.linkedin.com/in/unsar-hameed-379896106/'
         },
         {
+            name: "Jamshed Zaman",
+            title: "Community Manager- LHR",
+            image: Jamshed_Zaman,
+            description: "With a diverse background spanning professional development, education, journalism, and public relations, Jamshed bring a rich tapestry of experiences and skills. In more than 4 years of professional experience in Educational Development at various renowned institutions including University of Central Punjab and Forman Christian College, Jamshed has been deeply involved in educational administration curriculum design, facilitating workshops, fostering industry connections for student opportunities.",
+            linkedInProfile: 'https://www.linkedin.com/in/jamshedzaman252/'
+        },
+        {
             name: "Arsalan Ahmed",
             title: "Accounts Officer",
             image: Arsalan_Ahmed,
             description: "As the finance officer, Arsalan supports the financial operations of this organization by processing transactions and maintaining financial records. He also excels in analyzing financial data, offering valuable insights and support to senior finance professionals.",
             linkedInProfile: 'https://www.linkedin.com/in/arsalan-ahmed-708974106/'
         },
+        // {
+        //     name: "Farrukh Hussain Lodhi",
+        //     title: "Assistant Manager Accounts/Tax",
+        //     image: Farrukh_Hussain_Lodhi,
+        //     description: "",
+        //     linkedInProfile: ''
+        // },
         {
-            name: "Farrukh Hussain Lodhi",
-            title: "Assistant Manager Accounts/Tax",
-            image: Farrukh_Hussain_Lodhi,
-            description: "",
+            name: "	Hissham Mohiuddin",
+            title: "Manager, Tax Reporting and Budgeting",
+            image: Hissham_Mohiuddin,
+            description: "Hissham Mohiuddin serves as Manager - Tax Reporting and Budgeting. With extensive knowledge of tax laws and regulations, he oversees compliance, reporting, and budgeting processes. Hissham plays a crucial role in minimizing tax liabilities and safeguarding our financial health.",
+            linkedInProfile: 'https://www.linkedin.com/in/hissham-mohiuddin-43798726/'
+        },
+        {
+            name: "	Ghulam Mustafa",
+            title: "Assistant Manager Accounts and Tax",
+            image: Ghulam_Mustafa,
+            description: "	Ghulam Mustafa serves as our Assistant Manager - Accounts and Tax, ensuring the smooth operation of financial tasks and timely tax compliance. A dedicated professional with a keen eye for detail, he applies his expertise in accounting principles, making him a valuable asset to our team.",
+            linkedInProfile: ''
+        },
+        {
+            name: "Kiran Amin Panjwani",
+            title: "Coordinator, Programs and Partnership",
+            image: Kiran_Amin,
+            description: "Kiran Amin Panjwani serves as our Coordinator - Programs and Partnerships, orchestrating seamless program management and fostering strong partnerships. An organized and proactive professional, she excels in project execution, ensuring impactful initiatives with her attention to detail and effective communication",
+            linkedInProfile: '	https://www.linkedin.com/in/kiranpanjwani220/'
+        },
+        {
+            name: "Jawed Iqbal",
+            title: "Corporate Liaison and Events Officer",
+            image:Jawaid_Iqbal,
+            description: `	Jawed Iqbal serves as the Corporate Liaison and Events Officer, where he plays a pivotal role in organising a range of corporate training sessions, workshops, and conferences aimed at strengthening the company's public relations.
+             By facilitating these events, Jawed not only provides valuable networking opportunities but also actively bridges the gap between academia and industry. His efforts help build meaningful connections that foster knowledge exchange and promote the company's reputation in professional development.`,
+            linkedInProfile: '	http://www.linkedin.com/in/jawed-iqbal-375a56237'
+        },
+        {
+            name: "	Arnold Ibrahim",
+            title: "Event Coordinator",
+            image: Arnold_Ibrahim,
+            description: "	At AshreiTech Academy, Arnold is the backbone of a well-oiled event machine. Leveraging his expertise, he manages and supervises every aspect, from pre- to post-event operations, ensuring everything runs smoothly. Arnold coordinates with organizations, guides attendees, and seamlessly handles multiple events at once. Passionate about creating memorable experiences, he is key to fostering a dynamic event culture at the academy.",
             linkedInProfile: ''
         },
         // {
@@ -151,13 +217,7 @@ const Teams = () => {
             description: "At AshreiTech Academy, Muhammad Ibrahim is the Student Coordinator, dedicated to resolving student issues and offering counseling sessions. He mentors the next generation of tech talent, guiding students and career shifters in acquiring essential skills. Passionate about innovation and growth, he is committed to equipping students with the tools they need to succeed.",
             linkedInProfile: 'https://www.linkedin.com/in/muhammad-ibrahim-505b13235/'
         },
-        {
-            name: "Jamshed Zaman",
-            title: "Community Manager- LHR",
-            image: Jamshed_Zaman,
-            description: "With a diverse background spanning professional development, education, journalism, and public relations, Jamshed bring a rich tapestry of experiences and skills. In more than 4 years of professional experience in Educational Development at various renowned institutions including University of Central Punjab and Forman Christian College, Jamshed has been deeply involved in educational administration curriculum design, facilitating workshops, fostering industry connections for student opportunities.",
-            linkedInProfile: 'https://www.linkedin.com/in/jamshedzaman252/'
-        },
+       
         {
             name: "Noman Ali",
             title: "Admin & Operations Lead",

@@ -5,8 +5,8 @@ export const GetInTouch = (props) => {
     
     return (
         <>
-        <div className='d-flex justify-content-center'>
-            <h1 style={{fontSize:"60px",color:'#d3b52b'}} className='WhoAreYou mt-5'>Enquiry Form</h1>
+        <div className='d-flex justify-content-center title-res'>
+            <h1 style={{fontSize:"60px",color:'#d3b52b'}} className='WhoAreYou mt-5 mb-5'>Enquiry Form</h1>
         </div>
             <div>
                 <TabsComponent />

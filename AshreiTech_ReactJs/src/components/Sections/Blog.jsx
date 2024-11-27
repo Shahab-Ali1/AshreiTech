@@ -170,6 +170,7 @@ export default function Blog() {
         <div className="col-12 col-md-8 col-lg-8 mt-5 mt-lg-0">
           {ImagesData.length > 0 ? (
             ImagesData.length > 3 ? (
+              <SliderWrapper>
               <Slider {...settings}>
                 {ImagesData.map((item, index) => (
                   <div key={item?.Id} className="px-2">
@@ -181,13 +182,15 @@ export default function Blog() {
                           <div className="pclass p-1 d-flex justify-content-center px-3"><p>{item?.category}</p></div>
                           <h5 className="card-title mt-4 text-center text-lg-left text-md-left" id='odder_card-h'>{item?.stxt}</h5>
                           <p className="card-text mb-4 text-center text-lg-left text-md-left" id="offer_card">{item?.discription}</p>
-                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }} onClick={() => navigate("/courses",{state:{...ImagesData[index]}})}>Learn more</p></div>
+                          {/* <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }} onClick={() => navigate("/GetInTouch",{state:{...ImagesData[index]}})}>Register Now</p></div> */}
+                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }} onClick={() => navigate("/GetInTouch")}>Register Now</p></div>
                         </WrapperForP>
                       </div>
                     </div>
                   </div>
                 ))}
               </Slider>
+              </SliderWrapper>
             ) : (
               <div className="row">
                 {ImagesData.map((item, index) => (
@@ -200,7 +203,8 @@ export default function Blog() {
                           <div className="pclass p-1 d-flex justify-content-center px-3"><p>{item?.category}</p></div>
                           <h5 className="card-title mt-4 text-center text-lg-left text-md-left" id='odder_card-h'>{item?.stxt}</h5>
                           <p className="card-text mb-4 text-center text-lg-left text-md-left" id="offer_card">{item?.discription}</p>
-                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }} onClick={() => navigate("/courses",{state:{...ImagesData[index]}})}>Learn more</p></div>
+                          <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }} onClick={() => navigate("/GetInTouch")}>Register Now</p></div>
+                          {/* <div className="pclass p-1 text-center col-6"><p style={{ fontSize: '14px' }} onClick={() => navigate("/GetInTouch",{state:{...ImagesData[index]}})}>Register Now</p></div> */}
                         </WrapperForP>
                       </div>
                     </div>
@@ -212,6 +216,7 @@ export default function Blog() {
             <p>No courses available for this category.</p>
           )}
         </div>
+
       </div>
     </div>
   );
@@ -229,3 +234,25 @@ const WrapperForP = styled.div`
     color: #fff;
   }
 `;
+
+const SliderWrapper = styled.div`
+ .slick-slide {
+    padding: 0 10px; /* Space between slides */
+    background-color: transparent;
+    
+  }
+  
+    .slick-prev, .slick-next {
+    /* background-color: white; */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slick-prev:before, .slick-next:before {
+    font-size: 20px;
+    color: rgb(90, 140, 117);
+  }
+  `;
