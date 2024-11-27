@@ -34,13 +34,34 @@ export const AdmissionEnquiry = (props) => {
     const [genderData, setGenderData] = useState([]);
     const [jobStatusData, setJobStatusData] = useState([]);
     const [EntityId, setEntityId] = useState(0)
+    const [TempletaInfo, setTempletaInfo] = useState(null);
 
     useEffect(() => {
         getCity();
         getGender();
         getStudentStatus();
         getjobStatus();
+        TemplateeData();
     }, [])
+    const TemplateeData = (cityid) => {
+        try {
+            // https://sma.edu-man.com/sm/api/Smstemplate/v2/TemplateeData/9051
+            debugger;
+            getMethod(`Smstemplate/v2/TemplateeData/${9051}`)
+                .then((data) => {
+                    debugger;
+                    if (data) {
+                        setTempletaInfo(data?.Data[0]);
+                    }
+                })
+                .catch(error => {
+                    debugger;
+                    codeError(error);
+                });
+        } catch (error) {
+            console.log(error);
+        }
+    }
     const getCity = () => {
         try {
             getMethod("city")
@@ -348,12 +369,13 @@ export const AdmissionEnquiry = (props) => {
 
     const sentWelcomeEmail = () => {
         try {
+            debugger;
             let body = {
                 "Data": {
                     sendfrom: "academics@ashreitech.edu.pk",
                     sendto: formData.email,
-                    subject: "Enquiry Form",
-                    body: "Welcome",
+                    subject: TempletaInfo?.stxt ?? "Enquiry Form",
+                    body: TempletaInfo?.ltxt ?? "Welcome",
                 }
             }
             PostMethod("FOAdmEnquiry/V2/SendEmailAsync", body)
